@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+   <script>
+   const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('query');
+    const resultsDisplay = document.getElementById('searchResultsDisplay');
+
+    if (searchQuery) {
+        // You would typically fetch data or filter content based on searchQuery here.
+        // For demonstration, just display the query.
+        resultsDisplay.innerHTML = `<h2>Search results for: "${searchQuery}"</h2>
+                                    <p>Implement your search logic to display relevant content here.</p>`;
+    } else {
+        resultsDisplay.innerHTML = `<p>No search query provided.</p>`;
+    }
+</script>
+
+
+<script src="https://static.app/js/static.js" type="text/javascript"></script>
+</body>
+</html>
