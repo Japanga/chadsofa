@@ -16,6 +16,83 @@
                 
                 
             </div>
+          
+          <div class="topnav">
+ <form id="siteSearchForm">
+        <input type="text" id="searchInput" placeholder="Search the site...">
+        
+    </form>
+          </div>
+          
+                   <script>
+         
+const name1 = ['rukiafag'];
+const fetchName1 = name1.toString();
+const article1 = ['moaz'];
+const fetchArticle1 = article1.toString();
+const name2 = ['the belgian'];
+const fetchName2 = name2.toString();
+const article2 = ['poaz'];
+const fetchArticle2 = article2.toString();
+const name3 = ['the warden'];
+const fetchName3 = name3.toString();
+const article3 = ['woaz'];
+const fetchArticle3 = article3.toString();
+const name4 = ['geekdom'];
+const fetchName4 = name4.toString();
+const article4 = ['geekdom101'];
+const fetchArticle4 = article4.toString();
+const name5 = ['jiren'];
+const fetchName5 = name5.toString();
+const article5 = ['woaz'];
+const fetchArticle5 = article5.toString();
+const name6 = ['luigi'];
+const fetchName6 = name6.toString();
+const article6 = ['startchad'];
+const fetchArticle6 = article6.toString();
+
+
+
+    const searchForm = document.getElementById('siteSearchForm');
+    const searchInput =   document.getElementById('searchInput');
+    
+    searchForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent default form submission
+        const query = searchInput.value;
+        if (query) {
+            // Redirect to the search results page with the query
+            window.location.href = query + '.html';
+        }
+        if (query == fetchName1) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle1 + '.html';
+        }
+         if (query == fetchName2) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle2 + '.html';
+        }
+        if (query == fetchName3) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle3 + '.html';
+        }
+          if (query == fetchName4) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle4 + '.html';
+        }
+          if (query == fetchName5) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle5 + '.html';
+        }
+         if (query == fetchName6) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle6 + '.html';
+        }
+
+
+      
+    });
+    
+          </script>
 
             <div id="flex">
                 
@@ -45,7 +122,7 @@
 <button class="tablink" onclick="window.location.href='index.html'" id="defaultOpen">HOME</button>
 <button class="tablink" onclick="window.location.href='posters.html'">POSTERS</button>
 <button class="tablink" onclick="window.location.href='news.html'">NEWS</button>
-<button class="tablink" onclick="window.location.href='cybersecurity.html'">CYBERSECURITY</button>
+<button class="tablink" onclick="window.location.href='gallery.html'">GALLERY</button>
                     <h1>FOAZ FATHER OF ALL ZOMBIES</h1>
                   
                                                        <table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#000000; border:1px solid #999; line-height:1.5; color:red; font-size:smaller;"><tr>
@@ -103,12 +180,49 @@
             /* these are variables that are being used in the code
     these tended to confuse some people, so I only kept 
     the images as variables */
-    
+    topnav {
+  overflow: hidden;
+ background: linear-gradient(#190A05, #870000);
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: center;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+ background: linear-gradient(#190A05, #870000);
+}
+          
+          /* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: center;
+  position: fixed;
+  top: 0;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+          }
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background: linear-gradient(#190A05, #870000);
+          }
+          
     .tablink {
    background: linear-gradient(#190A05, #870000);
   color: red;
-  float: left;
-  border: none;
+  float: none;
+  border: all;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
@@ -392,4 +506,4 @@
         </style>
               
 </body>
-</html>
+            </html>
