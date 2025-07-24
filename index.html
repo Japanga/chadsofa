@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://cdn.staticrun.app/2d9f09cc-8aba-4abc-822a-86333b5241b2/97f08559-81f0-42f4-891e-3bd78455b0b3/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body> 
   
@@ -46,21 +47,49 @@
 <button class="tablink" onclick="window.location.href='index.html'" id="defaultOpen">HOME</button>
 <button class="tablink" onclick="window.location.href='posters.html'">POSTERS</button>
 <button class="tablink" onclick="window.location.href='news.html'">NEWS</button>
-<button class="tablink" onclick="window.location.href='gallery.html'">CYBERSECURITY</button>
+<button class="tablink" onclick="window.location.href='cybersecurity.html'">GALLERY</button>
                     <h1>Dragon Ball Super Wiki</h1>
                     <p><strong>INFORMATION</strong></p>
                     <p>This is a personal open-source hybrid of content mixed between articles written on the original Chadsofa wiki, and new content/features.</p>
                          <div class="topnav">
  <form id="siteSearchForm">
         <input type="text" id="searchInput" placeholder="Search the site...">
+        
     </form>
 </div>
 
-                  
-                    <script>
-     const searchForm = document.getElementById('siteSearchForm');
-    const searchInput = document.getElementById('searchInput');
+         <script>
+         
+const name1 = ['rukiafag'];
+const fetchName1 = name1.toString();
+const article1 = ['moaz'];
+const fetchArticle1 = article1.toString();
+const name2 = ['the belgian'];
+const fetchName2 = name2.toString();
+const article2 = ['poaz'];
+const fetchArticle2 = article2.toString();
+const name3 = ['the warden'];
+const fetchName3 = name3.toString();
+const article3 = ['woaz'];
+const fetchArticle3 = article3.toString();
+const name4 = ['geekdom'];
+const fetchName4 = name4.toString();
+const article4 = ['geekdom101'];
+const fetchArticle4 = article4.toString();
+const name5 = ['jiren'];
+const fetchName5 = name5.toString();
+const article5 = ['woaz'];
+const fetchArticle5 = article5.toString();
+const name6 = ['luigi'];
+const fetchName6 = name6.toString();
+const article6 = ['startchad'];
+const fetchArticle6 = article6.toString();
 
+
+
+    const searchForm = document.getElementById('siteSearchForm');
+    const searchInput =   document.getElementById('searchInput');
+    
     searchForm.addEventListener('submit', (event) => {
         event.preventDefault(); // Prevent default form submission
         const query = searchInput.value;
@@ -68,111 +97,36 @@
             // Redirect to the search results page with the query
             window.location.href = query + '.html';
         }
-      
-       if (query == 'rukiafag') {
+        if (query == fetchName1) {
             // Redirect to the search results page with the query
-            window.location.href = 'moaz.html';
+            window.location.href = fetchArticle1 + '.html';
         }
-      
-       if (query == 'rukiabitch') {
+         if (query == fetchName2) {
             // Redirect to the search results page with the query
-            window.location.href = 'moaz.html';
+            window.location.href = fetchArticle2 + '.html';
         }
-      
-       if (query == 'rukia') {
+        if (query == fetchName3) {
             // Redirect to the search results page with the query
-            window.location.href = 'moaz.html';
+            window.location.href = fetchArticle3 + '.html';
         }
-      
-       if (query == 'mother of all zombies') {
+          if (query == fetchName4) {
             // Redirect to the search results page with the query
-            window.location.href = 'moaz.html';
+            window.location.href = fetchArticle4 + '.html';
         }
-      
-       if (query == 'the belgian') {
+          if (query == fetchName5) {
             // Redirect to the search results page with the query
-            window.location.href = 'poaz.html';
+            window.location.href = fetchArticle5 + '.html';
         }
-      
-       if (query == 'the b') {
+         if (query == fetchName6) {
             // Redirect to the search results page with the query
-            window.location.href = 'poaz.html';
-        }
-      
-       if (query == 'prince of all zombies') {
-            // Redirect to the search results page with the query
-            window.location.href = 'poaz.html';
-        }
-      
-       if (query == 'wafflenigger') {
-            // Redirect to the search results page with the query
-            window.location.href = 'poaz.html';
-        }
-      
-       if (query == 'jiren') {
-            // Redirect to the search results page with the query
-            window.location.href = 'woaz.html';
-        }
-      
-        if (query == 'the warden') {
-            // Redirect to the search results page with the query
-            window.location.href = 'woaz.html';
-        }
-      
-       if (query == 'jiren the grey') {
-            // Redirect to the search results page with the query
-            window.location.href = 'woaz.html';
-        }
-      
-       if (query == 'jiren the gray') {
-            // Redirect to the search results page with the query
-            window.location.href = 'woaz.html';
-        }
-      
-       if (query == 'toaluigi95') {
-            // Redirect to the search results page with the query
-            window.location.href = 'startchad.html';
-        }
-      
-       if (query == 'toaluigi') {
-            // Redirect to the search results page with the query
-            window.location.href = 'startchad.html';
-        }
-      
-       if (query == 'luigi') {
-            // Redirect to the search results page with the query
-            window.location.href = 'startchad.html';
-        }
-      
-       if (query == 'tinkertrain') {
-            // Redirect to the search results page with the query
-            window.location.href = 'godmodegod.html';
-        }
-      
-       if (query == 'geekdom') {
-            // Redirect to the search results page with the query
-            window.location.href = 'geekdom101.html';
-        }
-      
-       if (query == 'reekdom') {
-            // Redirect to the search results page with the query
-            window.location.href = 'geekdom101.html';
+            window.location.href = fetchArticle6 + '.html';
         }
 
-       if (query == 'shitgang') {
-            // Redirect to the search results page with the query
-            window.location.href = 'cutegang.html';
-        }
-
-       if (query == 'beerus') {
-            // Redirect to the search results page with the query
-            window.location.href = 'surpassedrus.html';
-        }
-      
 
       
     });
-</script>
+    
+</script
                 
                     
                     <p><strong>PERSONNEL</strong></p>
@@ -180,38 +134,38 @@
               
       
       <span>
- <a href="woaz.html" target="_blank">
+ <a href="/woaz.html" target="_blank">
    <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1547/42/1547420263640.jpg" alt="Smiley face" style="float:left;width:300px;height:360px;"> </p>
  </a>
 </span>
 
   <span>
- <a href="foaz.html" target="_blank">
+ <a href="/foaz.html" target="_blank">
      <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1584/63/1584632511769.jpg" alt="Smiley face" style="float:right;width:300px;height:360px;"> </p>
  </a>
 </span>
 
   <span>
- <a href="poaz.html" target="_blank">
+ <a href="/poaz.html" target="_blank">
         <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1733/03/1733030887286.png" alt="Smiley face" style="float:left;width:300px;height:360px;"> </p>
  </a>
 </span>
       
   <span>
- <a href="moaz.html" target="_blank">
+ <a href="/moaz.html" target="_blank">
        <p><img src="https://desu-usergeneratedcontent.xyz/trash/image/1661/64/1661647518129.jpg" alt="Smiley face" style="float:right;width:300px;height:360px;"> </p>
  </a>
 </span>
     
       <span>
- <a href="romaine.html" target="_blank">
+ <a href="/romaine.html" target="_blank">
      <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1512/28/1512283927193.png" alt="Smiley face" style="float:left;width:300px;height:360px;"> </p>
  </a>
 </span>
 
        
   <span>
- <a href="turles.html" target="_blank">
+ <a href="/turles.html" target="_blank">
          
      <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1749/83/1749832940662.jpg" alt="Smiley face" style="float:right;width:300px;height:360px;"> </p>
  </a>
@@ -219,7 +173,7 @@
        
 
  <span>
- <a href="startchad.html" target="_blank">
+ <a href="/startchad.html" target="_blank">
          
    <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1604/61/1604615112437.jpg" alt="Smiley face" style="float:left;width:300px;height:360px;"> </p>
  </a>
@@ -227,7 +181,7 @@
  
      
  <span>
- <a href="argentinian.html" target="_blank">
+ <a href="/argentinian.html" target="_blank">
          
      
 <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1673/66/1673664697537.png" alt="Smiley face" style="float:right;width:300px;height:360px;"> </p>
@@ -235,21 +189,21 @@
 </span>
 
  <span>
- <a href="geekdom101.html" target="_blank">
+ <a href="/geekdom101.html" target="_blank">
          
    <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1634/34/1634345398640.jpg" alt="Smiley face" style="float:left;width:300px;height:360px;"> </p>
  </a>
 </span>
 
  <span>
- <a href="samir34.html" target="_blank">
+ <a href="/samir34.html" target="_blank">
         
 <p><img src="https://pbs.twimg.com/media/C8RyqYYWAAQdTvs.jpg" alt="Smiley face" style="float:right;width:300px;height:360px;"> </p>
  </a>
 </span>
 
  <span>
- <a href="godmodegod.html" target="_blank">
+ <a href="/godmodegod.html" target="_blank">
          
    <p><img src="https://i.imgur.com/iKXkoAl.jpeg" alt="Smiley face" style="float:left;width:300px;height:360px;"> </p>
  </a>
@@ -257,7 +211,7 @@
 
 
  <span>
- <a href="moeshit.html" target="_blank">
+ <a href="/moeshit.html" target="_blank">
          
    <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1749/32/1749321999909.gif" alt="Smiley face" style="float:right;width:300px;height:360px;"> </p>
  </a>
@@ -301,6 +255,8 @@
 /* Style the search box inside the navigation bar */
 .topnav input[type=text] {
   float: center;
+  position: fixed;
+  top: 0;
   padding: 6px;
   border: none;
   margin-top: 8px;
@@ -315,6 +271,8 @@
     display: block;
     text-align: left;
     width: 100%;
+    position: fixed;
+    top: 0;
     margin: 0;
     padding: 14px;
   }
@@ -333,8 +291,8 @@
     .tablink {
   background: linear-gradient(#190A05, #870000);
   color: red;
-  float: left;
-  border: none;
+  float: none;
+  border: all;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
