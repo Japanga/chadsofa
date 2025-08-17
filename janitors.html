@@ -2,8 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
+   <link rel="shortcut icon" type="image/x-icon" 
+
+href="https://yourimageshare.com/ib/awhW7ojlbn.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHADS OF /A/ MIRAHEZE</title>
+    <title>Dragon Ball Super Wiki</title>
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
@@ -38,117 +41,201 @@
 <div id="Oslo" class="tabcontent">
   <h1>PRIVACY</h1>
   <p>Oslo is the capital of Norway.</p>
+  
 </div>
-                  
+        
+                       <header id="myHeader">
+
+</header>
                     <div class="topnav">
  <form id="siteSearchForm">
         <input type="text" id="searchInput" placeholder="Search the site...">
         
     </form>
-</div>
+                      </div>
+             <div class="dropdown">
+  <button class="dropbtn">Header</button>
+  <div class="dropdown-content">
+    <a id="changeImageButton">Header 1 - ENTER</a>
+    <a id="changeImageButton2">Header 2 - Miraheze</a>
+    <a id="changeImageButton3">Header 3 - Rei/Asuka</a>
+  </div>
+</div> 
                   
-                   <script>
-         
-const name1 = ['rukiafag'];
-const fetchName1 = name1.toString();
-const article1 = ['moaz'];
-const fetchArticle1 = article1.toString();
-const name2 = ['the belgian'];
-const fetchName2 = name2.toString();
-const article2 = ['poaz'];
-const fetchArticle2 = article2.toString();
-const name3 = ['the warden'];
-const fetchName3 = name3.toString();
-const article3 = ['woaz'];
-const fetchArticle3 = article3.toString();
-const name4 = ['geekdom'];
-const fetchName4 = name4.toString();
-const article4 = ['geekdom101'];
-const fetchArticle4 = article4.toString();
-const name5 = ['jiren'];
-const fetchName5 = name5.toString();
-const article5 = ['woaz'];
-const fetchArticle5 = article5.toString();
-const name6 = ['luigi'];
-const fetchName6 = name6.toString();
-const article6 = ['startchad'];
-const fetchArticle6 = article6.toString();
+                  <script> 
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+             
+                      // Example using a simple cookie function
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+ 
+//
+// On page load (e.g., within window.onload or DOMContentLoaded):
+window.onload = function() {
+   const header = document.getElementById('myHeader');
+    var storedImageUrl = getCookie("currentBackgroundImg");
+    if (storedImageUrl) {
+       header.style.backgroundImage = "url('" + storedImageUrl + "')";
+       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       header.style.backgroundImage = "no-repeat"; // Optional
+    }
+};
+</script> 
+
+ <script> 
+              document.addEventListener('DOMContentLoaded', function() {
+  const header = document.getElementById('myHeader');
+  const button = document.getElementById('changeImageButton');
+  const button2 = document.getElementById('changeImageButton2');
+ const button3 = document.getElementById('changeImageButton3');
+
+  button.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://i.imgur.com/WqcAGQo.png')"; 
+  }); 
+               button2.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/wPRybiZbC0.jpg')"; 
+  });
+                
+                button3.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"; 
+  });
+                
+                
+});
+
+</script>
 
 
+            <script> 
+              document.addEventListener('DOMContentLoaded', function() {
+  const header = document.getElementById('myHeader');
+  const button = document.getElementById('changeImageButton');
+  const button2 = document.getElementById('changeImageButton2');
+ const button3 = document.getElementById('changeImageButton3');
 
-    const searchForm = document.getElementById('siteSearchForm');
-    const searchInput =   document.getElementById('searchInput');
-    
-    searchForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent default form submission
-        const query = searchInput.value;
-        if (query) {
-            // Redirect to the search results page with the query
-            window.location.href = query + '.html';
-        }
-        if (query == fetchName1) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle1 + '.html';
-        }
-         if (query == fetchName2) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle2 + '.html';
-        }
-        if (query == fetchName3) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle3 + '.html';
-        }
-          if (query == fetchName4) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle4 + '.html';
-        }
-          if (query == fetchName5) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle5 + '.html';
-        }
-         if (query == fetchName6) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle6 + '.html';
-        }
+  button.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://i.imgur.com/WqcAGQo.png')"; 
+  }); 
+               button2.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/wPRybiZbC0.jpg')"; 
+  });
+                
+                button3.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"; 
+  });
+                
+                
+});
+            </script> 
+                  
+                     <style>
+  blockquote {
+    font-style: italic;
+    font-size: 10px;
+  }
+</style>
 
+<blockquote>
+<a href="./redclover.html">© Red Clover Corporation</a> 2025 - present all rights reserved, all 
 
-      
-    });
-    
-                  </script>
+content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> 
 
+created by <a href="./moot.html">m00t</a> and owned by <a 
 
-<audio src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" autoplay></audio>
+href="https://en.wikipedia.org/wiki/Hiroyuki_Nishimura">Hiroyuki Nishimura</a> - 
 
-<button class="tablink" onclick="window.location.href='index.html'" id="defaultOpen">HOME</button>
+business/contact matters redclovercorporation@hotmail.com
+</blockquote>
+ 
+     <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" 
+
+style="float:right;width:95px;height:95px;"> </p>
+ </a>
+              
+                 <p><img src="https://yourimageshare.com/ib/dH6sYbAr4T.png" alt="Smiley face" 
+
+style="float:right;width:95px;height:95px;"> </p>
+ </a>
+                  
+<button class="tablink" onclick="window.location.href='index.html'" 
+
+id="defaultOpen">HOME</button>
 <button class="tablink" onclick="window.location.href='posters.html'">POSTERS</button>
 <button class="tablink" onclick="window.location.href='news.html'">NEWS</button>
 <button class="tablink" onclick="window.location.href='gallery.html'">GALLERY</button>
-                    <h1>Janitors</h1>
-                      <p><img src="https://yourimageshare.com/ib/2lJloicQdY.png" alt="Smiley face" style="float:right;width:300px;height:360px;"> </p>
+          <button class="tablink" 
+
+onclick="window.location.href='interviews.html'">INTERVIEWS</button>
+          <button class="tablink" 
+
+onclick="window.location.href='cybersecurity.html'">CYBERSECURITY</button>
+                  
+                    <div class="topnav">
+ <form id="siteSearchForm">
+        <input type="text" id="searchInput" placeholder="Search the site...">
+    </form>
+</div>
+                  
+                  
+ <h1>Janitors</h1>
+                      <p><img src="https://yourimageshare.com/ib/LisDFpbBgk.jpg" alt="Smiley face" style="float:right;width:320px;height:330px;"> </p>
                     <p>CHADnitors/LORDnitors/GODnitors are names usually given to the 4chan moderation staff that have been directly relevant in /dbs/ on two occasions. A famous screencap from 2022 leaked from the hidden /j/ board revealed their distress and difficulties over having to handle /dbs/.</p>
                   
-                   <p>Since the end of July, the <a href="./moaz.html">Rukiafag</a> has formed an unexpectedly deep relationship with the sects of the 4chan organization focused on hiring moderators and janitors after meeting the famous public figure <a href="https://en.wikipedia.org/wiki//pol/">RapeApe</a> and <a href="./moot.html">m00t</a> a day before his birthday. He was briefly incarcerated and removed from posting in /dbs/, leading to the formation of a massive new archiveposting general called /ghost/. <a href="./moaz.html">Rukiafag</a>'s position as a staff member/director remains very loose and unconfirmed - but he is still known to hold very high influence over them and they very regularly attack enemies of his like Giselle posters, and the Buuzilian.</p>
-                  
-                 
+                   <p>Since the end of July, the <a href="./moaz.html">Rukiafag</a> has formed an unexpectedly deep relationship with the sects of the 4chan organization focused on hiring moderators and janitors after meeting the famous public figure <a href="https://en.wikipedia.org/wiki//pol/">RapeApe</a> and <a href="./moot.html">m00t</a> a day before his birthday. He was briefly incarcerated and removed from posting in /dbs/, leading to the formation of a massive new archiveposting general called /ghost/. <a href="./moaz.html">Rukiafag</a> formally emailed the official 4chan business contact email bizdev@4chan.org on August 7th, and confirmed his Director/Affiliate status with approval from administer Hirom00t on August 17th! The over-moderation that took place in this time was preparation for the things the 4chan organization were DISSATISFIED with in /dbs/, that will now be enforced by the <a href="./moaz.html">Rukiafag</a>.</p>
+                  <ol>
+                    
+  <li><i><b>BAN EVASION - VPN/proxy use. (employees of the 4chan organization are not under this rule!) </b></i> </li>
+                    
+  <li><i><b>NSFW images on SFW board - cuckshit and blacked spammers like Tienrus.</b></i></li>
+  <li><i><b>AVATARFAGGING. (Rukiafag is RETIRED, and has been for years.)   </b></i></li>
 
-        <h1>GALLERY</h1>
-                 
-   <p><img src="https://yourimageshare.com/ib/6yD30dLaMi.jpg" alt="Smiley face" style="float:center;width:340px;height:170px;"> </p>
-                  
-                    <p><img src="https://yourimageshare.com/ib/q69Hwmu73A.jpg" alt="Smiley face" style="float:center;width:600px;height:320px;"> </p>
-                
+                     <li><i><b>OFF-TOPIC - this does not always pertain to series, but our mutual hatred towards discussion of meta events/topics/posters. Talking about me, or anyone else on the live /a/ threads WILL get you taken down.</b></i></li>
+                    
+                      <li><i><b>ADVERTISING - The usage of our platform for the promotion of your own off-site personal endeavors is STRICTLY FORBIDDEN. You will refer to the official 4chan advertising email advertise@4chan.org if you wish to pay the organization to sponsor your endeavors.</b></i></li>
+                    
+                      <li><i><b>COMPLAINING ABOUT MODERATION/4CHAN - Liam is employed for RapeApe, m00t, and Hirom00t and will not tolerate any disrespect of their company under any circumstance. If our site is that bad, go make your own!</b></i></li>
+                    
+                    <li><i><b>QUALITY CONTROL - It needs to be instated that Liam's election was natural and accepted for one simple reason: he is a webmaster and coder just like the moderation and administration of 4chan. Being in control of all the content on his own site, he unknowingly used a lot of the same tools used by 4chan admins like GitHub repositories. Deep down, 4chan is NOT your site. It is Chris's site, it is Hiroyuki's site. A product they are advertising to their potential investers and users. And your SHITPOSTING degrades the quality of that product. Liam himself was critisized by the webmasters for posts he made before assuming the position, possibly ruining the professionalism of the role - but it was ignored because of the serviceable record on his other social media profiles and presences.</b></i></li>
+                    
+                    <li><i><b>Specific posters that were given a VERY harsh time in this period like Tienrus, The Belgian/Giselleposter, and Panpedo while Rukiafag was defended and unmentioned are posters that the staff specifically want him to target and remove.</b></i> </li>
+</ol>
           
-
-                    
-              
-                    
-                    
-
-                 
-
-
+           <p>Anyone interested in using Liam's success and future in securing the position interested in applying themselves can look into the following report:</a>
+    
+      <li><i><b>PUBLIC IMAGE - He was CRITISIZED for posts made in other areas before succeding in the election. Like any other employment, staff must keep a very clean public record. Things previously mentioned that would usually be rejected by other employers like substance abuse should NEVER be shown to the public again. Representatives of the 4chan organization cannot do things that make the rest of it look bad.</b></i></li>
+    
+    <li><i><b>TECHNOLOGY - Unknowingly, before becoming a janitor and contributor to the Biblico Anonoma - Rukiafag used a lot of the same tools used by IRC/4chan staff developers like GitHub repositories and also built his database with assistance from notorious site raiders the Soyjak.party - making the application much more naturual and acceptable.</b></i></li>
+    
+    <li><i><b>RESPECT - The Biblio Anonoma is one of the most essential databases on 4chan culture, and a great way to learn about all of the key figures. Mentioning ANYTHING from early 4chan culture at all, like W.T. Snacks, SomethingAwful, or Slender Man - shows your respect and knowledge of the 4chan infrastructure that will increase your chances of securing the position.</b></i></li>
+    
+    <li><i><b>PATIENCE - When you are confirmed to have been elected and in the queue, please do not get too excited and anxious, or reveal it to too many people. Too many counts of impersonating officials before being elected one could be a serious offense.</b></i></li>
+                  
+      
                 </main>
+  
               
                     <div id="boxcontainer">
   <div id="HCB_comment_box"> <a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
@@ -163,6 +250,64 @@ const fetchArticle6 = article6.toString();
           
         <!-- THIS IS THE CSS !-->
         <style>
+          
+
+
+
+
+ #myHeader {
+  background-image: url('https://i.imgur.com/WqcAGQo.png');
+  background-size: cover;
+  background-position: center;
+  height: 200px; /* Example height */
+}
+.dropbtn {
+                  position: absolute;
+ background: linear-gradient(#190A05, #870000);
+  color: white;
+  padding: 10px;
+  font-size: 16px; 
+  border: none;
+               
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: fixed;
+  margin:auto;
+  display: inline-block;
+  right: 0;
+   left: -2;
+  width: 65%;
+  top:0;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  min-width: 320px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover { background: linear-gradient(#190A05, #870000);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
             #boxcontainer {
 position: absolute;
 width: 100%;
@@ -391,17 +536,7 @@ bottom: 0;
       text-decoration:none; */
             }
 
-            #header {
-                width: 100%;
-                background-color: #FF0000;
-                /* header color here! */
-                height: 150px;
-                /* this is only for a background image! */
-                /* if you want to put images IN the header, 
-      you can add them directly to the <div id="header"></div> element! */
-                background-image: var(--header-image);
-                background-size: 100%;
-            }
+         
 
             /* navigation section!! */
             #navbar {
