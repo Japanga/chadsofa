@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+   <link rel="shortcut icon" type="image/x-icon" href="https://yourimageshare.com/ib/awhW7ojlbn.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHADS OF /A/ MIRAHEZE</title>
+    <title>Dragon Ball Super Wiki</title>
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
@@ -38,17 +39,9 @@
 <div id="Oslo" class="tabcontent">
   <h1>PRIVACY</h1>
   <p>Oslo is the capital of Norway.</p>
+  
 </div>
-                  
-                    <div class="topnav">
- <form id="siteSearchForm">
-        <input type="text" id="searchInput" placeholder="Search the site...">
         
-    </form>
-</div>
-                  
-                  
- 
                        <header id="myHeader">
 
 </header>
@@ -65,7 +58,44 @@
     <a id="changeImageButton2">Header 2 - Miraheze</a>
     <a id="changeImageButton3">Header 3 - Rei/Asuka</a>
   </div>
-</div>     
+</div> 
+                  
+                  <script> 
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+             
+                      // Example using a simple cookie function
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+ 
+//
+// On page load (e.g., within window.onload or DOMContentLoaded):
+window.onload = function() {
+   const header = document.getElementById('myHeader');
+    var storedImageUrl = getCookie("currentBackgroundImg");
+    if (storedImageUrl) {
+       header.style.backgroundImage = "url('" + storedImageUrl + "')";
+       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       header.style.backgroundImage = "no-repeat"; // Optional
+    }
+};
+</script> 
 
  <script> 
               document.addEventListener('DOMContentLoaded', function() {
@@ -94,83 +124,31 @@
 </script>
 
 
+            <script> 
+              document.addEventListener('DOMContentLoaded', function() {
+  const header = document.getElementById('myHeader');
+  const button = document.getElementById('changeImageButton');
+  const button2 = document.getElementById('changeImageButton2');
+ const button3 = document.getElementById('changeImageButton3');
+
+  button.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://i.imgur.com/WqcAGQo.png')"; 
+  }); 
+               button2.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/wPRybiZbC0.jpg')"; 
+  });
+                
+                button3.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"; 
+  });
+                
+                
+});
+            </script> 
                   
-                    <script>
-         
-const name1 = ['rukiafag'];
-const fetchName1 = name1.toString();
-const article1 = ['moaz'];
-const fetchArticle1 = article1.toString();
-const name2 = ['the belgian'];
-const fetchName2 = name2.toString();
-const article2 = ['poaz'];
-const fetchArticle2 = article2.toString();
-const name3 = ['the warden'];
-const fetchName3 = name3.toString();
-const article3 = ['woaz'];
-const fetchArticle3 = article3.toString();
-const name4 = ['geekdom'];
-const fetchName4 = name4.toString();
-const article4 = ['geekdom101'];
-const fetchArticle4 = article4.toString();
-const name5 = ['jiren'];
-const fetchName5 = name5.toString();
-const article5 = ['woaz'];
-const fetchArticle5 = article5.toString();
-const name6 = ['luigi'];
-const fetchName6 = name6.toString();
-const article6 = ['startchad'];
-const fetchArticle6 = article6.toString();
-
-
-
-    const searchForm = document.getElementById('siteSearchForm');
-    const searchInput =   document.getElementById('searchInput');
-    
-    searchForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent default form submission
-        const query = searchInput.value;
-        if (query) {
-            // Redirect to the search results page with the query
-            window.location.href = query + '.html';
-        }
-        if (query == fetchName1) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle1 + '.html';
-        }
-         if (query == fetchName2) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle2 + '.html';
-        }
-        if (query == fetchName3) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle3 + '.html';
-        }
-          if (query == fetchName4) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle4 + '.html';
-        }
-          if (query == fetchName5) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle5 + '.html';
-        }
-         if (query == fetchName6) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle6 + '.html';
-        }
-
-
-      
-    });
-    
-                  </script>
-
-
-
-
-<audio src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" 
-
-autoplay></audio>
                      <style>
   blockquote {
     font-style: italic;
@@ -212,6 +190,15 @@ onclick="window.location.href='interviews.html'">INTERVIEWS</button>
           <button class="tablink" 
 
 onclick="window.location.href='cybersecurity.html'">CYBERSECURITY</button>
+                  
+                    <div class="topnav">
+ <form id="siteSearchForm">
+        <input type="text" id="searchInput" placeholder="Search the site...">
+    </form>
+</div>
+                  
+                  
+
           
           <h1>Red Clover Corporation, LLC</h1>
                       <p><img src="https://yourimageshare.com/ib/HuMB6cKNwS.png" alt="Smiley face" style="float:right;width:320px;height:330px;"> </p>
