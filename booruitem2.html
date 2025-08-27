@@ -129,6 +129,7 @@ const fetchArticle6 = article6.toString();
         <input type="text" id="searchInput" placeholder="Search the site...">
         
     </form>
+                      
                       </div>
              <div class="dropdown">
   <button class="dropbtn">Header</button>
@@ -136,15 +137,54 @@ const fetchArticle6 = article6.toString();
     <a id="changeImageButton">Header 1 - ENTER</a>
     <a id="changeImageButton2">Header 2 - Miraheze</a>
     <a id="changeImageButton3">Header 3 - Rei/Asuka</a>
+    <a id="changeImageButton4">Header 4 - Fortress</a>
   </div>
-</div>     
+</div> 
+                  
+                  <script> 
 
-            <script> 
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+             
+                      // Example using a simple cookie function
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+ 
+//
+// On page load (e.g., within window.onload or DOMContentLoaded):
+window.onload = function() {
+   const header = document.getElementById('myHeader');
+    var storedImageUrl = getCookie("currentBackgroundImg");
+    if (storedImageUrl) {
+       header.style.backgroundImage = "url('" + storedImageUrl + "')";
+       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       header.style.backgroundImage = "no-repeat"; // Optional
+    }
+};
+</script> 
+
+ <script> 
               document.addEventListener('DOMContentLoaded', function() {
   const header = document.getElementById('myHeader');
   const button = document.getElementById('changeImageButton');
   const button2 = document.getElementById('changeImageButton2');
  const button3 = document.getElementById('changeImageButton3');
+                const button4 = document.getElementById('changeImageButton4');
 
   button.addEventListener('click', function() {
     // Change the background image URL
@@ -160,10 +200,17 @@ const fetchArticle6 = article6.toString();
     header.style.backgroundImage = "url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"; 
   });
                 
+                   button4.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/lBhfIORzhm.png')"; 
+  });
+                
                 
 });
 
 </script>
+
+
 
                                        <style>
   blockquote {
@@ -645,3 +692,4 @@ const fetchArticle6 = article6.toString();
      
 </body>
 </html>
+
