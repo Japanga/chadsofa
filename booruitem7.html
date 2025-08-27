@@ -50,6 +50,7 @@
         <input type="text" id="searchInput" placeholder="Search the site...">
         
     </form>
+                     
                       </div>
              <div class="dropdown">
   <button class="dropbtn">Header</button>
@@ -57,6 +58,7 @@
     <a id="changeImageButton">Header 1 - ENTER</a>
     <a id="changeImageButton2">Header 2 - Miraheze</a>
     <a id="changeImageButton3">Header 3 - Rei/Asuka</a>
+    <a id="changeImageButton4">Header 4 - Fortress</a>
   </div>
 </div> 
                   
@@ -103,6 +105,7 @@ window.onload = function() {
   const button = document.getElementById('changeImageButton');
   const button2 = document.getElementById('changeImageButton2');
  const button3 = document.getElementById('changeImageButton3');
+                const button4 = document.getElementById('changeImageButton4');
 
   button.addEventListener('click', function() {
     // Change the background image URL
@@ -116,6 +119,11 @@ window.onload = function() {
                 button3.addEventListener('click', function() {
     // Change the background image URL
     header.style.backgroundImage = "url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"; 
+  });
+                
+                   button4.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/lBhfIORzhm.png')"; 
   });
                 
                 
@@ -124,30 +132,6 @@ window.onload = function() {
 </script>
 
 
-            <script> 
-              document.addEventListener('DOMContentLoaded', function() {
-  const header = document.getElementById('myHeader');
-  const button = document.getElementById('changeImageButton');
-  const button2 = document.getElementById('changeImageButton2');
- const button3 = document.getElementById('changeImageButton3');
-
-  button.addEventListener('click', function() {
-    // Change the background image URL
-    header.style.backgroundImage = "url('https://i.imgur.com/WqcAGQo.png')"; 
-  }); 
-               button2.addEventListener('click', function() {
-    // Change the background image URL
-    header.style.backgroundImage = "url('https://yourimageshare.com/ib/wPRybiZbC0.jpg')"; 
-  });
-                
-                button3.addEventListener('click', function() {
-    // Change the background image URL
-    header.style.backgroundImage = "url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"; 
-  });
-                
-                
-});
-            </script> 
                   
                      <style>
   blockquote {
@@ -651,3 +635,4 @@ onclick="window.location.href='cybersecurity.html'">CYBERSECURITY</button>
      
 </body>
 </html>
+
