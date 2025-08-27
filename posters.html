@@ -51,6 +51,7 @@
         <input type="text" id="searchInput" placeholder="Search the site...">
         
     </form>
+                     
                       </div>
              <div class="dropdown">
   <button class="dropbtn">Header</button>
@@ -58,6 +59,7 @@
     <a id="changeImageButton">Header 1 - ENTER</a>
     <a id="changeImageButton2">Header 2 - Miraheze</a>
     <a id="changeImageButton3">Header 3 - Rei/Asuka</a>
+    <a id="changeImageButton4">Header 4 - Fortress</a>
   </div>
 </div> 
                   
@@ -104,6 +106,7 @@ window.onload = function() {
   const button = document.getElementById('changeImageButton');
   const button2 = document.getElementById('changeImageButton2');
  const button3 = document.getElementById('changeImageButton3');
+                const button4 = document.getElementById('changeImageButton4');
 
   button.addEventListener('click', function() {
     // Change the background image URL
@@ -117,6 +120,11 @@ window.onload = function() {
                 button3.addEventListener('click', function() {
     // Change the background image URL
     header.style.backgroundImage = "url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"; 
+  });
+                
+                   button4.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/lBhfIORzhm.png')"; 
   });
                 
                 
@@ -285,8 +293,13 @@ const fetchArticle6 = article6.toString();
           <a href="category5legacyarticles.html"> Legacy Articles</a>
           <a href="category6newarticles.html"> New Articles</a>
                   
+ 
                   <p><strong>TOP ARTICLE CONTRIBUTORS</strong></p>
-                 <strong><p style="color:orange"><i>Geekdom101, Risu,  DerGrosseScholar</p>
+                
+       
+    <h1 class="gradient-text"><a href="geekdom101.html">Geekdom101</a>, <a href="risu.html">Risu</a>, <a href="cutegang.html">DerGrosseScholar</a></h1>
+
+        
                   
                   <p><strong>SPONSOR HYPERLINKS</strong></p>
                   
@@ -324,6 +337,7 @@ const fetchArticle6 = article6.toString();
   border: none;
                
 }
+        
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -475,7 +489,39 @@ const fetchArticle6 = article6.toString();
   width: 25%;
 }
           
-    
+    .gradient-text {   
+       font-size: 18px;
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      
+  /* Set the background to a linear gradient */
+  background: linear-gradient(to right, white, #F7A205, #F74105, #F76205, white, #F7A205, #F74105);
+  
+  /* Clip the background to the text content */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers */
+  
+  /* Make the background larger than the text to allow for movement */
+  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
+  
+  /* Apply the animation */
+  animation: moveGradient 1s linear infinite; /* Adjust duration and timing as needed */
+}
+
+/* Define the keyframe animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  100% {
+    background-position: 100% 50%; /* End position */
+  }
+}
 
 /* Change background color of buttons on hover */
 .tablink:hover {
