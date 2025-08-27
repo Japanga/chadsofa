@@ -295,9 +295,13 @@ const fetchArticle6 = article6.toString();
                   
  
                   <p><strong>TOP ARTICLE CONTRIBUTORS</strong></p>
-                
-       
-    <h1 class="gradient-text"><a href="geekdom101.html">Geekdom101</a>, <a href="risu.html">Risu</a>, <a href="cutegang.html">DerGrosseScholar</a></h1>
+               
+          
+    <h1 class="gradient-text" style="display:inline">
+      <a href="geekdom101.html">Geekdom101</a>, 
+      <a href="risu.html">Risu</a>, 
+      <a href="cutegang.html">DerGrosseScholar</a>
+          </h1>
 
         
                   
@@ -488,8 +492,11 @@ const fetchArticle6 = article6.toString();
   font-size: 17px;
   width: 25%;
 }
-          
+   .underline {
+    text-decoration: underline;
+}       
     .gradient-text {   
+      
        font-size: 18px;
       font-family: sans-serif;
       font-style: italic;
@@ -510,7 +517,7 @@ const fetchArticle6 = article6.toString();
   background-size: 200% auto; /* Or a larger percentage depending on desired effect */
   
   /* Apply the animation */
-  animation: moveGradient 1s linear infinite; /* Adjust duration and timing as needed */
+  animation: moveGradient 3s linear infinite; /* Adjust duration and timing as needed */
 }
 
 /* Define the keyframe animation */
