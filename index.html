@@ -70,7 +70,9 @@
     <a id="changeImageButton">Header 1 - ENTER</a>
     <a id="changeImageButton2">Header 2 - Miraheze</a>
     <a id="changeImageButton3">Header 3 - Rei/Asuka</a>
+     <a id="changeImageButton4">Header 4 - Fortress ✪ NEW ✪</a>
   </div>
+               
 </div>     
 
             <script> 
@@ -79,6 +81,7 @@
   const button = document.getElementById('changeImageButton');
   const button2 = document.getElementById('changeImageButton2');
  const button3 = document.getElementById('changeImageButton3');
+const button4 = document.getElementById('changeImageButton4');
 
   function setCookie(name, value, days) {
         var expires = "";
@@ -130,6 +133,20 @@ alert("Your header choice has been bound to your cache code " + (resultInput.val
 let allCookies = document.cookie;
 console.log(allCookies);
                setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/NRZt5lrEYG.png', 365); // Store for 365 days
+
+  });
+                
+                                button4.addEventListener('click', function() {
+                  
+var background4 = ["url('https://yourimageshare.com/ib/lBhfIORzhm.png')"];
+       // Change the background image URL
+header.style.backgroundImage = background4
+   
+alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
+    
+let allCookies = document.cookie;
+console.log(allCookies);
+               setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/lBhfIORzhm.png', 365); // Store for 365 days
 
   });
                 
