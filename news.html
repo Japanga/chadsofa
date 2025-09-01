@@ -51,6 +51,86 @@
         
     </form>
                       </div>
+                    <div class="dropdown2">     
+
+                <button class="dropbtn" onclick="redirectToRandomPage()">Random Article</button>
+                </div>
+                
+                <script>
+
+                  // Define an array of URLs to which the user can be redirected.
+const pageURLs = [
+    "./woaz.html",
+    "./poaz.html",
+    "./moaz.html",
+    "./foaz.html"
+    "./romaine.html"
+    "./turles.html"
+    "./argentinian.html"
+    "./cabbagang.html"
+    "./characterfag.html"
+    "./congo.html"
+    "./cutegang.html"
+    "./dbshungergames.html"
+    "./dennis.html"
+    "./discordler.html"
+    "./dogposter.html"
+    "./drawchad.html"
+    "./elespecialista.html"
+    "./elgrandepadre.html"
+    "./elhermano.html"
+    "./elshaggyblanco.html"
+    "./filterbitch.html"
+    "./geekdom101.html"
+    "./hoppu.html"
+    "./janitors.html"
+    "./krillin.html"
+    "./lordparagon.html"
+    "./moeshit.html"
+    "./moewives.html"
+    "./moot.html"
+    "./moro.html"
+    "./multiverseguy.html"
+    "./panpedo.html"
+    "./punchchad.html"
+    "./risu.html"
+    "./samechad.html"
+    "./samir34.html"
+    "./moewives.html"
+    "./seththeprogrammer.html"
+    "./shameel.html"
+    "./skillet91.html"
+    "./songoten.html"
+    "./startchad.html"
+    "./surpassedrus.html"
+    "./tablosaf.html"
+    "./toeichadnimation.html"
+    "./totallynotmark.html"
+    "./turles.html"
+    "./yzilma.html"
+];
+// Function to perform the random redirection.
+function redirectToRandomPage() {
+    // Generate a random index within the bounds of the pageURLs array.
+    const randomIndex = Math.floor(Math.random() * pageURLs.length);
+
+    // Get the URL at the randomly selected index.
+    const targetURL = pageURLs[randomIndex];
+
+    // Redirect the user to the chosen URL.
+    // Using window.location.href directly changes the URL and adds an entry to the browser 
+
+history.
+    // For replacing the current history entry, use window.location.replace(targetURL);
+    window.location.href = targetURL;
+}
+                  </script>
+                
+
+
+
+
+
              <div class="dropdown">
   <button class="dropbtn">Header</button>
   <div class="dropdown-content">
@@ -281,6 +361,8 @@ const fetchArticle6 = article6.toString();
            <p><strong>SEPTEMBER 1ST, 2025</strong></p>
            <p>"Yzilma" page has been created.</p>
           <p>"Son Goten" page has been created.</p>
+          
+          <p>A highly useful "Random Article" function has been implemented to the site, making navigating across the entire database much funner, and smoother.</p>
           <p><strong>AUGUST 26TH, 2025</strong></p>
            <p>"El Shaggy Blanco" page created. This was our first time using polls to decide a new induction, and we will continue to do this in the future to survey what new pages the fans truly want to see.</p>
            <p>Custom .CSS injections for the 4chan client released under the Red Clover banner can now be found on the Red Clover Corporation page, visible everywhere across the site.</p>
@@ -563,6 +645,23 @@ horizontally */
   width: 65%;
   top:0;
 }
+          
+
+
+
+      /* The container <div> - needed to position the dropdown content */
+.dropdown2 {
+  position: fixed;
+  margin:auto;
+  display: inline-block;
+  right: 0;
+   left: 1;
+  width: 58%;
+  top:0;
+}
+
+
+
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
