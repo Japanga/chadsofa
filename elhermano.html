@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
+    
   <head>
     <meta charset="UTF-8">
-   <link rel="shortcut icon" type="image/x-icon" 
-
-href="https://yourimageshare.com/ib/awhW7ojlbn.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://yourimageshare.com/ib/awhW7ojlbn.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragon Ball Super Wiki</title>
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://cdn.staticrun.app/2d9f09cc-8aba-4abc-822a-86333b5241b2/97f08559-81f0-42f4-891e-3bd78455b0b3/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
-  <body>  
+  <body> 
   
         <div id="container"><div id="header"></div>
             <div id="headerArea">
                 
-                 
+                
             </div>
+          
+          
+          
+          
 
             <div id="flex">
                 
                 <main>
+                  
                 <div id="London" class="tabcontent">
   <h1>HOME</h1>
   <p>London is the capital city of England.</p>
@@ -41,10 +45,17 @@ href="https://yourimageshare.com/ib/awhW7ojlbn.png" />
 <div id="Oslo" class="tabcontent">
   <h1>PRIVACY</h1>
   <p>Oslo is the capital of Norway.</p>
-  
 </div>
+      
+                    <div class="topnav">
+ <form id="siteSearchForm">
+        <input type="text" id="searchInput" placeholder="Search the site...">
         
-                       <header id="myHeader">
+    </form>
+                      </div>
+                  
+                              
+                  <header id="myHeader">
 
 </header>
                     <div class="topnav">
@@ -52,9 +63,9 @@ href="https://yourimageshare.com/ib/awhW7ojlbn.png" />
         <input type="text" id="searchInput" placeholder="Search the site...">
         
     </form>
-                     
+                    
                       </div>
-                    <div class="dropdown2">     
+              <div class="dropdown2">     
 
                 <button class="dropbtn" onclick="redirectToRandomPage()">Random Article</button>
                 </div>
@@ -123,99 +134,106 @@ function redirectToRandomPage() {
     const targetURL = pageURLs[randomIndex];
 
     // Redirect the user to the chosen URL.
-    // Using window.location.href directly changes the URL and adds an entry to the browser 
-
-history.
+    // Using window.location.href directly changes the URL and adds an entry to the browser history.
     // For replacing the current history entry, use window.location.replace(targetURL);
     window.location.href = targetURL;
 }
                   </script>
                 
-
-
-
-
-
+                
+                
+                
+                  
+                  
              <div class="dropdown">
   <button class="dropbtn">Header</button>
   <div class="dropdown-content">
     <a id="changeImageButton">Header 1 - ENTER</a>
     <a id="changeImageButton2">Header 2 - Miraheze</a>
     <a id="changeImageButton3">Header 3 - Rei/Asuka</a>
-    <a id="changeImageButton4">Header 4 - Fortress</a>
+     <a id="changeImageButton4">Header 4 - Fortress</a>
   </div>
-</div> 
-                  
-                  <script> 
+               
+</div>     
 
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-             
-                      // Example using a simple cookie function
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
- 
-//
-// On page load (e.g., within window.onload or DOMContentLoaded):
-window.onload = function() {
-   const header = document.getElementById('myHeader');
-    var storedImageUrl = getCookie("currentBackgroundImg");
-    if (storedImageUrl) {
-       header.style.backgroundImage = "url('" + storedImageUrl + "')";
-       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
-       header.style.backgroundImage = "no-repeat"; // Optional
-    }
-};
-</script> 
-
- <script> 
+            <script> 
               document.addEventListener('DOMContentLoaded', function() {
   const header = document.getElementById('myHeader');
   const button = document.getElementById('changeImageButton');
   const button2 = document.getElementById('changeImageButton2');
  const button3 = document.getElementById('changeImageButton3');
-                const button4 = document.getElementById('changeImageButton4');
+const button4 = document.getElementById('changeImageButton4');
 
-  button.addEventListener('click', function() {
+  function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    } button.addEventListener('click', function() {
+    
+var background1 = ["url('https://i.imgur.com/WqcAGQo.png')"];
+
     // Change the background image URL
-    header.style.backgroundImage = "url('https://i.imgur.com/WqcAGQo.png')"; 
+header.style.backgroundImage = background1
+   
+alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
+    
+let allCookies = document.cookie;
+console.log(allCookies);
+    
+setCookie("currentBackgroundImg", 'https://i.imgur.com/WqcAGQo.png', 365);
+  
   }); 
                button2.addEventListener('click', function() {
+  
+                     
+var background2 = ["url('https://yourimageshare.com/ib/wPRybiZbC0.jpg'"];
+
     // Change the background image URL
-    header.style.backgroundImage = "url('https://yourimageshare.com/ib/wPRybiZbC0.jpg')"; 
+header.style.backgroundImage = background2
+   
+alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
+    
+let allCookies = document.cookie;
+console.log(allCookies);
+                 
+                 setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/wPRybiZbC0.jpg', 365);
   });
                 
                 button3.addEventListener('click', function() {
-    // Change the background image URL
-    header.style.backgroundImage = "url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"; 
+                  
+var background3 = ["url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"];
+       // Change the background image URL
+header.style.backgroundImage = background3
+   
+alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
+    
+let allCookies = document.cookie;
+console.log(allCookies);
+               setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/NRZt5lrEYG.png', 365); // Store for 365 days
+
   });
                 
-                   button4.addEventListener('click', function() {
-    // Change the background image URL
-    header.style.backgroundImage = "url('https://yourimageshare.com/ib/lBhfIORzhm.png')"; 
+                                button4.addEventListener('click', function() {
+                  
+var background4 = ["url('https://yourimageshare.com/ib/lBhfIORzhm.png')"];
+       // Change the background image URL
+header.style.backgroundImage = background4
+   
+alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
+    
+let allCookies = document.cookie;
+console.log(allCookies);
+               setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/lBhfIORzhm.png', 365); // Store for 365 days
+
   });
                 
                 
 });
-
-</script>
-
-
+            </script> 
                   
                      <style>
   blockquote {
@@ -225,49 +243,100 @@ window.onload = function() {
 </style>
 
 <blockquote>
-<a href="./redclover.html">© Red Clover Corporation</a> 2025 - present all rights reserved, all 
-
-content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> 
-
-created by <a href="./moot.html">m00t</a> and owned by <a 
-
-href="https://en.wikipedia.org/wiki/Hiroyuki_Nishimura">Hiroyuki Nishimura</a> - 
-
-business/contact matters redclovercorporation@hotmail.com
+<a href="./redclover.html">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="./moot.html">m00t</a> and owned by <a href="https://en.wikipedia.org/wiki/Hiroyuki_Nishimura">Hiroyuki Nishimura</a> - business/contact matters redclovercorporation@hotmail.com
 </blockquote>
  
-     <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" 
-
-style="float:right;width:95px;height:95px;"> </p>
+     <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
               
-                 <p><img src="https://yourimageshare.com/ib/dH6sYbAr4T.png" alt="Smiley face" 
-
-style="float:right;width:95px;height:95px;"> </p>
+                 <p><img src="https://yourimageshare.com/ib/dH6sYbAr4T.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
                   
-<button class="tablink" onclick="window.location.href='index.html'" 
-
-id="defaultOpen">HOME</button>
+<button class="tablink" onclick="window.location.href='index.html'" id="defaultOpen">HOME</button>
 <button class="tablink" onclick="window.location.href='posters.html'">POSTERS</button>
 <button class="tablink" onclick="window.location.href='news.html'">NEWS</button>
 <button class="tablink" onclick="window.location.href='gallery.html'">GALLERY</button>
-          <button class="tablink" 
+          <button class="tablink" onclick="window.location.href='interviews.html'">INTERVIEWS</button>
+          <button class="tablink" onclick="window.location.href='cybersecurity.html'">CYBERSECURITY</button>
+                    
 
-onclick="window.location.href='interviews.html'">INTERVIEWS</button>
-          <button class="tablink" 
 
-onclick="window.location.href='cybersecurity.html'">CYBERSECURITY</button>
-                  
-                    <div class="topnav">
- <form id="siteSearchForm">
-        <input type="text" id="searchInput" placeholder="Search the site...">
-    </form>
-</div>
-                  
-                  
+         <script>
+         
+const name1 = ['rukiafag'];
+const fetchName1 = name1.toString();
+const article1 = ['moaz'];
+const fetchArticle1 = article1.toString();
+const name2 = ['the belgian'];
+const fetchName2 = name2.toString();
+const article2 = ['poaz'];
+const fetchArticle2 = article2.toString();
+const name3 = ['the warden'];
+const fetchName3 = name3.toString();
+const article3 = ['woaz'];
+const fetchArticle3 = article3.toString();
+const name4 = ['geekdom'];
+const fetchName4 = name4.toString();
+const article4 = ['geekdom101'];
+const fetchArticle4 = article4.toString();
+const name5 = ['jiren'];
+const fetchName5 = name5.toString();
+const article5 = ['woaz'];
+const fetchArticle5 = article5.toString();
+const name6 = ['luigi'];
+const fetchName6 = name6.toString();
+const article6 = ['startchad'];
+const fetchArticle6 = article6.toString();
 
-                    <h1>EL HERMANO DE JIREN</h1>
+
+
+    const searchForm = document.getElementById('siteSearchForm');
+    const searchInput =   document.getElementById('searchInput');
+    
+    searchForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent default form submission
+        const query = searchInput.value;
+        if (query) {
+            // Redirect to the search results page with the query
+            window.location.href = query + '.html';
+        }
+        if (query == fetchName1) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle1 + '.html';
+        }
+         if (query == fetchName2) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle2 + '.html';
+        }
+        if (query == fetchName3) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle3 + '.html';
+        }
+          if (query == fetchName4) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle4 + '.html';
+        }
+          if (query == fetchName5) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle5 + '.html';
+        }
+         if (query == fetchName6) {
+            // Redirect to the search results page with the query
+            window.location.href = fetchArticle6 + '.html';
+        }
+
+
+      
+    });
+    
+</script>
+                
+           
+          
+          
+          
+          
+                    <h1>EL HERMANO</h1>
                   
                   <table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#000000; border:1px solid #999; line-height:1.5; color:red; font-size:smaller;"><tr>
 <th colspan="2" style="background:#000000; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;">El Hermano</th></tr>
@@ -305,45 +374,26 @@ onclick="window.location.href='cybersecurity.html'">CYBERSECURITY</button>
                     <p>El Hermano (エル　ハマノ Eru Hamano), also known as El Hermano de Jiren, is the strongest character in Spic Lore, and one of the only few characters capable of defeating Gohan Blanco (Completado) and El Grande Padre (Forma Verdadera). Among the many characters created through Spic Lore, El Hermano stands alone at the top, rivaled perhaps only by El Especialista. He is the older brother of Jiren, with a better backstory, and is far smarter, far faster, and far less reckless than his brother, whom he often calls a "dimwit". El Hermano is a prodigy from El Planeta Mexicano. He is responsible for killing everyone Jiren ever loved when Jiren was a child, and later doing it again by killing his master Gicchin. El Hermano is the smartest being in existence, which is why his head is so big, to contain that massive IQ. This is why he often refers to Jiren as a dimwit, an imbecile, dunce, nincompoop, ignoramus, etc...
 
 It is rumored that El Hermano was personally trained by the Regla de Todos to surpass and replace him, a fact that El Grande Padre resented, which is why El Grande Padre killed the Regla de Todos.</p>
-                    
-                    <div id="boxcontainer">
-  <div id="HCB_comment_box"> <a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
- <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /></div>
-</div>
- 
-              
-              
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dJ43Tl5IByJdqspQippWg1"+"&opts=16798&num=10&ts=1753561492634");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-
-                    
-                    
-
-                 
-
+                  
+                  <!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dJ43Tl5IByJdqspQippWg1"+"&opts=16798&num=10&ts=1753470209459");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
 
                 </main>
                 
           
         <!-- THIS IS THE CSS !-->
         <style>
-                    #myHeader {
+          
+ #myHeader {
   background-image: url('https://i.imgur.com/WqcAGQo.png');
   background-size: cover;
   background-position: center;
   height: 200px; /* Example height */
 }
- #boxcontainer {
-position: absolute;
-width: 100%;
-align-self: end;
-}
-
-#HCB_comment_box {
-position: absolute;
-bottom: 0;
-}
           
-      
             /* user styles */ 
 
             /* styles are what change the color and sizes of stuff on your site. */
@@ -352,137 +402,7 @@ bottom: 0;
     these tended to confuse some people, so I only kept 
     the images as variables */
     
-   .topnav {
-  overflow: hidden;
- background: linear-gradient(#190A05, #870000);
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: center;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
- background: linear-gradient(#190A05, #870000);
-}
-
-/* Style the "active" element to highlight the current page */
-.topnav a.active {
-  background: linear-gradient(#190A05, #870000);
-}
-
-/* Style the search box inside the navigation bar */
-.topnav input[type=text] {
-  float: center;
-  position: fixed;
-  top: 0;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 19px;
-  font-size: 17px;
-}
-
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of 
-
-horizontally */
-@media screen and (max-width: 600px) {
-  .topnav a, .topnav input[type=text] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
-  }
-}
-    .dropbtn {
-                  position: absolute;
- background: linear-gradient(#190A05, #870000);
-  color: white;
-  padding: 10px;
-  font-size: 16px; 
-  border: none;
-               
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: fixed;
-  margin:auto;
-  display: inline-block;
-  right: 0;
-   left: -2;
-  width: 65%;
-  top:0;
-}
-          
-
-
-
-      /* The container <div> - needed to position the dropdown content */
-.dropdown2 {
-  position: fixed;
-  margin:auto;
-  display: inline-block;
-  right: 0;
-   left: 1;
-  width: 58%;
-  top:0;
-}
-
-
-
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: none;
-  min-width: 320px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover { background: linear-gradient(#190A05, #870000);}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-            /* user styles */
-
-            /* user styles */ 
-
-            /* styles are what change the color and sizes of stuff on your site. */
-
-            /* these are variables that are being used in the code
-    these tended to confuse some people, so I only kept 
-    the images as variables */
-    
-       .topnav {
+    .topnav {
   overflow: hidden;
  background: linear-gradient(#190A05, #870000);
 }
@@ -532,10 +452,74 @@ horizontally */
     margin: 0;
     padding: 14px;
   }
+  
   .topnav input[type=text] {
     border: 1px solid #ccc;
   }
 }
+          .dropbtn {
+                  position: absolute;
+ background: linear-gradient(#190A05, #870000);
+  color: white;
+  padding: 10px;
+  font-size: 16px; 
+  border: none;
+               
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: fixed;
+  margin:auto;
+  display: inline-block;
+  right: 0;
+   left: -2;
+  width: 65%;
+  top:0;
+}
+          
+
+
+      /* The container <div> - needed to position the dropdown content */
+.dropdown2 {
+  position: fixed;
+  margin:auto;
+  display: inline-block;
+  right: 0;
+   left: 1;
+  width: 58%;
+  top:0;
+}
+
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  min-width: 320px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover { background: linear-gradient(#190A05, #870000);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
             /* user styles */
 
             /* styles are what change the color and sizes of stuff on your site. */
@@ -693,7 +677,13 @@ horizontally */
       text-decoration:none; */
             }
 
-          
+           
+                /* this is only for a background image! */
+                /* if you want to put images IN the header, 
+      you can add them directly to the <div id="header"></div> element! */
+                background-image: var(--header-image);
+                background-size: 100%;
+            }
 
             /* navigation section!! */
             #navbar {
@@ -852,9 +842,7 @@ horizontally */
             }
         </style>
 
-     
+      
 </body>
 </html>
-
-
 
