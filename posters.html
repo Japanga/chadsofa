@@ -72,84 +72,77 @@
      <button id="changeImageButton4">Header 4 - Fortress</button>         
 
                   
-            <script> 
+           
+                  <script> 
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+             
+                      // Example using a simple cookie function
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+ 
+//
+// On page load (e.g., within window.onload or DOMContentLoaded):
+window.onload = function() {
+   const header = document.getElementById('myHeader');
+    var storedImageUrl = getCookie("currentBackgroundImg");
+    if (storedImageUrl) {
+       header.style.backgroundImage = "url('" + storedImageUrl + "')";
+       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       header.style.backgroundImage = "no-repeat"; // Optional
+    }
+};
+</script> 
+
+ <script> 
               document.addEventListener('DOMContentLoaded', function() {
   const header = document.getElementById('myHeader');
   const button = document.getElementById('changeImageButton');
   const button2 = document.getElementById('changeImageButton2');
  const button3 = document.getElementById('changeImageButton3');
-const button4 = document.getElementById('changeImageButton4');
+ const button4 = document.getElementById('changeImageButton4');
 
-  function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    } button.addEventListener('click', function() {
-    
-var background1 = ["url('https://i.imgur.com/WqcAGQo.png')"];
-
+  button.addEventListener('click', function() {
     // Change the background image URL
-header.style.backgroundImage = background1
-   
-alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
-    
-let allCookies = document.cookie;
-console.log(allCookies);
-    
-setCookie("currentBackgroundImg", 'https://i.imgur.com/WqcAGQo.png', 365);
-  
+    header.style.backgroundImage = "url('https://i.imgur.com/WqcAGQo.png')"; 
   }); 
                button2.addEventListener('click', function() {
-  
-                     
-var background2 = ["url('https://yourimageshare.com/ib/wPRybiZbC0.jpg'"];
-
     // Change the background image URL
-header.style.backgroundImage = background2
-   
-alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
-    
-let allCookies = document.cookie;
-console.log(allCookies);
-                 
-                 setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/wPRybiZbC0.jpg', 365);
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/wPRybiZbC0.jpg')"; 
   });
                 
                 button3.addEventListener('click', function() {
-                  
-var background3 = ["url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"];
-       // Change the background image URL
-header.style.backgroundImage = background3
-   
-alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
-    
-let allCookies = document.cookie;
-console.log(allCookies);
-               setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/NRZt5lrEYG.png', 365); // Store for 365 days
-
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"; 
   });
                 
-                                button4.addEventListener('click', function() {
-                  
-var background4 = ["url('https://yourimageshare.com/ib/lBhfIORzhm.png')"];
-       // Change the background image URL
-header.style.backgroundImage = background4
-   
-alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
-    
-let allCookies = document.cookie;
-console.log(allCookies);
-               setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/lBhfIORzhm.png', 365); // Store for 365 days
-
+                button4.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/lBhfIORzhm.png')"; 
   });
                 
                 
 });
-            </script> 
+
+</script>
+
+           
                   
                   
                   
@@ -991,3 +984,4 @@ horizontally */
      
 </body>
 </html>
+
