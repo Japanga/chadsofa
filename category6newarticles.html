@@ -47,12 +47,7 @@
   <p>Oslo is the capital of Norway.</p>
 </div>
       
-                    <div class="topnav">
- <form id="siteSearchForm">
-        <input type="text" id="searchInput" placeholder="Search the site...">
-        
-    </form>
-                      </div>
+                   
                   
                               
                   <header id="myHeader">
@@ -60,98 +55,23 @@
 </header>
                     <div class="topnav">
 
+                    
                       </div>
-              <div class="dropdown2">     
-
-                <button class="dropbtn" onclick="redirectToRandomPage()">Random Article</button>
-                </div>
-                
-                <script>
-
-                  // Define an array of URLs to which the user can be redirected.
-const pageURLs = [
-    "./woaz.html",
-    "./poaz.html",
-    "./moaz.html",
-    "./foaz.html",
-    "./romaine.html",
-    "./turles.html",
-    "./argentinian.html",
-    "./cabbagang.html",
-    "./characterfag.html",
-    "./congo.html",
-    "./cutegang.html",
-    "./dbshungergames.html",
-    "./dennis.html",
-    "./discordler.html",
-    "./dogposter.html",
-    "./drawchad.html",
-    "./elespecialista.html",
-    "./elgrandepadre.html",
-    "./elhermano.html",
-    "./elshaggyblanco.html",
-    "./filterbitch.html",
-    "./geekdom101.html",
-    "./gets.html",
-    "./hoppu.html",
-    "./janitors.html",
-    "./krillin.html",
-    "./lordparagon.html",
-    "./moeshit.html",
-    "./moewives.html",
-    "./moot.html",
-    "./moro.html",
-    "./multiverseguy.html",
-    "./panpedo.html",
-    "./punchchad.html",
-    "./risu.html",
-    "./samechad.html",
-    "./samir34.html",
-    "./moewives.html",
-    "./seththeprogrammer.html",
-    "./shameel.html",
-    "./skillet91.html",
-    "./songoten.html",
-    "./startchad.html",
-    "./surpassedrus.html",
-    "./tablosaf.html",
-    "./toeichadnimation.html",
-    "./totallynotmark.html",
-    "./turles.html",
-    "./woaz.html",
-    "./yzilma.html"
-];
-// Function to perform the random redirection.
-function redirectToRandomPage() {
-    // Generate a random index within the bounds of the pageURLs array.
-    const randomIndex = Math.floor(Math.random() * pageURLs.length);
-
-    // Get the URL at the randomly selected index.
-    const targetURL = pageURLs[randomIndex];
-
-    // Redirect the user to the chosen URL.
-    // Using window.location.href directly changes the URL and adds an entry to the browser history.
-    // For replacing the current history entry, use window.location.replace(targetURL);
-    window.location.href = targetURL;
-}
-                  </script>
-                
+    
+                  
                 
                 
                 
                   
-                  
-             <div class="dropdown">
-  <button class="dropbtn">Header</button>
-  <div class="dropdown-content">
-    <a id="changeImageButton">Header 1 - ENTER</a>
-    <a id="changeImageButton2">Header 2 - Miraheze</a>
-    <a id="changeImageButton3">Header 3 - Rei/Asuka</a>
-     <a id="changeImageButton4">Header 4 - Fortress</a>
-  </div>
-               
-</div>     
+          
 
+                  
+                     <button id="changeImageButton">Header 1 - ENTER</button>
+    <button id="changeImageButton2">Header 2 - Miraheze</button>
+    <button id="changeImageButton3">Header 3 - Rei/Asuka</button>
+     <button id="changeImageButton4">Header 4 - Fortress</button>         
+
+                  
             <script> 
               document.addEventListener('DOMContentLoaded', function() {
   const header = document.getElementById('myHeader');
@@ -231,6 +151,136 @@ console.log(allCookies);
 });
             </script> 
                   
+                  
+                  
+                  <button class="changeImageButton5" onclick="redirectToRandomPage()">Random Article</button>
+                
+                  
+                  
+                <script>
+
+                  // Define an array of URLs to which the user can be redirected.
+const pageURLs = [
+    "./woaz.html",
+    "./poaz.html",
+    "./moaz.html",
+    "./foaz.html",
+    "./romaine.html",
+    "./turles.html",
+    "./argentinian.html",
+    "./cabbagang.html",
+    "./characterfag.html",
+    "./congo.html",
+    "./cutegang.html",
+    "./dbshungergames.html",
+    "./dennis.html",
+    "./discordler.html",
+    "./dogposter.html",
+    "./drawchad.html",
+    "./elespecialista.html",
+    "./elgrandepadre.html",
+    "./elhermano.html",
+    "./elshaggyblanco.html",
+    "./filterbitch.html",
+    "./geekdom101.html",
+    "./gets.html",
+    "./hoppu.html",
+    "./janitors.html",
+    "./krillin.html",
+    "./lordparagon.html",
+    "./moeshit.html",
+    "./moewives.html",
+    "./moot.html",
+    "./moro.html",
+    "./multiverseguy.html",
+    "./panpedo.html",
+    "./punchchad.html",
+    "./risu.html",
+    "./samechad.html",
+    "./samir34.html",
+    "./moewives.html",
+    "./seththeprogrammer.html",
+    "./shameel.html",
+    "./skillet91.html",
+    "./songoten.html",
+    "./startchad.html",
+    "./surpassedrus.html",
+    "./tablosaf.html",
+    "./toeichadnimation.html",
+    "./totallynotmark.html",
+    "./turles.html",
+    "./woaz.html",
+    "./yzilma.html",
+    "./android18.html",
+    "./godmodegod.html"
+];
+// Function to perform the random redirection.
+function redirectToRandomPage() {
+    // Generate a random index within the bounds of the pageURLs array.
+    const randomIndex = Math.floor(Math.random() * pageURLs.length);
+
+    // Get the URL at the randomly selected index.
+    const targetURL = pageURLs[randomIndex];
+
+    // Redirect the user to the chosen URL.
+    // Using window.location.href directly changes the URL and adds an entry to the browser history.
+    // For replacing the current history entry, use window.location.replace(targetURL);
+    window.location.href = targetURL;
+}
+                  </script>
+                
+                                    
+
+                  <div class="search-container">
+          
+   <input type="search" id="searchBar" placeholder="Search the site.....">
+    
+</div>
+
+                  <ul id="resultsList"></ul>
+                  
+    <script>
+        const searchBar = document.getElementById('searchBar');
+        const resultsList = document.getElementById('resultsList');
+
+        const items = [
+             '<a href="android18.html">Android 18</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot.html">moot.html</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','<a href="argentinian.html">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz.html">poaz.html</a>', '<a href="cabbagang.html">Cabbagang</a>', '<a href="characterfag.html">Characterfag</a>', '<a href="congo.html">Congo</a>',
+'<a href="cutegang.html">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '<a href="Dennis.html">Dennis</a>', '<a href="dbshungergames.html">/dbs/ Hunger Games</a>', '<a href="discordler.html">Discordler</a>', '<a href="dogposter.html">Dogposter</a>', '<a href="DrawChad.html">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','<a href="el especialista.html">El Especialista</a>', '<a href="elgrandepadre.html">El Grande Padre</a>', '<a href="elhermano.html">El Hermano</a>', '<a href="elshaggyblanco.html">El Shaggy Blanco</a>', '<a href="filterbitch.html">Filterbitch</a>', '<a href="foaz.html">FOAZ</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz.html">foaz.html</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18.html">android18.html</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod.html">godmodegod.html</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod.html">godmodegod.html</a>','"/ghost/" ☖TAG☖ USE DETECTED, LOCATED AT <a href="janitors.html">janitors.html</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz.html">woaz.html</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma.html">yzilma.html</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu.html">risu.html</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>','<a href="hoppu.html">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="janitors.html">janitors.html</a>','<a href="janitors.html">Janitors</a>', '<a href="krillin.html">Krillin</a>', '<a href="lordparagon.html">LordParagon</a>', '<a href="moaz.html">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu.html">Risu</a>', '<a href="moeshit.html">Moeshit</a>', '<a href="moewives.html">Moewives</a>', '<a href="moot.html">m00t</a>','<a href="moro.html">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','<a href="multiverseguy.html">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma.html">yzilma.html</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot.html">moot.html</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark.html">totallynotmark.html</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark.html">totallynotmark.html</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma.html">yzilma.html</a>', '<a href="panpedo.html">Panpedo</a>', '<a href="poaz.html">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz.html">POAZ</a>', '<a href="punchchad.html">Punchchad</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"RapeApe" ☖TAG☖ USE DETECTED, LOCATED AT <a href="janitors.html">janitors.html</a>','"RapeApe" ☖TAG☖ USE DETECTED, LOCATED AT <a href="punchchad.html">punchchad.html</a>', '<a href="redclover.html">Red Clover</a>', '<a href="risu.html">risu.html</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '<a href="romaine.html">Romaine</a>', '<a href="samechad.html">SameCHAD</a>', '<a href="samir34.html">Samir34</a>', '<a href="seththeprorammer.html">SethTheProgrammer</a>', '<a href="shameel.html">Shameel</a>', '<a href="skillet91.html">Skillet91</a>', '<a href="songoten.html">Son Goten</a>', '<a href="startchad.html">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy.html">multiverseguy.html</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark.html">totallynotmark.html</a>','<a href="surpassedrus.html">Surpassedrus</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>', '<a href="tablosaf.html">tablosaf</a>', '<a href="toeichadnimation.html">Toei Animation</a>', '<a href="totallynotmark.html">TotallyNotMARK</a>', '<a href="turles.html">Turles</a>', '<a href="woaz.html">WOAZ</a>', '"W.T. Snacks" ☖TAG☖ USE DETECTED, LOCATED AT <a href="punchchad.html">punchchad.html</a>','<a href="yzilma.html">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine.html">romaine.html</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine.html">romaine.html</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>'
+        ];
+ searchBar.addEventListener('input', () => {
+            const searchTerm = searchBar.value.toLowerCase();
+            resultsList.innerHTML = ''; // Clear previous results
+
+            if (searchTerm === '') {
+                return; // Don't display anything if search bar is empty
+            }
+
+            const filteredItems = items.filter(item =>
+                item.toLowerCase().includes(searchTerm)
+            );
+
+            if (filteredItems.length > 0) {
+                filteredItems.forEach(item => {
+                  
+                    const li = document.createElement('li');
+li.textContent = item;
+li.innerHTML = item;
+
+                     
+        resultsList.appendChild(li);
+                });
+            } else {
+                const li = document.createElement('li');
+                li.textContent = 'No results found.';
+                resultsList.appendChild(li);
+            }
+        });
+    </script>
+                  
+                  
+      
+                  
+                  
                      <style>
   blockquote {
     font-style: italic;
@@ -254,85 +304,9 @@ console.log(allCookies);
 <button class="tablink" onclick="window.location.href='gallery.html'">GALLERY</button>
           <button class="tablink" onclick="window.location.href='interviews.html'">INTERVIEWS</button>
           <button class="tablink" onclick="window.location.href='cybersecurity.html'">CYBERSECURITY</button>
-                    
-
-
-         <script>
-         
-const name1 = ['rukiafag'];
-const fetchName1 = name1.toString();
-const article1 = ['moaz'];
-const fetchArticle1 = article1.toString();
-const name2 = ['the belgian'];
-const fetchName2 = name2.toString();
-const article2 = ['poaz'];
-const fetchArticle2 = article2.toString();
-const name3 = ['the warden'];
-const fetchName3 = name3.toString();
-const article3 = ['woaz'];
-const fetchArticle3 = article3.toString();
-const name4 = ['geekdom'];
-const fetchName4 = name4.toString();
-const article4 = ['geekdom101'];
-const fetchArticle4 = article4.toString();
-const name5 = ['jiren'];
-const fetchName5 = name5.toString();
-const article5 = ['woaz'];
-const fetchArticle5 = article5.toString();
-const name6 = ['luigi'];
-const fetchName6 = name6.toString();
-const article6 = ['startchad'];
-const fetchArticle6 = article6.toString();
-
-
-
-    const searchForm = document.getElementById('siteSearchForm');
-    const searchInput =   document.getElementById('searchInput');
-    
-    searchForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent default form submission
-        const query = searchInput.value;
-        if (query) {
-            // Redirect to the search results page with the query
-            window.location.href = query + '.html';
-        }
-        if (query == fetchName1) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle1 + '.html';
-        }
-         if (query == fetchName2) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle2 + '.html';
-        }
-        if (query == fetchName3) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle3 + '.html';
-        }
-          if (query == fetchName4) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle4 + '.html';
-        }
-          if (query == fetchName5) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle5 + '.html';
-        }
-         if (query == fetchName6) {
-            // Redirect to the search results page with the query
-            window.location.href = fetchArticle6 + '.html';
-        }
-
-
-      
-    });
-    
-</script>
                 
-           
-          
-          
-          
-          
-                 
+
+                     
  <h1>NEW ARTICLES</h1>
                        <p><i>"NEW Articles" are newly written pages/reports/articles by the Rukiafag.</i></p>
                   <a href="turles.html"> Turles</a>
@@ -366,22 +340,100 @@ const fetchArticle6 = article6.toString();
           <a href="yzilma.html">Yzilma</a>
           
           <a href="songoten.html">Son Goten</a>
+                  
+ 
           
-                
                 </main>
-                
-          
+   
         <!-- THIS IS THE CSS !-->
-        <style>
+         <style>
           
- #myHeader {
+          #myHeader {
   background-image: url('https://i.imgur.com/WqcAGQo.png');
   background-size: cover;
   background-position: center;
   height: 200px; /* Example height */
 }
-          
-            /* user styles */ 
+       
+/* Style the input field */
+#searchBar {
+
+  border: all;
+  outline: none; /* Remove default outline on focus */
+  padding: 8px;
+  font-size: 16px;
+  background-color: black; /* Make background transparent */
+  color: red;
+}
+
+/* Style the placeholder text */
+#searchBar::placeholder {
+  color: red;
+}
+
+#changeImageButton {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
+}
+           #changeImageButton2 {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
+}
+           #changeImageButton3 {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
+}
+           #changeImageButton4 {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
+}
+           .changeImageButton5 {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
+}
+
+    
+          .overlay {
+    position: fixed; /* Positions the overlay relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Covers the full width of the viewport */
+    height: 100%; /* Covers the full height of the viewport */
+    /* Black background with 50% opacity */
+    z-index: 9999; /* Ensures the overlay is on top of other content */
+}
+/* Style the container */
+.search-container {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background: linear-gradient(#190A05, #870000);;
+  width: 300px;
+  color: red;
+}          
+           
+          /* user styles */ 
 
             /* styles are what change the color and sizes of stuff on your site. */
 
@@ -389,7 +441,7 @@ const fetchArticle6 = article6.toString();
     these tended to confuse some people, so I only kept 
     the images as variables */
     
-    .topnav {
+   .topnav {
   overflow: hidden;
  background: linear-gradient(#190A05, #870000);
 }
@@ -423,11 +475,39 @@ const fetchArticle6 = article6.toString();
   padding: 6px;
   border: none;
   margin-top: 8px;
-  margin-right: 16px;
+  margin-right: 19px;
   font-size: 17px;
 }
 
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of 
+       .hidden {
+  display: none; /* This class will hide the element */
+}
+          
+          * {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Tahoma, Geneva,
+    Verdana, Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #E80E00;
+  background: #E80E00;
+  padding: 10px;
+}
+
+
+      
+      
+     
+horizontally */
 @media screen and (max-width: 600px) {
   .topnav a, .topnav input[type=text] {
     float: none;
@@ -439,20 +519,13 @@ const fetchArticle6 = article6.toString();
     margin: 0;
     padding: 14px;
   }
-  
   .topnav input[type=text] {
     border: 1px solid #ccc;
   }
 }
-          .dropbtn {
-                  position: absolute;
- background: linear-gradient(#190A05, #870000);
-  color: white;
-  padding: 10px;
-  font-size: 16px; 
-  border: none;
-               
-}
+    
+           
+           
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -464,10 +537,8 @@ const fetchArticle6 = article6.toString();
   width: 65%;
   top:0;
 }
-          
-
-
-      /* The container <div> - needed to position the dropdown content */
+           
+           /* The container <div> - needed to position the dropdown content */
 .dropdown2 {
   position: fixed;
   margin:auto;
@@ -477,9 +548,6 @@ const fetchArticle6 = article6.toString();
   width: 58%;
   top:0;
 }
-
-
-
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
@@ -556,7 +624,6 @@ const fetchArticle6 = article6.toString();
   font-size: 17px;
   width: 25%;
 }
-          
 
 /* Change background color of buttons on hover */
 .tablink:hover {
@@ -578,7 +645,7 @@ const fetchArticle6 = article6.toString();
 #Oslo {background-color:orange;}
 
             :root {
-                --header-image: url('https://i.imgur.com/WqcAGQo.png');
+                --header-image: url('');
                 --body-bg-image: url('https://i.pinimg.com/originals/14/22/e1/1422e181b210d76a4211b32e47d8ce61.gif');
 
                 /* colors */
@@ -664,14 +731,7 @@ const fetchArticle6 = article6.toString();
       text-decoration:none; */
             }
 
-           
-                /* this is only for a background image! */
-                /* if you want to put images IN the header, 
-      you can add them directly to the <div id="header"></div> element! */
-                background-image: var(--header-image);
-                background-size: 100%;
-            }
-
+      
             /* navigation section!! */
             #navbar {
                 height: 40px;
@@ -829,8 +889,7 @@ const fetchArticle6 = article6.toString();
             }
         </style>
 
-      
+     
 </body>
 </html>
-
 
