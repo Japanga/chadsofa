@@ -61,7 +61,7 @@
                   
                 
                 
-                
+                <audio src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" autoplay></audio>        
                   
           
 
@@ -72,84 +72,77 @@
      <button id="changeImageButton4">Header 4 - Fortress</button>         
 
                   
-            <script> 
+         
+                  <script> 
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+             
+                      // Example using a simple cookie function
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+ 
+//
+// On page load (e.g., within window.onload or DOMContentLoaded):
+window.onload = function() {
+   const header = document.getElementById('myHeader');
+    var storedImageUrl = getCookie("currentBackgroundImg");
+    if (storedImageUrl) {
+       header.style.backgroundImage = "url('" + storedImageUrl + "')";
+       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       header.style.backgroundImage = "no-repeat"; // Optional
+    }
+};
+</script> 
+
+ <script> 
               document.addEventListener('DOMContentLoaded', function() {
   const header = document.getElementById('myHeader');
   const button = document.getElementById('changeImageButton');
   const button2 = document.getElementById('changeImageButton2');
  const button3 = document.getElementById('changeImageButton3');
-const button4 = document.getElementById('changeImageButton4');
+ const button4 = document.getElementById('changeImageButton4');
 
-  function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    } button.addEventListener('click', function() {
-    
-var background1 = ["url('https://i.imgur.com/WqcAGQo.png')"];
-
+  button.addEventListener('click', function() {
     // Change the background image URL
-header.style.backgroundImage = background1
-   
-alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
-    
-let allCookies = document.cookie;
-console.log(allCookies);
-    
-setCookie("currentBackgroundImg", 'https://i.imgur.com/WqcAGQo.png', 365);
-  
+    header.style.backgroundImage = "url('https://i.imgur.com/WqcAGQo.png')"; 
   }); 
                button2.addEventListener('click', function() {
-  
-                     
-var background2 = ["url('https://yourimageshare.com/ib/wPRybiZbC0.jpg'"];
-
     // Change the background image URL
-header.style.backgroundImage = background2
-   
-alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
-    
-let allCookies = document.cookie;
-console.log(allCookies);
-                 
-                 setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/wPRybiZbC0.jpg', 365);
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/wPRybiZbC0.jpg')"; 
   });
                 
                 button3.addEventListener('click', function() {
-                  
-var background3 = ["url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"];
-       // Change the background image URL
-header.style.backgroundImage = background3
-   
-alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
-    
-let allCookies = document.cookie;
-console.log(allCookies);
-               setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/NRZt5lrEYG.png', 365); // Store for 365 days
-
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/NRZt5lrEYG.png')"; 
   });
                 
-                                button4.addEventListener('click', function() {
-                  
-var background4 = ["url('https://yourimageshare.com/ib/lBhfIORzhm.png')"];
-       // Change the background image URL
-header.style.backgroundImage = background4
-   
-alert("Your header choice has been bound to your cache code " + (resultInput.value) + " all other pages on the site will continue to use the same one.");
-    
-let allCookies = document.cookie;
-console.log(allCookies);
-               setCookie("currentBackgroundImg", 'https://yourimageshare.com/ib/lBhfIORzhm.png', 365); // Store for 365 days
-
+                button4.addEventListener('click', function() {
+    // Change the background image URL
+    header.style.backgroundImage = "url('https://yourimageshare.com/ib/lBhfIORzhm.png')"; 
   });
                 
                 
 });
-            </script> 
+
+</script>
+
+           
                   
                   
                   
@@ -245,7 +238,7 @@ function redirectToRandomPage() {
 
         const items = [
              '<a href="android18.html">Android 18</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot.html">moot.html</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','<a href="argentinian.html">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz.html">poaz.html</a>', '<a href="cabbagang.html">Cabbagang</a>', '<a href="characterfag.html">Characterfag</a>', '<a href="congo.html">Congo</a>',
-'<a href="cutegang.html">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '<a href="Dennis.html">Dennis</a>', '<a href="dbshungergames.html">/dbs/ Hunger Games</a>', '<a href="discordler.html">Discordler</a>', '<a href="dogposter.html">Dogposter</a>', '<a href="DrawChad.html">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','<a href="el especialista.html">El Especialista</a>', '<a href="elgrandepadre.html">El Grande Padre</a>', '<a href="elhermano.html">El Hermano</a>', '<a href="elshaggyblanco.html">El Shaggy Blanco</a>', '<a href="filterbitch.html">Filterbitch</a>', '<a href="foaz.html">FOAZ</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz.html">foaz.html</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18.html">android18.html</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod.html">godmodegod.html</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod.html">godmodegod.html</a>','"/ghost/" ☖TAG☖ USE DETECTED, LOCATED AT <a href="janitors.html">janitors.html</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz.html">woaz.html</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma.html">yzilma.html</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu.html">risu.html</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>','<a href="hoppu.html">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="janitors.html">janitors.html</a>','<a href="janitors.html">Janitors</a>', '<a href="krillin.html">Krillin</a>', '<a href="lordparagon.html">LordParagon</a>', '<a href="moaz.html">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu.html">Risu</a>', '<a href="moeshit.html">Moeshit</a>', '<a href="moewives.html">Moewives</a>', '<a href="moot.html">m00t</a>','<a href="moro.html">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','<a href="multiverseguy.html">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma.html">yzilma.html</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot.html">moot.html</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark.html">totallynotmark.html</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark.html">totallynotmark.html</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma.html">yzilma.html</a>', '<a href="panpedo.html">Panpedo</a>', '<a href="poaz.html">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz.html">POAZ</a>', '<a href="punchchad.html">Punchchad</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"RapeApe" ☖TAG☖ USE DETECTED, LOCATED AT <a href="janitors.html">janitors.html</a>','"RapeApe" ☖TAG☖ USE DETECTED, LOCATED AT <a href="punchchad.html">punchchad.html</a>', '<a href="redclover.html">Red Clover</a>', '<a href="risu.html">risu.html</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '<a href="romaine.html">Romaine</a>', '<a href="samechad.html">SameCHAD</a>', '<a href="samir34.html">Samir34</a>', '<a href="seththeprorammer.html">SethTheProgrammer</a>', '<a href="shameel.html">Shameel</a>', '<a href="skillet91.html">Skillet91</a>', '<a href="songoten.html">Son Goten</a>', '<a href="startchad.html">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy.html">multiverseguy.html</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark.html">totallynotmark.html</a>','<a href="surpassedrus.html">Surpassedrus</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>', '<a href="tablosaf.html">tablosaf</a>', '<a href="toeichadnimation.html">Toei Animation</a>', '<a href="totallynotmark.html">TotallyNotMARK</a>', '<a href="turles.html">Turles</a>', '<a href="woaz.html">WOAZ</a>', '"W.T. Snacks" ☖TAG☖ USE DETECTED, LOCATED AT <a href="punchchad.html">punchchad.html</a>','<a href="yzilma.html">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine.html">romaine.html</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine.html">romaine.html</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>'
+'<a href="cutegang.html">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '<a href="Dennis.html">Dennis</a>', '<a href="dbshungergames.html">/dbs/ Hunger Games</a>', '<a href="discordler.html">Discordler</a>', '<a href="dogposter.html">Dogposter</a>', '<a href="DrawChad.html">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','<a href="el especialista.html">El Especialista</a>', '<a href="elgrandepadre.html">El Grande Padre</a>', '<a href="elhermano.html">El Hermano</a>', '<a href="elshaggyblanco.html">El Shaggy Blanco</a>', '<a href="filterbitch.html">Filterbitch</a>', '<a href="foaz.html">FOAZ</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz.html">foaz.html</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18.html">android18.html</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod.html">godmodegod.html</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod.html">godmodegod.html</a>','"/ghost/" ☖TAG☖ USE DETECTED, LOCATED AT <a href="janitors.html">janitors.html</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz.html">woaz.html</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma.html">yzilma.html</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu.html">risu.html</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>','<a href="hoppu.html">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="janitors.html">janitors.html</a>','<a href="janitors.html">Janitors</a>', '<a href="krillin.html">Krillin</a>', '<a href="lordparagon.html">LordParagon</a>', '<a href="moaz.html">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu.html">Risu</a>', '<a href="moeshit.html">Moeshit</a>', '<a href="moewives.html">Moewives</a>', '<a href="moot.html">m00t</a>','<a href="moro.html">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>','<a href="multiverseguy.html">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma.html">yzilma.html</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot.html">moot.html</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark.html">totallynotmark.html</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles.html">turles.html</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark.html">totallynotmark.html</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma.html">yzilma.html</a>', '<a href="panpedo.html">Panpedo</a>', '<a href="poaz.html">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz.html">poaz.html</a>', '<a href="punchchad.html">Punchchad</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"RapeApe" ☖TAG☖ USE DETECTED, LOCATED AT <a href="janitors.html">janitors.html</a>','"RapeApe" ☖TAG☖ USE DETECTED, LOCATED AT <a href="punchchad.html">punchchad.html</a>', '<a href="redclover.html">Red Clover</a>', '<a href="risu.html">risu.html</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>', '<a href="romaine.html">Romaine</a>', '<a href="samechad.html">SameCHAD</a>', '<a href="samir34.html">Samir34</a>', '<a href="seththeprorammer.html">SethTheProgrammer</a>', '<a href="shameel.html">Shameel</a>', '<a href="skillet91.html">Skillet91</a>', '<a href="songoten.html">Son Goten</a>', '<a href="startchad.html">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy.html">multiverseguy.html</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark.html">totallynotmark.html</a>','<a href="surpassedrus.html">Surpassedrus</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad.html">startchad.html</a>', '<a href="tablosaf.html">tablosaf</a>', '<a href="toeichadnimation.html">Toei Animation</a>', '<a href="totallynotmark.html">TotallyNotMARK</a>', '<a href="turles.html">Turles</a>', '<a href="woaz.html">WOAZ</a>', '"W.T. Snacks" ☖TAG☖ USE DETECTED, LOCATED AT <a href="punchchad.html">punchchad.html</a>','<a href="yzilma.html">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine.html">romaine.html</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine.html">romaine.html</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz.html">moaz.html</a>'
         ];
  searchBar.addEventListener('input', () => {
             const searchTerm = searchBar.value.toLowerCase();
@@ -307,15 +300,11 @@ li.innerHTML = item;
                 
 
                     
-            
-                     <h1></h1>
-                       
+                   <h1>Sample text</h1>
+                          
                   
-                  <!-- begin wwww.htmlcommentbox.com -->
- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...
- <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /> </div>
+                 
           
-
                 </main>
     
             <script type="text/javascript" id="hcb">
@@ -643,25 +632,22 @@ horizontally */
     */
 
             @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+               font-family: Arial;
+               
             }
 
             @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+              font-family: Arial;
                 font-weight: bold;
             }
 
             @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+               font-family: Arial;
                 font-style: italic;
             }
 
             @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+               font-family: Arial;
                 font-style: italic;
                 font-weight: bold;
             }
@@ -871,4 +857,5 @@ horizontally */
      
 </body>
 </html>
+
 
