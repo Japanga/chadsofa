@@ -342,31 +342,25 @@ li.innerHTML = item;
                     <p>Risu is an old /dbs/ artist from the Tournament of Power era known for making MS paint memes. Risu's relationship with the Rukiafag is mysterious to some, but being a big fan of Jiren: she has obviously posted with him for years (especially in the /treasure/ FOAZ/MOAZ era), they are also both artists and have been known to occasionally show off their works to eachother.</p>
 
         <h1>GALLERY</h1>
- 
-     
-                    
-   
-            <span id="galleryContainer"> 
-              
-                   <span id="galleryItem1">         
+           <span id="galleryContainer"> 
+          <span id="galleryRow1"> 
    <p><img src="https://yourimageshare.com/ib/i2iNi8P8Nk.png" alt="Smiley face" style="float:left;width:390px;height:330px;"> </p>   
-                 </span>  
+        </span>    
               
-              
-              <span id="galleryItem2"> 
+      <p><img src="https://yourimageshare.com/ib/vK3AlvNuoo.png" alt="Smiley face" style="float:left;width:290px;height:630px;"> </p>  
+    
+    
+     
+              <span id="galleryRow2"> 
                  
         <p><img src="https://yourimageshare.com/ib/JAm1VXlJqk.png" alt="Smiley face" style="float:left;width:300px;height:700px;"> </p>
-                 
+                
                </span>  
-  
-                     
-                     
-       </span>  
-             
+  </span> 
           
       
       
-             <p><img src="https://yourimageshare.com/ib/vK3AlvNuoo.png" alt="Smiley face" style="float:right;width:290px;height:630px;"> </p>    
+              
                 </main>
     
             <script type="text/javascript" id="hcb">
@@ -378,21 +372,13 @@ li.innerHTML = item;
         <!-- THIS IS THE CSS !-->
          <style>
           #galleryContainer {
-      display:  inline-block;
+      display: grid;
        
  
     }
-           #galleryItem1 {
-  display: grid; /* Ensures items are on the same line and respect width/height */
+           #galleryRow1 {
+  display: inline-block; /* Ensures items are on the same line and respect width/height */
   /* Other styles for your items */
-}
-           #galleryItem2 {
-  display: grid; /* Ensures items are on the same line and respect width/height */
-  /* Other styles for your items */
-}
-           #galleryItem3 {
- justify-self: end; /* Aligns the item to the right within its grid area */
-  align-self: end; 
 }
 
           #myHeader {
@@ -936,5 +922,4 @@ horizontally */
      
 </body>
 </html>
-
 
