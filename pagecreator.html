@@ -305,7 +305,7 @@ li.innerHTML = item;
            
                    <h1>PAGE PREVIEW CREATOR</h1>
           
-           <button class="tablink" onclick="editContent()">EXIT EDITOR/SAVE PAGE</button>
+           <button class="tablink" onclick="editContent()">SAVE PAGE</button>
                           
                   <table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#000000; border:1px solid #999; line-height:1.5; color:red; font-size:smaller;"><tr>
 <th colspan="2" style="background:#000000; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;"><p id = "posterName" contenteditable="true">EDIT POSTER NAME</p>           
@@ -716,18 +716,17 @@ horizontally */
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 // variables
-$base-color: black;
+$base-color: cadetblue;
 $base-font: 'Raleway', sans-serif;
-
 
 body {
   font-family: $base-font;
-  height: 300px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
- background-color: black;
+  background-color: lighten($base-color, 45%);
 }
 
 .wrapper{
@@ -739,6 +738,12 @@ body {
   background-color: purple;
 }
 
+h1 {
+  font-family: inherit;
+  margin: 0 0 .75em 0;
+  color: desaturate($base-color, 15%);
+  text-align: center;
+}
 
 .box {
   display: block;
@@ -747,16 +752,22 @@ body {
   margin: 10px;
   background-color: white;
   border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   overflow: hidden;
 }
+
 .upload-options {
   position: relative;
   height: 75px;
- background-color: black;
+  background-color: $base-color;
   cursor: pointer;
   overflow: hidden;
   text-align: center;
-
+  transition: background-color ease-in-out 150ms;
+  &:hover {
+    background-color: lighten($base-color, 10%);
+  }
   & input {
     width: 0.1px;
     height: 0.1px;
@@ -780,12 +791,15 @@ body {
       font-family: 'Material Icons';
       position: absolute;
       font-size: 2.5rem;
+      color: rgba(230, 230, 230, 1);
+      top: calc(50% - 2.5rem);
+      left: calc(50% - 1.25rem);
       z-index: 0;
     }
     & span {
       display: inline-block;
       width: 50%;
-      height: 120%;
+      height: 100%;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
@@ -800,7 +814,7 @@ body {
 
 
 .js--image-preview {
-  height: 248px;
+  height: 225px;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -838,7 +852,7 @@ i.material-icons {
 .drop {
   display: block;
   position: absolute;
-
+  background: transparentize($base-color, .8);
   border-radius: 100%;
   transform:scale(0);
 }
