@@ -205,7 +205,7 @@ function getCookie(name) {
         } else {
             // If the cookie doesn't exist, set a default value and store it
             const defaultString6 = "EDITED SITE NAMES";
-            setCookie('defaultString6', defaultString6, 7); // Store for 7 days
+            setCookie('myStoredString6', defaultString6, 7); // Store for 7 days
             targetElement6.textContent = defaultString6;
            }
    
@@ -216,8 +216,17 @@ function getCookie(name) {
         } else {
             // If the cookie doesn't exist, set a default value and store it
             const defaultString7 = "EDITED SERIES NAMES";
-            setCookie('defaultString7', defaultString7, 7); // Store for 7 days
+            setCookie('myStoredString7', defaultString7, 7); // Store for 7 days
             targetElement7.textContent = defaultString7;
+        }
+    if (storedString8) {
+            // If the cookie exists, use its value
+          targetElement8.textContent = storedString7;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString8 = "EDITED AFFILIATE NAMES";
+            setCookie('myStoredString8', defaultString8, 7); // Store for 7 days
+            targetElement8.textContent = defaultString8;
         
  
  
