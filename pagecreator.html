@@ -436,11 +436,24 @@ li.innerHTML = item;
     </script>
 <!-- end www.htmlcommentbox.com -->
      <script>
+        var currentAvatarCookie = [""];
+        
        const inputFile = document.querySelector("#picture__input");
 const pictureImage = document.querySelector(".picture__image");
 const pictureImageTxt = "Choose an image";
 pictureImage.innerHTML = pictureImageTxt;
 
+       function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+             
+       
 inputFile.addEventListener("change", function (e) {
   const inputTarget = e.target;
   const file = inputTarget.files[0];
@@ -462,6 +475,7 @@ inputFile.addEventListener("change", function (e) {
     reader.readAsDataURL(file);
   } else {
     pictureImage.innerHTML = pictureImageTxt;
+    setCookie("currentAvatarCookie", pictureImageTxt);
   }
 });
 
