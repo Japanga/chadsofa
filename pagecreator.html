@@ -414,7 +414,7 @@ li.innerHTML = item;
         
          myAffiliateNames.textContent = "" + myAffiliateNames.textContent + "";
          alert("Your new affiliates " + myAffiliateNames.textContent + " were saved and stored to the system.");
-         setCookie("currentSeriesNameCookie", myAffiliateNames.value, 365);
+         setCookie("currentAffiliatesNameCookie", myAffiliateNames.textContent, 365);
 
       }
                    function setCookie(name, value, days) {
