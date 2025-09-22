@@ -99,15 +99,34 @@ function getCookie(name) {
  
 //
 // On page load (e.g., within window.onload or DOMContentLoaded):
-window.onload = function() {
+ document.addEventListener('DOMContentLoaded', function() {
    const header = document.getElementById('myHeader');
+ 
     var storedImageUrl = getCookie("currentBackgroundImg");
+  
+  
     if (storedImageUrl) {
        header.style.backgroundImage = "url('" + storedImageUrl + "')";
        header.style.backgroundImage = "cover"; // Optional: Adjust as needed
        header.style.backgroundImage = "no-repeat"; // Optional
     }
-};
+
+
+  const targetElement = document.getElementById('posterName'); // Assuming an element with id 'myStringDisplay'
+        var storedString = getCookie('currentPosterNameCookie');
+   
+        if (storedString) {
+            // If the cookie exists, use its value
+          targetElement.textContent = storedString;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString = "EDITED POSTER NAME";
+            setCookie('myStoredString', defaultString, 7); // Store for 7 days
+            targetElement.textContent = defaultString;
+        }
+ 
+    
+    });
 </script> 
 
  <script> 
@@ -309,227 +328,82 @@ li.innerHTML = item;
            
                    <h1>PAGE PREVIEW CREATOR</h1>
           
-           <button class="tablink" onclick="editContent()">SAVE PAGE</button>
+           <button class="tablink" onclick="editContent()">EDIT PAGE</button>
                           
                   <table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#000000; border:1px solid #999; line-height:1.5; color:red; font-size:smaller;"><tr>
-<th colspan="2" style="background:#000000; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;"><p id = "posterName" contenteditable="true">EDIT POSTER NAME</p>           
+<th colspan="2" style="background:#000000; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;"><p id = "posterName">EDITED POSTER NAME</p>           
 <tr style="border-bottom:1px solid #999;"><th colspan="2" style="padding:0;"> 
   
-  <label class="picture" for="picture__input" tabIndex="0">
-  <span class="picture__image"></span>
-</label>
+    <header id="myAvatar">
 
-<input type="file" name="picture__input" id="picture__input">
+</header>
+ </tr>
+  </tr>
 <tr>
 <td style="padding:4px;"><b>Primary Occupation</b></td>
-<td style="padding:4px;"><p id = "occupationName" contenteditable="true">EDIT OCCUPATION NAME</p></td>
+<td style="padding:4px;"><p id = "occupationName">EDITED OCCUPATION NAME</p></td>
 </tr>
 <tr><th colspan="2" style="background:#ddd; border-bottom:1px solid #999; border-top:1px solid #999; padding:4px; text-align:center;">Background Information</th></tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Date of activity</b></td>
-<td style="padding:4px;"><p id = "activityName" contenteditable="true">EDIT ACTIVITY</p></td>
+<td style="padding:4px;"><p id = "activityName">EDITED ACTIVITY</p></td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Main characters (male)</b></td>
-<td style="padding:4px;"><p id = "maleCharNames" contenteditable="true">EDIT MALE CHARACTERS</p></td>
+<td style="padding:4px;"><p id = "maleCharNames">EDITED MALE CHARACTERS</p></td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Main characters (female)</b></td>
-<td style="padding:4px;"><p id = "femaleCharNames" contenteditable="true">EDIT FEMALE CHARACTERS</p></td>
+<td style="padding:4px;"><p id = "femaleCharNames">EDITED FEMALE CHARACTERS</p></td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Site of origin</b></td>
-<td style="padding:4px;"><p id = "siteNames" contenteditable="true">EDIT SITE OF ORIGIN</p></td>
+<td style="padding:4px;"><p id = "siteNames">EDITED SITE OF ORIGIN</p></td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Favorite non-DB series</b></td>
-<td style="padding:4px;"><p id = "seriesNames" contenteditable="true">EDIT SERIES NAMES</p></td>
+<td style="padding:4px;"><p id = "seriesNames">EDITED SERIES NAMES</p></td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Affiliated posters</b></td>
-<td style="padding:4px;"><p id = "affiliateNames" contenteditable="true">EDIT AFFILIATES</p></td>
+<td style="padding:4px;"><p id = "affiliateNames">EDITED AFFILIATES</p></td>
 </table> 
                  
           <p contenteditable="true">EDIT ARTICLE CONTENT</p>
               
           
+          
     
+     </main> 
     
-    
-               <script>
-    const submitPostButton = document.getElementById('submitPostButton');
-   const myPosterName = document.getElementById("posterName");
-    const myOccupationName = document.getElementById("occupationName");
-   const myActivityName = document.getElementById("activityName");
-   const myMaleCharName = document.getElementById("maleCharNames");
-   const myFemaleCharName = document.getElementById("girlCharNames");
-   const mySeriesName = document.getElementById("seriesNames");
-    const myAffiliateNames = document.getElementById("affiliateNames");
-      function editContent() {
-        alert("Page saved");
-
-    // Change the text content of the paragraph
-        var currentPosterNameCookie = ["EDIT POSTER NAME"];
-        var currentOccupationNameCookie = ["EDIT OCCUPATION NAME"];
-         var currentActivityNameCookie = ["EDIT ACTIVITY"];
-         var currentMaleCharNameCookie = ["EDIT MALE CHARACTERS"];
-         var currentFemaleCharNameCookie = ["EDIT FEMALE CHARACTERS"];
-        var currentSeriesNameCookie = ["EDIT SERIES"];
-        var currentAffiliatesNameCookie = ["EDIT AFFILIATES"];
-        
-     
-
-         myPosterName.textContent = "" + myPosterName.textContent + "";
-         alert("Your new poster name " + myPosterName.textContent + " was saved and stored to the system.");
-         setCookie("currentPosterNameCookie", myPosterName.textContent, 365);
-        
-          myOccupationName.textContent = "" + myOccupationName.textContent + "";
-         alert("Your new occupation " + myOccupationName.textContent + " was saved and stored to the system.");
-         setCookie("currentOccupationNameCookie", myOccupationName.value, 365);
-        
-          myActivityName.textContent = "" + myActivityName.textContent + "";
-         alert("Your new date of activity " + myActivityName.textContent + " was saved and stored to the system.");
-         setCookie("currentActivityNameCookie", myActivityName.value, 365);
-        
-           myMaleCharName.textContent = "" + myMaleCharName.textContent + "";
-         alert("Your new male characters " + myMaleCharName.textContent + " were saved and stored to the system.");
-         setCookie("currentMaleCharNameCookie", myMaleCharName.value, 365);
-        
-        
-           myFemaleCharName.textContent = "" + myFemaleCharName.textContent + "";
-         alert("Your new date of activity " + myFemaleCharName.textContent + " was saved and stored to the system.");
-         setCookie("currentFemaleCharNameCookie", myFemaleCharName.value, 365);
-        
-        mySeriesName.textContent = "" + mySeriesName.textContent + "";
-         alert("Your new series " + mySeriesName.textContent + " were saved and stored to the system.");
-         setCookie("currentSeriesNameCookie", mySeriesName.value, 365);
-        
-         myAffiliateNames.textContent = "" + myAffiliateNames.textContent + "";
-         alert("Your new affiliates " + myAffiliateNames.textContent + " were saved and stored to the system.");
-         setCookie("currentSeriesNameCookie", myAffiliateNames.value, 365);
-
-      }
-                   function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    } button.addEventListener('click', function() {
-    
-     function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                reader.onload = function (e) {
-                    $('#blah')
-                        .attr('src', e.target.result);
-                };
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+     <script> 
+       document.addEventListener('DOMContentLoaded', function() {
+    const avatar = document.getElementById('myAvatar');
+   var storedAvatarUrl = getCookie("currentAvatarCookie");
   
-  });
-    </script>
-<!-- end www.htmlcommentbox.com -->
-     <script>
-        var currentAvatarCookie = [""];
-        
-       const inputFile = document.querySelector("#picture__input");
-const pictureImage = document.querySelector(".picture__image");
-const pictureImageTxt = "Choose an image";
-pictureImage.innerHTML = pictureImageTxt;
-
-       function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
+   
+    if (storedAvatarUrl) {
+       avatar.style.backgroundImage = "url('" + storedAvatarUrl + "')";
+       avatar.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       avatar.style.backgroundImage = "no-repeat"; // Optional
     }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-             
-       
-inputFile.addEventListener("change", function (e) {
-  const inputTarget = e.target;
-  const file = inputTarget.files[0];
-
-  if (file) {
-    const reader = new FileReader();
-
-    reader.addEventListener("load", function (e) {
-      const readerTarget = e.target;
-
-      const img = document.createElement("img");
-      img.src = readerTarget.result;
-      img.classList.add("picture__img");
-
-      pictureImage.innerHTML = "";
-      pictureImage.appendChild(img);
-    });
-
-    reader.readAsDataURL(file);
-  } else {
-    pictureImage.innerHTML = pictureImageTxt;
-    setCookie("currentAvatarCookie", img.textContent.value, 365);
-  }
-});
-
-                    </script>
-         
+        </script> 
+        
         <!-- THIS IS THE CSS !-->
          <style>
-          #picture__input {
-  display: none;
-}
-
-.picture {
-  height: 350px;
-  width: 310px;
-  aspect-ratio: 16/9;
-  background: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #aaa;
-  border: 2px dashed currentcolor;
-  cursor: pointer;
-  font-family: sans-serif;
-  transition: color 300ms ease-in-out, background 300ms ease-in-out;
-  outline: none;
-  overflow: hidden;
-}
-
-.picture:hover {
-  color: #777;
-  background: #ccc;
-}
-
-.picture:active {
-  border-color: turquoise;
-  color: turquoise;
-  background: #eee;
-}
-
-.picture:focus {
-  color: #777;
-  background: #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.picture__img {
-  max-width: 100%;
-}
-
+          
           #myHeader {
   background-image: url('https://i.imgur.com/WqcAGQo.png');
   background-size: cover;
   background-position: center;
   height: 200px; /* Example height */
+}
+              #myAvatar {
+  background-image: url('https://yourimageshare.com/ib/qG5RhXUaZk.png');
+  background-size: cover;
+  background-position: center;
+  height: 350px; /* Example height */
+                 width: 310px; /* Example height */
 }
        
 /* Style the input field */
