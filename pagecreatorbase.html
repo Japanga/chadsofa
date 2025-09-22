@@ -120,14 +120,22 @@ function getCookie(name) {
         if (storedString) {
             // If the cookie exists, use its value
           targetElement.textContent = storedString;
-          targetElement2.textContent = storedString2;
         } else {
             // If the cookie doesn't exist, set a default value and store it
             const defaultString = "EDITED POSTER NAME";
-            setCookie('myStoredString', defaultString, 7); // Store for 7 days
+            setCookie('currentPosterNameCookie', defaultString, 7); // Store for 7 days
             targetElement.textContent = defaultString;
         }
 
+      if (storedString2) {
+            // If the cookie exists, use its value
+          targetElement2.textContent = storedString2;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString2 = "EDITED OCCUPATION NAME";
+            setCookie('currentOccupationNameCookie', defaultString2, 7); // Store for 7 days
+            targetElement2.textContent = defaultString2;
+        }
 
         // Example of updating the string and cookie later
         // You could trigger this with a button click or another event
@@ -406,11 +414,11 @@ function getCookie(name) {
    
      const avatar = document.getElementById('myAvatar');
   
-    var storedImageUrl2 = getCookie("currentAvatarNameCookie");
+    var storedImageUrl2 = getCookie("currentAvatarCookie");
   
   
     if (storedImageUrl2) {
-       avatar.style.backgroundImage = storedImageUrl2;
+       avatar.style.backgroundImage = "url('" + storedImageUrl2 + "')";
        avatar.style.backgroundImage = "cover"; // Optional: Adjust as needed
        avatar.style.backgroundImage = "no-repeat"; // Optional
     }
