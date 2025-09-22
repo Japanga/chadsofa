@@ -101,8 +101,10 @@ function getCookie(name) {
 // On page load (e.g., within window.onload or DOMContentLoaded):
  document.addEventListener('DOMContentLoaded', function() {
    const header = document.getElementById('myHeader');
+    const avatar = document.getElementById('myAvatar');
   
     var storedImageUrl = getCookie("currentBackgroundImg");
+   var storedAvatarUrl = getCookie("currentAvatarCookie");
   
   
     if (storedImageUrl) {
@@ -110,13 +112,16 @@ function getCookie(name) {
        header.style.backgroundImage = "cover"; // Optional: Adjust as needed
        header.style.backgroundImage = "no-repeat"; // Optional
     }
+   
+    if (storedAvatarUrl) {
+       avatar.style.backgroundImage = "url('" + storedAvatarUrl + "')";
+       avatar.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       avatar.style.backgroundImage = "no-repeat"; // Optional
+    }
 
   const targetElement = document.getElementById('posterName'); // Assuming an element with id 'myStringDisplay'
         var storedString = getCookie('currentPosterNameCookie');
    
-     const targetElement2 = document.getElementById('occupationName'); // Assuming an element with id 'myStringDisplay'
-        var storedString2 = getCookie('currentOccupationNameCookie');
-
         if (storedString) {
             // If the cookie exists, use its value
           targetElement.textContent = storedString;
@@ -127,21 +132,7 @@ function getCookie(name) {
             targetElement.textContent = defaultString;
         }
  
-      if (storedString2) {
-            // If the cookie exists, use its value
-          targetElement2.textContent = storedString2;
-        } else {
-            // If the cookie doesn't exist, set a default value and store it
-            const defaultString2 = "EDITED OCCUPATION NAME";
-            setCookie('myStoredString2', defaultString2, 7); // Store for 7 days
-            targetElement2.textContent = defaultString2;
-        }
- 
-        // Example of updating the string and cookie later
-        // You could trigger this with a button click or another event
-        // const newString = "Updated String Value";
-        // setCookie('myStoredString', newString, 7);
-        // targetElement.textContent = newString;
+    
     });
 </script> 
 
@@ -389,46 +380,8 @@ li.innerHTML = item;
               
           
           
-          
-          
-            <script> 
-
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-             
-                      // Example using a simple cookie function
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
-                 
-   
-     const avatar = document.getElementById('myAvatar');
-  
-    var storedImageUrl2 = getCookie("currentAvatarCookie");
-  
-  
-    if (storedImageUrl) {
-       avatar.style.backgroundImage = "url('" + storedImageUrl2 + "')";
-       avatar.style.backgroundImage = "cover"; // Optional: Adjust as needed
-       avatar.style.backgroundImage = "no-repeat"; // Optional
-    }
-  </script> 
     
-    
+     </main> 
     
         
         <!-- THIS IS THE CSS !-->
