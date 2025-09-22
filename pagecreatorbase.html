@@ -125,18 +125,18 @@ function getCookie(name) {
         var storedString5 = getCookie('currentFemaleCharNameCookie');
    
      
-  const targetElement6 = document.getElementById('mySeriesNames'); // Assuming an element with id 'myStringDisplay'
-        var storedString6 = getCookie('currentSeriesNameCookie');
+  const targetElement6 = document.getElementById('mySiteNames'); // Assuming an element with id 'myStringDisplay'
+        var storedString6 = getCookie('currentSiteNamesCookie');
   
    
      
-  const targetElement7 = document.getElementById('myFemaleCharName'); // Assuming an element with id 'myStringDisplay'
-        var storedString5 = getCookie('currentFemaleCharNameCookie');
+  const targetElement7 = document.getElementById('mySeriesName'); // Assuming an element with id 'myStringDisplay'
+        var storedString7 = getCookie('currentSeriesNameCookie');
   
    
      
-  const targetElement8 = document.getElementById('myFemaleCharName'); // Assuming an element with id 'myStringDisplay'
-        var storedString5 = getCookie('currentFemaleCharNameCookie');
+  const targetElement8 = document.getElementById('myAffiliateNames'); // Assuming an element with id 'myStringDisplay'
+        var storedString8 = getCookie('currentAffiliatesNameCookie');
   
   
   
@@ -201,9 +201,17 @@ function getCookie(name) {
           targetElement6.textContent = storedString6;
         } else {
             // If the cookie doesn't exist, set a default value and store it
-            const defaultString6 = "EDITED SERIES NAMES";
+            const defaultString6 = "EDITED SITE NAMES";
             setCookie('defaultString6', defaultString6, 7); // Store for 7 days
             targetElement6.textContent = defaultString6;
+          if (storedString7) {
+            // If the cookie exists, use its value
+          targetElement7.textContent = storedString7;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString7 = "EDITED SERIES NAMES";
+            setCookie('defaultString7', defaultString7, 7); // Store for 7 days
+            targetElement7.textContent = defaultString7;
         
  
  
