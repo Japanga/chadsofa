@@ -137,6 +137,10 @@ var storedString5 = getCookie('currentFemaleCharNameCookie');
      
   const targetElement8 = document.getElementById('myAffiliateNames'); // Assuming an element with id 'myStringDisplay'
         var storedString8 = getCookie('currentAffiliatesNameCookie');
+   
+        
+  const targetElement9 = document.getElementById('myPostContent'); // Assuming an element with id 'myStringDisplay'
+        var storedString9 = getCookie('currentPostContentCookie');
   
   
   
@@ -222,12 +226,23 @@ var storedString5 = getCookie('currentFemaleCharNameCookie');
    
     if (storedString8) {
             // If the cookie exists, use its value
-          targetElement8.textContent = storedString7;
+          targetElement8.textContent = storedString8;
         } else {
             // If the cookie doesn't exist, set a default value and store it
             const defaultString8 = "EDITED AFFILIATE NAMES";
             setCookie('myStoredString8', defaultString8, 7); // Store for 7 days
             targetElement8.textContent = defaultString8;
+        
+        }
+   
+       if (storedString9) {
+            // If the cookie exists, use its value
+          targetElement9.textContent = storedString9;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString9 = "EDITED POST CONTENT";
+            setCookie('myStoredString9', defaultString9, 7); // Store for 7 days
+            targetElement9.textContent = defaultString9;
         
         }
  
