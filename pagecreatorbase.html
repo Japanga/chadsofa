@@ -123,9 +123,9 @@ function getCookie(name) {
         } else {
             // If the cookie doesn't exist, set a default value and store it
             const defaultString = "EDITED POSTER NAME";
+            setCookie('myStoredString', defaultString, 7); // Store for 7 days
             targetElement.textContent = defaultString;
         }
- }
 
       if (storedString2) {
             // If the cookie exists, use its value
@@ -133,10 +133,10 @@ function getCookie(name) {
         } else {
             // If the cookie doesn't exist, set a default value and store it
             const defaultString2 = "EDITED OCCUPATION NAME";
+            setCookie('myStoredString2', defaultString2, 7); // Store for 7 days
             targetElement2.textContent = defaultString2;
         }
-                    
-
+ 
         // Example of updating the string and cookie later
         // You could trigger this with a button click or another event
         // const newString = "Updated String Value";
