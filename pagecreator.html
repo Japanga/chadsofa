@@ -388,7 +388,7 @@ li.innerHTML = item;
 
          myPosterName.textContent = "" + myPosterName.textContent + "";
          alert("Your new poster name " + myPosterName.textContent + " was saved and stored to the system.");
-         setCookie("currentPosterNameCookie", myPosterName.value, 365);
+         setCookie("currentPosterNameCookie", myPosterName.textContent, 365);
         
           myOccupationName.textContent = "" + myOccupationName.textContent + "";
          alert("Your new occupation " + myOccupationName.textContent + " was saved and stored to the system.");
@@ -460,6 +460,9 @@ li.innerHTML = item;
 
     reader.onload = function() {
       thumb.style.backgroundImage = 'url(' + reader.result + ')';
+          
+    setCookie("currentPageAvatar", reader.result, 365);
+      
     }
     reader.readAsDataURL(file);
     thumb.className += ' js--no-default';
