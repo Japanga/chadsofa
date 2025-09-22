@@ -370,8 +370,6 @@ li.innerHTML = item;
    const myFemaleCharName = document.getElementById("girlCharNames");
    const mySeriesName = document.getElementById("seriesNames");
     const myAffiliateNames = document.getElementById("affiliateNames");
-                 const myAvatar = document.getElementById("myAvatar");
-                 const myNewImageUrl = document.getElementById("myNewImageUrl");
       function editContent() {
         alert("Page saved");
 
@@ -444,6 +442,8 @@ li.innerHTML = item;
 <!-- end www.htmlcommentbox.com -->
      
           <script>
+            var currentAvatarNameCookie = [""];
+            
             function initImageUpload(box) {
   let uploadField = box.querySelector('.image-upload');
 
@@ -459,10 +459,8 @@ li.innerHTML = item;
         reader = new FileReader();
 
     reader.onload = function() {
-      thumb.style.backgroundImage = 'url(' + reader.result + ')';
-          
-    setCookie("currentPageAvatar", reader.result, 365);
-      
+      thumb.style.backgroundImage = 'url(' + reader.result + ')';  
+         setCookie("currentAvatarNameCookie", 'url(' + reader.result + ')', 365);
     }
     reader.readAsDataURL(file);
     thumb.className += ' js--no-default';
