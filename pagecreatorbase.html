@@ -103,6 +103,10 @@ function getCookie(name) {
    const header = document.getElementById('myHeader');
  
     var storedImageUrl = getCookie("currentBackgroundImg");
+   
+   
+  const targetElement = document.getElementById('posterName'); // Assuming an element with id 'myStringDisplay'
+        var storedString = getCookie('currentPosterNameCookie');
   
   
     if (storedImageUrl) {
@@ -112,8 +116,6 @@ function getCookie(name) {
     }
 
 
-  const targetElement = document.getElementById('posterName'); // Assuming an element with id 'myStringDisplay'
-        var storedString = getCookie('currentPosterNameCookie');
    
         if (storedString) {
             // If the cookie exists, use its value
@@ -372,11 +374,7 @@ li.innerHTML = item;
           <p contenteditable="true">EDIT ARTICLE CONTENT</p>
               
           
-          
-    
-     </main> 
-    
-     <script> 
+              <script> 
        document.addEventListener('DOMContentLoaded', function() {
     const avatar = document.getElementById('myAvatar');
    var storedAvatarUrl = getCookie("currentAvatarCookie");
@@ -389,6 +387,10 @@ li.innerHTML = item;
     }
         </script> 
         
+    
+     </main> 
+    
+ 
         <!-- THIS IS THE CSS !-->
          <style>
           
