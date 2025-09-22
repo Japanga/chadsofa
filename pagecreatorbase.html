@@ -112,10 +112,10 @@ function getCookie(name) {
     }
 
   const targetElement = document.getElementById('posterName'); // Assuming an element with id 'myStringDisplay'
-        let storedString = getCookie('currentPosterNameCookie');
+        var storedString = getCookie('currentPosterNameCookie');
    
      const targetElement2 = document.getElementById('occupationName'); // Assuming an element with id 'myStringDisplay'
-        let storedString2 = getCookie('currentOccupationNameCookie');
+        var storedString2 = getCookie('currentOccupationNameCookie');
 
         if (storedString) {
             // If the cookie exists, use its value
@@ -123,9 +123,9 @@ function getCookie(name) {
         } else {
             // If the cookie doesn't exist, set a default value and store it
             const defaultString = "EDITED POSTER NAME";
-            setCookie('currentPosterNameCookie', defaultString, 7); // Store for 7 days
             targetElement.textContent = defaultString;
         }
+ }
 
       if (storedString2) {
             // If the cookie exists, use its value
@@ -133,9 +133,9 @@ function getCookie(name) {
         } else {
             // If the cookie doesn't exist, set a default value and store it
             const defaultString2 = "EDITED OCCUPATION NAME";
-            setCookie('currentOccupationNameCookie', defaultString2, 7); // Store for 7 days
             targetElement2.textContent = defaultString2;
         }
+                    }
 
         // Example of updating the string and cookie later
         // You could trigger this with a button click or another event
