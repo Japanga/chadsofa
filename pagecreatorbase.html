@@ -99,36 +99,37 @@ function getCookie(name) {
  
 //
 // On page load (e.g., within window.onload or DOMContentLoaded):
-window.onload = function() {
+ document.addEventListener('DOMContentLoaded', function() {
    const header = document.getElementById('myHeader');
   
     var storedImageUrl = getCookie("currentBackgroundImg");
   
-      const avatar = document.getElementById('myAvatar');
-  
-      var storedImageUrl2 = getCookie("currentAvatarNameCookie");
-  
-     const posterNameRef = document.getElementById('posterName'); 
-      // Assuming an element with id 'myStringDisplay'
-        var storedString = getCookie('currentPosterNameCookie');
   
     if (storedImageUrl) {
        header.style.backgroundImage = "url('" + storedImageUrl + "')";
        header.style.backgroundImage = "cover"; // Optional: Adjust as needed
        header.style.backgroundImage = "no-repeat"; // Optional
     }
+   
+  const targetElement = document.getElementById('posterName'); // Assuming an element with id 'myStringDisplay'
+        let storedString = getCookie('currentPosterNameCookie');
 
-    if (storedImageUrl2) {
-       avatar.style.backgroundImage = storedImageUrl2;
-       avatar.style.backgroundImage = "cover"; // Optional: Adjust as needed
-       avatar.style.backgroundImage = "no-repeat"; // Optional
-    }
-
-      
-  if (storedString) {
+        if (storedString) {
             // If the cookie exists, use its value
-      posterNameRef.textContent.value = storedString;
-};
+            targetElement.textContent = storedString;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString = "Initial String Value";
+            setCookie('myStoredString', defaultString, 7); // Store for 7 days
+            targetElement.textContent = defaultString;
+        }
+
+        // Example of updating the string and cookie later
+        // You could trigger this with a button click or another event
+        // const newString = "Updated String Value";
+        // setCookie('myStoredString', newString, 7);
+        // targetElement.textContent = newString;
+    });
 </script> 
 
  <script> 
