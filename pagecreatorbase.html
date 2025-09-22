@@ -56,7 +56,7 @@
                     <div class="topnav">
 
                     
-                      </div>
+                      </div> 
     
                   
                 
@@ -130,12 +130,12 @@ var storedString5 = getCookie('currentFemaleCharNameCookie');
   
    
      
-  const targetElement7 = document.getElementById('mySeriesName'); // Assuming an element with id 'myStringDisplay'
+  const targetElement7 = document.getElementById('seriesNames'); // Assuming an element with id 'myStringDisplay'
         var storedString7 = getCookie('currentSeriesNameCookie');
   
    
      
-  const targetElement8 = document.getElementById('myAffiliateNames'); // Assuming an element with id 'myStringDisplay'
+  const targetElement8 = document.getElementById('affiliateNames'); // Assuming an element with id 'myStringDisplay'
         var storedString8 = getCookie('currentAffiliatesNameCookie');
    
         
@@ -244,7 +244,7 @@ var storedString5 = getCookie('currentFemaleCharNameCookie');
             setCookie('myStoredString9', defaultString9, 7); // Store for 7 days
             targetElement9.textContent = defaultString9;
         }
-   }
+   
         
  
     
@@ -479,22 +479,25 @@ li.innerHTML = item;
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Site of origin</b></td>
-<td style="padding:4px;"><p id = "siteNames">EDITED SITE OF ORIGIN</p></td>
+<td style="padding:4px;"><p id = "siteNames">EDITED SITE OF ORIGIN</p>
+  </td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Favorite non-DB series</b></td>
-<td style="padding:4px;"><p id = "seriesNames">EDITED SERIES NAMES</p></td>
+<td style="padding:4px;"><p id = "seriesNames">EDITED SERIES NAMES</p>
+  </td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Affiliated posters</b></td>
-<td style="padding:4px;"><p id = "affiliateNames">EDITED AFFILIATES</p></td>
+<td style="padding:4px;"><p id = "affiliateNames">EDITED AFFILIATES</p>
+  </td>
 </table> 
                  
           <p id = "myPostContent">EDIT ARTICLE CONTENT</p>
               
-          
-          
-        </script> 
+            
+                       
+        </script>  
         
     
      </main> 
