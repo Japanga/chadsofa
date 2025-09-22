@@ -108,6 +108,9 @@ function getCookie(name) {
   const targetElement = document.getElementById('posterName'); // Assuming an element with id 'myStringDisplay'
         var storedString = getCookie('currentPosterNameCookie');
   
+  const targetElement2 = document.getElementById('occupationName'); // Assuming an element with id 'myStringDisplay'
+        var storedString2 = getCookie('currentOccupationNameCookie');
+  
   
     if (storedImageUrl) {
        header.style.backgroundImage = "url('" + storedImageUrl + "')";
@@ -125,6 +128,16 @@ function getCookie(name) {
             const defaultString = "EDITED POSTER NAME";
             setCookie('myStoredString', defaultString, 7); // Store for 7 days
             targetElement.textContent = defaultString;
+        }
+   
+   if (storedString2) {
+            // If the cookie exists, use its value
+          targetElement2.textContent = storedString;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString2 = "EDITED OCCUPATION NAME";
+            setCookie('myStoredString', defaultString2, 7); // Store for 7 days
+            targetElement2.textContent = defaultString2;
         }
  
     
@@ -374,17 +387,7 @@ li.innerHTML = item;
           <p contenteditable="true">EDIT ARTICLE CONTENT</p>
               
           
-              <script> 
-       document.addEventListener('DOMContentLoaded', function() {
-    const avatar = document.getElementById('myAvatar');
-   var storedAvatarUrl = getCookie("currentAvatarCookie");
-  
-   
-    if (storedAvatarUrl) {
-       avatar.style.backgroundImage = "url('" + storedAvatarUrl + "')";
-       avatar.style.backgroundImage = "cover"; // Optional: Adjust as needed
-       avatar.style.backgroundImage = "no-repeat"; // Optional
-    }
+          
         </script> 
         
     
