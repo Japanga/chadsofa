@@ -350,7 +350,7 @@ li.innerHTML = item;
 <td style="padding:4px;"><p id = "affiliateNames" contenteditable="true">EDIT AFFILIATES</p></td>
 </table> 
                  
-          <p contenteditable="true">EDIT ARTICLE CONTENT</p>
+          <p id = "myPostContent" contenteditable="true">EDIT ARTICLE CONTENT</p>
               
           
     
@@ -366,6 +366,7 @@ li.innerHTML = item;
    const mySiteNames = document.getElementById("siteNames");
    const mySeriesName = document.getElementById("seriesNames");
     const myAffiliateNames = document.getElementById("affiliateNames");
+    const myPostContent = document.getElementById("myPostContent");
       function editContent() {
         alert("Page saved");
 
@@ -394,27 +395,31 @@ li.innerHTML = item;
          setCookie("currentActivityNameCookie", myActivityName.textContent, 365);
         
            myMaleCharName.textContent = "" + myMaleCharName.textContent + "";
-         alert("Your new male characters " + myMaleCharName.textContent + " were saved and stored to the system.");
+         alert("Your new male characters " + myMaleCharName.textContent + " and all other changes and stored to the system.");
          setCookie("currentMaleCharNameCookie", myMaleCharName.textContent, 365);
         
         
            myFemaleCharName.textContent = "" + myFemaleCharName.textContent + "";
-         alert("Your new female characters " + myFemaleCharName.textContent + " were saved and stored to the system.");
+   
          setCookie("currentFemaleCharNameCookie", myFemaleCharName.textContent, 365);
         
           
            mySiteNames.textContent = "" + mySiteNames.textContent + "";
-         alert("Your sites of origin " + mySiteNames.textContent + " were saved and stored to the system.");
+
          setCookie("currentSiteNamesCookie", mySiteNames.textContent, 365);
         
         
         mySeriesName.textContent = "" + mySeriesName.textContent + "";
-         alert("Your new series " + mySeriesName.textContent + " were saved and stored to the system.");
+
          setCookie("currentSeriesNameCookie", mySeriesName.textContent, 365);
         
          myAffiliateNames.textContent = "" + myAffiliateNames.textContent + "";
-         alert("Your new affiliates " + myAffiliateNames.textContent + " were saved and stored to the system.");
+  
          setCookie("currentAffiliatesNameCookie", myAffiliateNames.textContent, 365);
+        
+         myPostContent.textContent = "" + myPostContent.textContent + "";
+  
+         setCookie("currentPostContentCookie", myPostContent.textContent, 365);
 
       }
                    function setCookie(name, value, days) {
