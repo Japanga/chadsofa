@@ -363,6 +363,7 @@ li.innerHTML = item;
    const myActivityName = document.getElementById("activityName");
    const myMaleCharName = document.getElementById("maleCharNames");
    const myFemaleCharName = document.getElementById("girlCharNames");
+   const mySiteNames = document.getElementById("siteNames");
    const mySeriesName = document.getElementById("seriesNames");
     const myAffiliateNames = document.getElementById("affiliateNames");
       function editContent() {
@@ -374,6 +375,7 @@ li.innerHTML = item;
          var currentActivityNameCookie = ["EDIT ACTIVITY"];
          var currentMaleCharNameCookie = ["EDIT MALE CHARACTERS"];
          var currentFemaleCharNameCookie = ["EDIT FEMALE CHARACTERS"];
+           var currentSiteNamesCookie = ["EDIT SITES OF ORIGIN"];
         var currentSeriesNameCookie = ["EDIT SERIES"];
         var currentAffiliatesNameCookie = ["EDIT AFFILIATES"];
         
@@ -389,20 +391,26 @@ li.innerHTML = item;
         
           myActivityName.textContent = "" + myActivityName.textContent + "";
          alert("Your new date of activity " + myActivityName.textContent + " was saved and stored to the system.");
-         setCookie("currentActivityNameCookie", myActivityName.value, 365);
+         setCookie("currentActivityNameCookie", myActivityName.textContent, 365);
         
            myMaleCharName.textContent = "" + myMaleCharName.textContent + "";
          alert("Your new male characters " + myMaleCharName.textContent + " were saved and stored to the system.");
-         setCookie("currentMaleCharNameCookie", myMaleCharName.value, 365);
+         setCookie("currentMaleCharNameCookie", myMaleCharName.textContent, 365);
         
         
            myFemaleCharName.textContent = "" + myFemaleCharName.textContent + "";
-         alert("Your new date of activity " + myFemaleCharName.textContent + " was saved and stored to the system.");
-         setCookie("currentFemaleCharNameCookie", myFemaleCharName.value, 365);
+         alert("Your new female characters " + myFemaleCharName.textContent + " were saved and stored to the system.");
+         setCookie("currentFemaleCharNameCookie", myFemaleCharName.textContent, 365);
+        
+          
+           mySiteNames.textContent = "" + mySiteNames.textContent + "";
+         alert("Your sites of origin " + mySiteNames.textContent + " were saved and stored to the system.");
+         setCookie("currentSiteNamesCookie", mySiteNames.textContent, 365);
+        
         
         mySeriesName.textContent = "" + mySeriesName.textContent + "";
          alert("Your new series " + mySeriesName.textContent + " were saved and stored to the system.");
-         setCookie("currentSeriesNameCookie", mySeriesName.value, 365);
+         setCookie("currentSeriesNameCookie", mySeriesName.textContent, 365);
         
          myAffiliateNames.textContent = "" + myAffiliateNames.textContent + "";
          alert("Your new affiliates " + myAffiliateNames.textContent + " were saved and stored to the system.");
