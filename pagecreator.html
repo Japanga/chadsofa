@@ -351,18 +351,14 @@ li.innerHTML = item;
 </table> 
                  
           <p id = "myPostContent" contenteditable="true">EDIT ARTICLE CONTENT</p>
-              
-          
-    
-    
-    
+
                <script>
     const submitPostButton = document.getElementById('submitPostButton');
    const myPosterName = document.getElementById("posterName");
     const myOccupationName = document.getElementById("occupationName");
    const myActivityName = document.getElementById("activityName");
    const myMaleCharName = document.getElementById("maleCharNames");
-   const myFemaleCharName = document.getElementById("girlCharNames");
+   const myFemaleCharName = document.getElementById("femaleCharNames");
    const mySiteNames = document.getElementById("siteNames");
    const mySeriesName = document.getElementById("seriesNames");
     const myAffiliateNames = document.getElementById("affiliateNames");
@@ -399,28 +395,16 @@ li.innerHTML = item;
          alert("Your new male characters " + myMaleCharName.textContent + " and all other changes and stored to the system.");
          setCookie("currentMaleCharNameCookie", myMaleCharName.textContent, 365);
         
-        
-           myFemaleCharName.textContent = "" + myFemaleCharName.textContent + "";
-   
-         setCookie("currentFemaleCharNameCookie", myFemaleCharName.textContent, 365);
-        
-          
-           mySiteNames.textContent = "" + mySiteNames.textContent + "";
-
-         setCookie("currentSiteNamesCookie", mySiteNames.textContent, 365);
-        
-        
-        mySeriesName.textContent = "" + mySeriesName.textContent + "";
-
-         setCookie("currentSeriesNameCookie", mySeriesName.textContent, 365);
-        
-         myAffiliateNames.textContent = "" + myAffiliateNames.textContent + "";
-  
-         setCookie("currentAffiliatesNameCookie", myAffiliateNames.textContent, 365);
-        
-         myPostContent.textContent = "" + myPostContent.textContent + "";
-  
-         setCookie("currentPostContentCookie", myPostContent.textContent, 365);
+ myFemaleCharName.textContent = "" + myFemaleCharName.textContent + "";
+setCookie("currentFemaleCharNameCookie", myFemaleCharName.textContent, 365);
+ mySiteNames.textContent = "" + mySiteNames.textContent + "";
+setCookie("currentSiteNamesCookie", mySiteNames.textContent, 365);
+ mySeriesName.textContent = "" + mySeriesName.textContent + "";
+ setCookie("currentSeriesNameCookie", mySeriesName.textContent, 365);
+myAffiliateNames.textContent = "" + myAffiliateNames.textContent + "";
+setCookie("currentAffiliatesNameCookie", myAffiliateNames.textContent, 365);
+myPostContent.textContent = "" + myPostContent.textContent + "";
+setCookie("currentPostContentCookie", myPostContent.textContent, 365);
 
       }
                    function setCookie(name, value, days) {
