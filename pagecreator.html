@@ -314,17 +314,12 @@ li.innerHTML = item;
                   <table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#000000; border:1px solid #999; line-height:1.5; color:red; font-size:smaller;"><tr>
 <th colspan="2" style="background:#000000; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;"><p id = "posterName" contenteditable="true">EDIT POSTER NAME</p>           
 <tr style="border-bottom:1px solid #999;"><th colspan="2" style="padding:0;"> 
-  <div class="wrapper">
-    <div class="box">
-    <div class="js--image-preview"></div>
-    <div class="upload-options">
-      <label>
-        <input type="file" class="image-upload" accept="image/*" />
-      </label>
-    </div>
-  </div>
-    </div>
-  </tr>
+  
+  <label class="picture" for="picture__input" tabIndex="0">
+  <span class="picture__image"></span>
+</label>
+
+<input type="file" name="picture__input" id="picture__input">
 <tr>
 <td style="padding:4px;"><b>Primary Occupation</b></td>
 <td style="padding:4px;"><p id = "occupationName" contenteditable="true">EDIT OCCUPATION NAME</p></td>
@@ -440,106 +435,82 @@ li.innerHTML = item;
   });
     </script>
 <!-- end www.htmlcommentbox.com -->
-     
-          <script>
-            var currentAvatarNameCookie = [""];
-            
-            function initImageUpload(box) {
-  let uploadField = box.querySelector('.image-upload');
+     <script>
+       const inputFile = document.querySelector("#picture__input");
+const pictureImage = document.querySelector(".picture__image");
+const pictureImageTxt = "Choose an image";
+pictureImage.innerHTML = pictureImageTxt;
 
-  uploadField.addEventListener('change', getFile);
+inputFile.addEventListener("change", function (e) {
+  const inputTarget = e.target;
+  const file = inputTarget.files[0];
 
-  function getFile(e){
-    let file = e.currentTarget.files[0];
-    checkType(file);
-  }
-  
-  function previewImage(file){
-    let thumb = box.querySelector('.js--image-preview'),
-        reader = new FileReader();
+  if (file) {
+    const reader = new FileReader();
 
-    reader.onload = function() {
-      thumb.style.backgroundImage = 'url(' + reader.result + ')';  
-         setCookie("currentAvatarNameCookie", 'url(' + reader.result + ')', 365);
-    }
+    reader.addEventListener("load", function (e) {
+      const readerTarget = e.target;
+
+      const img = document.createElement("img");
+      img.src = readerTarget.result;
+      img.classList.add("picture__img");
+
+      pictureImage.innerHTML = "";
+      pictureImage.appendChild(img);
+    });
+
     reader.readAsDataURL(file);
-    thumb.className += ' js--no-default';
+  } else {
+    pictureImage.innerHTML = pictureImageTxt;
   }
-
-  function checkType(file){
-    let imageType = /image.*/;
-    if (!file.type.match(imageType)) {
-      throw 'Datei ist kein Bild';
-    } else if (!file){
-      throw 'Kein Bild gewählt';
-    } else {
-      previewImage(file);
-    }
-  }
-  
-}
-
-// initialize box-scope
-var boxes = document.querySelectorAll('.box');
-
-for (let i = 0; i < boxes.length; i++) {
-  let box = boxes[i];
-  initDropEffect(box);
-  initImageUpload(box);
-}
-
-
-
-/// drop-effect
-function initDropEffect(box){
-  let area, drop, areaWidth, areaHeight, maxDistance, dropWidth, dropHeight, x, y;
-  
-  // get clickable area for drop effect
-  area = box.querySelector('.js--image-preview');
-  area.addEventListener('click', fireRipple);
-  
-  function fireRipple(e){
-    area = e.currentTarget
-    // create drop
-    if(!drop){
-      drop = document.createElement('span');
-      drop.className = 'drop';
-      this.appendChild(drop);
-    }
-    // reset animate class
-    drop.className = 'drop';
-    
-    // calculate dimensions of area (longest side)
-    areaWidth = getComputedStyle(this, null).getPropertyValue("width");
-    areaHeight = getComputedStyle(this, null).getPropertyValue("height");
-    maxDistance = Math.max(parseInt(areaWidth, 10), parseInt(areaHeight, 10));
-
-    // set drop dimensions to fill area
-    drop.style.width = maxDistance + 'px';
-    drop.style.height = maxDistance + 'px';
-    
-    // calculate dimensions of drop
-    dropWidth = getComputedStyle(this, null).getPropertyValue("width");
-    dropHeight = getComputedStyle(this, null).getPropertyValue("height");
-    
-    // calculate relative coordinates of click
-    // logic: click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center
-    x = e.pageX - this.offsetLeft - (parseInt(dropWidth, 10)/2);
-    y = e.pageY - this.offsetTop - (parseInt(dropHeight, 10)/2) - 30;
-    
-    // position drop and animate
-    drop.style.top = y + 'px';
-    drop.style.left = x + 'px';
-    drop.className += ' animate';
-    e.stopPropagation();
-    
-  }
-}
+});
 
                     </script>
+         
         <!-- THIS IS THE CSS !-->
          <style>
-          
+          #picture__input {
+  display: none;
+}
+
+.picture {
+  height: 350px;
+  width: 310px;
+  aspect-ratio: 16/9;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  border: 2px dashed currentcolor;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: color 300ms ease-in-out, background 300ms ease-in-out;
+  outline: none;
+  overflow: hidden;
+}
+
+.picture:hover {
+  color: #777;
+  background: #ccc;
+}
+
+.picture:active {
+  border-color: turquoise;
+  color: turquoise;
+  background: #eee;
+}
+
+.picture:focus {
+  color: #777;
+  background: #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.picture__img {
+  max-width: 100%;
+}
+
           #myHeader {
   background-image: url('https://i.imgur.com/WqcAGQo.png');
   background-size: cover;
