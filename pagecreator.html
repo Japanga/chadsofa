@@ -395,6 +395,8 @@ li.innerHTML = item;
          alert("Your new male characters " + myMaleCharName.textContent + " and all other changes and stored to the system.");
          setCookie("currentMaleCharNameCookie", myMaleCharName.textContent, 365);
         
+         window.location.href = "./pagecreatorbase.html";
+        
  myFemaleCharName.textContent = "" + myFemaleCharName.textContent + "";
 setCookie("currentFemaleCharNameCookie", myFemaleCharName.textContent, 365);
  mySiteNames.textContent = "" + mySiteNames.textContent + "";
@@ -405,7 +407,6 @@ myAffiliateNames.textContent = "" + myAffiliateNames.textContent + "";
 setCookie("currentAffiliatesNameCookie", myAffiliateNames.textContent, 365);
 myPostContent.textContent = "" + myPostContent.textContent + "";
 setCookie("currentPostContentCookie", myPostContent.textContent, 365);
-window.open("./pagecreatorbase.html", "_blank");
       }
                    function setCookie(name, value, days) {
         var expires = "";
@@ -429,7 +430,7 @@ window.open("./pagecreatorbase.html", "_blank");
                 reader.readAsDataURL(input.files[0]);
             }
         }
-  
+    
   });
     </script>
 <!-- end www.htmlcommentbox.com -->
