@@ -116,17 +116,17 @@ function getCookie(name) {
         var storedString3 = getCookie('currentActivityNameCookie');
    
        
-  const targetElement4 = document.getElementById('myMaleCharName'); // Assuming an element with id 'myStringDisplay'
+  const targetElement4 = document.getElementById('maleCharNames'); // Assuming an element with id 'myStringDisplay'
         var storedString4 = getCookie('currentMaleCharNameCookie');
   
    
        
-  const targetElement5 = document.getElementById('myFemaleCharName'); // Assuming an element with id 'myStringDisplay'
-        var storedString5 = getCookie('currentFemaleCharNameCookie');
+  const targetElement5 = document.getElementById('femaleCharNames'); // Assuming an element with id 'myStringDisplay'
+var storedString5 = getCookie('currentFemaleCharNameCookie');
    
      
-  const targetElement6 = document.getElementById('mySiteNames'); // Assuming an element with id 'myStringDisplay'
-        var storedString6 = getCookie('currentSiteNamesCookie');
+  const targetElement6 = document.getElementById('siteNames'); // Assuming an element with id 'myStringDisplay'
+ var storedString6 = getCookie('currentSiteNamesCookie');
   
    
      
@@ -219,6 +219,7 @@ function getCookie(name) {
             setCookie('myStoredString7', defaultString7, 7); // Store for 7 days
             targetElement7.textContent = defaultString7;
         }
+   
     if (storedString8) {
             // If the cookie exists, use its value
           targetElement8.textContent = storedString7;
@@ -228,7 +229,7 @@ function getCookie(name) {
             setCookie('myStoredString8', defaultString8, 7); // Store for 7 days
             targetElement8.textContent = defaultString8;
         
- 
+        }
  
     
     });
@@ -473,7 +474,7 @@ li.innerHTML = item;
 <td style="padding:4px;"><p id = "affiliateNames">EDITED AFFILIATES</p></td>
 </table> 
                  
-          <p contenteditable="true">EDIT ARTICLE CONTENT</p>
+          <p id = "myPostContent">EDIT ARTICLE CONTENT</p>
               
           
           
