@@ -101,6 +101,7 @@ function getCookie(name) {
 // On page load (e.g., within window.onload or DOMContentLoaded):
 window.onload = function() {
    const header = document.getElementById('myHeader');
+  
     var storedImageUrl = getCookie("currentBackgroundImg");
     if (storedImageUrl) {
        header.style.backgroundImage = "url('" + storedImageUrl + "')";
@@ -114,6 +115,13 @@ window.onload = function() {
        avatar.style.backgroundImage = "cover"; // Optional: Adjust as needed
        avatar.style.backgroundImage = "no-repeat"; // Optional
     }
+
+         const posterNameRef = document.getElementById('posterName'); 
+      // Assuming an element with id 'myStringDisplay'
+        let storedString = getCookie('currentPosterNameCookie');
+  if (storedString) {
+            // If the cookie exists, use its value
+            posterNameRef.textContent = storedString;
 };
 </script> 
 
