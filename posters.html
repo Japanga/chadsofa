@@ -315,7 +315,7 @@ li.innerHTML = item;
           
           
 <h1>POSTERS</h1>
-                       <p><strong>POSTER HYPERLINKS (45 listed, more in Non-Poster Pages) (78 pages overall across whole database) 113 total images hosted, visit the <a href="supergallery.html"> SUPER GALLERY</a> for more information.</strong></p>
+                       <p><strong>POSTER HYPERLINKS (45 listed, more in Non-Poster Pages) (80 pages overall across whole database) 113 total images hosted, visit the <a href="supergallery.html"> SUPER GALLERY</a> for more information.</strong></p>
                   <a href="foaz.html"> FOAZ</a>
                   <a href="poaz.html"> POAZ</a>
                   <a href="woaz.html"> Jiren</a>
@@ -375,10 +375,26 @@ li.innerHTML = item;
           <a href="category5legacyarticles.html"> Legacy Articles</a>
           <a href="category6newarticles.html"> New Articles</a>
           
+          
+                  
+                     <style>
+ ghosttext {
+  color: #27F5AD; /* Sets the default link color to blue */
+}
+</style>
+          
           <p><strong>FACTION HYPERLINKS</strong></p>
                   <a href="janitors.html"> 4chan Organization</a>
                   <a href="redclover.html"> Red Clover Corporation</a>
                   <a href="soyjakparty.html"> Soyjak.Party / "THE 'SHARTY"</a>
+          
+          
+          
+              <h1 class="ghost-text" style="display:inline">
+               
+               <a href="ghost.html">/ghost/</a>
+          
+          </h1>
                   
  
                   <p><strong>HEAD WIKI CONTRIBUTORS</strong></p>
@@ -592,6 +608,8 @@ li.innerHTML = item;
        .hidden {
   display: none; /* This class will hide the element */
 }
+           
+           
           
           * {
   margin: auto;
@@ -614,7 +632,44 @@ body {
 
 
       
+       .ghost-text {   
       
+       font-size: 18px;
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      
+  /* Set the background to a linear gradient */
+  background: linear-gradient(to right, white, #27F5AD, #27F5AD, #27F5AD, white, #27F5AD, #27F5AD);
+  
+  /* Clip the background to the text content */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers */
+  
+  /* Make the background larger than the text to allow for movement */
+  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
+  
+  /* Apply the animation */
+  animation: moveGradient 3s linear infinite; /* Adjust duration and timing as needed */
+}
+
+/* Define the keyframe animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  100% {
+    background-position: 100% 50%; /* End position */
+  }
+}   
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of 
+       .hidden {
+  display: none; /* This class will hide the element */
+}
      
 horizontally */
 @media screen and (max-width: 600px) {
