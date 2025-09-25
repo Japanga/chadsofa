@@ -308,13 +308,19 @@ function redirectToRandomPage() {
                                     
                            <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
                    <button id="changeImageButton7">⚙ The Vault ⚙</button> 
-                  
+                  <div id="search-container">
                   <div class="search-container">
           
    <input type="search" id="searchBar" placeholder="Search the site.....">
     
 </div>
+                    </div>
 
+                  
+                  
+                  
+                  
+                  
                   <ul id="resultsList"></ul>
                   
     <script>
@@ -399,9 +405,10 @@ const myElement5 = document.getElementById('changeImageButton5');
    const myElement6 = document.getElementById('changeImageButton6');
       const myElement7 = document.getElementById('changeImageButton7');
 
+ const myDiv1 = document.querySelector('.search-container');
    
-   
-const gradientStringHalloween = "linear-gradient(#FA5B05, #8F2500)";
+const gradientStringHalloween = "linear-gradient(#FF4000, #4F1907)";
+
       const blackFontString = "black";
    
    const orangeFontString = "orange";
@@ -434,10 +441,12 @@ else if (currentMonth === 8) { // June
   
          Object.assign(myElement7.style.background = gradientStringHalloween);
  Object.assign(myElement7.style.color = blackFontString);
+  
+   Object.assign(myDiv1.style.background = gradientStringHalloween);
 
 
 }
-// Add more conditions for other months as needed
+
  
 
 
@@ -537,6 +546,19 @@ else if (currentMonth === 8) { // June
                
 }
            
+           /* Style the container */
+  .search-container {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background: linear-gradient(#190A05, #870000);
+  width: 300px;
+  color: red;
+}          
+    
+        
+           
 
     
           .overlay {
@@ -548,18 +570,7 @@ else if (currentMonth === 8) { // June
     /* Black background with 50% opacity */
     z-index: 9999; /* Ensures the overlay is on top of other content */
 }
-/* Style the container */
-.search-container {
-  display: flex; /* Use flexbox for alignment */
-  align-items: center;
-  border-radius: 20px;
-  padding: 5px 10px;
-  background: linear-gradient(#190A05, #870000);
-  width: 300px;
-  color: red;
-}          
-    
-           
+   
  
           /* user styles */ 
 
