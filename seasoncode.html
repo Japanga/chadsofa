@@ -60,9 +60,7 @@
     
                   
                 
-                
-                <audio src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" autoplay></audio>        
-                  
+         
           
 
                   
@@ -179,10 +177,49 @@ window.onload = function() {
 // Call the function to update the header when the page loads
 updateHeaderByMonth();
 </script>
+                  
 
-           
+          
+                       
                   
+ <script> 
+ function playMonthlyAudio() {
+      const currentDate = new Date();
+      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
+
+      const audioFiles = [
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jpsRmTmDhiUbzkXd77onylmH6e0o7Kbr',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
+      ];
+
+      // Ensure the audio file for the current month exists
+      if (audioFiles[currentMonth]) {
+        const audio = new Audio(audioFiles[currentMonth]);
+        audio.play()
+          .catch(error => {
+            console.error("Error playing audio:", error);
+            // Handle potential errors like user interaction required for autoplay
+          });
+      } else {
+        console.warn("No audio file defined for the current month.");
+      }
+    }
+
+    // Call the function to play the audio when the page loads or on a specific event
+    playMonthlyAudio();
+</script>
                   
+
                   
                   <button class="changeImageButton5" onclick="redirectToRandomPage()">Random Article</button>
                 
