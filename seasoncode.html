@@ -383,11 +383,11 @@ li.innerHTML = item;
  </a>
                   
 <button class="tablink" onclick="window.location.href='index.html'" id="defaultOpen">HOME</button>
-<button class="tablink" onclick="window.location.href='posters.html'">POSTERS</button>
-<button class="tablink" onclick="window.location.href='news.html'">NEWS</button>
-<button class="tablink" onclick="window.location.href='gallery.html'">GALLERY</button>
-          <button class="tablink" onclick="window.location.href='interviews.html'">INTERVIEWS</button>
-          <button class="tablink" onclick="window.location.href='cybersecurity.html'">CYBERSECURITY</button>
+<button class="tablink2" onclick="window.location.href='posters.html'">POSTERS</button>
+<button class="tablink3" onclick="window.location.href='news.html'">NEWS</button>
+<button class="tablink4" onclick="window.location.href='gallery.html'">GALLERY</button>
+          <button class="tablink5" onclick="window.location.href='interviews.html'">INTERVIEWS</button>
+          <button class="tablink6" onclick="window.location.href='cybersecurity.html'">CYBERSECURITY</button>
                 
 
                     
@@ -404,14 +404,24 @@ const myElement = document.getElementById('changeImageButton');
 const myElement5 = document.getElementById('changeImageButton5');
    const myElement6 = document.getElementById('changeImageButton6');
       const myElement7 = document.getElementById('changeImageButton7');
+   
 
  const myDiv1 = document.querySelector('.search-container');
    
+    const myDiv2 = document.querySelector('blockquote');
+   
+       const myDiv3 = document.querySelector('.tablink');
+      const myDiv4 = document.querySelector('.tablink2');
+      const myDiv5 = document.querySelector('.tablink3');
+      const myDiv6 = document.querySelector('.tablink4');
+      const myDiv7 = document.querySelector('.tablink5');
+      const myDiv8 = document.querySelector('.tablink6');
+
 const gradientStringHalloween = "linear-gradient(#FF4000, #4F1907)";
 
       const blackFontString = "black";
    
-   const orangeFontString = "orange";
+   const orangeFontString = "#FF4000";
    
    const currentMonth = new Date().getMonth();
 
@@ -444,6 +454,32 @@ else if (currentMonth === 8) { // June
   
    Object.assign(myDiv1.style.background = gradientStringHalloween);
 
+   Object.assign(myDiv2.style.color = orangeFontString);
+  
+     Object.assign(myDiv3.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv3.style.color = blackFontString);
+  
+  
+     Object.assign(myDiv4.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv4.style.color = blackFontString);
+  
+    Object.assign(myDiv5.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv5.style.color = blackFontString);
+  
+  Object.assign(myDiv6.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv6.style.color = blackFontString);
+  
+    Object.assign(myDiv7.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv7.style.color = blackFontString);
+  
+    Object.assign(myDiv8.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv8.style.color = blackFontString);
 
 }
 
@@ -763,6 +799,70 @@ horizontally */
   font-size: 17px;
   width: 25%;
 }
+           
+            .tablink2 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+           
+            .tablink3 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+           
+            .tablink4 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+           
+            .tablink5 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+            .tablink6 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+
+
+
 
 /* Change background color of buttons on hover */
 .tablink:hover {
