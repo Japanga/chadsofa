@@ -219,9 +219,12 @@ updateHeaderByMonth();
     playMonthlyAudio();
 </script>
                   
+                  
+         
+                  
 
                   
-                  <button class="changeImageButton5" onclick="redirectToRandomPage()">Random Article</button>
+                  <button id="changeImageButton5">Random Article</button>
                 
                   
                   
@@ -303,8 +306,8 @@ function redirectToRandomPage() {
                   </script>
                 
                                     
-                           <button id="changeImageButton"onclick="window.location.href='pagecreatorbase.html'">⚒ Page Creator ⚒</button> 
-                   <button id="changeImageButton"onclick="window.location.href='category5legacyarticles.html'">⚙ The Vault ⚙</button> 
+                           <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
+                   <button id="changeImageButton7">⚙ The Vault ⚙</button> 
                   
                   <div class="search-container">
           
@@ -385,7 +388,58 @@ li.innerHTML = item;
                    <h1>Sample text</h1>
                           
                   
-                 
+                          
+                                    
+ <script> 
+const myElement = document.getElementById('changeImageButton');
+   const myElement2 = document.getElementById('changeImageButton2');
+   const myElement3 = document.getElementById('changeImageButton3');
+   const myElement4 = document.getElementById('changeImageButton4');
+const myElement5 = document.getElementById('changeImageButton5');
+   const myElement6 = document.getElementById('changeImageButton6');
+      const myElement7 = document.getElementById('changeImageButton7');
+   
+   
+   
+const gradientStringHalloween = "linear-gradient(#FA5B05, #8F2500)";
+      const blackFontString = "black";
+   
+   const currentMonth = new Date().getMonth();
+
+   
+   // Apply styles based on the current month
+if (currentMonth === 0) { // January
+ 
+} 
+else if (currentMonth === 8) { // June
+  Object.assign(myElement.style.background = gradientStringHalloween);
+ Object.assign(myElement.style.color = blackFontString);
+  
+   Object.assign(myElement2.style.background = gradientStringHalloween);
+ Object.assign(myElement2.style.color = blackFontString);
+  
+   Object.assign(myElement3.style.background = gradientStringHalloween);
+ Object.assign(myElement3.style.color = blackFontString);
+  
+     Object.assign(myElement4.style.background = gradientStringHalloween);
+ Object.assign(myElement4.style.color = blackFontString);
+  
+       Object.assign(myElement5.style.background = gradientStringHalloween);
+ Object.assign(myElement5.style.color = blackFontString);
+
+       Object.assign(myElement6.style.background = gradientStringHalloween);
+ Object.assign(myElement6.style.color = blackFontString);
+  
+         Object.assign(myElement7.style.background = gradientStringHalloween);
+ Object.assign(myElement7.style.color = blackFontString);
+
+
+}
+// Add more conditions for other months as needed
+ 
+
+
+</script>
           
                 </main>
     
@@ -420,6 +474,8 @@ li.innerHTML = item;
 #searchBar::placeholder {
   color: red;
 }
+           
+           
 
 #changeImageButton {
  background: linear-gradient(#190A05, #870000);
@@ -453,7 +509,7 @@ li.innerHTML = item;
   font-size: 16px; 
                
 }
-           .changeImageButton5 {
+             #changeImageButton5 {
  background: linear-gradient(#190A05, #870000);
   border: linear-gradient(#190A05, #870000);
   color: red;
@@ -461,6 +517,24 @@ li.innerHTML = item;
   font-size: 16px; 
                
 }
+           #changeImageButton6 {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
+}
+           
+           #changeImageButton7 {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
+}
+           
 
     
           .overlay {
@@ -478,11 +552,13 @@ li.innerHTML = item;
   align-items: center;
   border-radius: 20px;
   padding: 5px 10px;
-  background: linear-gradient(#190A05, #870000);;
+  background: linear-gradient(#190A05, #870000);
   width: 300px;
   color: red;
 }          
+    
            
+ 
           /* user styles */ 
 
             /* styles are what change the color and sizes of stuff on your site. */
