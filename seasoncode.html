@@ -196,7 +196,7 @@ updateHeaderByMonth();
         'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
         'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
         'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jpsRmTmDhiUbzkXd77onylmH6e0o7Kbr',
+        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
         'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
         'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
         'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
@@ -317,7 +317,22 @@ function redirectToRandomPage() {
 </div>
                     </div>
 
-                  
+                  <script>
+                      const myPageButton = document.getElementById('changeImageButton6');
+
+                      const myVaultButton = document.getElementById('changeImageButton7');
+                    
+                    
+        function goToPageCreator() {
+           window.location.href = "./pagecreatorbase.html";
+        }
+                      function goToVault() {
+           window.location.href = "./category5legacypages.html";
+        }
+                                   myPageButton.addEventListener('click', goToPageCreator);
+                    
+                    myVaultButton.addEventListener('click', goToVault);
+                  </script>
                   
                   
                   
@@ -403,11 +418,14 @@ const myElement = document.getElementById('changeImageButton');
    const myElement3 = document.getElementById('changeImageButton3');
    const myElement4 = document.getElementById('changeImageButton4');
 const myElement5 = document.getElementById('changeImageButton5');
-   const myElement6 = document.getElementById('changeImageButton6');
-      const myElement7 = document.getElementById('changeImageButton7');
+ const myElement6 = document.getElementById('changeImageButton6');
+ const myElement7 = document.getElementById('changeImageButton7');
+   
    
 
  const myDiv1 = document.querySelector('.search-container');
+   
+    const myElement8 = document.getElementById('searchBar');
    
     const myDiv2 = document.querySelector('blockquote');
    
@@ -417,7 +435,10 @@ const myElement5 = document.getElementById('changeImageButton5');
       const myDiv6 = document.querySelector('.tablink4');
       const myDiv7 = document.querySelector('.tablink5');
       const myDiv8 = document.querySelector('.tablink6');
+   
+    const myDiv9 = document.querySelector('searchBar');
 
+   
 const gradientStringHalloween = "linear-gradient(#FF4000, #4F1907)";
 
       const blackFontString = "black";
@@ -427,6 +448,7 @@ const gradientStringHalloween = "linear-gradient(#FF4000, #4F1907)";
    const currentMonth = new Date().getMonth();
 
    
+
    // Apply styles based on the current month
 if (currentMonth === 0) { // January
  
@@ -481,6 +503,11 @@ else if (currentMonth === 8) { // June
     Object.assign(myDiv8.style.background = gradientStringHalloween);
   
    Object.assign(myDiv8.style.color = blackFontString);
+  
+   Object.assign(myElement8.style.color = orangeFontString);
+  
+   // To "remove" the ::before pseudo-element
+    myElement8.classList.add('halloween');
 
 }
 
@@ -522,8 +549,11 @@ else if (currentMonth === 8) { // June
 #searchBar::placeholder {
   color: red;
 }
-           
-           
+   
+           /* Style the placeholder text */
+#searchBar.halloween::placeholder {
+  color: #FF4000;
+}
 
 #changeImageButton {
  background: linear-gradient(#190A05, #870000);
