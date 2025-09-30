@@ -60,9 +60,7 @@
     
                   
                 
-                
-                <audio src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" autoplay></audio>        
-                  
+         
           
 
                   
@@ -97,6 +95,7 @@ function getCookie(name) {
     return null;
 }
  
+
 //
 // On page load (e.g., within window.onload or DOMContentLoaded):
 window.onload = function() {
@@ -142,19 +141,98 @@ window.onload = function() {
 
 </script>
 
-           
                   
                   
                   
-                  <button class="changeImageButton5" onclick="redirectToRandomPage()">Random Article</button>
+ <script> 
+ function updateHeaderByMonth() {
+    const today = new Date();
+    const currentMonthIndex = today.getMonth(); // 0 for January, 11 for December
+
+    const monthHeaders = [
+        "https://i.imgur.com/WqcAGQo.png", // January (index 0)
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://yourimageshare.com/ib/2D57mWw4so.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png"
+    ];
+
+    const headerElement = document.getElementById("myHeader"); // Assuming your header has id="mainHeader"
+  
+
+    if (headerElement) {
+         headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
+    } else {
+        console.error("Header element with ID 'mainHeader' not found.");
+    }
+}
+
+// Call the function to update the header when the page loads
+updateHeaderByMonth();
+</script>
+                  
+
+          
+                       
+                  
+ <script> 
+ function playMonthlyAudio() {
+      const currentDate = new Date();
+      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
+
+      const audioFiles = [
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
+      ];
+
+      // Ensure the audio file for the current month exists
+      if (audioFiles[currentMonth]) {
+        const audio = new Audio(audioFiles[currentMonth]);
+        audio.play()
+          .catch(error => {
+            console.error("Error playing audio:", error);
+            // Handle potential errors like user interaction required for autoplay
+          });
+      } else {
+        console.warn("No audio file defined for the current month.");
+      }
+    }
+
+    // Call the function to play the audio when the page loads or on a specific event
+    playMonthlyAudio();
+</script>
+                  
+                  
+         
+                  
+
+                  
+                  <button id="changeImageButton5">Random Article</button>
                 
                   
                   
                 <script>
 
-                  // Define an array of URLs to which the user can be redirected.
+                  // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
-   "./woaz",
+  "./woaz",
     "./poaz",
     "./moaz",
     "./foaz",
@@ -232,15 +310,36 @@ function redirectToRandomPage() {
                   </script>
                 
                                     
-                           <button id="changeImageButton"onclick="window.location.href='pagecreatorbase'">⚒ Page Creator ⚒</button> 
-                   <button id="changeImageButton"onclick="window.location.href='category5legacyarticles'">⚙ The Vault ⚙</button> 
-                  
+                           <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
+                   <button id="changeImageButton7">⚙ The Vault ⚙</button> 
+                  <div id="search-container">
                   <div class="search-container">
           
    <input type="search" id="searchBar" placeholder="Search the site.....">
     
 </div>
+                    </div>
 
+                  <script>
+                      const myPageButton = document.getElementById('changeImageButton6');
+
+                      const myVaultButton = document.getElementById('changeImageButton7');
+                    
+                    
+        function goToPageCreator() {
+           window.location.href = "./pagecreatorbase";
+        }
+                      function goToVault() {
+           window.location.href = "./category5legacypages";
+        }
+                                   myPageButton.addEventListener('click', goToPageCreator);
+                    
+                    myVaultButton.addEventListener('click', goToVault);
+                  </script>
+                  
+                  
+                  
+                  
                   <ul id="resultsList"></ul>
                   
     <script>
@@ -295,6 +394,7 @@ li.innerHTML = item;
 <blockquote>
 <a href="./redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="./moot">m00t</a>  - <b>wiki/site related matters dragonballsuperwiki2025@outlook.com</b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@Rizon.net #Rizon, #4chan, #desuarchive and #myanimelist</a></b> 
 </blockquote>
+                    
      <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
               
@@ -302,16 +402,16 @@ li.innerHTML = item;
  </a>
                   
 <button class="tablink" onclick="window.location.href='index'" id="defaultOpen">HOME</button>
-<button class="tablink" onclick="window.location.href='posters'">POSTERS</button>
-<button class="tablink" onclick="window.location.href='news'">NEWS</button>
-<button class="tablink" onclick="window.location.href='gallery'">GALLERY</button>
-          <button class="tablink" onclick="window.location.href='interviews'">INTERVIEWS</button>
-          <button class="tablink" onclick="window.location.href='cybersecurity'">CYBERSECURITY</button>
+<button class="tablink2" onclick="window.location.href='posters'">POSTERS</button>
+<button class="tablink3" onclick="window.location.href='news'">NEWS</button>
+<button class="tablink4" onclick="window.location.href='gallery'">GALLERY</button>
+          <button class="tablink5" onclick="window.location.href='interviews'">INTERVIEWS</button>
+          <button class="tablink6" onclick="window.location.href='cybersecurity'">CYBERSECURITY</button>
                 
 
-
-             
-     <h1>POSTERS</h1>
+     
+                  
+                     <h1>POSTERS</h1>
                        <p><strong>NON-POSTER HYPERLINKS</strong></p>
                   <a href="foaz"> FOAZ</a>
                   <a href="argentinian"> The Argentinian (White)</a>
@@ -340,9 +440,117 @@ li.innerHTML = item;
            <a href="elshaggyblanco"> El Shaggy Blanco</a> 
             <a href="zombies">Zombies</a> 
             <a href="fourhorsemen">Four Horsemen of the Apocalypse</a> 
+          <a href="soyjakparty">Soyjak.Party</a> 
+          <a href="ghost">/ghost/</a> 
                     
                
+                  
                  
+                          
+                                    
+ <script> 
+const myElement = document.getElementById('changeImageButton');
+   const myElement2 = document.getElementById('changeImageButton2');
+   const myElement3 = document.getElementById('changeImageButton3');
+   const myElement4 = document.getElementById('changeImageButton4');
+const myElement5 = document.getElementById('changeImageButton5');
+ const myElement6 = document.getElementById('changeImageButton6');
+ const myElement7 = document.getElementById('changeImageButton7');
+   
+   
+
+ const myDiv1 = document.querySelector('.search-container');
+   
+    const myElement8 = document.getElementById('searchBar');
+   
+    const myDiv2 = document.querySelector('blockquote');
+   
+       const myDiv3 = document.querySelector('.tablink');
+      const myDiv4 = document.querySelector('.tablink2');
+      const myDiv5 = document.querySelector('.tablink3');
+      const myDiv6 = document.querySelector('.tablink4');
+      const myDiv7 = document.querySelector('.tablink5');
+      const myDiv8 = document.querySelector('.tablink6');
+   
+    const myDiv9 = document.querySelector('searchBar');
+
+   
+const gradientStringHalloween = "linear-gradient(#FF4000, #4F1907)";
+
+      const blackFontString = "black";
+   
+   const orangeFontString = "#FF4000";
+   
+   const currentMonth = new Date().getMonth();
+
+   
+
+   // Apply styles based on the current month
+if (currentMonth === 0) { // January
+ 
+} 
+else if (currentMonth === 9) { // June
+  Object.assign(myElement.style.background = gradientStringHalloween);
+ Object.assign(myElement.style.color = blackFontString);
+  
+   Object.assign(myElement2.style.background = gradientStringHalloween);
+ Object.assign(myElement2.style.color = blackFontString);
+  
+   Object.assign(myElement3.style.background = gradientStringHalloween);
+ Object.assign(myElement3.style.color = blackFontString);
+  
+     Object.assign(myElement4.style.background = gradientStringHalloween);
+ Object.assign(myElement4.style.color = blackFontString);
+  
+       Object.assign(myElement5.style.background = gradientStringHalloween);
+ Object.assign(myElement5.style.color = blackFontString);
+
+       Object.assign(myElement6.style.background = gradientStringHalloween);
+ Object.assign(myElement6.style.color = blackFontString);
+  
+         Object.assign(myElement7.style.background = gradientStringHalloween);
+ Object.assign(myElement7.style.color = blackFontString);
+  
+   Object.assign(myDiv1.style.background = gradientStringHalloween);
+
+   Object.assign(myDiv2.style.color = orangeFontString);
+  
+     Object.assign(myDiv3.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv3.style.color = blackFontString);
+  
+  
+     Object.assign(myDiv4.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv4.style.color = blackFontString);
+  
+    Object.assign(myDiv5.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv5.style.color = blackFontString);
+  
+  Object.assign(myDiv6.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv6.style.color = blackFontString);
+  
+    Object.assign(myDiv7.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv7.style.color = blackFontString);
+  
+    Object.assign(myDiv8.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv8.style.color = blackFontString);
+  
+   Object.assign(myElement8.style.color = orangeFontString);
+  
+   // To "remove" the ::before pseudo-element
+    myElement8.classList.add('halloween');
+
+}
+
+ 
+
+
+</script>
           
                 </main>
     
@@ -377,6 +585,11 @@ li.innerHTML = item;
 #searchBar::placeholder {
   color: red;
 }
+   
+           /* Style the placeholder text */
+#searchBar.halloween::placeholder {
+  color: #FF4000;
+}
 
 #changeImageButton {
  background: linear-gradient(#190A05, #870000);
@@ -410,7 +623,7 @@ li.innerHTML = item;
   font-size: 16px; 
                
 }
-           .changeImageButton5 {
+             #changeImageButton5 {
  background: linear-gradient(#190A05, #870000);
   border: linear-gradient(#190A05, #870000);
   color: red;
@@ -418,6 +631,37 @@ li.innerHTML = item;
   font-size: 16px; 
                
 }
+           #changeImageButton6 {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
+}
+           
+           #changeImageButton7 {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
+}
+           
+           /* Style the container */
+  .search-container {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background: linear-gradient(#190A05, #870000);
+  width: 300px;
+  color: red;
+}          
+    
+        
+           
 
     
           .overlay {
@@ -429,17 +673,8 @@ li.innerHTML = item;
     /* Black background with 50% opacity */
     z-index: 9999; /* Ensures the overlay is on top of other content */
 }
-/* Style the container */
-.search-container {
-  display: flex; /* Use flexbox for alignment */
-  align-items: center;
-  border-radius: 20px;
-  padding: 5px 10px;
-  background: linear-gradient(#190A05, #870000);;
-  width: 300px;
-  color: red;
-}          
-           
+   
+ 
           /* user styles */ 
 
             /* styles are what change the color and sizes of stuff on your site. */
@@ -631,6 +866,70 @@ horizontally */
   font-size: 17px;
   width: 25%;
 }
+           
+            .tablink2 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+           
+            .tablink3 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+           
+            .tablink4 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+           
+            .tablink5 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+            .tablink6 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+
+
+
 
 /* Change background color of buttons on hover */
 .tablink:hover {
