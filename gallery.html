@@ -500,6 +500,12 @@ document.getElementById("text14").innerHTML=text;
 function hide14(){
     document.getElementById("text14").innerHTML="";
 } 
+                                        function showText15(text){
+document.getElementById("text15").innerHTML=text;
+}
+function hide15(){
+    document.getElementById("text15").innerHTML="";
+} 
 </script>     
                   
                    
@@ -647,7 +653,15 @@ function hide14(){
      
 <div id="text14"></div>
      
-   
+        <span id="booruItemRow7">
+                       <span>
+ <a href="./booruitem15" target="_blank">
+   <p> <img src="https://yourimageshare.com/ib/SbH2EUUmcl.jpg"  style="float:left;width:240px;height:330px;" id="image" onMouseOver="showText15('Post ID: 15  Author: Risu  Date: September 30th, 2025 Characters - Jiren')" onMouseOut="hide15();"></p>
+ </a>
+</span>     
+     
+   <div id="text15"></div>
+          
                  </span> 
                  
                   
@@ -795,6 +809,10 @@ else if (currentMonth === 9) { // June
   /* Other styles for your items */
 }
               #booruItemRow6 {
+  display: inline-block; /* Ensures items are on the same line and respect width/height */
+  /* Other styles for your items */
+}
+             #booruItemRow7 {
   display: inline-block; /* Ensures items are on the same line and respect width/height */
   /* Other styles for your items */
 }
