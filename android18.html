@@ -169,6 +169,7 @@ window.onload = function() {
 
     if (headerElement) {
          headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
+        setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
     } else {
         console.error("Header element with ID 'mainHeader' not found.");
     }
@@ -1176,4 +1177,5 @@ horizontally */
      
 </body>
 </html>
+
 
