@@ -70,6 +70,183 @@
      <button id="changeImageButton4">Header 4 - Fortress</button>         
 
                   
+                  <script> 
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+             
+                      // Example using a simple cookie function
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+ 
+//
+// On page load (e.g., within window.onload or DOMContentLoaded):
+ document.addEventListener('DOMContentLoaded', function() {
+   const header = document.getElementById('myHeader');
+ 
+    var storedImageUrl = getCookie("currentBackgroundImg");
+   
+   
+  const targetElement = document.getElementById('posterName'); // Assuming an element with id 'myStringDisplay'
+        var storedString = getCookie('currentPosterNameCookie');
+  
+  const targetElement2 = document.getElementById('occupationName'); // Assuming an element with id 'myStringDisplay'
+        var storedString2 = getCookie('currentOccupationNameCookie');
+  
+    
+  const targetElement3 = document.getElementById('activityName'); // Assuming an element with id 'myStringDisplay'
+        var storedString3 = getCookie('currentActivityNameCookie');
+   
+       
+  const targetElement4 = document.getElementById('maleCharNames'); // Assuming an element with id 'myStringDisplay'
+        var storedString4 = getCookie('currentMaleCharNameCookie');
+  
+   
+       
+  const targetElement5 = document.getElementById('femaleCharNames'); // Assuming an element with id 'myStringDisplay'
+var storedString5 = getCookie('currentFemaleCharNameCookie');
+   
+     
+  const targetElement6 = document.getElementById('siteNames'); // Assuming an element with id 'myStringDisplay'
+ var storedString6 = getCookie('currentSiteNamesCookie');
+  
+   
+     
+  const targetElement7 = document.getElementById('seriesNames'); // Assuming an element with id 'myStringDisplay'
+        var storedString7 = getCookie('currentSeriesNameCookie');
+  
+   
+     
+  const targetElement8 = document.getElementById('affiliateNames'); // Assuming an element with id 'myStringDisplay'
+        var storedString8 = getCookie('currentAffiliatesNameCookie');
+   
+        
+  const targetElement9 = document.getElementById('myPostContent'); // Assuming an element with id 'myStringDisplay'
+        var storedString9 = getCookie('currentPostContentCookie');
+  
+  
+  
+    if (storedImageUrl) {
+       header.style.backgroundImage = "url('" + storedImageUrl + "')";
+       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       header.style.backgroundImage = "no-repeat"; // Optional
+    }
+
+
+   
+        if (storedString) {
+            // If the cookie exists, use its value
+          targetElement.textContent = storedString;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString = "EDITED POSTER NAME";
+            setCookie('myStoredString', defaultString, 7); // Store for 7 days
+            targetElement.textContent = defaultString;
+        }
+   
+   if (storedString2) {
+            // If the cookie exists, use its value
+          targetElement2.textContent = storedString2;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString2 = "EDITED OCCUPATION NAME";
+            setCookie('myStoredString2', defaultString2, 7); // Store for 7 days
+            targetElement2.textContent = defaultString2;
+        }
+   
+     if (storedString3) {
+            // If the cookie exists, use its value
+          targetElement3.textContent = storedString3;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString3 = "EDITED ACTIVITY NAME";
+            setCookie('myStoredString3', defaultString3, 7); // Store for 7 days
+            targetElement3.textContent = defaultString3;
+        }
+   
+    if (storedString4) {
+            // If the cookie exists, use its value
+          targetElement4.textContent = storedString4;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString4 = "EDITED MALE CHARACTER NAMES";
+            setCookie('myStoredString4', defaultString4, 7); // Store for 7 days
+            targetElement4.textContent = defaultString4;
+        }
+   
+    if (storedString5) {
+            // If the cookie exists, use its value
+          targetElement5.textContent = storedString5;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString5 = "EDITED FEMALE CHARACTER NAMES";
+            setCookie('myStoredString5', defaultString5, 7); // Store for 7 days
+            targetElement5.textContent = defaultString5;
+        }
+   
+   
+         if (storedString6) {
+            // If the cookie exists, use its value
+          targetElement6.textContent = storedString6;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString6 = "EDITED SITE NAMES";
+            setCookie('myStoredString6', defaultString6, 7); // Store for 7 days
+            targetElement6.textContent = defaultString6;
+           }
+   
+   
+          if (storedString7) {
+            // If the cookie exists, use its value
+          targetElement7.textContent = storedString7;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString7 = "EDITED SERIES NAMES";
+            setCookie('myStoredString7', defaultString7, 7); // Store for 7 days
+            targetElement7.textContent = defaultString7;
+        }
+   
+    if (storedString8) {
+            // If the cookie exists, use its value
+          targetElement8.textContent = storedString8;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString8 = "EDITED AFFILIATE NAMES";
+            setCookie('myStoredString8', defaultString8, 7); // Store for 7 days
+            targetElement8.textContent = defaultString8;
+        
+        }
+   
+       if (storedString9) {
+            // If the cookie exists, use its value
+          targetElement9.textContent = storedString9;
+        } else {
+            // If the cookie doesn't exist, set a default value and store it
+            const defaultString9 = "EDITED POST CONTENT";
+            setCookie('myStoredString9', defaultString9, 7); // Store for 7 days
+            targetElement9.textContent = defaultString9;
+        }
+   
+        
+ 
+    
+    });
+</script> 
          
                   <script> 
 
