@@ -60,10 +60,7 @@
     
                   
                 
-                        <audio src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" autoplay></audio>        
-                  
-            
-               
+         
           
 
                   
@@ -98,6 +95,7 @@ function getCookie(name) {
     return null;
 }
  
+
 //
 // On page load (e.g., within window.onload or DOMContentLoaded):
 window.onload = function() {
@@ -143,77 +141,158 @@ window.onload = function() {
 
 </script>
 
-           
                   
                   
                   
-                  <button class="changeImageButton5" onclick="redirectToRandomPage()">Random Article</button>
+ <script> 
+ function updateHeaderByMonth() {
+    const today = new Date();
+    const currentMonthIndex = today.getMonth(); // 0 for January, 11 for December
+
+    const monthHeaders = [
+        "https://i.imgur.com/WqcAGQo.png", // January (index 0)
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://yourimageshare.com/ib/2D57mWw4so.png",
+        "https://i.imgur.com/WqcAGQo.png",
+        "https://i.imgur.com/WqcAGQo.png"
+    ];
+
+    const headerElement = document.getElementById("myHeader"); // Assuming your header has id="mainHeader"
+  
+
+    if (headerElement) {
+         headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
+    } else {
+        console.error("Header element with ID 'mainHeader' not found.");
+    }
+}
+
+// Call the function to update the header when the page loads
+updateHeaderByMonth();
+</script>
+                  
+
+          
+                       
+                  
+ <script> 
+ function playMonthlyAudio() {
+      const currentDate = new Date();
+      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
+
+      const audioFiles = [
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
+      ];
+
+      // Ensure the audio file for the current month exists
+      if (audioFiles[currentMonth]) {
+        const audio = new Audio(audioFiles[currentMonth]);
+        audio.play()
+          .catch(error => {
+            console.error("Error playing audio:", error);
+            // Handle potential errors like user interaction required for autoplay
+          });
+      } else {
+        console.warn("No audio file defined for the current month.");
+      }
+    }
+
+    // Call the function to play the audio when the page loads or on a specific event
+    playMonthlyAudio();
+</script>
+                  
+                  
+         
+                  
+
+                  
+                  <button id="changeImageButton5">Random Article</button>
                 
                   
                   
                 <script>
 
-                  // Define an array of URLs to which the user can be redirected.
+                  // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
-    "./woaz",
-    "./poaz",
-    "./moaz",
-    "./foaz",
-    "./romaine",
-    "./turles",
-    "./argentinian",
-    "./cabbagang",
-    "./characterfag",
-    "./congo",
-    "./cutegang",
-    "./dbshungergames",
-    "./dennis",
-    "./discordler",
-    "./dogposter",
-    "./drawchad",
-    "./elespecialista",
-    "./elgrandepadre",
-    "./elhermano",
-    "./elshaggyblanco",
-    "./filterbitch",
-    "./geekdom101",
-    "./gets",
-    "./hoppu",
-    "./janitors",
-    "./krillin",
-    "./lordparagon",
-    "./moeshit",
-    "./moewives",
-    "./moot",
-    "./moro.html",
-    "./multiverseguy",
-    "./panpedo",
-    "./risu",
-    "./samechad",
-    "./samir34",
-    "./moewives",
-    "./seththeprogrammer",
-    "./shameel",
-    "./skillet91",
-    "./songoten",
-    "./startchad",
-    "./surpassedrus",
-    "./tablosaf",
-    "./toeichadnimation",
-    "./totallynotmark",
-    "./turles",
-    "./woaz",
-    "./yzilma",
-    "./android18",
-    "./godmodegod",
-    "./zombies",
-    "./fourhorsemen",
-    "./azusabro",
-    "./sakurakosama",
-    "./soyjakparty",
-    "./spaniard",
-    "./android21",
-    "./ghost"
+ "/chadsofa/wiki/posters/woaz",
+    "/chadsofa/wiki/posters/poaz",
+    "/chadsofa/wiki/posters/moaz",
+    "/chadsofa/wiki/posters/foaz",
+    "/chadsofa/wiki/posters/romaine",
+    "/chadsofa/wiki/posters/turles",
+    "/chadsofa/wiki/posters/argentinian",
+    "/chadsofa/wiki/posters/cabbagang",
+    "/chadsofa/wiki/posters/characterfag",
+    "/chadsofa/wiki/posters/congo",
+    "/chadsofa/wiki/posters/cutegang",
+    "/chadsofa/wiki/posters/dbshungergames",
+    "/chadsofa/wiki/posters/dennis",
+    "/chadsofa/wiki/posters/discordler",
+    "/chadsofa/wiki/posters/dogposter",
+    "/chadsofa/wiki/posters/drawchad",
+    "/chadsofa/wiki/posters/elespecialista",
+    "/chadsofa/wiki/posters/elgrandepadre",
+    "/chadsofa/wiki/posters/elhermano",
+    "/chadsofa/wiki/posters/elshaggyblanco",
+    "/chadsofa/wiki/posters/filterbitch",
+    "/chadsofa/wiki/posters/geekdom101",
+    "/chadsofa/wiki/posters/gets",
+    "/chadsofa/wiki/posters/hoppu",
+    "/chadsofa/wiki/posters/janitors",
+    "/chadsofa/wiki/posters/krillin",
+    "/chadsofa/wiki/posters/lordparagon",
+    "/chadsofa/wiki/posters/moeshit",
+    "/chadsofa/wiki/posters/moewives",
+    "/chadsofa/wiki/posters/moot",
+    "/chadsofa/wiki/posters/moro.html",
+    "/chadsofa/wiki/posters/multiverseguy",
+    "/chadsofa/wiki/posters/panpedo",
+    "/chadsofa/wiki/posters/risu",
+    "/chadsofa/wiki/posters/samechad",
+    "/chadsofa/wiki/posters/samir34",
+    "/chadsofa/wiki/posters/moewives",
+    "/chadsofa/wiki/posters/seththeprogrammer",
+    "/chadsofa/wiki/posters/shameel",
+    "/chadsofa/wiki/posters/skillet91",
+    "/chadsofa/wiki/posters/songoten",
+    "/chadsofa/wiki/posters/startchad",
+    "/chadsofa/wiki/posters/surpassedrus",
+    "/chadsofa/wiki/posters/tablosaf",
+    "/chadsofa/wiki/posters/toeichadnimation",
+    "/chadsofa/wiki/posters/totallynotmark",
+    "/chadsofa/wiki/posters/turles",
+    "/chadsofa/wiki/posters/woaz",
+    "/chadsofa/wiki/posters/yzilma",
+    "/chadsofa/wiki/posters/android18",
+    "/chadsofa/wiki/posters/godmodegod",
+    "/chadsofa/wiki/posters/zombies",
+    "/chadsofa/wiki/posters/fourhorsemen",
+    "/chadsofa/wiki/posters/azusabro",
+    "/chadsofa/wiki/posters/sakurakosama",
+    "/chadsofa/wiki/posters/soyjakparty",
+    "/chadsofa/wiki/posters/spaniard",
+    "/chadsofa/wiki/posters/android21",
+    "/chadsofa/wiki/posters/desuarchive",
+    "/chadsofa/wiki/posters/nulybro"
+
 
 ];
 // Function to perform the random redirection.
@@ -232,24 +311,46 @@ function redirectToRandomPage() {
                   </script>
                 
                                     
-                           <button id="changeImageButton"onclick="window.location.href='pagecreatorbase.html'">⚒ Page Creator ⚒</button> 
-                   <button id="changeImageButton"onclick="window.location.href='category5legacyarticles.html'">⚙ The Vault ⚙</button> 
-                  
+                           <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
+                   <button id="changeImageButton7">⚙ The Vault ⚙</button> 
+                  <div id="search-container">
                   <div class="search-container">
           
    <input type="search" id="searchBar" placeholder="Search the site.....">
     
 </div>
+                    </div>
 
+                  <script>
+                      const myPageButton = document.getElementById('changeImageButton6');
+
+                      const myVaultButton = document.getElementById('changeImageButton7');
+                    
+                    
+         function goToPageCreator() {
+           window.location.href = "/chadsofa/wiki/tools/pagecreatorbase";
+        }
+                      function goToVault() {
+           window.location.href = "/chadsofa/wiki/category/js$TAG=LEGACY";
+        }
+
+                                   myPageButton.addEventListener('click', goToPageCreator);
+                    
+                    myVaultButton.addEventListener('click', goToVault);
+                  </script>
+                  
+                  
+                  
+                  
                   <ul id="resultsList"></ul>
                   
     <script>
         const searchBar = document.getElementById('searchBar');
         const resultsList = document.getElementById('resultsList');
 
-           const items = [
+        const items = [
              '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
-'<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
+'<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>', '<a href="lordtienrus">LordTienrus</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
         ];
  searchBar.addEventListener('input', () => {
             const searchTerm = searchBar.value.toLowerCase();
@@ -293,25 +394,25 @@ li.innerHTML = item;
 </style>
 
 <blockquote>
-<a href="./redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="./moot">m00t</a>  - <b>wiki/site related matters <u>dragonballsuperwiki2025@outlook.com</u></b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@Rizon.net #Rizon, @#redclover, #4chan, #desuarchive, #myanimelist, and   #bibanon</a></b> 
+<a href="/wiki/pages/posters/redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="/wiki/pages/posters/moot">m00t</a>  - <b>wiki/site related matters dragonballsuperwiki2025@outlook.com</b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@Rizon.net #Rizon, @#redclover, #4chan, #desuarchive, #myanimelist, and #bibanon</a></b> 
 </blockquote>
- 
+                    
      <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
               
                  <p><img src="https://yourimageshare.com/ib/dH6sYbAr4T.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
                   
-<button class="tablink" onclick="window.location.href='index'" id="defaultOpen">HOME</button>
-<button class="tablink" onclick="window.location.href='posters'">POSTERS</button>
-<button class="tablink" onclick="window.location.href='news'">NEWS</button>
-<button class="tablink" onclick="window.location.href='gallery'">GALLERY</button>
-          <button class="tablink" onclick="window.location.href='interviews'">INTERVIEWS</button>
-          <button class="tablink" onclick="window.location.href='cybersecurity'">CYBERSECURITY</button>
-               
-         
+<button class="tablink" onclick="window.location.href='/chadsofa/wiki/main/index'" id="defaultOpen">HOME</button>
+<button class="tablink2" onclick="window.location.href='/chadsofa/wiki/main/posters'">POSTERS</button>
+<button class="tablink3" onclick="window.location.href='/chadsofa/wiki/main/news'">NEWS</button>
+<button class="tablink4" onclick="window.location.href='/chadsofa/wiki/booru/gallery'">GALLERY</button>
+          <button class="tablink5" onclick="window.location.href='/chadsofa/wiki/main/interviews'">INTERVIEWS</button>
+          <button class="tablink6" onclick="window.location.href='/chadsofa/wiki/main/cybersecurity'">CYBERSECURITY</button>
+                
 
-                     
+                    
+                 
            
                    <h1>PAGE PREVIEW CREATOR</h1>
           
@@ -363,32 +464,179 @@ li.innerHTML = item;
             
                        
         </script>  
-        
-    
-                       
-                           
+                  
+                          
+                                    
+ <script> 
+const myElement = document.getElementById('changeImageButton');
+   const myElement2 = document.getElementById('changeImageButton2');
+   const myElement3 = document.getElementById('changeImageButton3');
+   const myElement4 = document.getElementById('changeImageButton4');
+const myElement5 = document.getElementById('changeImageButton5');
+ const myElement6 = document.getElementById('changeImageButton6');
+ const myElement7 = document.getElementById('changeImageButton7');
+   
+   
+
+ const myDiv1 = document.querySelector('.search-container');
+   
+    const myElement8 = document.getElementById('searchBar');
+   
+    const myDiv2 = document.querySelector('blockquote');
+   
+       const myDiv3 = document.querySelector('.tablink');
+      const myDiv4 = document.querySelector('.tablink2');
+      const myDiv5 = document.querySelector('.tablink3');
+      const myDiv6 = document.querySelector('.tablink4');
+      const myDiv7 = document.querySelector('.tablink5');
+      const myDiv8 = document.querySelector('.tablink6');
+   
+    const myDiv9 = document.querySelector('searchBar');
+
+   
+const gradientStringHalloween = "linear-gradient(#FF4000, #4F1907)";
+
+      const blackFontString = "black";
+   
+   const orangeFontString = "#FF4000";
+   
+   const currentMonth = new Date().getMonth();
+
+   
+
+   // Apply styles based on the current month
+if (currentMonth === 0) { // January
+ 
+} 
+else if (currentMonth === 9) { // June
+  Object.assign(myElement.style.background = gradientStringHalloween);
+ Object.assign(myElement.style.color = blackFontString);
+  
+   Object.assign(myElement2.style.background = gradientStringHalloween);
+ Object.assign(myElement2.style.color = blackFontString);
+  
+   Object.assign(myElement3.style.background = gradientStringHalloween);
+ Object.assign(myElement3.style.color = blackFontString);
+  
+     Object.assign(myElement4.style.background = gradientStringHalloween);
+ Object.assign(myElement4.style.color = blackFontString);
+  
+       Object.assign(myElement5.style.background = gradientStringHalloween);
+ Object.assign(myElement5.style.color = blackFontString);
+
+       Object.assign(myElement6.style.background = gradientStringHalloween);
+ Object.assign(myElement6.style.color = blackFontString);
+  
+         Object.assign(myElement7.style.background = gradientStringHalloween);
+ Object.assign(myElement7.style.color = blackFontString);
+  
+   Object.assign(myDiv1.style.background = gradientStringHalloween);
+
+   Object.assign(myDiv2.style.color = orangeFontString);
+  
+     Object.assign(myDiv3.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv3.style.color = blackFontString);
+  
+  
+     Object.assign(myDiv4.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv4.style.color = blackFontString);
+  
+    Object.assign(myDiv5.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv5.style.color = blackFontString);
+  
+  Object.assign(myDiv6.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv6.style.color = blackFontString);
+  
+    Object.assign(myDiv7.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv7.style.color = blackFontString);
+  
+    Object.assign(myDiv8.style.background = gradientStringHalloween);
+  
+   Object.assign(myDiv8.style.color = blackFontString);
+  
+   Object.assign(myElement8.style.color = orangeFontString);
+  
+   // To "remove" the ::before pseudo-element
+    myElement8.classList.add('halloween');
+
+}
+
+ 
+
+
+</script>
+          
                 </main>
     
+            <script type="text/javascript" id="hcb">
+   /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dJ43Tl5IByJdqspQippWg1"+"&opts=16798&num=10&ts=1753470209459");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ 
+  </script>
 <!-- end www.htmlcommentbox.com -->
      
           
         <!-- THIS IS THE CSS !-->
-        <!-- THIS IS THE CSS !-->
          <style>
-          
+            #picture__input {
+  display: none;
+}
+
+.picture {
+  height: 350px;
+  width: 310px;
+  aspect-ratio: 16/9;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  border: 2px dashed currentcolor;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: color 300ms ease-in-out, background 300ms ease-in-out;
+  outline: none;
+  overflow: hidden;
+}
+
+.picture:hover {
+  color: #777;
+  background: #ccc;
+}
+
+.picture:active {
+  border-color: turquoise;
+  color: turquoise;
+  background: #eee;
+}
+
+.picture:focus {
+  color: #777;
+  background: #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.picture__img {
+  max-width: 100%;
+}
+
           #myHeader {
   background-image: url('https://i.imgur.com/WqcAGQo.png');
   background-size: cover;
   background-position: center;
   height: 200px; /* Example height */
 }
-              #myAvatar {
+            #myAvatar {
   background-image: url('https://yourimageshare.com/ib/qG5RhXUaZk.png');
   background-size: cover;
   background-position: center;
   height: 350px; /* Example height */
                  width: 310px; /* Example height */
 }
+       
        
 /* Style the input field */
 #searchBar {
@@ -404,6 +652,11 @@ li.innerHTML = item;
 /* Style the placeholder text */
 #searchBar::placeholder {
   color: red;
+}
+   
+           /* Style the placeholder text */
+#searchBar.halloween::placeholder {
+  color: #FF4000;
 }
 
 #changeImageButton {
@@ -438,7 +691,7 @@ li.innerHTML = item;
   font-size: 16px; 
                
 }
-           .changeImageButton5 {
+             #changeImageButton5 {
  background: linear-gradient(#190A05, #870000);
   border: linear-gradient(#190A05, #870000);
   color: red;
@@ -446,272 +699,37 @@ li.innerHTML = item;
   font-size: 16px; 
                
 }
-
-    
-          .overlay {
-    position: fixed; /* Positions the overlay relative to the viewport */
-    top: 0;
-    left: 0;
-    width: 100%; /* Covers the full width of the viewport */
-    height: 100%; /* Covers the full height of the viewport */
-    /* Black background with 50% opacity */
-    z-index: 9999; /* Ensures the overlay is on top of other content */
+           #changeImageButton6 {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
 }
-/* Style the container */
-.search-container {
+           
+           #changeImageButton7 {
+ background: linear-gradient(#190A05, #870000);
+  border: linear-gradient(#190A05, #870000);
+  color: red;
+  padding: 4px;
+  font-size: 16px; 
+               
+}
+           
+           /* Style the container */
+  .search-container {
   display: flex; /* Use flexbox for alignment */
   align-items: center;
   border-radius: 20px;
   padding: 5px 10px;
-  background: linear-gradient(#190A05, #870000);;
-  width: 300px;
-  color: red;
-}          
-           
-          /* user styles */ 
-
-            /* styles are what change the color and sizes of stuff on your site. */
-
-            /* these are variables that are being used in the code
-    these tended to confuse some people, so I only kept 
-    the images as variables */
-    
-   .topnav {
-  overflow: hidden;
- background: linear-gradient(#190A05, #870000);
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: center;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
- background: linear-gradient(#190A05, #870000);
-}
-
-/* Style the "active" element to highlight the current page */
-.topnav a.active {
   background: linear-gradient(#190A05, #870000);
-}
-
-/* Style the search box inside the navigation bar */
-.topnav input[type=text] {
-  float: center;
-  position: fixed;
-  top: 0;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 19px;
-  font-size: 17px;
-}
-
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of 
-       .hidden {
-  display: none; /* This class will hide the element */
-}
-          
-          * {
-  margin: auto;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Tahoma, Geneva,
-    Verdana, Arial, Helvetica, sans-serif;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-  color: #E80E00;
-  background: #E80E00;
-  padding: 10px;
-}
-
-
-      
-      
-     
-horizontally */
-@media screen and (max-width: 600px) {
-  .topnav a, .topnav input[type=text] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
-  }
-}
+  width: 300px;
+  color: red;
+}          
     
+        
            
-   @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-// variables
-$base-color: cadetblue;
-$base-font: 'Raleway', sans-serif;
-
-body {
-  font-family: $base-font;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: lighten($base-color, 45%);
-}
-
-.wrapper{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: purple;
-}
-
-h1 {
-  font-family: inherit;
-  margin: 0 0 .75em 0;
-  color: desaturate($base-color, 15%);
-  text-align: center;
-}
-
-.box {
-  display: block;
-  min-width: 300px;
-  height: 300px;
-  margin: 10px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  overflow: hidden;
-}
-
-.upload-options {
-  position: relative;
-  height: 75px;
-  background-color: $base-color;
-  cursor: pointer;
-  overflow: hidden;
-  text-align: center;
-  transition: background-color ease-in-out 150ms;
-  &:hover {
-    background-color: lighten($base-color, 10%);
-  }
-  & input {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-  }
-  & label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-weight: 400;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-    overflow: hidden;
-    &::after {
-      content: 'add'; 
-      font-family: 'Material Icons';
-      position: absolute;
-      font-size: 2.5rem;
-      color: rgba(230, 230, 230, 1);
-      top: calc(50% - 2.5rem);
-      left: calc(50% - 1.25rem);
-      z-index: 0;
-    }
-    & span {
-      display: inline-block;
-      width: 50%;
-      height: 100%;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      vertical-align: middle;
-      text-align: center;
-      &:hover i.material-icons {
-        color: lightgray;        
-      }
-    }
-  }
-}
-
-
-.js--image-preview {
-  height: 225px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  background-image: url('');
-  background-color: white;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  &::after {
-    content: "photo_size_select_actual"; 
-    font-family: 'Material Icons';
-    position: relative;
-    font-size: 4.5em;
-    color: rgba(230, 230, 230, 1);
-    top: calc(50% - 3rem);
-    left: calc(50% - 2.25rem);
-    z-index: 0;
-  }
-  &.js--no-default::after {
-    display: none;
-  }
-  &:nth-child(2) {
-    background-image: url('http://bastianandre.at/giphy.gif');
-  }
-}
-
-i.material-icons {
-  transition: color 100ms ease-in-out;
-  font-size: 2.25em;
-  line-height: 55px;
-  color: white;
-  display: block;
-}
-
-.drop {
-  display: block;
-  position: absolute;
-  background: transparentize($base-color, .8);
-  border-radius: 100%;
-  transform:scale(0);
-}
-
-.animate {
-  animation: ripple 0.4s linear;
-}
-
-@keyframes ripple {
-    100% {opacity: 0; transform: scale(2.5);}
-}        
 
     
           .overlay {
@@ -723,17 +741,8 @@ i.material-icons {
     /* Black background with 50% opacity */
     z-index: 9999; /* Ensures the overlay is on top of other content */
 }
-/* Style the container */
-.search-container {
-  display: flex; /* Use flexbox for alignment */
-  align-items: center;
-  border-radius: 20px;
-  padding: 5px 10px;
-  background: linear-gradient(#190A05, #870000);;
-  width: 300px;
-  color: red;
-}          
-           
+   
+ 
           /* user styles */ 
 
             /* styles are what change the color and sizes of stuff on your site. */
@@ -925,6 +934,70 @@ horizontally */
   font-size: 17px;
   width: 25%;
 }
+           
+            .tablink2 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+           
+            .tablink3 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+           
+            .tablink4 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+           
+            .tablink5 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+            .tablink6 {
+ background: linear-gradient(#190A05, #870000);
+  color: red;
+  float: none;
+  border: all;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+
+
+
 
 /* Change background color of buttons on hover */
 .tablink:hover {
