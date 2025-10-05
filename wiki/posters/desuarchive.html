@@ -416,9 +416,53 @@ li.innerHTML = item;
    <h1>DESUARCHIVE</h1>
           <h1 class="gradient-text" style="display:inline">
   ⍟ 90TH PAGE ON THE /DBS/ WIKI ⍟</h1>
+          <i><b><p id = "DESURADAR">CURRENT DESUARCHIVE STATUS</p></b></i>
                            <p><img src="https://yourimageshare.com/ib/KW154q3BK2.png" alt="Smiley face" style="float:right;width:320px;height:270px;"> </p>
                     <p>Desuarchive is an archiving site used extensively by the scholars that is used to archive /a/ threads and posts. Annoying fuckers with no lives are known to very often use the site to dwell on past drama and events in the threads with this site, which I hate and recommend against. The name comes from an ancient 4chan meme about the Rozen Maiden waifu Suiseikei, "DESU!". 4chan will autocorrect any usage of "tbh" in your post to "DESU" by default. Desuarchive deserves a special level of love and attention from the /DBS/ Wiki, as it is technically the only way it was allowed to survive. <a href="./ghost">/ghost/posting</a> is not something that was just turned on automatically. It was enabled by the owner/admin of Desuarchive, <a href="https://en.wikipedia.org/wiki/Hiroyuki_Nishimura">Hiroyuki Nishimura</a>: who opened /ghost/ as a way to continue linking and discussing the Wiki without breaking rules on advertising while also still keeping the same core team of /dbs/ friends that started the site and met in off-site areas on several occasions.</p>
-                          
+                 <script>    
+                    const targetElement = document.getElementById('DESURADAR');
+                   
+                async function checkSiteStatus(url) {
+  try {
+    const response = await fetch(url, { method: 'HEAD', mode: 'no-cors' });
+    // For 'no-cors' mode, we can't directly check status codes.
+    // The mere fact that the fetch operation completed without an error 
+    // often indicates the server is reachable, though not necessarily healthy.
+    // For more robust checks, a CORS-enabled endpoint on the target domain is ideal.
+    console.log(`${url} appears to be up.`);
+    return true;
+  } catch (error) {
+    console.error(`Error checking ${url}:`, error);
+    console.log(`${url} appears to be down.`);
+    return false;
+  }
+}
+
+// Example usage:
+checkSiteStatus('https://desuarchive.org/')
+  .then(isUp => {
+    if (isUp) {
+      const greenColorString = "green";
+          // If the cookie doesn't exist, set a default value and store it
+            const desuStatusString = "☯☮ DESUARCHIVE IS UP, WE SUCCEDED TO RETRIEVE  A SIGNAL FROM THEIR DOMAIN ☮☯";
+            targetElement.textContent = desuStatusString;
+      Object.assign(targetElement.style.color = greenColorString);
+    } else {
+       
+                  const desuStatusString = "☣☢ DESUARCHIVE IS DOWN, WE HAVE FAILED TO RETRIEVE A SIGNAL FROM THEIR DOMAIN ☢☣";
+       targetElement.textContent = desuStatusString;
+    }
+  });
+
+checkSiteStatus('https://this-is-a-nonexistent-domain.xyz/')
+  .then(isUp => {
+    if (isUp) {
+      console.log('Nonexistent domain is online!');
+    } else {
+      console.log('Nonexistent domain is offline!');
+    }
+  });
+                   </script>
                                     
  <script> 
 const myElement = document.getElementById('changeImageButton');
@@ -738,8 +782,9 @@ horizontally */
   }
 }
     
-           
-     
+           .green-text {   
+             color: 
+     }
               .gradient-text {   
       
        font-size: 18px;
