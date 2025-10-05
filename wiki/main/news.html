@@ -233,7 +233,7 @@ updateHeaderByMonth();
   const myRandButton = document.getElementById('changeImageButton5');
                   // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
-  "/chadsofa/wiki/posters/woaz",
+ "/chadsofa/wiki/posters/woaz",
     "/chadsofa/wiki/posters/poaz",
     "/chadsofa/wiki/posters/moaz",
     "/chadsofa/wiki/posters/foaz",
@@ -291,8 +291,7 @@ const pageURLs = [
     "/chadsofa/wiki/posters/soyjakparty",
     "/chadsofa/wiki/posters/spaniard",
     "/chadsofa/wiki/posters/android21",
-    "/chadsofa/wiki/posters/desuarchive",
-    "/chadsofa/wiki/posters/nulybro"
+    "/chadsofa/wiki/posters/desuarchive"
 
 ];
 // Function to perform the random redirection.
@@ -328,11 +327,11 @@ function redirectToRandomPage() {
                       const myVaultButton = document.getElementById('changeImageButton7');
                     
                     
-          function goToPageCreator() {
-           window.location.href = "/chadsofa/wiki/tools/pagecreatorbase";
+        function goToPageCreator() {
+           window.location.href = "./pagecreatorbase";
         }
                       function goToVault() {
-           window.location.href = "/chadsofa/wiki/category/js$TAG=LEGACY";
+           window.location.href = "./category5legacypages";
         }
                                    myPageButton.addEventListener('click', goToPageCreator);
                     
@@ -394,7 +393,7 @@ li.innerHTML = item;
 </style>
 
 <blockquote>
-<a href="./redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="./moot">m00t</a>  - <b>wiki/site related matters <u>dragonballsuperwiki2025@outlook.com</u></b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@nude.and.on-irc #Rizon, #myanimelist, and #bibanon</a></b> 
+<a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="/chadsofa/wiki/posters/moot">m00t</a>  - <b>wiki/site related matters <u>dragonballsuperwiki2025@outlook.com</u></b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@nude.and.on-irc #Rizon, #myanimelist, and #bibanon</a></b> 
 </blockquote>
                     
      <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
@@ -403,66 +402,240 @@ li.innerHTML = item;
                  <p><img src="https://yourimageshare.com/ib/dH6sYbAr4T.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
                   
-                  
-<button class="tablink" onclick="window.location.href='/chadsofa/wiki/main/index'" id="defaultOpen">HOME</button>
-<button class="tablink2" onclick="window.location.href='/chadsofa/wiki/main/posters'">POSTERS</button>
-<button class="tablink3" onclick="window.location.href='/chadsofa/wiki/main/news'">NEWS</button>
-<button class="tablink4" onclick="window.location.href='/chadsofa/wiki/booru/gallery'">GALLERY</button>
-          <button class="tablink5" onclick="window.location.href='/chadsofa/wiki/main/interviews'">INTERVIEWS</button>
-          <button class="tablink6" onclick="window.location.href='/chadsofa/wiki/main/cybersecurity'">CYBERSECURITY</button>
+               
+<button class="tablink" onclick="window.location.href='index'" id="defaultOpen">HOME</button>
+<button class="tablink2" onclick="window.location.href='posters'">POSTERS</button>
+<button class="tablink3" onclick="window.location.href='news'">NEWS</button>
+<button class="tablink4" onclick="window.location.href='/wiki/booru/gallery'">GALLERY</button>
+          <button class="tablink5" onclick="window.location.href='interviews'">INTERVIEWS</button>
+          <button class="tablink6" onclick="window.location.href='cybersecurity'">CYBERSECURITY</button>
                 
-
-                            
-   <h1>DESUARCHIVE</h1>
-          <h1 class="gradient-text" style="display:inline">
-  ⍟ 90TH PAGE ON THE /DBS/ WIKI ⍟</h1>
-          <i><b><p id = "DESURADAR">CURRENT DESUARCHIVE STATUS</p></b></i>
-                           <p><img src="https://yourimageshare.com/ib/KW154q3BK2.png" alt="Smiley face" style="float:right;width:320px;height:270px;"> </p>
-                    <p>Desuarchive is an archiving site used extensively by the scholars that is used to archive /a/ threads and posts. Annoying fuckers with no lives are known to very often use the site to dwell on past drama and events in the threads with this site, which I hate and recommend against. The name comes from an ancient 4chan meme about the Rozen Maiden waifu Suiseikei, "DESU!". 4chan will autocorrect any usage of "tbh" in your post to "DESU" by default. Desuarchive deserves a special level of love and attention from the /DBS/ Wiki, as it is technically the only way it was allowed to survive. <a href="./ghost">/ghost/posting</a> is not something that was just turned on automatically. It was enabled by the owner/admin of Desuarchive, <a href="https://en.wikipedia.org/wiki/Hiroyuki_Nishimura">Hiroyuki Nishimura</a>: who opened /ghost/ as a way to continue linking and discussing the Wiki without breaking rules on advertising while also still keeping the same core team of /dbs/ friends that started the site and met in off-site areas on several occasions.</p>
-                 <script>    
-                    const targetElement = document.getElementById('DESURADAR');
-                   
-                async function checkSiteStatus(url) {
-  try {
-    const response = await fetch(url, { method: 'HEAD', mode: 'no-cors' });
-    // For 'no-cors' mode, we can't directly check status codes.
-    // The mere fact that the fetch operation completed without an error 
-    // often indicates the server is reachable, though not necessarily healthy.
-    // For more robust checks, a CORS-enabled endpoint on the target domain is ideal.
-    console.log(`${url} appears to be up.`);
-    return true;
-  } catch (error) {
-    console.error(`Error checking ${url}:`, error);
-    console.log(`${url} appears to be down.`);
-    return false;
+                
+          <style>
+  halloweennewssmall {
+     color: #FF4000;  
   }
-}
+</style> 
+          
+<h1>LATEST SITE UPDATES</h1>
+           <p><strong>OCTOBER 5TH, 2025</strong></p>
+          <i><b><p>DESUARCHIVE IS DOWN FOR MAINTENANCE, I HAVE BUILT THE "DESU RADAR" ALLOWING YOU TO USE MY WIKI ITSELF TO CHECK IF DESUARCHIVE IS CURRENTLY UP OR NOT.</p></b></i>
+          <p><img src="https://yourimageshare.com/ib/kVA89wqICg.png" alt="Smiley face" style="width:660px;height:350px;"> </p>
+          <p>I have been facing some controversy for being charged with a BAN from the <b>#4chan</b> IRC channel. This is a gorgeous moment to actually explain more about the banning levels and process of the IRC system: and explaining how I have not committed any severe offenses. Connecting to the IRC masks your IP under a base vhost or "hostmask": these are fake domains to hide your IP. When you first join the IRC, you are assigned a basic randomly generated mask to hide the IP something like <b>~qwebirc@FC4D5777.5CC8285C.24B005CC.IP</b> This alone could be a bannable offense, for whatever reason of not wanting unprofessional, raw, basic IP host mask users in the channel. I worked with the staff of IRC to secure my own vhost domain, <b>~t00thl3$$@nude.and.on-irc</b>. Bans on the IRC network are either bound to both the NICK and the HOSTMASK, or just the HOSTMASK alone. Only my base IP hostmask is banned from <b>#4chan</b>. Talking in the channel is notoriously strict, and people have gotten banned for using it to report people. Bans on the IRC can last a while, but can always eventually be removed or reset by the operator if they were not already set to expire after a given time. <u>Harsher and more severe bans keep users from accessing the entire IRC network altogether...</u></p>
+          <p><img src="https://yourimageshare.com/ib/N1NkitwJP6.jpg" alt="Smiley face" style="width:620px;height:390px;"> </p>
+          <p><strong>OCTOBER 4TH, 2025</strong></p>
+          <p>Hopefully no one noticed... but during yesterday's re-organization the modded nude FighterZ videos made for the <a href="/chadsofa/wiki/posters/android21">Android 21</a> page had disappeared. (ONE OF OUR GREATEST AND MOST NICHÉ FUCKING FEATURES, GOONERS WON, CHUDS WON, YOTUBE LOST, WOMEN STFU). To make up for it, I have recorded two new videos fighting against Gold Cooler and Frieza for the page. (Fun fact: I usually specifically pick the characters I fight in the videos off of ones used by other characterfags/members of the /DBS/ community. Fighting against Frieza and Cooler is a direct homage to <a href="/chadsofa/wiki/posters/geekdom101">Geekdom101</a> and <a href="/chadsofa/wiki/posters/discordler">Discordler</a>)</p>
+          <p><img src="https://yourimageshare.com/ib/XURVVug29b.png" alt="Smiley face" style="width:620px;height:390px;"> </p>
+           <p><strong>OCTOBER 3RD, 2025</strong></p>
+          </p>/DBS/ Wiki began a recent crusade to remove all visible ".html" particles from the website to allow for MUCH more profesional looking urls and links to the site. Expanding this further, we are going through a full re-organization process. You will actually see "Wiki" in the site domains again. All different sections of the Wiki like the various tools (Page Creator, Vault etc.) , the categories and the posters will all be given their own sub-folders in the GitHub database. Our days of hosting media from other proprietary hosters like Yourimageshare and Jukehost may soon be coming to an end after we started directly embedding videos from the database for the NSFW division. This does sadly mean we will no longer be able to survey the number of site visitors off of the image pages, but we will be archiving that milestone here for when the time comes. If you are a commenter to the /dbs/ Wiki, you have not lost them and they were moved to the new URLS/pages. Because this site is ran by an amphetamine madman with ENTIRELY too much time on his hands, we will be celebrating our 90th page by giving it to the <a href="/chadsofa/wiki/posters/desuarchive">Desuarchive!</a> (who are factually the only reason we have even been able to still keep talking and working on the site.) <a href="/chadsofa/wiki/posters/nulybro">Nulybro</a> has also been given a page. The base <a href="https://japanga.github.io/chadsofa/">https://japanga.github.io/chadsofa/</a> domain still works and will still direct you to the main home page to avoid any loss or confusion from past users or if you already had the last one bookmarked, but clicking any of the buttons will still redirect you to the "wiki/main", "wiki/posters", "wiki/tools" and "wiki/booru" sub-folders. The NEW home page link is at <a href="https://japanga.github.io/chadsofa/wiki/main/index">https://japanga.github.io/chadsofa/wiki/main/index</a></p>
+   <p><img src="https://yourimageshare.com/ib/tRevyqBgN6.png" alt="Smiley face" style="width:620px;height:390px;"> </p>
+     <p><img src="https://yourimageshare.com/ib/H8YW5YqBZ9.png" alt="Smiley face" style="width:660px;height:360px;"> </p>
+            <p><strong>OCTOBER 2nd, 2025</strong></p>
+          </p>Rukiafag had made the staff developers and "janitors" of 4chan very proud with his management of the /DBS/ Wiki and began the notorious arc of August to pursue becoming affiliated with the janitors and moderators possibly even becoming one or some sort of Official 4chan business entity that is allowed to represent the organization. Sadly this era was very stressful, chaotic, and confusing: lots of insults and incorrect statements were made and Rukiafag even vandalized the Bibliotecha Anonoma, a sacred Wiki on 4chan History with ties to the IRC for making improper article edits about his status with the organization. Since their conflicts have finally been put to rest after he finally joined the IRC channels (including the one for that very database), a new ad for the IRC chat client has been added below the advertisement for the Bibliotecha Anonoma, as well as a new Advertisement for the <a href="soyjakparty">"Soyjak.Party"</a> Wiki, who have always shown their loyal support for the /DBS/ Wiki spin-off.</p>
+     <p><img src="https://yourimageshare.com/ib/QN4VknOltG.png" alt="Smiley face" style="width:570px;height:230px;"> </p>
+   <p><img src="https://yourimageshare.com/ib/xJUtTX28Fw.pngg" alt="Smiley face" style="width:570px;height:230px;"> </p>
+          <h1 class="halloweennews" style="display:inline">
+OCTOBER 1ST: DRAGON BALL SUPER WIKI 3.0 "THIS IS HALLOWEEN"</h1>
+            
+  <halloweennewssmall>
+<b><p>Get ready to be sp00ked... "HALLOWEEN" and the SEASONS CODE have been turned on for the whole month of October. This can obviously very easily be exploited, as the custom .css/header/music will be able to return if your device's month is forcefully set back to October. Adding this feature has led to some bugs relating to the original cookies-based header loading system, I would advise against using any of the original headers during the month of celebration as they may not store/load properly across all of the pages. During next month's downtime, we will be performing some optimization to better integrate the season header alongside the originals.</b></p>
+          </halloweennewssmall>
+      <p><img src="https://yourimageshare.com/ib/QzeTRjjYLP.png" alt="Smiley face" style="width:650px;height:400px;"> </p>
+          
+          <p><strong>SEPTEMBER 30th, 2025</strong></p>
+           <h1 class="gradient-text" style="display:inline">
+ <a href="./gallery">Wiki Artist/Top Contributor Risu has made 3 new contributions to the Booru. Booru items are counted as pages, so this has brought us up to nearly 90 pages. All "V.I.P" posters like Risu and Geekdom have been given new ⍟ symbols on their names, the animated gold text code created for them is now also used on their individual pages.</a> </h1>
+              <p><img src="https://yourimageshare.com/ib/zvQWO3PEpd.jpg" alt="Smiley face" style="width:320px;height:200px;"> </p>
+          <p><strong>SEPTEMBER 28th, 2025</strong></p>
+          </p>".htaccess" has been added to the Wiki. You will no longer see ".html" in any links or urls to the site, you can now link and post to pages directly from their names and no longer have to use the .html extension.</p>
+     <p><img src="https://yourimageshare.com/ib/smtfafIP4R.jpg" alt="Smiley face" style="width:600px;height:370px;"> </p>
+  
+           <p><strong>SEPTEMBER 27th, 2025</strong></p>
+         
+         </a><a href="android21">"Android 21"</a> page has been created. It is a very well known fact that I am a former Rule 34 porn artist, the Android 21 page will be used to begin the "NSFW division" of the /DBS/ Wiki. I am not interested in using the page to promote lots more of my porn artworks, the page is more specifically made to archive FighterZ videos made using nude mods that cannot be posted to YouTube. The artwork used on the Android 21 page can be found on Rule 34, where it will be used to further promote the Wiki and the Red Clover Corporation.</a> <a href="https://rule34.xxx/index.php?page=post&s=view&id=14939970">https://rule34.xxx/index.php?page=post&s=view&id=14939970</a></a>
+   <p><img src="https://yourimageshare.com/ib/TvAsIFLxRc.png" alt="Smiley face" style="width:600px;height:370px;"> </p>
+            <p><strong>SEPTEMBER 25th, 2025</strong></p>
+         
+         </a> <a href="spaniard">"The Spaniard"</a> page has been created.</a>
+           <p><strong>SEPTEMBER 24th, 2025</strong></p>
+         
+</a>Contact has been re-opened to the /DBS/ Wiki, my personal email was previously used briefly in the Wiki origin to negotiate some updates and talk with some of the users off-site but was ultimately removed due to trolling and improper usage. I will no longer tolerate dispute or doubt over my staff member status and have set up an account on the official IRC communications channel used by staff members, and can be privately messaged there directly at any time through out the day at as T00TH on channels <a href="https://qchat.rizon.net/">#4chan, #desuarchive</a> and <a href="https://qchat.rizon.net/">#myanimelist</a> for any matters pertaining to tech support or the 4chan Organization.</a> 
+            <p><strong>SEPTEMBER 23rd, 2025</strong></p>
+          
+          <h1 class="ghost-text" style="display:inline">
+<a href="./ghost">/ghost/</a> page has been created.... I have officially returned to the /a/ threads starting from the Staff meeting/new inductions on the 17th, and I will continue to visit and participate in the threads on a daily basis.</a> 
+          </h1>
+          <p><img src="https://yourimageshare.com/ib/OCsoglWMHw.png" style="width:760px;height:350px;"> </p> 
+      
+      <p><strong>SEPTEMBER 22nd, 2025</strong></p>
+           <p>The <a href="./pagecreatorbase">Page Creator</a> tool was recently introduced for fun, but was not 100% completed yet and could not properly save the data to the site. Cookies are one of the most essential parts of any website and focus on the communication and storage of data between user clients and servers, and have been part of the Wiki since the Red Clover major update. You are required to give cookies to the /DBS/ Wiki every time you enter it from the front gate Home Page, with the "Cache Code" system. Because the Page Creator was not completed yet, it was not added to the top section of the site yet and could only be found in the News. Now that it is, it will be findable across every page.</p>  
+          
+         <p><img src="https://yourimageshare.com/ib/BimZraRKyI.png" alt="Smiley face" style="width:760px;height:320px;"> </p> 
+            <p><strong>SEPTEMBER 21ST, 2025</strong></p>
+               <h1 class="gradient-text" style="display:inline">
+ <a href="./gallery.html">Wiki Artist/Top Contributor Risu has made a new contribution to the Booru.</a> 
+          </h1>
+           <p><strong>SEPTEMBER 20TH, 2025</strong></p>
+           <p><i>"ChainSAW Man"</i>, a fully voiced horror fan animation I created to promote the Reze movie that was previously previewed around /csm/: has been released to my official Fuckmaster18 channel, and on my Newgrounds profile <a href="https://trinity-animation.newgrounds.com/">"Trinity Animations"</a></p>
+           <iframe width="420" height="315" class="right-aligned-iframe"
+src="https://www.youtube.com/embed/5GL2zGMbbO0?autoplay=0&mute=1">
+</iframe>
+        <p><strong>SEPTEMBER 19TH, 2025</strong></p>
+           <p>Wikis are not known to ban users, especially sites like the /DBS/ Wiki that are ran and developed by single individuals. But if a poster makes too many repeat offenses, that gradually become more severe to the point of even damaging your own connections: they cannot go unpunished. For the first time in Wiki history, a user has been <b>PERMBANNED</b> from inclusion; for extremely detailed cases of gaslighting, 4chan Staff and <a href="./sakurakosama">User</a> Impersonation, using tripcodes and red archive bantexting to falseflag as <a href="./moot">m00t</a>, 4chan Owner and several of the other staff members - out of spite for not being included to our database. Idiots like this are going to violently be made an example of, to prove to our users that engaging in stupid, illegal stunts to force yourself onto the site will only result in the permanent termination of the chances for you ever doing so! Horrible comments made by the individual genuinely claiming he wanted to "manipulate" himself onto the site causing extreme confusion among the other members of the community and even trying to have THEIR pages removed and taken down have caused a permanent blacklist on this worthless, garbage, piece of shit terrible cuck poster.</p>
+ <p><img src="https://yourimageshare.com/ib/mAmA62HJP8.png" alt="Smiley face" style="width:640px;height:330px;"> </p>
+         <h1><strong>SEPTEMBER 18TH, 2025 - DRAGON BALL SUPER WIKI 2.5, HAIL LORD PYTHON AND FALLOUT</strong></h1>
+          
+          <p><a href="./soyjakparty">Soyjak.Party</a> page/factions section created. Did you know? Rukiafag's friendship with the staff runs way deeper than you realize, and the tech developers of 4chan themselves are among the biggest fans of the Wiki. They themselves were who gave the harshest constructive criticisms of the roughest parts of our development; like the search bars, cookies, categories, infoboxes, etc. GrapeApe9k frequently works in .php while doing the hosting work for 4chan, and .php is also used in the Bibliotheca Anonoma. He also expressed for fandom of Linux early in the Wiki history. Tech banter aside, we received lots of complaints and requests to incorporate .php, or provide other options for accessing the Wiki content beyond .html: the creation of our Desktop application "THE VAULT" will be the answer for this. Download links to The Vault are available at the <a href="./redclover">Red Clover</a> page.</p>
+           <p><img src="https://yourimageshare.com/ib/u3jARS0RZu.png" alt="Smiley face" style="width:700px;height:340px;"> </p>
+           <p><strong>SEPTEMBER 17TH, 2025</strong></p>
+<a href="./sakurakosama">SAKURAKO-SAMA</a> HAS BEEN ACKNOWLEDGED AND INDUCTED TO THE /DBS/ WIKI HALL OF FAME. After a staff meeting in the archives, a new "Factions" infobox has been created after the proper lineup of moderators/admins was defined.</p>
+          
+          
+          <p><img src="https://yourimageshare.com/ib/QXLl3Ha4Du.png" alt="Smiley face" style="width:590px;height:330px;"> </p>
+          
+          
+           <p><strong>SEPTEMBER 15TH, 2025</strong></p>
+            <p></p>
+        <p>"Azusabro" page has been created. <a href="pagecreatorbase">Page CREATOR</a>  function has been introduced. Now YOU can make your own custom unofficial pages, either for shitposts or pitches and previews that could eventually be added to the main database with proper appeals. Everyone already knows the official inclusions, so it is safe to create fake ones for fun or as personal user profiles.</p>
+          <p><img src="https://yourimageshare.com/ib/v1iy7p9aWv.png" alt="Smiley face" style="width:590px;height:330px;"> </p>
+          <p><strong>SEPTEMBER 12TH, 2025</strong></p>
+           <p>Since the Wiki is essentially a giant shitpost with lots of OCs and edits made specifically for it, I have organized every image used on the Wiki into a single page, called the <a href="supergallery">"SUPER GALLERY"</a>, because the cookies functonalities have only so far been used for the headers the Super Gallery will slowly evolve into an image favoriting/stashing system where users will be able to individually select their favorite shitposts and store them in their stash for later usage.</p>
+           <p><img src="https://yourimageshare.com/ib/HQfEUPoUKK.png" alt="Smiley face" style="width:590px;height:330px;"> </p>
+          <p><strong>SEPTEMBER 11TH, 2025</strong></p>
+             <p>A new YouTube channel has been started as a background project to the Wiki, re-uploading the full versions of some of the FighterZ matches that were previously posted early in the site history, as well as producing several new ones. This will not be highly advertised, but is still embedded and easily findable on several of the articles.</p>
+           <p><img src="https://yourimageshare.com/ib/nIlqvRiCli.png" alt="Smiley face" style="width:590px;height:330px;"> </p>
+          
+           <p><strong>SEPTEMBER 5TH, 2025</strong></p>
+          <p>"Zombies" page has been created. "Four Horsemen of the Apocalypse" page has been created. Features/functionalities on the Wiki that are going obsolete by the guests/visitors are going to slowly become disabled. Comments sections have almost exclusively only been used on the Gallery/Booru section, so they have been turned off for individual pages and articles. Removing the comments led to some of the articles becoming a lot smaller, meaning a lot of them had to be revised with new text and gallery images. This has led to all Wiki artists like Samir34, Skillet91, and DrawChad getting all of their art added to the pages. All proxy domains chadsofawiki.great-site.net, direct-chadsofa1,2,3 etc. were killed off for inactivity. Lingering particles from other sites like Neocities and Desuarchive have been removed - meaning the fonts/texts will look much better across the site and no images on the site will fail to appear if Desuarchive is currently down.</p>
+          <p><img src="https://yourimageshare.com/ib/nIQlVgwi4x.png" alt="Smiley face" style="width:670px;height:330px;"> </p>
+          <p><strong>SEPTEMBER 3RD, 2025</strong></p>
+           <p>We have made a massive overhaul to the site layout and search bar, adding a very advanced new redirecting/tagging system. It is specifically designed for individuals, phrases, characters, and anime series that may have been mentioned on the Wiki at some point, but do not yet have an official page. Over time, this will be slowly integrated into the categorizing system, and some tags may recieve an individual page if enough pages fall under them.</p>
+          <p><img src="https://yourimageshare.com/ib/wfiMGsju6B.png" alt="Smiley face" style="width:490px;height:330px;"> </p>
+           <p><strong>SEPTEMBER 1ST, 2025</strong></p>
+           <p>"Yzilma" page has been created.</p>
+          <p>"Son Goten" page has been created.</p>
+          <p>A highly useful "Random Article" function has been implemented to the site, making navigating across the entire database much funner, and smoother.</p>
+           <p>Rukia: Ice Moon custom theme created, designed for superior mobile functionality.</p>
+            <p><img src="https://yourimageshare.com/ib/IICUWEwVxc.jpg" alt="Smiley face" style="width:480px;height:330px;"> </p>
+          <p><strong>AUGUST 26TH, 2025</strong></p>
+           <p>"El Shaggy Blanco" page created. This was our first time using polls to decide a new induction, and we will continue to do this in the future to survey what new pages the fans truly want to see.</p>
+           <p>Custom .CSS injections for the 4chan client released under the Red Clover banner can now be found on the Red Clover Corporation page, visible everywhere across the site.</p>
+           <p><img src="https://yourimageshare.com/ib/Lip8mE0ZpV.png" alt="Smiley face" style="width:420px;height:330px;"> </p>
+           <p><strong>AUGUST 25TH, 2025</strong></p>
+                   <p>"Panpedo" page has been created.</p>
+                  <p>New image added to the "Multiverseguy" page.</p>
+                   <p>"Moro" page has been created.</p>
+          <p>"Characterfag" page has been restored from the original Miraheze.</p>
+          <p>Articles either originally written from the Rukiafag, or restored from the original Wiki are now separated into 2 categories "Legacy Articles" and "New Articles"</p>
+          <p>Early Wiki OC from June "FORTRESS" now usable as one of the site headers.</p>
+              <h1 class="gradient-text" style="display:inline">
+   <a href="posters.html">Wiki Top Contributors given a new beautiful animated gradient text code + new page embeds.</a> 
+          </h1>
+          <p>Bibliotheca Anonoma added to the featured/affiliated websites section.</p>
+          <p>Some of the faces around the site have been removed for greater privacy assurance.</p>
+           <p><strong>AUGUST 22ND, 2025</strong></p>
+                  
+                   <p>Gilbert and the Panpedo's public bans have been added to the janitors article.</p>
+                    <h1><strong>AUGUST 17TH, 2025 - DRAGON BALL SUPER WIKI 2.0 "RED CLOVER"</strong></h1>
+             
+                  <p>A CORPORATE BUSINESS ENTITY CALLED THE "RED CLOVER CORPORATION, LLC" HAS BEEN FORMED, OVERSEEING AND PROTECTING THE MATERIAL CREATED FOR THE SITE WHICH MAY POSSIBLY EXPAND INTO FURTHER PROJECTS AND VENTURES. Our first usage of the Wayback Machine in the entire history of the Wiki (originally used to rebuild materials from the first Dragon Ball Super Wiki) was used to preserve an original pictue of m00t's cat commented to the first image on the Booru. <a href="http://web.archive.org/web/20250000000000*/web.archive.org/screenshot/japanga.github.io/chadsofa/booruitem1.html">http://web.archive.org/web/20250000000000*/</a> A new page: the <a href="./gentlemen.html">"Gentlemen"</a> page has been restored from the original Miraheze. Header customization added to the site, 3 new header options are available. Cache passcoding added to the front home page of the side, data can now be inscribed and bound into the cookies of the site for long term-use - this is currently tied to the header functionality and keeps the same header across the site.</p>
+                     <p><img src="https://yourimageshare.com/ib/HuMB6cKNwS.png" alt="Smiley face" style="width:320px;height:330px;"> </p>
+          
+   
+                  <p><strong>AUGUST 4TH, 2025</strong></p>
+     <h1 class="gradient-text" style="display:inline">
+   New page for Christopher "m00t" Poole has been created..</a> 
+          </h1>
+                   <p><strong>JULY 25TH, 2025</strong></p>
+                   <p>An emergency mass deletion crisis on 4chan has forced us to introduce and open the comments section on the Booru. </p>
+                   <h1><strong>JULY 23RD, 2025 - DRAGON BALL SUPER WIKI 1.1 "PASSENGER"</strong></h1>
+     <h1 class="gradient-text" style="display:inline">
+   Risu promoted to HEAD WIKI CONTRIBUTOR.</a> 
+          </h1>
+                   <p>Search bar refined, and added to EVERY page on the site.</p>
+                  <p>Cybersecurity page removed and replaced with Gallery/Booru for OCs made by the artists during the creation of the wiki.</p>
+                  <p>New "Krillin" page has been created.</p>
+                   <p>New "Android 18" page has been created.</p>
+                   <p><strong>JULY 17TH, 2025</strong></p>
+                     <p>New "TotallyNotMark" page has been created.</p>
+                   <p>"Toei Animation" page has been restored from the original Miraheze.</p>
+                   <p>"Samechad" page has been restored from the original Miraheze.</p>
+                    <p><strong>JULY 15TH, 2025</strong></p>
+                     <p>New "Cutegang" page has been created.</p>
+                   <p><strong>JULY 12TH, 2025</strong></p>
+                     <p>"SURPASSEDrus" page has been restored from the original Miraheze.</p>
+                        <p><strong>JULY 5TH, 2025</strong></p>
+                     <p>New addition to 'LordParagon' gallery. New additions to 'StartChad' gallery. Video link embedded into 'Filenamebitch' page. The "Affiliated Posters" section now directly links to the poster pages, adding for much smoother navigation. Since users have always pryed open and peeked at the raw code of the site in "View page source", there is no issue of turning the project open source. After the destruction of the static.domains proxy, the base source code built for the wiki is now stored on Github. One of the links in the proxies list is a deployment ran straight from the repository hosted with Github Pages that will NEVER go down under any circumstance. All issues related to individual site storing and caching will also be greatly improved on sites ran directly from the Github repository as the codes will be updated live and in real time.</p>
+                  <p><img src="https://yourimageshare.com/ib/tqDiS3jxVl.png" alt="Smiley face" style="width:400px;height:230px;"> </p>
+                  
+                   <p><strong>JULY 4TH, 2025</strong></p>
+                     <p>New video and music added to 'Cooler' page.</p>
+                          <p><strong>JULY 3RD, 2025</strong></p>
+                  <p>Fully functional JavaScript search bar added to the front page, capable of directly accessing all pages on the site.</p>
+                     <p>The link to the original Miraheze archive reserve has been REMOVED.</p>
+                   <p><img src="https://yourimageshare.com/ib/IvUUwfKYS3.png" alt="Smiley face" style="width:230px;height:230px;"> 
+                     
+                                    
+                        
+                    <p><strong>JULY 2ND, 2025</strong></p>
+                  <p>Gallery added to the ''StartCHAD'' page.</p>
+                   <p>''Filterbitch'' page has been restored from the original Miraheze.</p>
+                   <p>''Democratic Republic of the Congo'' page has been restored from the original Miraheze.</p>
+                  <p>''/dbs/ Hunger Games'' page has been restored from the original Miraheze.</p>
+                  <p>New, censorsed tweet added to ''Risu'' page.</p>
+                   <p>New butt picture added to ''Hoppu'' page. (this was very important)</p>
+                    <p><strong>JULY 1ST, 2025</strong></p>
+                  <p>New ''SethTheProgrammer'' page created.</p>
+                  <p>''SHAMEEL'' page has been restored from the original Miraheze.</p>
+                   <h1><strong>JUNE 30TH, 2025 - DRAGON BALL SUPER WIKI 1.0 FULL CONTENT RESTORATION</strong></h1>
+                    <p>Infobox templates have been added to all pages.</p>
+                   <p>Category hyperlinks added to the "Posters" section.</p>
+                    <p>New quote added to Yuliban's page.</p>
+                  <p>''El Hermano'' page has been restored from the original Miraheze.</p>
+                   <p>''El Grande Padre'' page has been restored from the original Miraheze.</p>
+                   <p>''Dogposter'' page has been restored from the original Miraheze.</p>
+                  <p>New ''Multiverseguy'' page created.</p>
+                  <p>New ''DrawChad'' page created.</p>
+                  <p>New ''Skillet91'' page created.</p>
+                    <p><strong>JUNE 29TH, 2025</strong></p>
+                    <p>New ''LordParagon'' page created.</p>
+                    <p>BEAUTIFUL new black/red gradient headers added across the whole site.</p>
+                    <p>On a power scaling wiki, the page for our site surpassed 2,000 views.</p>
+                   <p><img src="https://yourimageshare.com/ib/1K13L9FJUk.jpg" alt="Smiley face" style="width:190px;height:230px;"> 
+                     <p><strong>JUNE 28TH, 2025</strong></p>
+                    <p>Extra hyperlinks section added to the Posters list.</p>
+                    <p>New ''TablosAF'' page created.</p>
+                    <p>Gallery added to ''Geekdom101'' page. (LOL)</p>
+                  <p><strong>JUNE 27TH, 2025</strong></p>
+                    <p>New ''Risu'' page created.</p>
+                     <p><strong>JUNE 26TH, 2025</strong></p>
+                    <p>''Marvin Abundis Ramirez'' page restored from the original Miraheze.</p> 
+                  <p>Neocities has been abandoned, and the project now has a new hoster.</p> 
+                  <p><img src="https://yourimageshare.com/ib/iyJk1r34hD.jpg" alt="Smiley face" style="width:160px;height:120px;"> </p>
+                     <p><strong>JUNE 21TH, 2025</strong></p>
+                    <p>New ''Hoppu'' page created.</p>
+                    <p>First full gallery added to the Hoppu article.</p>
+                     <p><strong>JUNE 20TH, 2025</strong></p>
+                    <p>''Cooler'' and ''Cabbagang'' pages restored from the original Miraheze.</p>
+                        <p><strong>JUNE 17TH, 2025</strong></p>
+                    <p>Jiren theme song added to every single page. (LOL)</p>
+                    <p>''Moeshit'' page restored from the original Miraheze.</p>
+                       <p><strong>JUNE 16TH, 2025</strong></p>
+                    <p>Pages for Geekdom101, GodModeGod, and Samir34 added to front page.</p>
+                    <p>Headers, and link to the Miraheze archive reserve added to front page.</p>
+                    <p>All posters on the front page now fully complete with restored pages.</p>
+                    <p>New site pages added for public changelogs and detailed information on the new cybersecurity protection measures.</p>
+                    <p><strong>JUNE 15TH, 2025</strong></p>
+                    <p>The wiki is officially relaunched, and briefly shuts down Neocities with traffic reports of over 21.8 million backlinks</p>
+                    
+                      <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1750/03/1750032795394.jpg" alt="Smiley face" style="float:left;width:430px;height:330px;"> </p>
+                    
+                  
+                 
 
-// Example usage:
-checkSiteStatus('https://desuarchive.org/')
-  .then(isUp => {
-    if (isUp) {
-      const greenColorString = "green";
-          // If the cookie doesn't exist, set a default value and store it
-            const desuStatusString = "☯☮ DESUARCHIVE IS UP, WE SUCCEDED TO RETRIEVE  A SIGNAL FROM THEIR DOMAIN ☮☯";
-            targetElement.textContent = desuStatusString;
-      Object.assign(targetElement.style.color = greenColorString);
-    } else {
-       
-                  const desuStatusString = "☣☢ DESUARCHIVE IS DOWN, WE HAVE FAILED TO RETRIEVE A SIGNAL FROM THEIR DOMAIN ☢☣";
-       targetElement.textContent = desuStatusString;
-    }
-  });
-
-checkSiteStatus('https://this-is-a-nonexistent-domain.xyz/')
-  .then(isUp => {
-    if (isUp) {
-      console.log('Nonexistent domain is online!');
-    } else {
-      console.log('Nonexistent domain is offline!');
-    }
-  });
-                   </script>
+          
+          
+                          
                                     
  <script> 
 const myElement = document.getElementById('changeImageButton');
@@ -737,54 +910,13 @@ else if (currentMonth === 9) { // June
   font-size: 17px;
 }
 
+            .halloweennews {
+     color: #FF4000;    
+  }
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of 
        .hidden {
   display: none; /* This class will hide the element */
-}
-          
-          * {
-  margin: auto;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Tahoma, Geneva,
-    Verdana, Arial, Helvetica, sans-serif;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-  color: #E80E00;
-  background: #E80E00;
-  padding: 10px;
-}
 
-
-      
-      
-     
-horizontally */
-@media screen and (max-width: 600px) {
-  .topnav a, .topnav input[type=text] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
-  }
-}
-    
-           .green-text {   
-             color: 
-     }
               .gradient-text {   
       
        font-size: 18px;
@@ -819,7 +951,113 @@ horizontally */
     background-position: 100% 50%; /* End position */
   }
 }   
-       
+
+            .gradient-text2 {   
+      
+       font-size: 14px;
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      
+  /* Set the background to a linear gradient */
+  background: linear-gradient(to right, white, #5915B3, #30014A, #9E3399, #30014A, #5915B3, white);
+  
+  /* Clip the background to the text content */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers */
+  
+  /* Make the background larger than the text to allow for movement */
+  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
+  
+  /* Apply the animation */
+  animation: moveGradient 2s linear infinite; /* Adjust duration and timing as needed */
+}
+
+/* Define the keyframe animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  100% {
+    background-position: 100% 50%; /* End position */
+  }
+}
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of 
+       .hidden {
+  display: none; /* This class will hide the element */
+}
+           
+          
+          * {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Tahoma, Geneva,
+    Verdana, Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #E80E00;
+  background: #E80E00;
+  padding: 10px;
+}
+
+
+        .ghost-text {   
+      
+       font-size: 18px;
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      
+  /* Set the background to a linear gradient */
+  background: linear-gradient(to right, white, #27F5AD, #27F5AD, #27F5AD, white, #27F5AD, #27F5AD);
+  
+  /* Clip the background to the text content */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers */
+  
+  /* Make the background larger than the text to allow for movement */
+  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
+  
+  /* Apply the animation */
+  animation: moveGradient 3s linear infinite; /* Adjust duration and timing as needed */
+}
+
+      
+     
+horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+    
+           
+           
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
