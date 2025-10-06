@@ -411,7 +411,105 @@ li.innerHTML = item;
 
                     
                    <h1>Sample text</h1>
-                          
+           <style>
+                              
+      .area {
+  text-align: center;
+  font-size: 0.2;
+  letter-spacing: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
+}
+.divlink { 
+  color: #FFFFFF;
+}
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #E00000,
+      0px 0px 10px #E00000, 
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 150px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px -10px 100px #E00000,
+      0px -10px 100px #E00000;
+  }
+}
+
+      .draggable {
+  position: absolute; /* Allows positioning with top/left */
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  z-index: 9; /* Ensures it stays on top of other elements */
+  width: 760px; /* Fixed width of 200 pixels */
+  height: 620px; /* Fixed height of 150 pixels */
+  transform: scale(0.3);
+        background: linear-gradient(#050505
+, #5C5C5C
+);
+}
+
+.draggable-header {
+  padding: 10px;
+  cursor: grab; /* Changes cursor to indicate dragability */
+  background-color: #2196f3;
+  color: #fff;
+    background: linear-gradient(#190A05, #870000);
+  color: #fff;
+}
+  
+        canvas {
+          border: 1px solid #666;
+          background-color: #000;
+          transform: scale(0.8);
+        }
+      
+      #audioVisualizer {
+         width: 640px;  /* Sets a fixed width */
+  height: 350px; /* Sets a fixed height */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #555;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(237, 9, 9, 1); /* Cyan glow */
+        margin-top: -30px;
+}
+      #audioPlayer {
+    width: 80%;
+    max-width: 600px;
+    margin-top: -20px;
+}
+      audio::-webkit-media-controls-panel {
+      background: linear-gradient(#190A05, #870000);
+    }
+          </style>
+                          <div id="myDraggableDiv" class="draggable">
+     
+     <div class="draggable-header">
+       <h1>🔊 ☠MurderJukebox ☠ 🔊</h1></div>
+        <div class="area"><i>
+    <i><h2>🎧 INPUT SONG NAME HERE 🎧</h2></i>
+    <i><b><h>© RED CLOVER CORPORATION SOFTWARE</h></b></i>
+   
+           <a class="divlink" href="https://codepen.io/Japanga/pen/yyeMYNb">
+         <p>https://codepen.io/Japanga/pen/yyeMYNb</p>
+    </a>
+    <canvas id="audioVisualizer" width="800" height="400"></canvas>
+<audio id="audioPlayer" src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" controls crossorigin="anonymous"></audio>
+    <script src="spectrum.js"></script>
+    </div>
                   
                           
                                     
@@ -521,6 +619,113 @@ else if (currentMonth === 9) { // June
           
                 </main>
     
+             <script>
+               window.onload = function() {
+    const audioPlayer = document.getElementById('audioPlayer');
+    const canvas = document.getElementById('audioVisualizer');
+    const ctx = canvas.getContext('2d');
+
+    // Set canvas dimensions
+    canvas.width = window.innerWidth * 0.8;
+    canvas.height = window.innerHeight * 0.6;
+
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioContext.createAnalyser();
+    const source = audioContext.createMediaElementSource(audioPlayer);
+
+    source.connect(analyser);
+    analyser.connect(audioContext.destination);
+
+    analyser.fftSize = 256; // Fast Fourier Transform size
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    function draw() {
+        requestAnimationFrame(draw);
+
+        analyser.getByteFrequencyData(dataArray);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous frame
+
+        const barWidth = (canvas.width / bufferLength) * 2.5;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = dataArray[i] * 1.5; // Adjust multiplier for visual effect
+
+            // Gradient for bars
+            const gradient = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight);
+            gradient.addColorStop(0, '#4C0202'); // Cyan
+            gradient.addColorStop(1, '#BD0404'); // Magenta
+            ctx.fillStyle = gradient;
+
+            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+            x += barWidth + 1; // Add a small gap between bars
+        }
+    }
+
+    // Ensure audio context resumes on user interaction for some browsers
+    audioPlayer.addEventListener('play', () => {
+        if (audioContext.state === 'suspended') {
+            audioContext.resume();
+        }
+        draw();
+    });
+
+    audioPlayer.addEventListener('pause', () => {
+        // Optionally, stop drawing when paused to save resources
+        // cancelAnimationFrame(draw); // This would require storing the animation frame ID
+    });
+    }
+     function makeDraggable(element) {
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+  // Get the header or the element itself to trigger drag
+  const dragHandle = element.querySelector(".draggable-header") || element;
+
+  dragHandle.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault(); // Prevent default browser drag behavior
+
+    // Get the mouse cursor position at startup
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+
+    // Calculate the new cursor position
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    // Set the element's new position
+    element.style.top = (element.offsetTop - pos2) + "px";
+    element.style.left = (element.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // Stop moving when mouse button is released
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+// Apply the draggable functionality to your div
+const myDraggableDiv = document.getElementById("myDraggableDiv");
+makeDraggable(myDraggableDiv);
+          </script>
+                            
+                           
             <script type="text/javascript" id="hcb">
    /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dJ43Tl5IByJdqspQippWg1"+"&opts=16798&num=10&ts=1753470209459");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ 
   </script>
