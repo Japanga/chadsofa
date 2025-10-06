@@ -412,8 +412,7 @@ li.innerHTML = item;
                     
                    <h1>Sample text</h1>
            <style>
-                              
-      .area {
+        .area {
   text-align: center;
   font-size: 0.2;
   letter-spacing: 0px;
@@ -422,7 +421,7 @@ li.innerHTML = item;
   animation: blur .75s ease-out infinite;
   text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
 }
-.divlink { 
+a.divlink { 
   color: #FFFFFF;
 }
 @keyframes blur {
@@ -447,7 +446,6 @@ li.innerHTML = item;
       0px -10px 100px #E00000;
   }
 }
-
       .draggable {
   position: absolute; /* Allows positioning with top/left */
   background-color: #f1f1f1;
@@ -494,17 +492,38 @@ li.innerHTML = item;
       audio::-webkit-media-controls-panel {
       background: linear-gradient(#190A05, #870000);
     }
+             .my-underlined-paragraph {
+  text-decoration: underline;
+               color:white;
+               font-size: 20px;
+              font-weight: bolder;
+}
+              .my-white-text {
+               color:white;
+               font-size: 20px;
+               font-weight: bolder;
+}
+             .my-black-text {
+               color:black;
+               font-size: 26px;
+               font-weight: bolder;
+}
           </style>
                           <div id="myDraggableDiv" class="draggable">
      
      <div class="draggable-header">
-       <h6>🔊 ☠MurderJukebox ☠ 🔊</h6></div>
+       
+       <h1><p class="my-white-text">🔊 ☠MurderJukebox ☠ 🔊</p></h1></h6>
+                            </div>
         <div class="area"><i>
-    <i><h4>🎧 INPUT SONG NAME HERE 🎧</h4></i>
-    <i><b><h4>© RED CLOVER CORPORATION SOFTWARE</h4></b></i>
-   
+  
+  <h1><p class="my-black-text">🎧 INPUT SONG NAME HERE 🎧</p></h1> 
+ 
+ <h1><p class="my-black-text">© RED CLOVER CORPORATION SOFTWARE</p></h1> 
+</div>
            
-         <h5>https://codepen.io/Japanga/pen/yyeMYNb</h5>
+
+      <a href="https://codepen.io/Japanga/pen/yyeMYNb"><p class="my-underlined-paragraph">https://codepen.io/Japanga/pen/yyeMYNb</p></a>
     </a>
     <canvas id="audioVisualizer" width="800" height="400"></canvas>
 <audio id="audioPlayer" src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" controls crossorigin="anonymous"></audio>
@@ -938,7 +957,22 @@ horizontally */
   }
 }
     
+      .white-link {
+                   
+  /* Set the background to a linear gradient */
+  background: white;
+ 
+  /* Clip the background to the text content */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers */
+  
+            }      
            
+ 
            
 
 /* The container <div> - needed to position the dropdown content */
@@ -1296,8 +1330,9 @@ horizontally */
             h3 {
                 color: #FF0000;
             }
-           h4 {
+h4 {
                 color: black;
+   font-size: 15px;
             }
            h5 {
                 color: white;
