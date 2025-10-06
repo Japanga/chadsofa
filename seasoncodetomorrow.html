@@ -456,14 +456,14 @@ li.innerHTML = item;
   z-index: 9; /* Ensures it stays on top of other elements */
   width: 760px; /* Fixed width of 200 pixels */
   height: 620px; /* Fixed height of 150 pixels */
-  transform: scale(0.3);
+  transform: scale(0.4);
         background: linear-gradient(#050505
 , #5C5C5C
 );
 }
 
 .draggable-header {
-  padding: 10px;
+  padding: 1px;
   cursor: grab; /* Changes cursor to indicate dragability */
   background-color: #2196f3;
   color: #fff;
@@ -489,7 +489,7 @@ li.innerHTML = item;
       #audioPlayer {
     width: 80%;
     max-width: 600px;
-    margin-top: -20px;
+    margin-top: -30px;
 }
       audio::-webkit-media-controls-panel {
       background: linear-gradient(#190A05, #870000);
@@ -498,13 +498,13 @@ li.innerHTML = item;
                           <div id="myDraggableDiv" class="draggable">
      
      <div class="draggable-header">
-       <h1>🔊 ☠MurderJukebox ☠ 🔊</h1></div>
+       <h6>🔊 ☠MurderJukebox ☠ 🔊</h6></div>
         <div class="area"><i>
-    <i><h2>🎧 INPUT SONG NAME HERE 🎧</h2></i>
-    <i><b><h>© RED CLOVER CORPORATION SOFTWARE</h></b></i>
+    <i><h4>🎧 INPUT SONG NAME HERE 🎧</h4></i>
+    <i><b><h4>© RED CLOVER CORPORATION SOFTWARE</h4></b></i>
    
-           <a class="divlink" href="https://codepen.io/Japanga/pen/yyeMYNb">
-         <p>https://codepen.io/Japanga/pen/yyeMYNb</p>
+           
+         <h5>https://codepen.io/Japanga/pen/yyeMYNb</h5>
     </a>
     <canvas id="audioVisualizer" width="800" height="400"></canvas>
 <audio id="audioPlayer" src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" controls crossorigin="anonymous"></audio>
@@ -1296,7 +1296,16 @@ horizontally */
             h3 {
                 color: #FF0000;
             }
-
+           h4 {
+                color: black;
+            }
+           h5 {
+                color: white;
+            }
+ h6 {
+                color: white;
+   font-size: 22px;
+            }
             h1 {
                 font-size: 25px;
             }
