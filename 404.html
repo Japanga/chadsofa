@@ -6,11 +6,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://yourimageshare.com/ib/awhW7ojlbn.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragon Ball Super Wiki</title>
-    <!-- The style.css file allows you to change the look of your web pages.
+    <!-- The style.css file allows you to ch ange the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
     <link href="https://cdn.staticrun.app/2d9f09cc-8aba-4abc-822a-86333b5241b2/97f08559-81f0-42f4-891e-3bd78455b0b3/style.css" rel="stylesheet" type="text/css" media="all">
-  </head>
+  </head> 
   <body> 
   
         <div id="container"><div id="header"></div>
@@ -177,49 +177,19 @@ window.onload = function() {
 // Call the function to update the header when the page loads
 updateHeaderByMonth();
 </script>
-                  
-
           
-                       
+                   <audio id="myAudio" src="https://audio.jukehost.co.uk/za1pDIJU38SXcKBYpUusn3w57xdVK490" preload="auto"></audio>
                   
  <script> 
- function playMonthlyAudio() {
-      const currentDate = new Date();
-      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
-
-      const audioFiles = [
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc',
-        'https://audio.jukehost.co.uk/XXdFeRH94EKUz8TYjGdAMKUyGr7RG9cc'
-      ];
-
-      // Ensure the audio file for the current month exists
-      if (audioFiles[currentMonth]) {
-        const audio = new Audio(audioFiles[currentMonth]);
-        audio.play()
-          .catch(error => {
-            console.error("Error playing audio:", error);
-            // Handle potential errors like user interaction required for autoplay
-          });
-      } else {
-        console.warn("No audio file defined for the current month.");
-      }
-    }
-
-    // Call the function to play the audio when the page loads or on a specific event
-    playMonthlyAudio();
-</script>
-                  
-                  
+  window.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("myAudio");
+    // Optionally set volume
+    audio.volume = 0.5; // Sets volume to 50%
+    audio.play();
+});
+     </script>     
+                       
+   
          
                   
 
