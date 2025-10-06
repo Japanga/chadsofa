@@ -181,45 +181,7 @@ updateHeaderByMonth();
 
           
                        
-                  
- <script> 
- function playMonthlyAudio() {
-      const currentDate = new Date();
-      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
-
-      const audioFiles = [
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
-      ];
-
-      // Ensure the audio file for the current month exists
-      if (audioFiles[currentMonth]) {
-        const audio = new Audio(audioFiles[currentMonth]);
-        audio.play()
-          .catch(error => {
-            console.error("Error playing audio:", error);
-            // Handle potential errors like user interaction required for autoplay
-          });
-      } else {
-        console.warn("No audio file defined for the current month.");
-      }
-    }
-
-    // Call the function to play the audio when the page loads or on a specific event
-    playMonthlyAudio();
-</script>
-                  
-                  
+      
          
                   
 
@@ -517,7 +479,7 @@ a.divlink {
                             </div>
         <div class="area"><i>
   
-  <h1><p class="my-black-text">🎧 INPUT SONG NAME HERE 🎧</p></h1> 
+  <h1><p id = "songName">🎧 INPUT SONG NAME HERE 🎧</p></h1> 
  
  <h1><p class="my-black-text">© RED CLOVER CORPORATION SOFTWARE</p></h1> 
 </div>
@@ -639,7 +601,77 @@ else if (currentMonth === 9) { // June
                 </main>
     
              <script>
+               
+
+               const songName = document.getElementById("songName");
+               
+                        function playMonthlyAudio() {
+      const currentDate = new Date();
+      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
+
+      const audioFiles = [
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
+      ];
+
+      // Ensure the audio file for the current month exists
+      if (audioFiles[currentMonth]) {
+        const audio = new Audio(audioFiles[currentMonth]);
+        audio.play()
+          .catch(error => {
+            console.error("Error playing audio:", error);
+            // Handle potential errors like user interaction required for autoplay
+          });
+      } else {
+        console.warn("No audio file defined for the current month.");
+      }
+    }
+             
+        // 1. Get the current month (0-indexed)
+        const currentDate = new Date();
+        const currentMonthIndex = currentDate.getMonth();
+
+        // 2. Define text content for each month
+        const monthTexts = [
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧",
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧",
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧",
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧",
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧",
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧",
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧",
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧",
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧",
+            "🎧 THIS IS HALLOWEEN 🎧",
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧",
+            "🎧 DRAGON BALL SUPER - JIREN THEME 🎧"
+        ];
+
+        // 3. Select the target paragraph
+        const paragraphElement = document.getElementById("songName");
+
+        // 4. Update the paragraph's text content
+        if (paragraphElement) {
+            paragraphElement.textContent = monthTexts[currentMonthIndex];
+        }
+
+  audioPlayer.play().catch(error => {
+    console.log("Autoplay blocked:", error);
+  });
+
+               
                window.onload = function() {
+                   const source = playMonthlyAudio();
     const audioPlayer = document.getElementById('audioPlayer');
     const canvas = document.getElementById('audioVisualizer');
     const ctx = canvas.getContext('2d');
@@ -650,7 +682,8 @@ else if (currentMonth === 9) { // June
 
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const analyser = audioContext.createAnalyser();
-    const source = audioContext.createMediaElementSource(audioPlayer);
+  
+                 
 
     source.connect(analyser);
     analyser.connect(audioContext.destination);
@@ -738,7 +771,8 @@ else if (currentMonth === 9) { // June
     document.onmousemove = null;
   }
 }
-
+               
+      
 // Apply the draggable functionality to your div
 const myDraggableDiv = document.getElementById("myDraggableDiv");
 makeDraggable(myDraggableDiv);
