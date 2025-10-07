@@ -298,15 +298,14 @@ li.innerHTML = item;
   font-weight: 700;
   text-transform: uppercase;
   animation: blur .75s ease-out infinite;
-  text-shadow: 0px 0px 5px #27F595, 0px 0px 7px #27F595
-;
+  text-shadow: 0px 0px 5px #27F595, 0px 0px 7px #07F7C3;
 }
 a.divlink { 
   color: #FFFFFF;
 }
 @keyframes blur {
   from {
-    text-shadow:0px 0px 10px #27F595,
+    text-shadow:0px 0px 10px #07F7C3,
       0px 0px 10px #27F595, 
       0px 0px 25px #27F595,
       0px 0px 25px #27F595,
@@ -367,7 +366,7 @@ a.divlink {
     background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid #555;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(237, 9, 9, 1); /* Cyan glow */
+    box-shadow: 0 0 15px rgba(39, 245, 169, 1); /* Cyan glow */
         margin-top: -30px;
 }
       #audioPlayer {
@@ -414,7 +413,7 @@ a.divlink {
     // Set canvas dimensions
     canvas.width = window.innerWidth * 0.8;
     canvas.height = window.innerHeight * 0.6;
-audioPlayer.play();
+    audioPlayer.play();
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const analyser = audioContext.createAnalyser();
     const source = audioContext.createMediaElementSource(audioPlayer);
@@ -441,8 +440,8 @@ audioPlayer.play();
 
             // Gradient for bars
             const gradient = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight);
-            gradient.addColorStop(0, '#4C0202'); // Cyan
-            gradient.addColorStop(1, '#BD0404'); // Magenta
+            gradient.addColorStop(0, '#27F5A9'); // Cyan
+            gradient.addColorStop(1, '#CEF2E5'); // Magenta
             ctx.fillStyle = gradient;
 
             ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
