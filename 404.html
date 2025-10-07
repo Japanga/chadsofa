@@ -486,7 +486,7 @@ a.divlink {
          <p>https://codepen.io/Japanga/pen/yyeMYNb</p>
     </a>
     <canvas id="audioVisualizer" width="800" height="400"></canvas>
-<audio id="audioPlayer" src="https://audio.jukehost.co.uk/za1pDIJU38SXcKBYpUusn3w57xdVK490" autoplay controls crossorigin="anonymous"></audio>
+<audio id="audioPlayer" src="https://audio.jukehost.co.uk/za1pDIJU38SXcKBYpUusn3w57xdVK490" controls crossorigin="anonymous"></audio>
     <script src="spectrum.js"></script>
     </div>
  
@@ -495,7 +495,7 @@ a.divlink {
     const audioPlayer = document.getElementById('audioPlayer');
     const canvas = document.getElementById('audioVisualizer');
     const ctx = canvas.getContext('2d');
-
+    audioPlayer.autoplay = true;
     // Set canvas dimensions
     canvas.width = window.innerWidth * 0.8;
     canvas.height = window.innerHeight * 0.6;
