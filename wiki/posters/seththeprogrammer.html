@@ -169,7 +169,7 @@ window.onload = function() {
 
     if (headerElement) {
          headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
-         setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
+        setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
     } else {
         console.error("Header element with ID 'mainHeader' not found.");
     }
@@ -182,46 +182,7 @@ updateHeaderByMonth();
 
           
                        
-                  
- <script> 
- function playMonthlyAudio() {
-      const currentDate = new Date();
-      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
-
-      const audioFiles = [
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
-      ];
-
-      // Ensure the audio file for the current month exists
-      if (audioFiles[currentMonth]) {
-        const audio = new Audio(audioFiles[currentMonth]);
-        audio.play()
-          .catch(error => {
-            console.error("Error playing audio:", error);
-            // Handle potential errors like user interaction required for autoplay
-          });
-      } else {
-        console.warn("No audio file defined for the current month.");
-      }
-    }
-
-    // Call the function to play the audio when the page loads or on a specific event
-    playMonthlyAudio();
-</script>
-                  
-                  
-         
+   
                   
 
                   
@@ -229,69 +190,71 @@ updateHeaderByMonth();
                 
                   
                   
-                  <script>
+                <script>
   const myRandButton = document.getElementById('changeImageButton5');
                   // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
-  "./woaz",
-    "./poaz",
-    "./moaz",
-    "./foaz",
-    "./romaine",
-    "./turles",
-    "./argentinian",
-    "./cabbagang",
-    "./characterfag",
-    "./congo",
-    "./cutegang",
-    "./dbshungergames",
-    "./dennis",
-    "./discordler",
-    "./dogposter",
-    "./drawchad",
-    "./elespecialista",
-    "./elgrandepadre",
-    "./elhermano",
-    "./elshaggyblanco",
-    "./filterbitch",
-    "./geekdom101",
-    "./gets",
-    "./hoppu",
-    "./janitors",
-    "./krillin",
-    "./lordparagon",
-    "./moeshit",
-    "./moewives",
-    "./moot",
-    "./moro.html",
-    "./multiverseguy",
-    "./panpedo",
-    "./risu",
-    "./samechad",
-    "./samir34",
-    "./moewives",
-    "./seththeprogrammer",
-    "./shameel",
-    "./skillet91",
-    "./songoten",
-    "./startchad",
-    "./surpassedrus",
-    "./tablosaf",
-    "./toeichadnimation",
-    "./totallynotmark",
-    "./turles",
-    "./woaz",
-    "./yzilma",
-    "./android18",
-    "./godmodegod",
-    "./zombies",
-    "./fourhorsemen",
-    "./azusabro",
-    "./sakurakosama",
-    "./soyjakparty",
-    "./spaniard",
-    "./android21",
-    "./ghost"
+ 
+"/chadsofa/wiki/posters/woaz",
+    "/chadsofa/wiki/posters/poaz",
+    "/chadsofa/wiki/posters/moaz",
+    "/chadsofa/wiki/posters/foaz",
+    "/chadsofa/wiki/posters/romaine",
+    "/chadsofa/wiki/posters/turles",
+    "/chadsofa/wiki/posters/argentinian",
+    "/chadsofa/wiki/posters/cabbagang",
+    "/chadsofa/wiki/posters/characterfag",
+    "/chadsofa/wiki/posters/congo",
+    "/chadsofa/wiki/posters/cutegang",
+    "/chadsofa/wiki/posters/dbshungergames",
+    "/chadsofa/wiki/posters/dennis",
+    "/chadsofa/wiki/posters/discordler",
+    "/chadsofa/wiki/posters/dogposter",
+    "/chadsofa/wiki/posters/drawchad",
+    "/chadsofa/wiki/posters/elespecialista",
+    "/chadsofa/wiki/posters/elgrandepadre",
+    "/chadsofa/wiki/posters/elhermano",
+    "/chadsofa/wiki/posters/elshaggyblanco",
+    "/chadsofa/wiki/posters/filterbitch",
+    "/chadsofa/wiki/posters/geekdom101",
+    "/chadsofa/wiki/posters/gets",
+    "/chadsofa/wiki/posters/hoppu",
+    "/chadsofa/wiki/posters/janitors",
+    "/chadsofa/wiki/posters/krillin",
+    "/chadsofa/wiki/posters/lordparagon",
+    "/chadsofa/wiki/posters/moeshit",
+    "/chadsofa/wiki/posters/moewives",
+    "/chadsofa/wiki/posters/moot",
+    "/chadsofa/wiki/posters/moro.html",
+    "/chadsofa/wiki/posters/multiverseguy",
+    "/chadsofa/wiki/posters/panpedo",
+    "/chadsofa/wiki/posters/risu",
+    "/chadsofa/wiki/posters/samechad",
+    "/chadsofa/wiki/posters/samir34",
+    "/chadsofa/wiki/posters/moewives",
+    "/chadsofa/wiki/posters/seththeprogrammer",
+    "/chadsofa/wiki/posters/shameel",
+    "/chadsofa/wiki/posters/skillet91",
+    "/chadsofa/wiki/posters/songoten",
+    "/chadsofa/wiki/posters/startchad",
+    "/chadsofa/wiki/posters/surpassedrus",
+    "/chadsofa/wiki/posters/tablosaf",
+    "/chadsofa/wiki/posters/toeichadnimation",
+    "/chadsofa/wiki/posters/totallynotmark",
+    "/chadsofa/wiki/posters/turles",
+    "/chadsofa/wiki/posters/woaz",
+    "/chadsofa/wiki/posters/yzilma",
+    "/chadsofa/wiki/posters/android18",
+    "/chadsofa/wiki/posters/godmodegod",
+    "/chadsofa/wiki/posters/zombies",
+    "/chadsofa/wiki/posters/fourhorsemen",
+    "/chadsofa/wiki/posters/azusabro",
+    "/chadsofa/wiki/posters/sakurakosama",
+    "/chadsofa/wiki/posters/soyjakparty",
+    "/chadsofa/wiki/posters/spaniard",
+    "/chadsofa/wiki/posters/android21",
+    "/chadsofa/wiki/posters/desuarchive",
+    "/chadsofa/wiki/posters/nulybro"
 
 ];
 // Function to perform the random redirection.
@@ -308,7 +271,7 @@ function redirectToRandomPage() {
     window.location.href = targetURL;
 }
                    myRandButton.addEventListener('click', redirectToRandomPage);
-                  </script>
+                </script>
                 
                                     
                            <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
@@ -327,7 +290,7 @@ function redirectToRandomPage() {
                       const myVaultButton = document.getElementById('changeImageButton7');
                     
                     
-          function goToPageCreator() {
+           function goToPageCreator() {
            window.location.href = "/chadsofa/wiki/tools/pagecreatorbase";
         }
                       function goToVault() {
@@ -348,7 +311,7 @@ function redirectToRandomPage() {
         const searchBar = document.getElementById('searchBar');
         const resultsList = document.getElementById('resultsList');
 
-           const items = [
+         const items = [
              '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
 '<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
         ];
@@ -393,6 +356,7 @@ li.innerHTML = item;
   }
 </style>
 
+
 <blockquote>
 <a href="./redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="./moot">m00t</a>  - <b>wiki/site related matters <u>dragonballsuperwiki2025@outlook.com</u></b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@nude.and.on-irc #Rizon, #myanimelist, and #bibanon</a></b> 
 </blockquote>
@@ -403,15 +367,16 @@ li.innerHTML = item;
                  <p><img src="https://yourimageshare.com/ib/dH6sYbAr4T.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
                   
-<button class="tablink" onclick="window.location.href='index'" id="defaultOpen">HOME</button>
-<button class="tablink2" onclick="window.location.href='posters'">POSTERS</button>
-<button class="tablink3" onclick="window.location.href='news'">NEWS</button>
-<button class="tablink4" onclick="window.location.href='gallery'">GALLERY</button>
-          <button class="tablink5" onclick="window.location.href='interviews'">INTERVIEWS</button>
-          <button class="tablink6" onclick="window.location.href='cybersecurity'">CYBERSECURITY</button>
-                
-
+<button class="tablink" onclick="window.location.href='/chadsofa/wiki/main/index'" id="defaultOpen">HOME</button>
+<button class="tablink2" onclick="window.location.href='/chadsofa/wiki/main/posters'">POSTERS</button>
+<button class="tablink3" onclick="window.location.href='/chadsofa/wiki/main/news'">NEWS</button>
+<button class="tablink4" onclick="window.location.href='/chadsofa/wiki/booru/gallery'">GALLERY</button>
+          <button class="tablink5" onclick="window.location.href='/chadsofa/wiki/main/interviews'">INTERVIEWS</button>
+          <button class="tablink6" onclick="window.location.href='/chadsofa/wiki/main/cybersecurity'">CYBERSECURITY</button>
              
+    
+                      
+                   
         <h1>SethTheProgrammer</h1>
        <table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#000000; border:1px solid #999; line-height:1.5; color:red; font-size:smaller;"><tr>
 <th colspan="2" style="background:#000000; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;">SethTheProgrammer</th></tr>
@@ -450,8 +415,433 @@ li.innerHTML = item;
                   
                        <h1>GALLERY</h1>
                    <p><img src="https://yourimageshare.com/ib/tNpM5meobz.jpg" alt="Smiley face" style="float:left;width:360px;height:300px;"> </p>
-  </div>    
+  </div>  
+               
+          
                           
+                      <div id="myDraggableDiv" class="draggable">
+     <div class="draggable-header">
+       <h1><p style="color: white;">MurderJukebox Spectrum Visualizer</p></h1></div>
+
+         <div class="area"><i>
+    <i><h2><p id = songName style="color: black;"></p></p>
+</h2></i>
+    <i><b><h><p id = songName style="color: black;">© RED CLOVER CORPORATION SOFTWARE</p></h></b></i>
+           <a class="divlink" href="https://codepen.io/Japanga/pen/yyeMYNb">
+         <p><p style="color: white;">https://codepen.io/Japanga/pen/yyeMYNb</p></p>
+    </a>
+           <div id="terminationDIV">
+        <canvas id="visualizer-canvas"></canvas>
+              </div>
+        <div class="controls">
+            <audio id="audio-player" 
+
+src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" controls 
+
+crossorigin="anonymous"></audio>
+          
+  <div id="players-container">
+          </div>
+            <button id="start-button">Start Visualizer</button>
+           <button id="stop-button">Stop Visualizer</button>
+          <button id="mute-button">Mute Visualizer</button>
+        </div>
+      
+     
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.getElementById('start-button');
+    const stopButton = document.getElementById('stop-button');
+    const muteButton = document.getElementById('mute-button');
+    const audioElement = document.getElementById('audio-player');
+    const canvas = document.getElementById('visualizer-canvas');
+    const canvasCtx = canvas.getContext('2d');
+        const playersContainer = document.getElementById('players-container');
+    let isInitialized = false;
+    
+    // Set canvas dimensions based on the element's client size
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+    
+    
+    audioElement.style.display = 'none'; // Or 'flex', 'grid', etc., depending on your layout
+  
+
+    let audioCtx, analyser, source, dataArray;
+    function getStringBasedOnMonth() {
+  const monthNames = [
+    "January String", "February String", "March String", "April String",
+    "May String", "June String", "July String", "August String",
+    "September String", "https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3", 
+
+"November String", "December String"
+  ];
+
+  const currentDate = new Date();
+  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
+
+  return monthNames[currentMonthIndex];
+}
+   function getStringBasedOnMonth2() {
+  const monthNames = [
+    "January String", "February String", "March String", "April String",
+    "May String", "June String", "July String", "August String",
+    "September String", "THIS IS HALLOWEEN", 
+"November String", "December String"
+  ];
+
+  const currentDate = new Date();
+  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
+
+  return monthNames[currentMonthIndex];
+}      
+    
+const mySongName = document.getElementById("songName");
+mySongName.textContent = getStringBasedOnMonth2();
+const result = getStringBasedOnMonth();
+
+    const initialize = () => {
+        // Create an AudioContext and AnalyserNode
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioCtx.createAnalyser();
+        
+        // Use an FFT size of 2048 to get frequency data
+        analyser.fftSize = 2048;
+        const bufferLength = analyser.frequencyBinCount;
+        dataArray = new Uint8Array(bufferLength);
+        
+        // Connect the audio source to the analyser and the audio output
+        source = audioCtx.createMediaElementSource(audioElement);
+        source.connect(analyser);
+        analyser.connect(audioCtx.destination);
+        
+        isInitialized = true; 
+        draw();
+        const newPlayer = document.createElement('audio');
+ newPlayer.style.display = 'none';
+  newPlayer.src = result;
+  newPlayer.setAttribute('controls', 'controls');
+  newPlayer.play();
+  newPlayer.volume = 0;
+  audioElement.src = result;
+  newPlayer.setAttribute('id', 'myNewAudioPlayer'); 
+  // Append the new player to the container
+  playersContainer.appendChild(newPlayer);
+  
+}
+            // Function to stop the audi o
+function stopAudio() {
+   const termDiv =     document.getElementById('terminationDIV').innerHTML = '';
+  audioElement.stop(); // Reset the audio to the beginning
+  canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+  termDiv.style.display = none;
+}
+  stopButton.addEventListener('click', stopAudio);  
+        
+        function muteAudio() {
+   const allAudioElements = document.querySelectorAll('audio');
+
+    allAudioElements.forEach(audioElement => {
+        audioElement.pause();
+        audioElement.currentTime = 0;
+    });
+
+    console.log("All audio elements have been reset.");
+}
+  muteButton.addEventListener('click', muteAudio);  
+    const draw = () => {
+        // Continue the animation loop
+        requestAnimationFrame(draw);
+        
+        // Get the frequency data
+        analyser.getByteFrequencyData(dataArray);
+        
+        // Clear the canvas
+        canvasCtx.fillStyle = '#222';
+        canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw the spectrum bars
+        const barWidth = (canvas.width / dataArray.length) * 2.5; // Adjust for spacing
+        let x = 0;
+        
+        for (let i = 0; i < dataArray.length; i++) {
+            const barHeight = dataArray[i]; // Value from 0-255
+            
+            // Set bar color
+            canvasCtx.fillStyle = `rgb(181, 9, 9)`;
+            
+            // Draw the bar
+            canvasCtx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+            
+            x += barWidth + 1; // Add a small gap between bars
+        }
+    };
+       
+   
+    
+    startButton.addEventListener('click', () => {
+        // The AudioContext must be resumed from a user gesture.
+        if (audioCtx && audioCtx.state === 'suspended') {
+            audioCtx.resume().then(() => {
+                if (!isInitialized) {
+                    initialize();
+                }
+                audioElement.play();
+            });
+        } else {
+            if (!isInitialized) {
+                initialize();
+            } 
+            audioElement.play();
+        }
+    });
+});
+              
+          
+  </script>
+           <script>
+              function makeDraggable(element) {
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+  // Get the header or the element itself to trigger drag
+  const dragHandle = element.querySelector(".draggable-header") || element;
+
+  dragHandle.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault(); // Prevent default browser drag behavior
+
+    // Get the mouse cursor position at startup
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+
+    // Calculate the new cursor position
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    // Set the element's new position
+    element.style.top = (element.offsetTop - pos2) + "px";
+    element.style.left = (element.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // Stop moving when mouse button is released
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+// Apply the draggable functionality to your div
+const myDraggableDiv = document.getElementById("myDraggableDiv");
+makeDraggable(myDraggableDiv);
+     
+    window.onload = function() {
+    const audioFile = document.getElementById('audioFile');
+    const canvas = document.getElementById('visualizer');
+    const ctx = canvas.getContext('2d');
+
+    let audioContext;
+    let analyser;
+    let source;
+    let audioBuffer;
+      
+const myAudio = document.getElementById('audioFile');
+const stopButton = document.getElementById('stopButton');
+
+   
+
+    audioFile.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const arrayBuffer = event.target.result;
+            initAudio(arrayBuffer);
+        };
+        reader.readAsArrayBuffer(file);
+    });
+      
+      
+// Function to stop the audi o
+function stopAudio(arrayBuffer) {
+  audioContext.close(); // Reset the audio to the beginning
+}
+      
+
+    function initAudio(arrayBuffer) {
+        if (audioContext) {
+            audioContext.close(); // Close existing context if re-initializing
+        }
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioContext.createAnalyser();
+        analyser.fftSize = 256; // Controls the number of frequency bins
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+
+        audioContext.decodeAudioData(arrayBuffer, function(buffer) {
+            audioBuffer = buffer;
+            source = audioContext.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(analyser);
+            analyser.connect(audioContext.destination);
+            source.start(0);
+            drawSpectrum(analyser, dataArray, bufferLength);
+        }, function(e) { console.error("Error decoding audio data", e); });
+    }
+
+    function drawSpectrum(analyser, dataArray, bufferLength) {
+        requestAnimationFrame(() => drawSpectrum(analyser, dataArray, bufferLength));
+
+        analyser.getByteFrequencyData(dataArray);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const barWidth = (canvas.width / bufferLength) * 2.5;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = dataArray[i];
+
+            ctx.fillStyle = 'rgb(' + (barHeight + 194) + ',8,8)';
+            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+            x += barWidth + 1;
+        }
+    }
+
+         stopButton.addEventListener('click', stopAudio);
+    // Handle window resizing
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+};
+  </script>
+  
+   <style>
+ 
+
+.container {
+    text-align: center;
+}
+
+#visualizer-canvas {
+    width: 600px;
+    height: 300px;
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+ 
+      .area {
+  text-align: center;
+  font-size: 0.2;
+  letter-spacing: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
+}
+ a.divlink { 
+  color: #FFFFFF;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #E00000,
+      0px 0px 10px #E00000, 
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 150px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px -10px 100px #E00000,
+      0px -10px 100px #E00000;
+  }
+}
+
+      .draggable {
+  position: absolute; /* Allows positioning with top/left */
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  z-index: 9; /* Ensures it stays on top of other elements */
+  width: 760px; /* Fixed width of 200 pixels */
+  height: 620px; /* Fixed height of 150 pixels */
+  transform: scale(0.3);
+        background: linear-gradient(#050505
+, #5C5C5C
+);
+}
+
+.draggable-header {
+  padding: 10px;
+  cursor: grab; /* Changes cursor to indicate dragability */
+  background-color: #2196f3;
+  color: #fff;
+    background: linear-gradient(#190A05, #870000);
+  color: #fff;
+}
+  
+        canvas {
+          border: 1px solid #666;
+          background-color: #000;
+          transform: scale(0.8);
+          background-image:url("https://yourimageshare.com/ib/KmeblhoVPl.gif"); 
+
+  background-size: cover; /* Ensures the image covers the entire element */
+
+  background-position: center; /* Centers the image horizontally and vertically */
+
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+
+  background-attachment: fixed; 
+        }
+      
+      #audioVisualizer {
+    background-color: rgba(194, 8, 8, 1);
+    border: 2px solid #C20808;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(194, 8, 8, 1); /* Cyan glow */
+        margin-top: -30px;
+}
+      #audioPlayer {
+    width: 80%;
+    max-width: 600px;
+    margin-top: -60px;
+}
+      audio::-webkit-media-controls-panel {
+      background: linear-gradient(#190A05, #870000);
+    }
+
+  </style>
+
                           
                                     
  <script> 
@@ -559,6 +949,9 @@ else if (currentMonth === 9) { // June
 </script>
           
                 </main>
+  
+  
+          
     
             <script type="text/javascript" id="hcb">
    /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dJ43Tl5IByJdqspQippWg1"+"&opts=16798&num=10&ts=1753470209459");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ 
@@ -667,20 +1060,52 @@ else if (currentMonth === 9) { // June
 }          
     
         
-           
-
-    
-          .overlay {
+            .overlay {
     position: fixed; /* Positions the overlay relative to the viewport */
     top: 0;
     left: 0;
     width: 100%; /* Covers the full width of the viewport */
     height: 100%; /* Covers the full height of the viewport */
-    /* Black background with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with 50% opacity */
     z-index: 9999; /* Ensures the overlay is on top of other content */
 }
-   
+
  
+   
+  .gradient-text {   
+      
+       font-size: 18px;
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      
+  /* Set the background to a linear gradient */
+  background: linear-gradient(to right, white, #F7A205, #F74105, #F76205, white, #F7A205, #F74105);
+  
+  /* Clip the background to the text content */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers */
+  
+  /* Make the background larger than the text to allow for movement */
+  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
+  
+  /* Apply the animation */
+  animation: moveGradient 3s linear infinite; /* Adjust duration and timing as needed */
+}
+
+/* Define the keyframe animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  100% {
+    background-position: 100% 50%; /* End position */
+  }
+}   
           /* user styles */ 
 
             /* styles are what change the color and sizes of stuff on your site. */
@@ -1201,12 +1626,3 @@ horizontally */
      
 </body>
 </html>
-
-
-
-
-
-
-
-
-
