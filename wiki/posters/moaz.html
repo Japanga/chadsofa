@@ -6,11 +6,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://yourimageshare.com/ib/awhW7ojlbn.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragon Ball Super Wiki</title>
-    <!-- The style.css file allows you to change the look of your web pages.
+    <!-- The style.css file allows you to ch ange the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
     <link href="https://cdn.staticrun.app/2d9f09cc-8aba-4abc-822a-86333b5241b2/97f08559-81f0-42f4-891e-3bd78455b0b3/style.css" rel="stylesheet" type="text/css" media="all">
-  </head>
+  </head> 
   <body> 
   
         <div id="container"><div id="header"></div>
@@ -169,7 +169,6 @@ window.onload = function() {
 
     if (headerElement) {
          headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
-         setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
     } else {
         console.error("Header element with ID 'mainHeader' not found.");
     }
@@ -178,49 +177,8 @@ window.onload = function() {
 // Call the function to update the header when the page loads
 updateHeaderByMonth();
 </script>
-                  
-
           
-                       
-                  
- <script> 
- function playMonthlyAudio() {
-      const currentDate = new Date();
-      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
-
-      const audioFiles = [
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb',
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb',
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb',
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb',
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb',
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb',
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb',
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb',
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb',
-        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb',
-        'https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb'
-      ];
-
-      // Ensure the audio file for the current month exists
-      if (audioFiles[currentMonth]) {
-        const audio = new Audio(audioFiles[currentMonth]);
-        audio.play()
-          .catch(error => {
-            console.error("Error playing audio:", error);
-            // Handle potential errors like user interaction required for autoplay
-          });
-      } else {
-        console.warn("No audio file defined for the current month.");
-      }
-    }
-
-    // Call the function to play the audio when the page loads or on a specific event
-    playMonthlyAudio();
-</script>
-                  
-                  
+   
          
                   
 
@@ -229,69 +187,70 @@ updateHeaderByMonth();
                 
                   
                   
-                   <script>
-  const myRandButton = document.getElementById('changeImageButton5');
+                <script>
+
                   // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
-  "./woaz",
-    "./poaz",
-    "./moaz",
-    "./foaz",
-    "./romaine",
-    "./turles",
-    "./argentinian",
-    "./cabbagang",
-    "./characterfag",
-    "./congo",
-    "./cutegang",
-    "./dbshungergames",
-    "./dennis",
-    "./discordler",
-    "./dogposter",
-    "./drawchad",
-    "./elespecialista",
-    "./elgrandepadre",
-    "./elhermano",
-    "./elshaggyblanco",
-    "./filterbitch",
-    "./geekdom101",
-    "./gets",
-    "./hoppu",
-    "./janitors",
-    "./krillin",
-    "./lordparagon",
-    "./moeshit",
-    "./moewives",
-    "./moot",
-    "./moro.html",
-    "./multiverseguy",
-    "./panpedo",
-    "./risu",
-    "./samechad",
-    "./samir34",
-    "./moewives",
-    "./seththeprogrammer",
-    "./shameel",
-    "./skillet91",
-    "./songoten",
-    "./startchad",
-    "./surpassedrus",
-    "./tablosaf",
-    "./toeichadnimation",
-    "./totallynotmark",
-    "./turles",
-    "./woaz",
-    "./yzilma",
-    "./android18",
-    "./godmodegod",
-    "./zombies",
-    "./fourhorsemen",
-    "./azusabro",
-    "./sakurakosama",
-    "./soyjakparty",
-    "./spaniard",
-    "./android21",
-    "./ghost"
+  "/chadsofa/wiki/posters/woaz",
+    "/chadsofa/wiki/posters/poaz",
+    "/chadsofa/wiki/posters/moaz",
+    "/chadsofa/wiki/posters/foaz",
+    "/chadsofa/wiki/posters/romaine",
+    "/chadsofa/wiki/posters/turles",
+    "/chadsofa/wiki/posters/argentinian",
+    "/chadsofa/wiki/posters/cabbagang",
+    "/chadsofa/wiki/posters/characterfag",
+    "/chadsofa/wiki/posters/congo",
+    "/chadsofa/wiki/posters/cutegang",
+    "/chadsofa/wiki/posters/dbshungergames",
+    "/chadsofa/wiki/posters/dennis",
+    "/chadsofa/wiki/posters/discordler",
+    "/chadsofa/wiki/posters/dogposter",
+    "/chadsofa/wiki/posters/drawchad",
+    "/chadsofa/wiki/posters/elespecialista",
+    "/chadsofa/wiki/posters/elgrandepadre",
+    "/chadsofa/wiki/posters/elhermano",
+    "/chadsofa/wiki/posters/elshaggyblanco",
+    "/chadsofa/wiki/posters/filterbitch",
+    "/chadsofa/wiki/posters/geekdom101",
+    "/chadsofa/wiki/posters/gets",
+    "/chadsofa/wiki/posters/hoppu",
+    "/chadsofa/wiki/posters/janitors",
+    "/chadsofa/wiki/posters/krillin",
+    "/chadsofa/wiki/posters/lordparagon",
+    "/chadsofa/wiki/posters/moeshit",
+    "/chadsofa/wiki/posters/moewives",
+    "/chadsofa/wiki/posters/moot",
+    "/chadsofa/wiki/posters/moro.html",
+    "/chadsofa/wiki/posters/multiverseguy",
+    "/chadsofa/wiki/posters/panpedo",
+    "/chadsofa/wiki/posters/risu",
+    "/chadsofa/wiki/posters/samechad",
+    "/chadsofa/wiki/posters/samir34",
+    "/chadsofa/wiki/posters/moewives",
+    "/chadsofa/wiki/posters/seththeprogrammer",
+    "/chadsofa/wiki/posters/shameel",
+    "/chadsofa/wiki/posters/skillet91",
+    "/chadsofa/wiki/posters/songoten",
+    "/chadsofa/wiki/posters/startchad",
+    "/chadsofa/wiki/posters/surpassedrus",
+    "/chadsofa/wiki/posters/tablosaf",
+    "/chadsofa/wiki/posters/toeichadnimation",
+    "/chadsofa/wiki/posters/totallynotmark",
+    "/chadsofa/wiki/posters/turles",
+    "/chadsofa/wiki/posters/woaz",
+    "/chadsofa/wiki/posters/yzilma",
+    "/chadsofa/wiki/posters/android18",
+    "/chadsofa/wiki/posters/godmodegod",
+    "/chadsofa/wiki/posters/zombies",
+    "/chadsofa/wiki/posters/fourhorsemen",
+    "/chadsofa/wiki/posters/azusabro",
+    "/chadsofa/wiki/posters/sakurakosama",
+    "/chadsofa/wiki/posters/soyjakparty",
+    "/chadsofa/wiki/posters/spaniard",
+    "/chadsofa/wiki/posters/android21",
+    "/chadsofa/wiki/posters/desuarchive",
+    "/chadsofa/wiki/posters/nulybro"
 
 ];
 // Function to perform the random redirection.
@@ -307,7 +266,6 @@ function redirectToRandomPage() {
     // For replacing the current history entry, use window.location.replace(targetURL);
     window.location.href = targetURL;
 }
-                   myRandButton.addEventListener('click', redirectToRandomPage);
                   </script>
                 
                                     
@@ -327,13 +285,12 @@ function redirectToRandomPage() {
                       const myVaultButton = document.getElementById('changeImageButton7');
                     
                     
-          function goToPageCreator() {
-           window.location.href = "/chadsofa/wiki/tools/pagecreatorbase";
+        function goToPageCreator() {
+           window.location.href = "./pagecreatorbase";
         }
                       function goToVault() {
-           window.location.href = "/chadsofa/wiki/category/js$TAG=LEGACY";
+           window.location.href = "./category5legacypages";
         }
-
                                    myPageButton.addEventListener('click', goToPageCreator);
                     
                     myVaultButton.addEventListener('click', goToVault);
@@ -348,9 +305,9 @@ function redirectToRandomPage() {
         const searchBar = document.getElementById('searchBar');
         const resultsList = document.getElementById('resultsList');
 
-          const items = [
-             '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
-'<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
+        const items = [
+              '<a href="/chadsofa/wiki/posters/azusabro">Azusabro</a>','<a href="/chadsofa/wiki/posters/android18">Android 18</a>','<a href="/chadsofa/wiki/posters/android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/poaz">Belgian</a>','<a href="/chadsofa/wiki/posters/cabbagang">Cabbagang</a>', '<a href="/chadsofa/wiki/posters/characterfag">Characterfag</a>', '<a href="/chadsofa/wiki/posters/congo">Congo</a>',
+'<a href="/chadsofa/wiki/posters/cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '<a href="/chadsofa/wiki/posters/Dennis">Dennis</a>', '<a href="/chadsofa/wiki/posters/dbshungergames">/dbs/ Hunger Games</a>', '<a href="/chadsofa/wiki/posters/discordler">Discordler</a>', '<a href="/chadsofa/wiki/posters/dogposter">Dogposter</a>', '<a href="/chadsofa/wiki/posters/drawchad">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/elespecialista">El Especialista</a>', '<a href="/chadsofa/wiki/posters/elgrandepadre">El Grande Padre</a>', '<a href="/chadsofa/wiki/posters/elhermano">El Hermano</a>', '<a href="/chadsofa/wiki/posters/elshaggyblanco">El Shaggy Blanco</a>', '<a href="/chadsofa/wiki/posters/filterbitch">Filterbitch</a>', '<a href="/chadsofa/wiki/posters/foaz">FOAZ</a>','<a href="/chadsofa/wiki/posters/fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/godmodegod">GodModeGod</a>', '<a href="/chadsofa/wiki/posters/geekdom101">Geekdom101</a>', '<a href="/chadsofa/wiki/posters/gentlemen">Gentlemen</a>', '<a href="/chadsofa/wiki/posters/gets">GETS</a>', '<a href="/chadsofa/wiki/posters/geekdom101">godmodegod</a>','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/godmodegod">GodModeGod</a>','<a href="/chadsofa/wiki/posters/ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>','<a href="/chadsofa/wiki/posters/hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/janitors">Janitors</a>', '<a href="/chadsofa/wiki/posters/krillin">Krillin</a>', '<a href="/chadsofa/wiki/posters/lordparagon">LordParagon</a>','<a href="/chadsofa/wiki/posters/moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/risu">Risu</a>', '<a href="/chadsofa/wiki/posters/moeshit">Moeshit</a>', '<a href="/chadsofa/wiki/posters/moewives">Moewives</a>', '<a href="/chadsofa/wiki/posters/moot">m00t</a>','<a href="/chadsofa/wiki/posters/moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>', '<a href="/chadsofa/wiki/posters/panpedo">Panpedo</a>', '<a href="/chadsofa/wiki/posters/poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '<a href="/chadsofa/wiki/posters/redclover">Red Clover Corporation</a>', '<a href="/chadsofa/wiki/posters/risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '<a href="/chadsofa/wiki/posters/romaine">Romaine</a>', '<a href="/chadsofa/wiki/posters/samechad">SameCHAD</a>', '<a href="/chadsofa/wiki/posters/samir34">Samir34</a>', '<a href="/chadsofa/wiki/posters/seththeprorammer">SethTheProgrammer</a>', '<a href="/chadsofa/wiki/posters/shameel">Shameel</a>', '<a href="/chadsofa/wiki/posters/skillet91">Skillet91</a>', '<a href="/chadsofa/wiki/posters/songoten">Son Goten</a>', '<a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMARK</a>','<a href="/chadsofa/wiki/posters/surpassedrus">Surpassedrus</a>','<a href="/chadsofa/wiki/posters/sakurakosama">Sakurako-sama</a>','<a href="/chadsofa/wiki/posters/soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','<a href="/chadsofa/wiki/posters/spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>', '<a href="/chadsofa/wiki/posters/tablosaf">TablosAF</a>', '<a href="/chadsofa/wiki/posters/toeichadnimation">Toei Animation</a>', '<a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMARK</a>', '<a href="/chadsofa/wiki/posters/turles">Turles</a>', '<a href="/chadsofa/wiki/posters/woaz">WOAZ</a>','<a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','<a href="/chadsofa/wiki/posters/zombies">Zombies</a>'
         ];
  searchBar.addEventListener('input', () => {
             const searchTerm = searchBar.value.toLowerCase();
@@ -394,7 +351,7 @@ li.innerHTML = item;
 </style>
 
 <blockquote>
-<a href="./redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="./moot">m00t</a>  - <b>wiki/site related matters <u>dragonballsuperwiki2025@outlook.com</u></b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@nude.and.on-irc #Rizon, #myanimelist, and #bibanon</a></b> 
+<a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="/chadsofa/wiki/posters/moot">m00t</a>  - <b>wiki/site related matters <u>dragonballsuperwiki2025@outlook.com</u></b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@nude.and.on-irc #Rizon, #myanimelist, and #bibanon</a></b> 
 </blockquote>
                     
      <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
@@ -403,6 +360,7 @@ li.innerHTML = item;
                  <p><img src="https://yourimageshare.com/ib/dH6sYbAr4T.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
                   
+               
 <button class="tablink" onclick="window.location.href='/chadsofa/wiki/main/index'" id="defaultOpen">HOME</button>
 <button class="tablink2" onclick="window.location.href='/chadsofa/wiki/main/posters'">POSTERS</button>
 <button class="tablink3" onclick="window.location.href='/chadsofa/wiki/main/news'">NEWS</button>
@@ -411,9 +369,7 @@ li.innerHTML = item;
           <button class="tablink6" onclick="window.location.href='/chadsofa/wiki/main/cybersecurity'">CYBERSECURITY</button>
                 
 
-                    
-                
-                    
+     
                     <h1></h1>
                                         
                  <table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#000000; border:1px solid #999; line-height:1.5; color:orange; font-size:smaller;"><tr>
@@ -423,6 +379,9 @@ li.innerHTML = item;
 <tr>
 <td style="padding:4px;"><b>Primary Occupation</b></td>
 <td style="padding:4px;"><p>Wiki Developer / <h1 class="gradient-text" style="display:inline">🍀 4chan Staff / Customer Support 🍀</h1></p></td>
+</tr>
+    <td style="padding:4px;"><b>Other Aliases</b></td>
+<td style="padding:4px;"><p>Japanga, ghostsamurai, T00THL3$$</p></td>
 </tr>
 <tr><th colspan="2" style="background:#ddd; border-bottom:1px solid #999; border-top:1px solid #999; padding:4px; text-align:center;">Background Information</th></tr>
 <tr style="border-bottom:1px solid #999;">
@@ -449,9 +408,223 @@ li.innerHTML = item;
 <td style="padding:4px;"><b>Affiliated posters</b></td>
 <td style="padding:4px;"><a href="turles.html">Makimasis</a>, <a href="poaz.html">The Belgian</a>, <a href="woaz.html">The Warden</a>, <a href="startchad.html">Toaluigi95</a>, <a href="godmodegod.html">Filenamebitch</a>, <a href="drawchad.html">DrawChad</a>,  <a href="multiverseguy.html"> Multiverseguy</a>, <a href="discordler.html"> Discordler</a>, <a href="moot.html">m00t</a></td>
 </table>
-             
+         
                   
                           
+   <style>
+     
+      .area {
+  text-align: center;
+  font-size: 0.2;
+  letter-spacing: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
+}
+a.divlink { 
+  color: #FFFFFF;
+}
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #E00000,
+      0px 0px 10px #E00000, 
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 150px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px -10px 100px #E00000,
+      0px -10px 100px #E00000;
+  }
+}
+
+      .draggable {
+  position: absolute; /* Allows positioning with top/left */
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  z-index: 9; /* Ensures it stays on top of other elements */
+  width: 760px; /* Fixed width of 200 pixels */
+  height: 620px; /* Fixed height of 150 pixels */
+  transform: scale(0.3);
+        background: linear-gradient(#050505
+, #5C5C5C
+);
+}
+
+.draggable-header {
+  padding: 10px;
+  cursor: grab; /* Changes cursor to indicate dragability */
+  background-color: #2196f3;
+  color: #fff;
+    background: linear-gradient(#190A05, #870000);
+  color: #fff;
+}
+  
+        canvas {
+          border: 1px solid #666;
+          background-color: #000;
+          transform: scale(0.8);
+             background-image: url("https://yourimageshare.com/ib/KmeblhoVPl.gif"); /* Replace with the path to your image */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image horizontally and vertically */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; 
+        }
+      
+      #audioVisualizer {
+         width: 640px;  /* Sets a fixed width */
+  height: 350px; /* Sets a fixed height */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #555;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(237, 9, 9, 1); /* Cyan glow */
+        margin-top: -30px;
+}
+      #audioPlayer {
+    width: 80%;
+    max-width: 600px;
+    margin-top: -20px;
+}
+   
+      audio::-webkit-media-controls-panel {
+      background: linear-gradient(#190A05, #870000);
+    }
+
+
+
+  </style>
+    
+  <div id="myDraggableDiv" class="draggable">
+     
+     <div class="draggable-header">
+       <h1><p style="color: white;">MurderJukebox Audio Player</p></p></h1></div>
+        <div class="area"><i>
+    <i><h2><p style="color: black;">THREE DAYS GRACE- GET OUT ALIVE</p></h2></i>
+    <i><b><h><p style="color: black;">© RED CLOVER CORPORATION SOFTWARE</p></h></b></i>
+   
+           <a class="divlink" href="https://codepen.io/Japanga/pen/NPxppyz">
+         <p><p style="color: white;">https://codepen.io/Japanga/pen/NPxppyz</p></p>
+    </a>
+    <canvas id="audioVisualizer" width="800" height="400"></canvas>
+<audio id="audioPlayer" src="https://audio.jukehost.co.uk/NKfK3L7D7BmvdojgL5bEkJofHeB1t4Tb" controls crossorigin="anonymous"></audio>
+    <script src="spectrum.js"></script>
+    </div>
+ 
+    <script> 
+      window.onload = function() {
+    const audioPlayer = document.getElementById('audioPlayer');
+    const canvas = document.getElementById('audioVisualizer');
+    const ctx = canvas.getContext('2d');
+    // Set canvas dimensions
+    canvas.width = window.innerWidth * 0.8;
+    canvas.height = window.innerHeight * 0.6;
+audioPlayer.play();
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioContext.createAnalyser();
+    const source = audioContext.createMediaElementSource(audioPlayer);
+
+    source.connect(analyser);
+    analyser.connect(audioContext.destination);
+
+    analyser.fftSize = 256; // Fast Fourier Transform size
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    function draw() {
+        requestAnimationFrame(draw);
+
+        analyser.getByteFrequencyData(dataArray);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous frame
+
+        const barWidth = (canvas.width / bufferLength) * 2.5;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = dataArray[i] * 1.5; // Adjust multiplier for visual effect
+
+            // Gradient for bars
+            const gradient = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight);
+            gradient.addColorStop(0, '#4C0202'); // Cyan
+            gradient.addColorStop(1, '#BD0404'); // Magenta
+            ctx.fillStyle = gradient;
+
+            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+            x += barWidth + 1; // Add a small gap between bars
+        }
+    }
+
+    // Ensure audio context resumes on user interaction for some browsers
+    audioPlayer.addEventListener('play', () => {
+        if (audioContext.state === 'suspended') {
+            audioContext.resume();
+        }
+        draw();
+    });
+
+    audioPlayer.addEventListener('pause', () => {
+        // Optionally, stop drawing when paused to save resources
+        // cancelAnimationFrame(draw); // This would require storing the animation frame ID
+    });
+    }
+     function makeDraggable(element) {
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+  // Get the header or the element itself to trigger drag
+  const dragHandle = element.querySelector(".draggable-header") || element;
+
+  dragHandle.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault(); // Prevent default browser drag behavior
+
+    // Get the mouse cursor position at startup
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+
+    // Calculate the new cursor position
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    // Set the element's new position
+    element.style.top = (element.offsetTop - pos2) + "px";
+    element.style.left = (element.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // Stop moving when mouse button is released
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+// Apply the draggable functionality to your div
+const myDraggableDiv = document.getElementById("myDraggableDiv");
+makeDraggable(myDraggableDiv);
+    </script>
                                     
  <script> 
 const myElement = document.getElementById('changeImageButton');
@@ -679,7 +852,40 @@ else if (currentMonth === 9) { // June
     z-index: 9999; /* Ensures the overlay is on top of other content */
 }
    
- 
+   .gradient-text {   
+      
+         font-size: 14px;
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      
+  /* Set the background to a linear gradient */
+  background: linear-gradient(to right, white, #5915B3, #30014A, #9E3399, #30014A, #5915B3, white);
+  
+  /* Clip the background to the text content */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers */
+  
+  /* Make the background larger than the text to allow for movement */
+  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
+  
+  /* Apply the animation */
+  animation: moveGradient 3s linear infinite; /* Adjust duration and timing as needed */
+}
+
+/* Define the keyframe animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  100% {
+    background-position: 100% 50%; /* End position */
+  }
+}   
           /* user styles */ 
 
             /* styles are what change the color and sizes of stuff on your site. */
@@ -725,46 +931,6 @@ else if (currentMonth === 9) { // June
   margin-right: 19px;
   font-size: 17px;
 }
-           .gradient-text {   
-      
-       font-size: 14px;
-      font-family: sans-serif;
-      font-style: italic;
-      font-weight: bold;
-      
-  /* Set the background to a linear gradient */
-  background: linear-gradient(to right, white, #5915B3, #30014A, #9E3399, #30014A, #5915B3, white);
-  
-  /* Clip the background to the text content */
-  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
-  background-clip: text;
-  
-  /* Make the text color transparent so the background shows through */
-  -webkit-text-fill-color: transparent; /* For WebKit browsers */
-  color: transparent; /* Fallback for other browsers */
-  
-  /* Make the background larger than the text to allow for movement */
-  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
-  
-  /* Apply the animation */
-  animation: moveGradient 2s linear infinite; /* Adjust duration and timing as needed */
-}
-
-/* Define the keyframe animation */
-@keyframes moveGradient {
-  0% {
-    background-position: 0% 50%; /* Start position */
-  }
-  100% {
-    background-position: 100% 50%; /* End position */
-  }
-}
-
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of 
-       .hidden {
-  display: none; /* This class will hide the element */
-}
-          
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of 
        .hidden {
@@ -997,7 +1163,7 @@ horizontally */
 
             :root {
                 --header-image: url('');
-                --body-bg-image: url('https://64.media.tumblr.com/8478e0c064bdfc77d55c5e98992ab2e5/tumblr_mg3yayrvbM1rmu6i5o1_500.gif');
+                --body-bg-image: url('https://i.pinimg.com/originals/14/22/e1/1422e181b210d76a4211b32e47d8ce61.gif');
 
                 /* colors */
                 --content: #FF0000;
@@ -1240,12 +1406,3 @@ horizontally */
      
 </body>
 </html>
-
-
-
-
-
-
-
-
-
