@@ -181,46 +181,7 @@ updateHeaderByMonth();
                   
 
           
-                       
-                  
- <script> 
- function playMonthlyAudio() {
-      const currentDate = new Date();
-      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
-
-      const audioFiles = [
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
-      ];
-
-      // Ensure the audio file for the current month exists
-      if (audioFiles[currentMonth]) {
-        const audio = new Audio(audioFiles[currentMonth]);
-        audio.play()
-          .catch(error => {
-            console.error("Error playing audio:", error);
-            // Handle potential errors like user interaction required for autoplay
-          });
-      } else {
-        console.warn("No audio file defined for the current month.");
-      }
-    }
-
-    // Call the function to play the audio when the page loads or on a specific event
-    playMonthlyAudio();
-</script>
-                  
-                  
+          
          
                   
 
@@ -418,6 +379,17 @@ li.innerHTML = item;
 </style> 
           
 <h1>LATEST SITE UPDATES</h1>
+           <p><strong>OCTOBER 7TH, 2025</strong></p>
+           <p>Audio/music has always been a signature of the /DBS/ Wiki but was previously not handled as well as I would have liked it to be. First shown as a preview in our new joke .404 easter egg page, <b>"MurderJukebox"</b> is a small, draggable audio spectrum player widget that lets you control the music across the Wiki with much more efficiency. Three different versions of the MurderJokebox were created each serving a unique purpose</p>
+           <ol>
+  <li> <i><a href="https://codepen.io/Japanga/pen/yyeMYNb">Murder Jukebox Audio Spectrum Visualizer</a></i></li>
+             <p>This is the most commonly used one. Generates an audio spectrum visualizer on each run based off of hidden audio players that is also still bound to the seasons code developed for the site headers.</p>
+  <li>  <i><a href="https://codepen.io/Japanga/pen/NPxppyz">Murder Jukebox Audio Player</a></i></li>
+             <p>Despite being the most straight-forward, it is used less frequently than the Spectrum Visualizer. Used mainly for pages and posters with their own custom themes with functionality for triggering autoplays as they are not as easy to do with the generator. (pages have always auto-loaded the music but would sometimes not be able to if you went straight from the page from an url or link instead of clicking it off the site)</p>
+  <li>  <i><a href="https://codepen.io/Japanga/pen/QwypyNr">Murder Jukebox Custom Audio Player</a></i></li>    
+             <p>This is the least used though possibly the funnest, as it allows YOU to set the audio being played. Used only for the Page Creator tool easily findable on the top section of the site.</p>
+</ol>
+<p><img src="https://yourimageshare.com/ib/P4qrbURveT.gif" alt="Smiley face" style="width:660px;height:390px;"> </p>
            <p><strong>OCTOBER 5TH, 2025</strong></p>
           <i><b><p><a href="/chadsofa/wiki/posters/desuarchive">DESUARCHIVE</a> BRIEFLY WENT DOWN FOR MAINTENANCE, I HAVE BUILT THE "DESU RADAR" ALLOWING YOU TO USE MY WIKI ITSELF TO CHECK IF DESUARCHIVE IS CURRENTLY UP OR NOT AT ANY GIVEN TIME. I have tested it for a while, and it works very efficiently. You can even trigger the alarms if you have not given cookies to the Desuarchive yet after clearing them.</p></b></i>
           <p><img src="https://yourimageshare.com/ib/dfqlV8WvAN.gif" alt="Smiley face" style="width:660px;height:390px;"> </p>
@@ -1486,5 +1458,4 @@ horizontally */
      
 </body>
 </html>
-
 
