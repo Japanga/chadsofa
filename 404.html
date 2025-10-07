@@ -472,7 +472,7 @@ a.divlink {
   <div id="myDraggableDiv" class="draggable">
      
      <div class="draggable-header">
-       <h1><p style="color: white;">MurderJukebox</p></p></h1></div>
+       <h1><p style="color: white;">MurderJukebox Audio Player</p></p></h1></div>
         <div class="area"><i>
     <i><h2><p style="color: black;">I LIKE TO MOVE IT- MADAGASCAR OST</p></h2></i>
     <i><b><h><p style="color: black;">© RED CLOVER CORPORATION SOFTWARE</p></h></b></i>
@@ -493,7 +493,7 @@ a.divlink {
     // Set canvas dimensions
     canvas.width = window.innerWidth * 0.8;
     canvas.height = window.innerHeight * 0.6;
-
+audioPlayer.play();
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const analyser = audioContext.createAnalyser();
     const source = audioContext.createMediaElementSource(audioPlayer);
