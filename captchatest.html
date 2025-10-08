@@ -8,11 +8,37 @@
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
+  
+    <b><p id="updatingParagraph">Getting a connection from the Wiki.</p></b>
+
+  
     <form action="/submit-form" method="post">
   
         <div class="h-captcha" data-sitekey="36042202-6850-4a02-b758-492e5d407d08"></div>
-        <button type="submit">Submit</button>
     </form>
-    <script src="script.js"></script>
+  
+  
+    <script>
+        const paragraph = document.getElementById('updatingParagraph');
+        const messages = [
+            "Getting a connection from the Wiki..",
+            "Getting a connection from the Wiki...",
+            "Getting a connection from the Wiki....",
+            "Getting a connection from the Wiki.....",
+            "Getting a connection from the Wiki......"
+        ];
+        let messageIndex = 0;
+
+        function updateParagraphText() {
+            paragraph.textContent = messages[messageIndex];
+            messageIndex = (messageIndex + 1) % messages.length; // Cycle through messages
+        }
+
+        // Call the function immediately to set the first message
+        updateParagraphText();
+
+        // Update the text every 3 seconds (3000 milliseconds)
+        setInterval(updateParagraphText, 100); 
+    </script>
 </body>
 </html>
