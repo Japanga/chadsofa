@@ -11,30 +11,14 @@
   
     <b><p id="updatingParagraph">Getting a connection from the Wiki.</p></b>
 
-    <script>
-    // Route for /products that only allows GET and POST
-app.route('/chadsofa')
-  .get((req, res) => {
-    res.send('This is a list of products.');
-  })
-  .post((req, res) => {
-    res.send('Product created successfully.');
-  })
-  .all((req, res) => { // This catches any other method (PUT, DELETE, etc.)
-    res.status(405)
-       .set('Allow', 'GET, POST') // Specify allowed methods
-       .send('Method Not Allowed');
-  });
-
-    </script>
   
-    <form action="/chadsofa/wiki/main/home">
+    <form action="/chadsofa/wiki/main/index" method="post">
   
         <div class="h-captcha" data-sitekey="36042202-6850-4a02-b758-492e5d407d08" data-theme="dark"></div>
         <button type="submit">Enter Site</button>
     </form>
   
-
+  
     <script>
         const paragraph = document.getElementById('updatingParagraph');
         const messages = [
