@@ -692,14 +692,239 @@ else if (currentMonth === 9) { // June
 
 
 </script>
+  
+  
           
                 </main>
+                    
+                    
     
             <script type="text/javascript" id="hcb">
    /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dJ43Tl5IByJdqspQippWg1"+"&opts=16798&num=10&ts=1753470209459");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ 
   </script>
 <!-- end www.htmlcommentbox.com -->
+           <style>  
+                          .area {
+  text-align: center;
+  font-size: 0.2;
+  letter-spacing: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
+}
+ a.divlink { 
+  color: #FFFFFF;
+}
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #E00000,
+      0px 0px 10px #E00000, 
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 150px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px -10px 100px #E00000,
+      0px -10px 100px #E00000;
+  }
+}
+      .draggable {
+  position: absolute; /* Allows positioning with top/left */
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center; 
+  z-index: 9; /* Ensures it stays on top of other elements */
+  width: 760px; /* Fixed width of 200 pixels */
+  height: 620px; /* Fixed height of 150 pixels */
+  transform: scale(0.4);
+        background: linear-gradient(#000000, #999999);
+}
+
+.draggable-header {
+  padding: 10px;
+  cursor: grab; /* Changes cursor to indicate dragability */
+  background-color: #2196f3;
+  color: #fff;
+    background: linear-gradient(#190A05, #870000);
+  color: #fff;
+}
+  
+        canvas {
+          border: 1px solid #666;
+          background-color: #000;
+          transform: scale(0.7);
+           width: 750px;
+        height: 350px;
+           margin-top: -50px;
+        }
+      
+      #audioFile {
+  margin-top: -700px;
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #910404;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #910404;
+}
+
+#audioFile:focus {
+  border-color: #910404;
+}
+           </style>  
+            <div id="myDraggableDiv" class="draggable">
+     <div class="draggable-header"><h1><p style="color: white;">MurderJukebox Custom Audio Player</p></h1> </div>
+        <div class="area">
+    <i><h2><p id = songName style="color: black;" contenteditable="true">YOUR SONG NAME</p></h2></i>
+      <i><b><h><p id = songName style="color: black;">© RED CLOVER CORPORATION SOFTWARE</p></h></b></i>
+           <a class="divlink" href="https://codepen.io/Japanga/pen/QwypyNr">
+         <p><p style="color: white;">https://codepen.io/Japanga/pen/QwypyNr</p></p>
+    </a>
+    <canvas id="visualizer" width="600" height="400"></canvas>
+   <input type="file" id="audioFile" accept="audio/*">
+<button id="stopButton">▐▐ PAUSE/STOP</button>
+    </div>
+            <script>       
+               function makeDraggable(element) {
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+  // Get the header or the element itself to trigger drag
+  const dragHandle = element.querySelector(".draggable-header") || element;
+
+  dragHandle.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault(); // Prevent default browser drag behavior
+
+    // Get the mouse cursor position at startup
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+
+    // Calculate the new cursor position
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    // Set the element's new position
+    element.style.top = (element.offsetTop - pos2) + "px";
+    element.style.left = (element.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // Stop moving when mouse button is released
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+// Apply the draggable functionality to your div
+const myDraggableDiv = document.getElementById("myDraggableDiv");
+makeDraggable(myDraggableDiv);
      
+    window.onload = function() {
+    const audioFile = document.getElementById('audioFile');
+    const canvas = document.getElementById('visualizer');
+    const ctx = canvas.getContext('2d');
+
+    let audioContext;
+    let analyser;
+    let source;
+    let audioBuffer;
+      
+const myAudio = document.getElementById('audioFile');
+const stopButton = document.getElementById('stopButton');
+
+   
+
+    audioFile.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const arrayBuffer = event.target.result;
+            initAudio(arrayBuffer);
+        };
+        reader.readAsArrayBuffer(file);
+    });
+      
+      
+// Function to stop the audi o
+function stopAudio(arrayBuffer) {
+  audioContext.close(); // Reset the audio to the beginning
+}
+      
+
+    function initAudio(arrayBuffer) {
+        if (audioContext) {
+            audioContext.close(); // Close existing context if re-initializing
+        }
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioContext.createAnalyser();
+        analyser.fftSize = 256; // Controls the number of frequency bins
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+
+        audioContext.decodeAudioData(arrayBuffer, function(buffer) {
+            audioBuffer = buffer;
+            source = audioContext.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(analyser);
+            analyser.connect(audioContext.destination);
+            source.start(0);
+            drawSpectrum(analyser, dataArray, bufferLength);
+        }, function(e) { console.error("Error decoding audio data", e); });
+    }
+
+    function drawSpectrum(analyser, dataArray, bufferLength) {
+        requestAnimationFrame(() => drawSpectrum(analyser, dataArray, bufferLength));
+
+        analyser.getByteFrequencyData(dataArray);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const barWidth = (canvas.width / bufferLength) * 2.5;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = dataArray[i];
+
+            ctx.fillStyle = 'rgb(' + (barHeight + 100) + ',50,50)';
+            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+            x += barWidth + 1;
+        }
+    }
+
+         stopButton.addEventListener('click', stopAudio);
+    // Handle window resizing
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+};
+        </script>  
+                  
           
         <!-- THIS IS THE CSS !-->
          <style>
