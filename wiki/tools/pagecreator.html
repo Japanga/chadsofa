@@ -70,183 +70,6 @@
      <button id="changeImageButton4">Header 4 - Fortress</button>         
 
                   
-                  <script> 
-
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-             
-                      // Example using a simple cookie function
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
- 
-//
-// On page load (e.g., within window.onload or DOMContentLoaded):
- document.addEventListener('DOMContentLoaded', function() {
-   const header = document.getElementById('myHeader');
- 
-    var storedImageUrl = getCookie("currentBackgroundImg");
-   
-   
-  const targetElement = document.getElementById('posterName'); // Assuming an element with id 'myStringDisplay'
-        var storedString = getCookie('currentPosterNameCookie');
-  
-  const targetElement2 = document.getElementById('occupationName'); // Assuming an element with id 'myStringDisplay'
-        var storedString2 = getCookie('currentOccupationNameCookie');
-  
-    
-  const targetElement3 = document.getElementById('activityName'); // Assuming an element with id 'myStringDisplay'
-        var storedString3 = getCookie('currentActivityNameCookie');
-   
-       
-  const targetElement4 = document.getElementById('maleCharNames'); // Assuming an element with id 'myStringDisplay'
-        var storedString4 = getCookie('currentMaleCharNameCookie');
-  
-   
-       
-  const targetElement5 = document.getElementById('femaleCharNames'); // Assuming an element with id 'myStringDisplay'
-var storedString5 = getCookie('currentFemaleCharNameCookie');
-   
-     
-  const targetElement6 = document.getElementById('siteNames'); // Assuming an element with id 'myStringDisplay'
- var storedString6 = getCookie('currentSiteNamesCookie');
-  
-   
-     
-  const targetElement7 = document.getElementById('seriesNames'); // Assuming an element with id 'myStringDisplay'
-        var storedString7 = getCookie('currentSeriesNameCookie');
-  
-   
-     
-  const targetElement8 = document.getElementById('affiliateNames'); // Assuming an element with id 'myStringDisplay'
-        var storedString8 = getCookie('currentAffiliatesNameCookie');
-   
-        
-  const targetElement9 = document.getElementById('myPostContent'); // Assuming an element with id 'myStringDisplay'
-        var storedString9 = getCookie('currentPostContentCookie');
-  
-  
-  
-    if (storedImageUrl) {
-       header.style.backgroundImage = "url('" + storedImageUrl + "')";
-       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
-       header.style.backgroundImage = "no-repeat"; // Optional
-    }
-
-
-   
-        if (storedString) {
-            // If the cookie exists, use its value
-          targetElement.textContent = storedString;
-        } else {
-            // If the cookie doesn't exist, set a default value and store it
-            const defaultString = "EDITED POSTER NAME";
-            setCookie('myStoredString', defaultString, 7); // Store for 7 days
-            targetElement.textContent = defaultString;
-        }
-   
-   if (storedString2) {
-            // If the cookie exists, use its value
-          targetElement2.textContent = storedString2;
-        } else {
-            // If the cookie doesn't exist, set a default value and store it
-            const defaultString2 = "EDITED OCCUPATION NAME";
-            setCookie('myStoredString2', defaultString2, 7); // Store for 7 days
-            targetElement2.textContent = defaultString2;
-        }
-   
-     if (storedString3) {
-            // If the cookie exists, use its value
-          targetElement3.textContent = storedString3;
-        } else {
-            // If the cookie doesn't exist, set a default value and store it
-            const defaultString3 = "EDITED ACTIVITY NAME";
-            setCookie('myStoredString3', defaultString3, 7); // Store for 7 days
-            targetElement3.textContent = defaultString3;
-        }
-   
-    if (storedString4) {
-            // If the cookie exists, use its value
-          targetElement4.textContent = storedString4;
-        } else {
-            // If the cookie doesn't exist, set a default value and store it
-            const defaultString4 = "EDITED MALE CHARACTER NAMES";
-            setCookie('myStoredString4', defaultString4, 7); // Store for 7 days
-            targetElement4.textContent = defaultString4;
-        }
-   
-    if (storedString5) {
-            // If the cookie exists, use its value
-          targetElement5.textContent = storedString5;
-        } else {
-            // If the cookie doesn't exist, set a default value and store it
-            const defaultString5 = "EDITED FEMALE CHARACTER NAMES";
-            setCookie('myStoredString5', defaultString5, 7); // Store for 7 days
-            targetElement5.textContent = defaultString5;
-        }
-   
-   
-         if (storedString6) {
-            // If the cookie exists, use its value
-          targetElement6.textContent = storedString6;
-        } else {
-            // If the cookie doesn't exist, set a default value and store it
-            const defaultString6 = "EDITED SITE NAMES";
-            setCookie('myStoredString6', defaultString6, 7); // Store for 7 days
-            targetElement6.textContent = defaultString6;
-           }
-   
-   
-          if (storedString7) {
-            // If the cookie exists, use its value
-          targetElement7.textContent = storedString7;
-        } else {
-            // If the cookie doesn't exist, set a default value and store it
-            const defaultString7 = "EDITED SERIES NAMES";
-            setCookie('myStoredString7', defaultString7, 7); // Store for 7 days
-            targetElement7.textContent = defaultString7;
-        }
-   
-    if (storedString8) {
-            // If the cookie exists, use its value
-          targetElement8.textContent = storedString8;
-        } else {
-            // If the cookie doesn't exist, set a default value and store it
-            const defaultString8 = "EDITED AFFILIATE NAMES";
-            setCookie('myStoredString8', defaultString8, 7); // Store for 7 days
-            targetElement8.textContent = defaultString8;
-        
-        }
-   
-       if (storedString9) {
-            // If the cookie exists, use its value
-          targetElement9.textContent = storedString9;
-        } else {
-            // If the cookie doesn't exist, set a default value and store it
-            const defaultString9 = "EDITED POST CONTENT";
-            setCookie('myStoredString9', defaultString9, 7); // Store for 7 days
-            targetElement9.textContent = defaultString9;
-        }
-   
-        
- 
-    
-    });
-</script> 
          
                   <script> 
 
@@ -357,7 +180,45 @@ updateHeaderByMonth();
                   
 
           
-      
+                       
+                  
+ <script> 
+ function playMonthlyAudio() {
+      const currentDate = new Date();
+      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
+
+      const audioFiles = [
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
+        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
+      ];
+
+      // Ensure the audio file for the current month exists
+      if (audioFiles[currentMonth]) {
+        const audio = new Audio(audioFiles[currentMonth]);
+        audio.play()
+          .catch(error => {
+            console.error("Error playing audio:", error);
+            // Handle potential errors like user interaction required for autoplay
+          });
+      } else {
+        console.warn("No audio file defined for the current month.");
+      }
+    }
+
+    // Call the function to play the audio when the page loads or on a specific event
+    playMonthlyAudio();
+</script>
+                  
                   
          
                   
@@ -533,7 +394,7 @@ li.innerHTML = item;
 </style>
 
 <blockquote>
-<a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="/chadsofa/wiki/posters/moot">m00t</a>  - <b>wiki/site related matters <u>dragonballsuperwiki2025@outlook.com</u></b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@nude.and.on-irc #Rizon, #myanimelist, and #bibanon</a></b> 
+<a href="/wiki/pages/posters/redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="/wiki/pages/posters/moot">m00t</a>  - <b>wiki/site related matters dragonballsuperwiki2025@outlook.com</b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@Rizon.net #Rizon, @#redclover, #4chan, #desuarchive, #myanimelist, and #bibanon</a></b> 
 </blockquote>
                     
      <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
@@ -555,272 +416,176 @@ li.innerHTML = item;
            
                    <h1>PAGE PREVIEW CREATOR</h1>
           
-           <button class="tablink" onclick="window.location.href='pagecreator'">EDIT PAGE</button>
+           <button class="tablink" onclick="editContent()">SAVE PAGE</button>
                           
                   <table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#000000; border:1px solid #999; line-height:1.5; color:red; font-size:smaller;"><tr>
-<th colspan="2" style="background:#000000; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;"><p id = "posterName">EDITED POSTER NAME</p>           
+<th colspan="2" style="background:#000000; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;"><p id = "posterName" contenteditable="true">EDIT POSTER NAME</p>           
 <tr style="border-bottom:1px solid #999;"><th colspan="2" style="padding:0;"> 
   
-    <header id="myAvatar">
+  <label class="picture" for="picture__input" tabIndex="0">
+  <span class="picture__image"></span>
+</label>
 
-</header>
- </tr>
+<input type="file" name="picture__input" id="picture__input">
 <tr>
 <td style="padding:4px;"><b>Primary Occupation</b></td>
-<td style="padding:4px;"><p id = "occupationName">EDITED OCCUPATION NAME</p></td>
+<td style="padding:4px;"><p id = "occupationName" contenteditable="true">EDIT OCCUPATION NAME</p></td>
 </tr>
 <tr><th colspan="2" style="background:#ddd; border-bottom:1px solid #999; border-top:1px solid #999; padding:4px; text-align:center;">Background Information</th></tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Date of activity</b></td>
-<td style="padding:4px;"><p id = "activityName">EDITED ACTIVITY</p></td>
+<td style="padding:4px;"><p id = "activityName" contenteditable="true">EDIT ACTIVITY</p></td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Main characters (male)</b></td>
-<td style="padding:4px;"><p id = "maleCharNames">EDITED MALE CHARACTERS</p></td>
+<td style="padding:4px;"><p id = "maleCharNames" contenteditable="true">EDIT MALE CHARACTERS</p></td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Main characters (female)</b></td>
-<td style="padding:4px;"><p id = "femaleCharNames">EDITED FEMALE CHARACTERS</p></td>
+<td style="padding:4px;"><p id = "femaleCharNames" contenteditable="true">EDIT FEMALE CHARACTERS</p></td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Site of origin</b></td>
-<td style="padding:4px;"><p id = "siteNames">EDITED SITE OF ORIGIN</p>
-  </td>
+<td style="padding:4px;"><p id = "siteNames" contenteditable="true">EDIT SITE OF ORIGIN</p></td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Favorite non-DB series</b></td>
-<td style="padding:4px;"><p id = "seriesNames">EDITED SERIES NAMES</p>
-  </td>
+<td style="padding:4px;"><p id = "seriesNames" contenteditable="true">EDIT SERIES NAMES</p></td>
 </tr>
 <tr style="border-bottom:1px solid #999;">
 <td style="padding:4px;"><b>Affiliated posters</b></td>
-<td style="padding:4px;"><p id = "affiliateNames">EDITED AFFILIATES</p>
-  </td>
+<td style="padding:4px;"><p id = "affiliateNames" contenteditable="true">EDIT AFFILIATES</p></td>
 </table> 
                  
-          <p id = "myPostContent">EDIT ARTICLE CONTENT</p>
-              
-                     <style>  
-                          .area {
-  text-align: center;
-  font-size: 0.2;
-  letter-spacing: 0px;
-  font-weight: 700;
-  text-transform: uppercase;
-  animation: blur .75s ease-out infinite;
-  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
-}
- a.divlink { 
-  color: #FFFFFF;
-}
-@keyframes blur {
-  from {
-    text-shadow:0px 0px 10px #E00000,
-      0px 0px 10px #E00000, 
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 50px #E00000,
-      0px 0px 50px #E00000,
-      0px 0px 50px #E00000,
-      0px 0px 150px #E00000,
-      0px 10px 100px #E00000,
-      0px 10px 100px #E00000,
-      0px 10px 100px #E00000,
-      0px 10px 100px #E00000,
-      0px -10px 100px #E00000,
-      0px -10px 100px #E00000;
-  }
-}
-      .draggable {
-  position: absolute; /* Allows positioning with top/left */
-  background-color: #f1f1f1;
-  border: 1px solid #d3d3d3;
-  text-align: center; 
-  z-index: 9; /* Ensures it stays on top of other elements */
-  width: 760px; /* Fixed width of 200 pixels */
-  height: 620px; /* Fixed height of 150 pixels */
-  transform: scale(0.4);
-        background: linear-gradient(#000000, #999999);
-}
+          <p id = "myPostContent" contenteditable="true">EDIT ARTICLE CONTENT</p>
 
-.draggable-header {
-  padding: 10px;
-  cursor: grab; /* Changes cursor to indicate dragability */
-  background-color: #2196f3;
-  color: #fff;
-    background: linear-gradient(#190A05, #870000);
-  color: #fff;
-}
-  
-        canvas {
-          border: 1px solid #666;
-          background-color: #000;
-          transform: scale(0.7);
-           width: 750px;
-        height: 350px;
-           margin-top: -50px;
-        }
-      
-      #audioFile {
-  margin-top: -700px;
-  width: 300px;
-  padding: 20px;
-  border: 2px solid #910404;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #910404;
-}
+               <script>
+    const submitPostButton = document.getElementById('submitPostButton');
+   const myPosterName = document.getElementById("posterName");
+    const myOccupationName = document.getElementById("occupationName");
+   const myActivityName = document.getElementById("activityName");
+   const myMaleCharName = document.getElementById("maleCharNames");
+   const myFemaleCharName = document.getElementById("femaleCharNames");
+   const mySiteNames = document.getElementById("siteNames");
+   const mySeriesName = document.getElementById("seriesNames");
+    const myAffiliateNames = document.getElementById("affiliateNames");
+    const myPostContent = document.getElementById("myPostContent");
+      function editContent() {
+        alert("Page saved");
 
-#audioFile:focus {
-  border-color: #910404;
-}
-           </style>  
-            <div id="myDraggableDiv" class="draggable">
-     <div class="draggable-header"><h1><p style="color: white;">MurderJukebox Custom Audio Player</p></h1> </div>
-        <div class="area">
-    <i><h2><p id = songName style="color: black;" contenteditable="true">YOUR SONG NAME</p></h2></i>
-      <i><b><h><p id = songName style="color: black;">© RED CLOVER CORPORATION SOFTWARE</p></h></b></i>
-           <a class="divlink" href="https://codepen.io/Japanga/pen/QwypyNr">
-         <p><p style="color: white;">https://codepen.io/Japanga/pen/QwypyNr</p></p>
-    </a>
-    <canvas id="visualizer" width="600" height="400"></canvas>
-   <input type="file" id="audioFile" accept="audio/*">
-<button id="stopButton">▐▐ PAUSE/STOP</button>
-    </div>
-            <script>       
-               function makeDraggable(element) {
-  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
-  // Get the header or the element itself to trigger drag
-  const dragHandle = element.querySelector(".draggable-header") || element;
-
-  dragHandle.onmousedown = dragMouseDown;
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault(); // Prevent default browser drag behavior
-
-    // Get the mouse cursor position at startup
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-
-    document.onmouseup = closeDragElement;
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-
-    // Calculate the new cursor position
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-
-    // Set the element's new position
-    element.style.top = (element.offsetTop - pos2) + "px";
-    element.style.left = (element.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // Stop moving when mouse button is released
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-
-// Apply the draggable functionality to your div
-const myDraggableDiv = document.getElementById("myDraggableDiv");
-makeDraggable(myDraggableDiv);
+    // Change the text content of the paragraph
+        var currentPosterNameCookie = ["EDIT POSTER NAME"];
+        var currentOccupationNameCookie = ["EDIT OCCUPATION NAME"];
+         var currentActivityNameCookie = ["EDIT ACTIVITY"];
+         var currentMaleCharNameCookie = ["EDIT MALE CHARACTERS"];
+         var currentFemaleCharNameCookie = ["EDIT FEMALE CHARACTERS"];
+           var currentSiteNamesCookie = ["EDIT SITES OF ORIGIN"];
+        var currentSeriesNameCookie = ["EDIT SERIES"];
+        var currentAffiliatesNameCookie = ["EDIT AFFILIATES"];
+        var currentPostContentCookie = ["EDIT POST CONTENT"];
+        
      
-    window.onload = function() {
-    const audioFile = document.getElementById('audioFile');
-    const canvas = document.getElementById('visualizer');
-    const ctx = canvas.getContext('2d');
 
-    let audioContext;
-    let analyser;
-    let source;
-    let audioBuffer;
-      
-const myAudio = document.getElementById('audioFile');
-const stopButton = document.getElementById('stopButton');
+         myPosterName.textContent = "" + myPosterName.textContent + "";
+         alert("Your new poster name " + myPosterName.textContent + " was saved and stored to the system.");
+         setCookie("currentPosterNameCookie", myPosterName.textContent, 365);
+        
+          myOccupationName.textContent = "" + myOccupationName.textContent + "";
+         alert("Your new occupation " + myOccupationName.textContent + " was saved and stored to the system.");
+         setCookie("currentOccupationNameCookie", myOccupationName.textContent, 365);
+        
+          myActivityName.textContent = "" + myActivityName.textContent + "";
+         alert("Your new date of activity " + myActivityName.textContent + " was saved and stored to the system.");
+         setCookie("currentActivityNameCookie", myActivityName.textContent, 365);
+        
+           myMaleCharName.textContent = "" + myMaleCharName.textContent + "";
+         alert("Your new male characters " + myMaleCharName.textContent + " and all other changes and stored to the system.");
+         setCookie("currentMaleCharNameCookie", myMaleCharName.textContent, 365);
+        
+         window.location.href = "./pagecreator";
+        
+ myFemaleCharName.textContent = "" + myFemaleCharName.textContent + "";
+setCookie("currentFemaleCharNameCookie", myFemaleCharName.textContent, 365);
+ mySiteNames.textContent = "" + mySiteNames.textContent + "";
+setCookie("currentSiteNamesCookie", mySiteNames.textContent, 365);
+ mySeriesName.textContent = "" + mySeriesName.textContent + "";
+ setCookie("currentSeriesNameCookie", mySeriesName.textContent, 365);
+myAffiliateNames.textContent = "" + myAffiliateNames.textContent + "";
+setCookie("currentAffiliatesNameCookie", myAffiliateNames.textContent, 365);
+myPostContent.textContent = "" + myPostContent.textContent + "";
+setCookie("currentPostContentCookie", myPostContent.textContent, 365);
+      }
+                   function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    } button.addEventListener('click', function() {
+    
+     function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
-   
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
 
-    audioFile.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (!file) return;
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    
+  });
+    </script>
+<!-- end www.htmlcommentbox.com -->
+     <script>
+        var currentAvatarCookie = [""];
+        
+       const inputFile = document.querySelector("#picture__input");
+const pictureImage = document.querySelector(".picture__image");
+const pictureImageTxt = "Choose an image";
+pictureImage.innerHTML = pictureImageTxt;
 
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            const arrayBuffer = event.target.result;
-            initAudio(arrayBuffer);
-        };
-        reader.readAsArrayBuffer(file);
-    });
-      
-      
-// Function to stop the audi o
-function stopAudio(arrayBuffer) {
-  audioContext.close(); // Reset the audio to the beginning
+       function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
-      
+             
+       
+inputFile.addEventListener("change", function (e) {
+  const inputTarget = e.target;
+  const file = inputTarget.files[0];
 
-    function initAudio(arrayBuffer) {
-        if (audioContext) {
-            audioContext.close(); // Close existing context if re-initializing
-        }
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        analyser = audioContext.createAnalyser();
-        analyser.fftSize = 256; // Controls the number of frequency bins
-        const bufferLength = analyser.frequencyBinCount;
-        const dataArray = new Uint8Array(bufferLength);
+  if (file) {
+    const reader = new FileReader();
 
-        audioContext.decodeAudioData(arrayBuffer, function(buffer) {
-            audioBuffer = buffer;
-            source = audioContext.createBufferSource();
-            source.buffer = audioBuffer;
-            source.connect(analyser);
-            analyser.connect(audioContext.destination);
-            source.start(0);
-            drawSpectrum(analyser, dataArray, bufferLength);
-        }, function(e) { console.error("Error decoding audio data", e); });
-    }
+    reader.addEventListener("load", function (e) {
+      const readerTarget = e.target;
 
-    function drawSpectrum(analyser, dataArray, bufferLength) {
-        requestAnimationFrame(() => drawSpectrum(analyser, dataArray, bufferLength));
+      const img = document.createElement("img");
+      img.src = readerTarget.result;
+      img.classList.add("picture__img");
 
-        analyser.getByteFrequencyData(dataArray);
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        const barWidth = (canvas.width / bufferLength) * 2.5;
-        let x = 0;
-
-        for (let i = 0; i < bufferLength; i++) {
-            const barHeight = dataArray[i];
-
-            ctx.fillStyle = 'rgb(' + (barHeight + 100) + ',50,50)';
-            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-
-            x += barWidth + 1;
-        }
-    }
-
-         stopButton.addEventListener('click', stopAudio);
-    // Handle window resizing
-    window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+      pictureImage.innerHTML = "";
+      pictureImage.appendChild(img);
     });
-};
-        </script>  
+
+    reader.readAsDataURL(file);
+  } else {
+    pictureImage.innerHTML = pictureImageTxt;
+    setCookie("currentAvatarCookie", pictureImage.innerHTML, 365);
+  }
+});
+
+                    </script>
                   
                           
                                     
@@ -986,14 +751,6 @@ else if (currentMonth === 9) { // June
   background-position: center;
   height: 200px; /* Example height */
 }
-            #myAvatar {
-  background-image: url('https://yourimageshare.com/ib/qG5RhXUaZk.png');
-  background-size: cover;
-  background-position: center;
-  height: 350px; /* Example height */
-                 width: 310px; /* Example height */
-}
-       
        
 /* Style the input field */
 #searchBar {
