@@ -323,6 +323,141 @@ function redirectToRandomPage() {
                 return; // Don't display anything if search bar is empty
             }
 
+                <script>
+  const myRandButton = document.getElementById('changeImageButton5');
+                  // Define an array of URLs to which the user can be redirected. 
+const pageURLs = [
+ 
+"/chadsofa/wiki/posters/woaz",
+    "/chadsofa/wiki/posters/poaz",
+    "/chadsofa/wiki/posters/moaz",
+    "/chadsofa/wiki/posters/foaz",
+    "/chadsofa/wiki/posters/romaine",
+    "/chadsofa/wiki/posters/turles",
+    "/chadsofa/wiki/posters/argentinian",
+    "/chadsofa/wiki/posters/cabbagang",
+    "/chadsofa/wiki/posters/characterfag",
+    "/chadsofa/wiki/posters/congo",
+    "/chadsofa/wiki/posters/cutegang",
+    "/chadsofa/wiki/posters/dbshungergames",
+    "/chadsofa/wiki/posters/dennis",
+    "/chadsofa/wiki/posters/discordler",
+    "/chadsofa/wiki/posters/dogposter",
+    "/chadsofa/wiki/posters/drawchad",
+    "/chadsofa/wiki/posters/elespecialista",
+    "/chadsofa/wiki/posters/elgrandepadre",
+    "/chadsofa/wiki/posters/elhermano",
+    "/chadsofa/wiki/posters/elshaggyblanco",
+    "/chadsofa/wiki/posters/filterbitch",
+    "/chadsofa/wiki/posters/geekdom101",
+    "/chadsofa/wiki/posters/gets",
+    "/chadsofa/wiki/posters/hoppu",
+    "/chadsofa/wiki/posters/janitors",
+    "/chadsofa/wiki/posters/krillin",
+    "/chadsofa/wiki/posters/lordparagon",
+    "/chadsofa/wiki/posters/moeshit",
+    "/chadsofa/wiki/posters/moewives",
+    "/chadsofa/wiki/posters/moot",
+    "/chadsofa/wiki/posters/moro.html",
+    "/chadsofa/wiki/posters/multiverseguy",
+    "/chadsofa/wiki/posters/panpedo",
+    "/chadsofa/wiki/posters/risu",
+    "/chadsofa/wiki/posters/samechad",
+    "/chadsofa/wiki/posters/samir34",
+    "/chadsofa/wiki/posters/moewives",
+    "/chadsofa/wiki/posters/seththeprogrammer",
+    "/chadsofa/wiki/posters/shameel",
+    "/chadsofa/wiki/posters/skillet91",
+    "/chadsofa/wiki/posters/songoten",
+    "/chadsofa/wiki/posters/startchad",
+    "/chadsofa/wiki/posters/surpassedrus",
+    "/chadsofa/wiki/posters/tablosaf",
+    "/chadsofa/wiki/posters/toeichadnimation",
+    "/chadsofa/wiki/posters/totallynotmark",
+    "/chadsofa/wiki/posters/turles",
+    "/chadsofa/wiki/posters/woaz",
+    "/chadsofa/wiki/posters/yzilma",
+    "/chadsofa/wiki/posters/android18",
+    "/chadsofa/wiki/posters/godmodegod",
+    "/chadsofa/wiki/posters/zombies",
+    "/chadsofa/wiki/posters/fourhorsemen",
+    "/chadsofa/wiki/posters/azusabro",
+    "/chadsofa/wiki/posters/sakurakosama",
+    "/chadsofa/wiki/posters/soyjakparty",
+    "/chadsofa/wiki/posters/spaniard",
+    "/chadsofa/wiki/posters/android21",
+    "/chadsofa/wiki/posters/desuarchive",
+    "/chadsofa/wiki/posters/nulybro",
+    "/chadsofa/wiki/posters/lordtienrus",
+    "/chadsofa/wiki/posters/leodoesart"
+
+];
+// Function to perform the random redirection.
+function redirectToRandomPage() {
+    // Generate a random index within the bounds of the pageURLs array.
+    const randomIndex = Math.floor(Math.random() * pageURLs.length);
+
+    // Get the URL at the randomly selected index.
+    const targetURL = pageURLs[randomIndex];
+
+    // Redirect the user to the chosen URL.
+    // Using window.location.href directly changes the URL and adds an entry to the browser history.
+    // For replacing the current history entry, use window.location.replace(targetURL);
+    window.location.href = targetURL;
+}
+                   myRandButton.addEventListener('click', redirectToRandomPage);
+                </script>
+                
+                                    
+                           <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
+                   <button id="changeImageButton7">⚙ The Vault ⚙</button> 
+                  <div id="search-container">
+                  <div class="search-container">
+          
+   <input type="search" id="searchBar" placeholder="Search the site.....">
+    
+</div>
+                    </div>
+
+                  <script>
+                      const myPageButton = document.getElementById('changeImageButton6');
+
+                      const myVaultButton = document.getElementById('changeImageButton7');
+                    
+                    
+           function goToPageCreator() {
+           window.location.href = "/chadsofa/wiki/tools/pagecreatorbase";
+        }
+                      function goToVault() {
+           window.location.href = "/chadsofa/wiki/category/js$TAG=LEGACY";
+        }
+
+                                   myPageButton.addEventListener('click', goToPageCreator);
+                    
+                    myVaultButton.addEventListener('click', goToVault);
+                  </script>
+                  
+                  
+                  
+                  
+                  <ul id="resultsList"></ul>
+                  
+    <script>
+        const searchBar = document.getElementById('searchBar');
+        const resultsList = document.getElementById('resultsList');
+
+         const items = [
+             '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
+'<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
+        ];
+ searchBar.addEventListener('input', () => {
+            const searchTerm = searchBar.value.toLowerCase();
+            resultsList.innerHTML = ''; // Clear previous results
+
+            if (searchTerm === '') {
+                return; // Don't display anything if search bar is empty
+            }
+
             const filteredItems = items.filter(item =>
                 item.toLowerCase().includes(searchTerm)
             );
@@ -344,7 +479,6 @@ li.innerHTML = item;
             }
         });
     </script>
-                  
                   
       
                   
@@ -1559,3 +1693,4 @@ horizontally */
      
 </body>
 </html>
+
