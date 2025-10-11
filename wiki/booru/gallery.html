@@ -540,7 +540,7 @@ function hide19(){
 } 
 </script>     
                   
-                   
+                <div class="gallery">   
 <span id="booruContainer">
   <span id="booruItemRow1">
    
@@ -704,33 +704,40 @@ function hide19(){
 </div>
  </span>                                   
     
-           <div class="booruExtension">
-  <div class="gallery-item">
+          <span id="booruItemRow8">
+            <span>
+ 
    <img src="https://yourimageshare.com/ib/70rnwq7BQh.png"  style="float:left;width:240px;height:330px;" id="image" onMouseOver="showText17('Post ID: 17  Author: MOAZ  Date: October 9th, 2025 Characters - Towa')" onMouseOut="hide17();">
     <div id="text17">
   </div>
-  <div class="gallery-item">
+ 
    <img src="https://yourimageshare.com/ib/4HEg2xFqxT.gif"  style="float:right;width:240px;height:330px;" id="image" onMouseOver="showText18('Post ID: 18  Author: MOAZ Date: October 10th, 2025 Characters - Rukia, Makima')" onMouseOut="hide18();">
     <div id="text18">
   </div>
-
-
-    
-  <!-- Add more gallery-item divs as needed -->
-</div>
-    
-    <div class="booruExtension2">
-<div class="gallery-item2">
+</span>
+  </div>
+            
+         <div class="gallery-item2">
     <a href="js$ID=19" target="_blank">
-   <p>    <img src="https://yourimageshare.com/ib/YnUTccwl2O.png" style="width:340px;height:200px;" id="image" onMouseOver="showText19('Post ID: 19  Author: MOAZ  Date: October 10th, 2025 Characters - Tienrus, Konan Akatsuki, Suiseiseki')" onMouseOut="hide19();"></p>
+   <p>    <img src="https://yourimageshare.com/ib/YnUTccwl2O.png" style="float:center;width:340px;height:200px;" id="image" onMouseOver="showText19('Post ID: 19  Author: MOAZ  Date: October 10th, 2025 Characters - Tienrus, Konan Akatsuki, Suiseiseki')" onMouseOut="hide19();"></p>
  </a> <div id="text19">
   </div>  
-    
-  <!-- Add more gallery-item divs as needed -->
-</div>
-       
+
+   
+    </main>
            <style> 
-              
+           .grid-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Example: 3 equal columns */
+  grid-gap: 1em; /* Space between grid items */
+}   
+             .gallery-item {
+  /* Basic styling for gallery items */
+  background-color: lightgray;
+  padding: 1em;
+  text-align: center;
+}
+
 
 .container {
     text-align: center;
@@ -1284,6 +1291,8 @@ function stopAudio(arrayBuffer) {
           
         <!-- THIS IS THE CSS !-->
          <style>
+           
+           
                  #booruContainer {
       display: grid;
        
@@ -1318,6 +1327,10 @@ function stopAudio(arrayBuffer) {
   /* Other styles for your items */
 }
             #booruItemRow8 {
+  display: inline-block; /* Ensures items are on the same line and respect width/height */
+  /* Other styles for your items */
+}
+           #booruItemRow9 {
   display: inline-block; /* Ensures items are on the same line and respect width/height */
   /* Other styles for your items */
 }
@@ -1955,7 +1968,6 @@ horizontally */
      
 </body>
 </html>
-
 
 
 
