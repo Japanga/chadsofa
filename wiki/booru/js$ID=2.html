@@ -169,7 +169,7 @@ window.onload = function() {
 
     if (headerElement) {
          headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
-         setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
+        setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
     } else {
         console.error("Header element with ID 'mainHeader' not found.");
     }
@@ -181,45 +181,7 @@ updateHeaderByMonth();
                   
 
           
-                       
-                  
- <script> 
- function playMonthlyAudio() {
-      const currentDate = new Date();
-      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
-
-      const audioFiles = [
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
-      ];
-
-      // Ensure the audio file for the current month exists
-      if (audioFiles[currentMonth]) {
-        const audio = new Audio(audioFiles[currentMonth]);
-        audio.play()
-          .catch(error => {
-            console.error("Error playing audio:", error);
-            // Handle potential errors like user interaction required for autoplay
-          });
-      } else {
-        console.warn("No audio file defined for the current month.");
-      }
-    }
-
-    // Call the function to play the audio when the page loads or on a specific event
-    playMonthlyAudio();
-</script>
-                  
+ 
                   
          
                   
@@ -229,12 +191,11 @@ updateHeaderByMonth();
                 
                   
                   
-                <script>
+                  <script>
   const myRandButton = document.getElementById('changeImageButton5');
                   // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
-  
-"/chadsofa/wiki/posters/woaz",
+  "/chadsofa/wiki/posters/woaz",
     "/chadsofa/wiki/posters/poaz",
     "/chadsofa/wiki/posters/moaz",
     "/chadsofa/wiki/posters/foaz",
@@ -311,7 +272,6 @@ function redirectToRandomPage() {
 }
                    myRandButton.addEventListener('click', redirectToRandomPage);
                   </script>
-                
                                     
                            <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
                    <button id="changeImageButton7">⚙ The Vault ⚙</button> 
@@ -329,12 +289,13 @@ function redirectToRandomPage() {
                       const myVaultButton = document.getElementById('changeImageButton7');
                     
                     
-         function goToPageCreator() {
+          function goToPageCreator() {
            window.location.href = "/chadsofa/wiki/tools/pagecreatorbase";
         }
                       function goToVault() {
            window.location.href = "/chadsofa/wiki/category/js$TAG=LEGACY";
         }
+
                                    myPageButton.addEventListener('click', goToPageCreator);
                     
                     myVaultButton.addEventListener('click', goToVault);
@@ -349,9 +310,10 @@ function redirectToRandomPage() {
         const searchBar = document.getElementById('searchBar');
         const resultsList = document.getElementById('resultsList');
 
-        const items = [
+         const items = [
               '<a href="/chadsofa/wiki/posters/azusabro">Azusabro</a>','<a href="/chadsofa/wiki/posters/android18">Android 18</a>','<a href="/chadsofa/wiki/posters/android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/poaz">Belgian</a>','<a href="/chadsofa/wiki/posters/cabbagang">Cabbagang</a>', '<a href="/chadsofa/wiki/posters/characterfag">Characterfag</a>', '<a href="/chadsofa/wiki/posters/congo">Congo</a>',
-'<a href="/chadsofa/wiki/posters/cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '<a href="/chadsofa/wiki/posters/Dennis">Dennis</a>', '<a href="/chadsofa/wiki/posters/dbshungergames">/dbs/ Hunger Games</a>', '<a href="/chadsofa/wiki/posters/discordler">Discordler</a>', '<a href="/chadsofa/wiki/posters/dogposter">Dogposter</a>', '<a href="/chadsofa/wiki/posters/drawchad">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/elespecialista">El Especialista</a>', '<a href="/chadsofa/wiki/posters/elgrandepadre">El Grande Padre</a>', '<a href="/chadsofa/wiki/posters/elhermano">El Hermano</a>', '<a href="/chadsofa/wiki/posters/elshaggyblanco">El Shaggy Blanco</a>', '<a href="/chadsofa/wiki/posters/filterbitch">Filterbitch</a>', '<a href="/chadsofa/wiki/posters/foaz">FOAZ</a>','<a href="/chadsofa/wiki/posters/fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/godmodegod">GodModeGod</a>', '<a href="/chadsofa/wiki/posters/geekdom101">Geekdom101</a>', '<a href="/chadsofa/wiki/posters/gentlemen">Gentlemen</a>', '<a href="/chadsofa/wiki/posters/gets">GETS</a>', '<a href="/chadsofa/wiki/posters/geekdom101">godmodegod</a>','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/godmodegod">GodModeGod</a>','<a href="/chadsofa/wiki/posters/ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>','<a href="/chadsofa/wiki/posters/hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/janitors">Janitors</a>', '<a href="/chadsofa/wiki/posters/krillin">Krillin</a>', '<a href="/chadsofa/wiki/posters/lordparagon">LordParagon</a>','<a href="/chadsofa/wiki/posters/moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/risu">Risu</a>', '<a href="/chadsofa/wiki/posters/moeshit">Moeshit</a>', '<a href="/chadsofa/wiki/posters/moewives">Moewives</a>', '<a href="/chadsofa/wiki/posters/moot">m00t</a>','<a href="/chadsofa/wiki/posters/moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>', '<a href="/chadsofa/wiki/posters/panpedo">Panpedo</a>', '<a href="/chadsofa/wiki/posters/poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '<a href="/chadsofa/wiki/posters/redclover">Red Clover Corporation</a>', '<a href="/chadsofa/wiki/posters/risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '<a href="/chadsofa/wiki/posters/romaine">Romaine</a>', '<a href="/chadsofa/wiki/posters/samechad">SameCHAD</a>', '<a href="/chadsofa/wiki/posters/samir34">Samir34</a>', '<a href="/chadsofa/wiki/posters/seththeprorammer">SethTheProgrammer</a>', '<a href="/chadsofa/wiki/posters/shameel">Shameel</a>', '<a href="/chadsofa/wiki/posters/skillet91">Skillet91</a>', '<a href="/chadsofa/wiki/posters/songoten">Son Goten</a>', '<a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMARK</a>','<a href="/chadsofa/wiki/posters/surpassedrus">Surpassedrus</a>','<a href="/chadsofa/wiki/posters/sakurakosama">Sakurako-sama</a>','<a href="/chadsofa/wiki/posters/soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','<a href="/chadsofa/wiki/posters/spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>', '<a href="/chadsofa/wiki/posters/tablosaf">TablosAF</a>', '<a href="/chadsofa/wiki/posters/toeichadnimation">Toei Animation</a>', '<a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMARK</a>', '<a href="/chadsofa/wiki/posters/turles">Turles</a>', '<a href="/chadsofa/wiki/posters/woaz">WOAZ</a>','<a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','<a href="/chadsofa/wiki/posters/zombies">Zombies</a>'  ];
+'<a href="/chadsofa/wiki/posters/cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '<a href="/chadsofa/wiki/posters/Dennis">Dennis</a>', '<a href="/chadsofa/wiki/posters/dbshungergames">/dbs/ Hunger Games</a>', '<a href="/chadsofa/wiki/posters/discordler">Discordler</a>', '<a href="/chadsofa/wiki/posters/dogposter">Dogposter</a>', '<a href="/chadsofa/wiki/posters/drawchad">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/elespecialista">El Especialista</a>', '<a href="/chadsofa/wiki/posters/elgrandepadre">El Grande Padre</a>', '<a href="/chadsofa/wiki/posters/elhermano">El Hermano</a>', '<a href="/chadsofa/wiki/posters/elshaggyblanco">El Shaggy Blanco</a>', '<a href="/chadsofa/wiki/posters/filterbitch">Filterbitch</a>', '<a href="/chadsofa/wiki/posters/foaz">FOAZ</a>','<a href="/chadsofa/wiki/posters/fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/godmodegod">GodModeGod</a>', '<a href="/chadsofa/wiki/posters/geekdom101">Geekdom101</a>', '<a href="/chadsofa/wiki/posters/gentlemen">Gentlemen</a>', '<a href="/chadsofa/wiki/posters/gets">GETS</a>', '<a href="/chadsofa/wiki/posters/geekdom101">godmodegod</a>','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/godmodegod">GodModeGod</a>','<a href="/chadsofa/wiki/posters/ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>','<a href="/chadsofa/wiki/posters/hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/janitors">Janitors</a>', '<a href="/chadsofa/wiki/posters/krillin">Krillin</a>', '<a href="/chadsofa/wiki/posters/lordparagon">LordParagon</a>','<a href="/chadsofa/wiki/posters/moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/risu">Risu</a>', '<a href="/chadsofa/wiki/posters/moeshit">Moeshit</a>', '<a href="/chadsofa/wiki/posters/moewives">Moewives</a>', '<a href="/chadsofa/wiki/posters/moot">m00t</a>','<a href="/chadsofa/wiki/posters/moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>','<a href="/chadsofa/wiki/posters/multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>', '<a href="/chadsofa/wiki/posters/panpedo">Panpedo</a>', '<a href="/chadsofa/wiki/posters/poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '<a href="/chadsofa/wiki/posters/redclover">Red Clover Corporation</a>', '<a href="/chadsofa/wiki/posters/risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>', '<a href="/chadsofa/wiki/posters/romaine">Romaine</a>', '<a href="/chadsofa/wiki/posters/samechad">SameCHAD</a>', '<a href="/chadsofa/wiki/posters/samir34">Samir34</a>', '<a href="/chadsofa/wiki/posters/seththeprorammer">SethTheProgrammer</a>', '<a href="/chadsofa/wiki/posters/shameel">Shameel</a>', '<a href="/chadsofa/wiki/posters/skillet91">Skillet91</a>', '<a href="/chadsofa/wiki/posters/songoten">Son Goten</a>', '<a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMARK</a>','<a href="/chadsofa/wiki/posters/surpassedrus">Surpassedrus</a>','<a href="/chadsofa/wiki/posters/sakurakosama">Sakurako-sama</a>','<a href="/chadsofa/wiki/posters/soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','<a href="/chadsofa/wiki/posters/spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/startchad">StartCHAD</a>', '<a href="/chadsofa/wiki/posters/tablosaf">TablosAF</a>', '<a href="/chadsofa/wiki/posters/toeichadnimation">Toei Animation</a>', '<a href="/chadsofa/wiki/posters/totallynotmark">TotallyNotMARK</a>', '<a href="/chadsofa/wiki/posters/turles">Turles</a>', '<a href="/chadsofa/wiki/posters/woaz">WOAZ</a>','<a href="/chadsofa/wiki/posters/yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="/chadsofa/wiki/posters/moaz">MOAZ</a>','<a href="/chadsofa/wiki/posters/zombies">Zombies</a>'
+         ];
  searchBar.addEventListener('input', () => {
             const searchTerm = searchBar.value.toLowerCase();
             resultsList.innerHTML = ''; // Clear previous results
@@ -404,16 +366,19 @@ li.innerHTML = item;
  </a>
                   
                   
-<button class="tablink" onclick="window.location.href='/wiki/main/index'" id="defaultOpen">HOME</button>
-<button class="tablink2" onclick="window.location.href='/wiki/main/posters'">POSTERS</button>
-<button class="tablink3" onclick="window.location.href='/wiki/main/news'">NEWS</button>
+                  
+                  
+<button class="tablink" onclick="window.location.href='/chadsofa/wiki/main/index'" id="defaultOpen">HOME</button>
+<button class="tablink2" onclick="window.location.href='/chadsofa/wiki/main/posters'">POSTERS</button>
+<button class="tablink3" onclick="window.location.href='/chadsofa/wiki/main/news'">NEWS</button>
 <button class="tablink4" onclick="window.location.href='gallery'">GALLERY</button>
-          <button class="tablink5" onclick="window.location.href='/wiki/main/interviews'">INTERVIEWS</button>
-          <button class="tablink6" onclick="window.location.href='/wiki/main/cybersecurity'">CYBERSECURITY</button>
-           
+          <button class="tablink5" onclick="window.location.href='/chadsofa/wiki/main/interviews'">INTERVIEWS</button>
+          <button class="tablink6" onclick="window.location.href='/chadsofa/wiki/main/cybersecurity'">CYBERSECURITY</button>
                 
 
                     
+                  
+                      
      <h1></h1>
                            <p><img src="https://yourimageshare.com/ib/U3u7yLMEIR.png" alt="Smiley face" style="float:center;width:300px;height:360px;"> </p>
                   
@@ -530,7 +495,434 @@ else if (currentMonth === 9) { // June
 
 </script>
           
+          
+          
+          
+          
                 </main>
+    
+         <div id="myDraggableDiv" class="draggable">
+     <div class="draggable-header">
+       <h1><p style="color: white;">MurderJukebox Spectrum Visualizer</p></h1></div>
+
+         <div class="area"><i>
+    <i><h2><p id = songName style="color: black;"></p></p>
+</h2></i>
+    <i><b><h><p id = songName style="color: black;">© RED CLOVER CORPORATION SOFTWARE</p></h></b></i>
+           <a class="divlink" href="https://codepen.io/Japanga/pen/yyeMYNb">
+         <p><p style="color: white;">https://codepen.io/Japanga/pen/yyeMYNb</p></p>
+    </a>
+           <div id="terminationDIV">
+        <canvas id="visualizer-canvas"></canvas>
+              </div>
+        <div class="controls">
+            <audio id="audio-player" 
+
+src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" controls 
+
+crossorigin="anonymous"></audio>
+          
+  <div id="players-container">
+          </div>
+            <button id="start-button">Start Visualizer</button>
+           <button id="stop-button">Stop Visualizer</button>
+          <button id="mute-button">Mute Visualizer</button>
+        </div>
+      
+     
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.getElementById('start-button');
+    const stopButton = document.getElementById('stop-button');
+    const muteButton = document.getElementById('mute-button');
+    const audioElement = document.getElementById('audio-player');
+    const canvas = document.getElementById('visualizer-canvas');
+    const canvasCtx = canvas.getContext('2d');
+        const playersContainer = document.getElementById('players-container');
+    let isInitialized = false;
+    
+    // Set canvas dimensions based on the element's client size
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+    
+    
+    audioElement.style.display = 'none'; // Or 'flex', 'grid', etc., depending on your layout
+  
+
+    let audioCtx, analyser, source, dataArray;
+    function getStringBasedOnMonth() {
+  const monthNames = [
+    "January String", "February String", "March String", "April String",
+    "May String", "June String", "July String", "August String",
+    "September String", "https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3", 
+
+"November String", "December String"
+  ];
+
+  const currentDate = new Date();
+  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
+
+  return monthNames[currentMonthIndex];
+}
+   function getStringBasedOnMonth2() {
+  const monthNames = [
+    "January String", "February String", "March String", "April String",
+    "May String", "June String", "July String", "August String",
+    "September String", "THIS IS HALLOWEEN", 
+"November String", "December String"
+  ];
+
+  const currentDate = new Date();
+  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
+
+  return monthNames[currentMonthIndex];
+}      
+    
+const mySongName = document.getElementById("songName");
+mySongName.textContent = getStringBasedOnMonth2();
+const result = getStringBasedOnMonth();
+
+    const initialize = () => {
+        // Create an AudioContext and AnalyserNode
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioCtx.createAnalyser();
+        
+        // Use an FFT size of 2048 to get frequency data
+        analyser.fftSize = 2048;
+        const bufferLength = analyser.frequencyBinCount;
+        dataArray = new Uint8Array(bufferLength);
+        
+        // Connect the audio source to the analyser and the audio output
+        source = audioCtx.createMediaElementSource(audioElement);
+        source.connect(analyser);
+        analyser.connect(audioCtx.destination);
+        
+        isInitialized = true; 
+        draw();
+        const newPlayer = document.createElement('audio');
+ newPlayer.style.display = 'none';
+  newPlayer.src = result;
+  newPlayer.setAttribute('controls', 'controls');
+  newPlayer.play();
+  newPlayer.volume = 0;
+  audioElement.src = result;
+  newPlayer.setAttribute('id', 'myNewAudioPlayer'); 
+  // Append the new player to the container
+  playersContainer.appendChild(newPlayer);
+  
+}
+            // Function to stop the audi o
+function stopAudio() {
+   const termDiv =     document.getElementById('terminationDIV').innerHTML = '';
+  audioElement.stop(); // Reset the audio to the beginning
+  canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+  termDiv.style.display = none;
+}
+  stopButton.addEventListener('click', stopAudio);  
+        
+        function muteAudio() {
+   const allAudioElements = document.querySelectorAll('audio');
+
+    allAudioElements.forEach(audioElement => {
+        audioElement.pause();
+        audioElement.currentTime = 0;
+    });
+
+    console.log("All audio elements have been reset.");
+}
+  muteButton.addEventListener('click', muteAudio);  
+    const draw = () => {
+        // Continue the animation loop
+        requestAnimationFrame(draw);
+        
+        // Get the frequency data
+        analyser.getByteFrequencyData(dataArray);
+        
+        // Clear the canvas
+        canvasCtx.fillStyle = '#222';
+        canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw the spectrum bars
+        const barWidth = (canvas.width / dataArray.length) * 2.5; // Adjust for spacing
+        let x = 0;
+        
+        for (let i = 0; i < dataArray.length; i++) {
+            const barHeight = dataArray[i]; // Value from 0-255
+            
+            // Set bar color
+            canvasCtx.fillStyle = `rgb(181, 9, 9)`;
+            
+            // Draw the bar
+            canvasCtx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+            
+            x += barWidth + 1; // Add a small gap between bars
+        }
+    };
+       
+   
+    
+    startButton.addEventListener('click', () => {
+        // The AudioContext must be resumed from a user gesture.
+        if (audioCtx && audioCtx.state === 'suspended') {
+            audioCtx.resume().then(() => {
+                if (!isInitialized) {
+                    initialize();
+                }
+                audioElement.play();
+            });
+        } else {
+            if (!isInitialized) {
+                initialize();
+            } 
+            audioElement.play();
+        }
+    });
+});
+              
+          
+  </script>
+           <script>
+              function makeDraggable(element) {
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+  // Get the header or the element itself to trigger drag
+  const dragHandle = element.querySelector(".draggable-header") || element;
+
+  dragHandle.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault(); // Prevent default browser drag behavior
+
+    // Get the mouse cursor position at startup
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+
+    // Calculate the new cursor position
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    // Set the element's new position
+    element.style.top = (element.offsetTop - pos2) + "px";
+    element.style.left = (element.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // Stop moving when mouse button is released
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+// Apply the draggable functionality to your div
+const myDraggableDiv = document.getElementById("myDraggableDiv");
+makeDraggable(myDraggableDiv);
+     
+    window.onload = function() {
+    const audioFile = document.getElementById('audioFile');
+    const canvas = document.getElementById('visualizer');
+    const ctx = canvas.getContext('2d');
+
+    let audioContext;
+    let analyser;
+    let source;
+    let audioBuffer;
+      
+const myAudio = document.getElementById('audioFile');
+const stopButton = document.getElementById('stopButton');
+
+   
+
+    audioFile.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const arrayBuffer = event.target.result;
+            initAudio(arrayBuffer);
+        };
+        reader.readAsArrayBuffer(file);
+    });
+      
+      
+// Function to stop the audi o
+function stopAudio(arrayBuffer) {
+  audioContext.close(); // Reset the audio to the beginning
+}
+      
+
+    function initAudio(arrayBuffer) {
+        if (audioContext) {
+            audioContext.close(); // Close existing context if re-initializing
+        }
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioContext.createAnalyser();
+        analyser.fftSize = 256; // Controls the number of frequency bins
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+
+        audioContext.decodeAudioData(arrayBuffer, function(buffer) {
+            audioBuffer = buffer;
+            source = audioContext.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(analyser);
+            analyser.connect(audioContext.destination);
+            source.start(0);
+            drawSpectrum(analyser, dataArray, bufferLength);
+        }, function(e) { console.error("Error decoding audio data", e); });
+    }
+
+    function drawSpectrum(analyser, dataArray, bufferLength) {
+        requestAnimationFrame(() => drawSpectrum(analyser, dataArray, bufferLength));
+
+        analyser.getByteFrequencyData(dataArray);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const barWidth = (canvas.width / bufferLength) * 2.5;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = dataArray[i];
+
+            ctx.fillStyle = 'rgb(' + (barHeight + 194) + ',8,8)';
+            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+            x += barWidth + 1;
+        }
+    }
+
+         stopButton.addEventListener('click', stopAudio);
+    // Handle window resizing
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+};
+  </script>
+  
+   <style>
+ 
+
+.container {
+    text-align: center;
+}
+
+#visualizer-canvas {
+    width: 600px;
+    height: 300px;
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+ 
+      .area {
+  text-align: center;
+  font-size: 0.2;
+  letter-spacing: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
+}
+ a.divlink { 
+  color: #FFFFFF;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #E00000,
+      0px 0px 10px #E00000, 
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 150px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px -10px 100px #E00000,
+      0px -10px 100px #E00000;
+  }
+}
+
+      .draggable {
+  position: absolute; /* Allows positioning with top/left */
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  z-index: 9; /* Ensures it stays on top of other elements */
+  width: 760px; /* Fixed width of 200 pixels */
+  height: 620px; /* Fixed height of 150 pixels */
+  transform: scale(0.3);
+        background: linear-gradient(#050505
+, #5C5C5C
+);
+}
+
+.draggable-header {
+  padding: 10px;
+  cursor: grab; /* Changes cursor to indicate dragability */
+  background-color: #2196f3;
+  color: #fff;
+    background: linear-gradient(#190A05, #870000);
+  color: #fff;
+}
+  
+        canvas {
+          border: 1px solid #666;
+          background-color: #000;
+          transform: scale(0.8);
+          background-image:url("https://yourimageshare.com/ib/KmeblhoVPl.gif"); 
+
+  background-size: cover; /* Ensures the image covers the entire element */
+
+  background-position: center; /* Centers the image horizontally and vertically */
+
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+
+  background-attachment: fixed; 
+        }
+      
+      #audioVisualizer {
+    background-color: rgba(194, 8, 8, 1);
+    border: 2px solid #C20808;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(194, 8, 8, 1); /* Cyan glow */
+        margin-top: -30px;
+}
+      #audioPlayer {
+    width: 80%;
+    max-width: 600px;
+    margin-top: -60px;
+}
+      audio::-webkit-media-controls-panel {
+      background: linear-gradient(#190A05, #870000);
+    }
+
+  </style>
     
             <script type="text/javascript" id="hcb">
    /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dJ43Tl5IByJdqspQippWg1"+"&opts=16798&num=10&ts=1753470209459");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ 
@@ -1173,15 +1565,3 @@ horizontally */
      
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
