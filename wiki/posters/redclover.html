@@ -1130,7 +1130,7 @@ a.divlink {
     // Set canvas dimensions
     canvas.width = window.innerWidth * 0.8;
     canvas.height = window.innerHeight * 0.6;
-audioPlayer.play();
+    audioPlayer.play();
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const analyser = audioContext.createAnalyser();
     const source = audioContext.createMediaElementSource(audioPlayer);
