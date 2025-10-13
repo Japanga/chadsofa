@@ -644,10 +644,15 @@ li.innerHTML = item;
        
        // --- Step 2 & 3: Check for cookie on DOM load and perform action ---
 document.addEventListener('DOMContentLoaded', (event) => {
-      const gridContainer = document.getElementById('imageGrid');
+      const gridContainer = document.getElementById('myAvatar');
     const savedImage = localStorage.getItem('selectedImage');
 
     if (savedImage) {
+    const newImage = document.createElement('img');
+    newImage.src = savedImage; // Set the image source
+    gridContainer.appendChild(newImage);
+      newImage.style.width = '310px';
+newImage.style.height = '350px';
 
     } else {
        alert("The page creator attempted to auto-load your saved image url, but it was unable to find one.");
@@ -830,7 +835,7 @@ else if (currentMonth === 9) { // June
   background-size: cover;
   background-position: center;
   height: 350px; /* Example height */
-                 width: 310px; /* Example height */
+  width: 310px; /* Example height */
 }
        
        
