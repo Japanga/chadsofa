@@ -571,7 +571,12 @@ inputFile.addEventListener("change", function (e) {
       const readerTarget = e.target;
 
       const img = document.createElement("img");
-      img.src = readerTarget.result;
+       const base64String = readerTarget.result;
+      
+      // Store the Base64 string in localStorage
+      localStorage.setItem('selectedImage', base64String);
+       img.src = base64String;
+      alert("Your page avatar was stored in the system.");
       img.classList.add("picture__img");
 
       pictureImage.innerHTML = "";
@@ -581,7 +586,7 @@ inputFile.addEventListener("change", function (e) {
     reader.readAsDataURL(file);
   } else {
     pictureImage.innerHTML = pictureImageTxt;
-    setCookie("currentAvatarCookie", pictureImage.innerHTML, 365);
+
   }
 });
 
