@@ -639,6 +639,25 @@ li.innerHTML = item;
           <p id = "myPostContent">EDIT ARTICLE CONTENT</p>
               
             
+                     
+     <script>
+       
+       // --- Step 2 & 3: Check for cookie on DOM load and perform action ---
+document.addEventListener('DOMContentLoaded', (event) => {
+      const gridContainer = document.getElementById('imageGrid');
+    const savedImage = localStorage.getItem('selectedImage');
+
+    if (savedImage) {
+
+    } else {
+       alert("The page creator attempted to auto-load your saved image url, but it was unable to find one.");
+        // --- Optional: Perform another action if the cookie is NOT present ---
+    }
+});
+         // Assuming you have a container for your grid
+
+
+        </script>
                        
         </script>  
                   
