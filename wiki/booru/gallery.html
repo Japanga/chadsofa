@@ -182,45 +182,7 @@ updateHeaderByMonth();
 
           
                        
-                  
- <script> 
- function playMonthlyAudio() {
-      const currentDate = new Date();
-      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
-
-      const audioFiles = [
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
-      ];
-
-      // Ensure the audio file for the current month exists
-      if (audioFiles[currentMonth]) {
-        const audio = new Audio(audioFiles[currentMonth]);
-        audio.play()
-          .catch(error => {
-            console.error("Error playing audio:", error);
-            // Handle potential errors like user interaction required for autoplay
-          });
-      } else {
-        console.warn("No audio file defined for the current month.");
-      }
-    }
-
-    // Call the function to play the audio when the page loads or on a specific event
-    playMonthlyAudio();
-</script>
-                  
-                  
+      
          
                   
 
@@ -396,7 +358,7 @@ li.innerHTML = item;
 
 
 <blockquote>
-<a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="/chadsofa/wiki/posters/moot">m00t</a>  - <b>wiki/site related matters <u>dragonballsuperwiki2025@outlook.com</u></b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@nude.and.on-irc #Rizon, #myanimelist, and #bibanon</a></b> 
+<a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="/chadsofa/wiki/posters/moot">m00t</a>  - <b>wiki/site related matters <u>dragonballsuperwiki2025@outlook.com</u></b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@nude.and.on-irc #Rizon, #myanimelist, and #bibanon</a></b>  <b>4chan Organization press matters press@4chan.org</b>
 </blockquote>
                     
      <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
@@ -537,6 +499,12 @@ document.getElementById("text19").innerHTML=text;
 }
 function hide19(){
     document.getElementById("text19").innerHTML="";
+} 
+                           function showText20(text){
+document.getElementById("text20").innerHTML=text;
+}
+function hide20(){
+    document.getElementById("text20").innerHTML="";
 } 
 </script>     
                   
@@ -716,15 +684,32 @@ function hide19(){
   </div>
 </span>
   </div>
-            
-         <div class="gallery-item2">
-    <a href="js$ID=19" target="_blank">
-   <p>    <img src="https://yourimageshare.com/ib/YnUTccwl2O.png" style="float:center;width:340px;height:200px;" id="image" onMouseOver="showText19('Post ID: 19  Author: MOAZ  Date: October 10th, 2025 Characters - Tienrus, Konan Akatsuki, Suiseiseki')" onMouseOut="hide19();"></p>
+  
+   <span id="booruItemRow9">
+            <span>
+ 
+      <a href="js$ID=19" target="_blank">
+   <p>    <img src="https://yourimageshare.com/ib/YnUTccwl2O.png" style="float:left;width:340px;height:200px;" id="image" onMouseOver="showText19('Post ID: 19  Author: MOAZ  Date: October 10th, 2025 Characters - Tienrus, Konan Akatsuki, Suiseiseki')" onMouseOut="hide19();"></p>
  </a> <div id="text19">
-  </div>  
 
+ </span>
+           </div>
+              
+     
+    <a href="js$ID=20" target="_blank">
+   <p>    <img src="https://yourimageshare.com/ib/3UtNh5t54S.jpg" style="float:right;width:280px;height:290px;" id="image" onMouseOver="showText20('Post ID: 20  Author: Risu  Date: October 13th, 2025 Characters - Jiren')" onMouseOut="hide20();"></p>
+ </a> <div id="text20">
+  </div>  
+ 
+ 
+  
+ 
+
+ 
+     
    
     </main>
+                  
            <style> 
            .grid-gallery-container {
   display: grid;
@@ -1968,7 +1953,6 @@ horizontally */
      
 </body>
 </html>
-
 
 
 
