@@ -169,7 +169,7 @@ window.onload = function() {
 
     if (headerElement) {
          headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
-        setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
+         setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
     } else {
         console.error("Header element with ID 'mainHeader' not found.");
     }
@@ -181,8 +181,8 @@ updateHeaderByMonth();
                   
 
           
-                       
-   
+          
+         
                   
 
                   
@@ -190,11 +190,10 @@ updateHeaderByMonth();
                 
                   
                   
-                <script>
+                   <script>
   const myRandButton = document.getElementById('changeImageButton5');
                   // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
- 
 "/chadsofa/wiki/posters/woaz",
     "/chadsofa/wiki/posters/poaz",
     "/chadsofa/wiki/posters/moaz",
@@ -255,6 +254,8 @@ const pageURLs = [
     "/chadsofa/wiki/posters/android21",
     "/chadsofa/wiki/posters/desuarchive",
     "/chadsofa/wiki/posters/nulybro",
+    "/chadsofa/wiki/posters/lordtienrus",
+    "/chadsofa/wiki/posters/leodoesart"
 
 ];
 // Function to perform the random redirection.
@@ -271,7 +272,7 @@ function redirectToRandomPage() {
     window.location.href = targetURL;
 }
                    myRandButton.addEventListener('click', redirectToRandomPage);
-                </script>
+                  </script>
                 
                                     
                            <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
@@ -290,13 +291,12 @@ function redirectToRandomPage() {
                       const myVaultButton = document.getElementById('changeImageButton7');
                     
                     
-           function goToPageCreator() {
-           window.location.href = "/chadsofa/wiki/tools/pagecreatorbase";
+        function goToPageCreator() {
+           window.location.href = "./pagecreatorbase";
         }
                       function goToVault() {
-           window.location.href = "/chadsofa/wiki/category/js$TAG=LEGACY";
+           window.location.href = "./category5legacypages";
         }
-
                                    myPageButton.addEventListener('click', goToPageCreator);
                     
                     myVaultButton.addEventListener('click', goToVault);
@@ -312,9 +312,10 @@ function redirectToRandomPage() {
         const resultsList = document.getElementById('resultsList');
 
            const items = [
-               '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
-'<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>','<a href="desuarchive">Desuarchive</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>','<a href="lordtienrus">LordTienrus</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="nulybro">Nulybro</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
-         ];
+              
+ '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
+'<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>','<a href="lordtienrus">LordTienrus</a>','<a href="leodoesart">LeoDoesArt</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
+           ];
  searchBar.addEventListener('input', () => {
             const searchTerm = searchBar.value.toLowerCase();
             resultsList.innerHTML = ''; // Clear previous results
@@ -356,7 +357,6 @@ li.innerHTML = item;
   }
 </style>
 
-
 <blockquote>
 <a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> 2025 - present all rights reserved, all content provided with community collaboration from <a href="https://www.4chan.org/">4chan</a> created by <a href="/chadsofa/wiki/posters/moot">m00t</a>  - <b>wiki/site related matters <u>dragonballsuperwiki2025@outlook.com</u></b> - <b>staff/mod related matters <a href="https://rizon.net/">T00TH@nude.and.on-irc #Rizon, #myanimelist, and #bibanon</a></b>  <b>4chan Organization press matters press@4chan.org</b>
 </blockquote>
@@ -367,489 +367,260 @@ li.innerHTML = item;
                  <p><img src="https://yourimageshare.com/ib/dH6sYbAr4T.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
                   
+               
 <button class="tablink" onclick="window.location.href='/chadsofa/wiki/main/index'" id="defaultOpen">HOME</button>
 <button class="tablink2" onclick="window.location.href='/chadsofa/wiki/main/posters'">POSTERS</button>
 <button class="tablink3" onclick="window.location.href='/chadsofa/wiki/main/news'">NEWS</button>
 <button class="tablink4" onclick="window.location.href='/chadsofa/wiki/booru/gallery'">GALLERY</button>
           <button class="tablink5" onclick="window.location.href='/chadsofa/wiki/main/interviews'">INTERVIEWS</button>
           <button class="tablink6" onclick="window.location.href='/chadsofa/wiki/main/cybersecurity'">CYBERSECURITY</button>
-             
-    
-  
- 
-                    <h1>Janitors</h1>
-           <table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#000000; border:1px solid #999; line-height:1.5; color:red; font-size:smaller;"><tr>
-<th colspan="2" style="background:#000000; border-bottom:1px solid #999; font-size:larger; padding:4px; text-align:center;">FACTION: 4CHAN ORGANIZATION</th></tr>
-<tr style="border-bottom:1px solid #999;"><th colspan="2" style="padding:0;">       <p><img src="https://yourimageshare.com/ib/DUYh9WeXna.png" alt="Smiley face" style="float:right;width:300px;height:360px;"> </p></tr>
-<tr>
-<td style="padding:4px;"><b>Owner</b></td>
-<td style="padding:4px;"><a href="moot">m00t</a></td>
-</tr>
-<tr><th colspan="2" style="background:#ddd; border-bottom:1px solid #999; border-top:1px solid #999; padding:4px; text-align:center;">Organization Information</th></tr>
-<tr style="border-bottom:1px solid #999;">
-<td style="padding:4px;"><b>Date of activity</b></td>
-<td style="padding:4px;">2003 -</td>
-</tr>
-<tr style="border-bottom:1px solid #999;">
-<td style="padding:4px;"><b>ADMINS</b></td>
-<td style="padding:4px;"><a href="https://en.wikipedia.org/wiki//pol/">GrapeApe9k</a>, <a href="./ghost">Hirom00t</a></td>
-</tr>
-             <td style="padding:4px;"><b>MODERATORS</b></td>
-<td style="padding:4px;"><a href="azusabro">Azusabro</a>, <a href="sakurakosama">Sakurako-sama</a>, <a href="moaz">T00THL3$$ </a>,<a href="https://edramatica.com/W._T._Snacks">W.T. Snacks(formerly)</a></td>
-</tr>
-</td>
-</table>
-    
-             <style>
-  blockquote {
-    font-style: italic;
-    font-size: 10px;
-  }
-</style>
-
-
-<blockquote>
-You will never be a real janitor. You have no IRC, you have no experience, you have no guy. You're a street scammer twisted by your ego and charisma into a crude mockery of the law’s perfection. All the “validation” you get is two-faced and half-hearted. Behind your back other janitors mock you. Your clients are disgusted and ashamed of you, your “associates” laugh at your ridiculousness behind closed doors. Elders are utterly repulsed by you. Thousands of years of evolution have allowed men to sniff out frauds with incredible efficiency. Even fake staff impersonators who “pass” seem uncanny and unnatural to the real thing. Your company structure is a dead giveaway. And even if you manage to get a dementia-ridden old man to represent you, he’ll turn tail and bolt the second he finds out that you're just a chimp with a machine gun. You will never be happy. You wrench out a fake smile every single morning and tell yourself it’s going to be okay, but deep inside you feel the depression creeping up like a weed, ready to crush you under the unbearable weight. Eventually it’ll be too much to bear - you’ll buy a dust filter for a Hoover Max Extract® 60 Pressure Pro™, change your identity, and never be seen again. GrapeApe9k will not find you, heartbroken but relieved that he no longer has to live with your unbearable shame and disappointment. You'll get a job with a nametag of your fake name, and every passerby for the rest of eternity will know as an uncharismatic loser who works at Reddit. Your body will decay and go back to the dust, and all that will remain of your legacy is a skeleton that is unmistakably un-janitorlike. This is your fate. This is what you chose. You'll always be a staff impersonator in Desuarchive playing with the red bantext anyone can use.
-</blockquote>
-                    
-                    <p>Janitors are volunteer custodians, hall monitors, and affiliates that served under higher staff ranks of the 4chan organization like moderators and administrators. If your ass got banned over some stupid shit, and you feel like getting a half-assed explanation why: you may feel free to spend the 20 minutes required to make an IRC account and contact Rukiafag/T00THL3$$ directly any time through out the day on IRC at channels <a href="https://rizon.net/">#Rizon, #myanimelist, #bibanon</a> and <a href="https://qchat.rizon.net/">#yourmother</a></p>
-                 
-          
-     <h1>GALLERY</h1>
-        <p><img src="https://yourimageshare.com/ib/cfjawpzVa8.jpg" alt="Smiley face" style="width:440px;height:140px;"> </p>
-          
-            <p><img src="https://yourimageshare.com/ib/QDKw3HrYSY.jpg" alt="Smiley face" style="width:320px;height:180px;"> </p>
-                  
-                  
-                      
-             
                 
-               
+                
+          <style>
+  halloweennewssmall {
+     color: #FF4000;  
+  }
+</style> 
           
-                          
-                      <div id="myDraggableDiv" class="draggable">
-     <div class="draggable-header">
-       <h1><p style="color: white;">MurderJukebox Spectrum Visualizer</p></h1></div>
-
-         <div class="area"><i>
-    <i><h2><p id = songName style="color: black;"></p></p>
-</h2></i>
-    <i><b><h><p id = songName style="color: black;">© RED CLOVER CORPORATION SOFTWARE</p></h></b></i>
-           <a class="divlink" href="https://codepen.io/Japanga/pen/yyeMYNb">
-         <p><p style="color: white;">https://codepen.io/Japanga/pen/yyeMYNb</p></p>
-    </a>
-           <div id="terminationDIV">
-        <canvas id="visualizer-canvas"></canvas>
-              </div>
-        <div class="controls">
-            <audio id="audio-player" 
-
-src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" controls 
-
-crossorigin="anonymous"></audio>
+<h1>LATEST SITE UPDATES</h1>
+           <p><strong>OCTOBER 14TH, 2025</strong></p>
+          <p>Wiki Milestone of 20 <a href="/chadsofa/wiki/gallery/booru">Booru</a> contributions has been reached. (RISUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU)</p>
+          <p><img src="https://yourimageshare.com/ib/Gmzu2hFczy.png" alt="Smiley face" style="width:540px;height:340px;"> </p>
+        <p><strong>OCTOBER 13TH, 2025</strong></p>
+          <p><a href="/chadsofa/wiki/posters/rabbitrun">Rabbitrun</a> page created at Staff request. A new post-Wiki project called <i>FakeChan</i> has been announced and previewed around <a href="/chadsofa/wiki/posters/ghost">/ghost/</a> that helped out in development in the Wiki as it has allowed us to finally fully complete the page creator and allow both user avatars AND post content to be saved and stored long time with the tool. <i>FakeChan</i> is set to be launched near the end of December but a lighter, stripped down version may come out sooner if there is enough demand for it.</p>
+              <p><img src="https://yourimageshare.com/ib/h9xkeCACUm.png" alt="Smiley face" style="width:800px;height:340px;"> </p>
+          <p><strong>OCTOBER 8TH, 2025</strong></p>
+          <p>/DBS/ Wiki previously used a fake "Cache Code" system that would have you generate a tripcode-looking set of numbers and it told you that it was some sort of cookies ID, rather than using an official captcha provider like the ones provided from Cloudflare and Google. 4chan recently started implementing hcaptcha, so, being the master troll I am: <b>I have put the exact same captcha on the Wiki front/index page.</b> (since I have built the MurderJukebox, the home page also now finally triggers the Jiren theme autoplay properly.)</p>
+          <p><img src="https://yourimageshare.com/ib/P20WBQDGch.jpg" alt="Smiley face" style="width:480px;height:430px;"> </p>
+          <span style="color: yellow;"><i><b>[1]☏☑ SOURCES/CITATIONS AND REFERENCES: SOME JACKASS ON THE INTERNET SAID IT, SO IT MUST BE TRUE</i></b></span>
+          <p>Friends of mine and users of the Wiki as well as the occasional haters and pesky irritating punks are known to often dispute, challenge or deny the information on this site. I would like to think I am an honest enough person that would never lie about things or make them up. But for schizo retards I hate and want to go fuck themselves that think I would: we are now going to be citing and referencing all of the information, and trimming down any that cannot be linked back somewhere.</p>
+          <p><img src="https://yourimageshare.com/ib/zMgy83ky01.jpg" alt="Smiley face" style="width:550px;height:300px;"> </p>
+           <p><strong>OCTOBER 7TH, 2025</strong></p>
+           <p>Audio/music has always been a signature of the /DBS/ Wiki but was previously not handled as well as I would have liked it to be. First shown as a preview in our new joke .404 easter egg page, <b>"MurderJukebox"</b> is a small, draggable audio spectrum player widget that lets you control the music across the Wiki with much more efficiency. Three different versions of the MurderJokebox were created each serving a unique purpose</p>
+           <ol>
+  <li> <i><a href="https://codepen.io/Japanga/pen/yyeMYNb">Murder Jukebox Spectrum Visualizer</a></i></li>
+             <p>This is the most commonly used one. Generates an audio spectrum visualizer on each run based off of hidden audio players that is also still bound to the seasons code developed for the site headers.</p>
+  <li>  <i><a href="https://codepen.io/Japanga/pen/NPxppyz">Murder Jukebox Audio Player</a></i></li>
+             <p>Despite being the most straight-forward, it is used less frequently than the Spectrum Visualizer. Used mainly for pages and posters with their own custom themes with functionality for triggering autoplays as they are not as easy to do with the generator. (pages have always auto-loaded the music but would sometimes not be able to if you went straight from the page from an url or link instead of clicking it off the site)</p>
+  <li>  <i><a href="https://codepen.io/Japanga/pen/QwypyNr">Murder Jukebox Custom Audio Player</a></i></li>    
+             <p>This is the least used though possibly the funnest, as it allows YOU to set the audio being played. Used only for the Page Creator tool easily findable on the top section of the site.</p>
+</ol>
+<p><img src="https://yourimageshare.com/ib/P4qrbURveT.gif" alt="Smiley face" style="width:660px;height:390px;"> </p>
+           <p><strong>OCTOBER 5TH, 2025</strong></p>
+          <i><b><p><a href="/chadsofa/wiki/posters/desuarchive">DESUARCHIVE</a> BRIEFLY WENT DOWN FOR MAINTENANCE, I HAVE BUILT THE "DESU RADAR" ALLOWING YOU TO USE MY WIKI ITSELF TO CHECK IF DESUARCHIVE IS CURRENTLY UP OR NOT AT ANY GIVEN TIME. I have tested it for a while, and it works very efficiently. You can even trigger the alarms if you have not given cookies to the Desuarchive yet after clearing them.</p></b></i>
+          <p><img src="https://yourimageshare.com/ib/dfqlV8WvAN.gif" alt="Smiley face" style="width:660px;height:390px;"> </p>
+          <p><img src="https://yourimageshare.com/ib/jZveRL7vRy.gif" alt="Smiley face" style="width:660px;height:390px;"> </p>
+          <p>I have been facing some controversy for being charged with a BAN from the <b>#4chan</b> IRC channel. This is a gorgeous moment to actually explain more about the banning levels and process of the IRC system: and explaining how I have not committed any severe offenses. Connecting to the IRC masks your IP under a base vhost or "hostmask": these are fake domains to hide your IP. When you first join the IRC, you are assigned a basic randomly generated mask to hide the IP something like <b>~qwebirc@FC4D5777.5CC8285C.24B005CC.IP</b> This alone could be a bannable offense, for whatever reason of not wanting unprofessional, raw, basic IP host mask users in the channel. I worked with the staff of IRC to secure my own vhost domain, <b>~t00thl3$$@nude.and.on-irc</b>. Bans on the IRC network are either bound to both the NICK and the HOSTMASK, or just the HOSTMASK alone. Only my base IP hostmask is banned from <b>#4chan</b>. Talking in the channel is notoriously strict, and people have gotten banned for using it to report people. Bans on the IRC can last a while, but can always eventually be removed or reset by the operator if they were not already set to expire after a given time. <u>Harsher and more severe bans keep users from accessing the entire IRC network altogether...</u></p>
+          <p><img src="https://yourimageshare.com/ib/N1NkitwJP6.jpg" alt="Smiley face" style="width:620px;height:390px;"> </p>
+          <p><strong>OCTOBER 4TH, 2025</strong></p>
+          <p>Hopefully no one noticed... but during yesterday's re-organization the modded nude FighterZ videos made for the <a href="/chadsofa/wiki/posters/android21">Android 21</a> page had disappeared. (ONE OF OUR GREATEST AND MOST NICHÉ FUCKING FEATURES, GOONERS WON, CHUDS WON, YOTUBE LOST, WOMEN STFU). To make up for it, I have recorded two new videos fighting against Gold Cooler and Frieza for the page. (Fun fact: I usually specifically pick the characters I fight in the videos off of ones used by other characterfags/members of the /DBS/ community. Fighting against Frieza and Cooler is a direct homage to <a href="/chadsofa/wiki/posters/geekdom101">Geekdom101</a> and <a href="/chadsofa/wiki/posters/discordler">Discordler</a>)</p>
+          <p><img src="https://yourimageshare.com/ib/XURVVug29b.png" alt="Smiley face" style="width:620px;height:390px;"> </p>
+           <p><strong>OCTOBER 3RD, 2025</strong></p>
+          </p>/DBS/ Wiki began a recent crusade to remove all visible ".html" particles from the website to allow for MUCH more profesional looking urls and links to the site. Expanding this further, we are going through a full re-organization process. You will actually see "Wiki" in the site domains again. All different sections of the Wiki like the various tools (Page Creator, Vault etc.) , the categories and the posters will all be given their own sub-folders in the GitHub database. Our days of hosting media from other proprietary hosters like Yourimageshare and Jukehost may soon be coming to an end after we started directly embedding videos from the database for the NSFW division. This does sadly mean we will no longer be able to survey the number of site visitors off of the image pages, but we will be archiving that milestone here for when the time comes. If you are a commenter to the /dbs/ Wiki, you have not lost them and they were moved to the new URLS/pages. Because this site is ran by an amphetamine madman with ENTIRELY too much time on his hands, we will be celebrating our 90th page by giving it to the <a href="/chadsofa/wiki/posters/desuarchive">Desuarchive!</a> (who are factually the only reason we have even been able to still keep talking and working on the site.) <a href="/chadsofa/wiki/posters/nulybro">Nulybro</a> has also been given a page. The base <a href="https://japanga.github.io/chadsofa/">https://japanga.github.io/chadsofa/</a> domain still works and will still direct you to the main home page to avoid any loss or confusion from past users or if you already had the last one bookmarked, but clicking any of the buttons will still redirect you to the "wiki/main", "wiki/posters", "wiki/tools" and "wiki/booru" sub-folders. The NEW home page link is at <a href="https://japanga.github.io/chadsofa/wiki/main/index">https://japanga.github.io/chadsofa/wiki/main/index</a></p>
+   <p><img src="https://yourimageshare.com/ib/tRevyqBgN6.png" alt="Smiley face" style="width:620px;height:390px;"> </p>
+     <p><img src="https://yourimageshare.com/ib/H8YW5YqBZ9.png" alt="Smiley face" style="width:660px;height:360px;"> </p>
+            <p><strong>OCTOBER 2nd, 2025</strong></p>
+          </p>Rukiafag had made the staff developers and "janitors" of 4chan very proud with his management of the /DBS/ Wiki and began the notorious arc of August to pursue becoming affiliated with the janitors and moderators possibly even becoming one or some sort of Official 4chan business entity that is allowed to represent the organization. Sadly this era was very stressful, chaotic, and confusing: lots of insults and incorrect statements were made and Rukiafag even vandalized the Bibliotecha Anonoma, a sacred Wiki on 4chan History with ties to the IRC for making improper article edits about his status with the organization. Since their conflicts have finally been put to rest after he finally joined the IRC channels (including the one for that very database), a new ad for the IRC chat client has been added below the advertisement for the Bibliotecha Anonoma, as well as a new Advertisement for the <a href="soyjakparty">"Soyjak.Party"</a> Wiki, who have always shown their loyal support for the /DBS/ Wiki spin-off.</p>
+     <p><img src="https://yourimageshare.com/ib/QN4VknOltG.png" alt="Smiley face" style="width:570px;height:230px;"> </p>
+   <p><img src="https://yourimageshare.com/ib/xJUtTX28Fw.pngg" alt="Smiley face" style="width:570px;height:230px;"> </p>
+          <h1 class="halloweennews" style="display:inline">
+OCTOBER 1ST: DRAGON BALL SUPER WIKI 3.0 "THIS IS HALLOWEEN"</h1>
+            
+  <halloweennewssmall>
+<b><p>Get ready to be sp00ked... "HALLOWEEN" and the SEASONS CODE have been turned on for the whole month of October. This can obviously very easily be exploited, as the custom .css/header/music will be able to return if your device's month is forcefully set back to October. Adding this feature has led to some bugs relating to the original cookies-based header loading system, I would advise against using any of the original headers during the month of celebration as they may not store/load properly across all of the pages. During next month's downtime, we will be performing some optimization to better integrate the season header alongside the originals.</b></p>
+          </halloweennewssmall>
+      <p><img src="https://yourimageshare.com/ib/QzeTRjjYLP.png" alt="Smiley face" style="width:650px;height:400px;"> </p>
           
-  <div id="players-container">
-          </div>
-            <button id="start-button">Start Visualizer</button>
-           <button id="stop-button">Stop Visualizer</button>
-          <button id="mute-button">Mute Visualizer</button>
-        </div>
+          <p><strong>SEPTEMBER 30th, 2025</strong></p>
+           <h1 class="gradient-text" style="display:inline">
+ <a href="./gallery">Wiki Artist/Top Contributor Risu has made 3 new contributions to the Booru. Booru items are counted as pages, so this has brought us up to nearly 90 pages. All "V.I.P" posters like Risu and Geekdom have been given new ⍟ symbols on their names, the animated gold text code created for them is now also used on their individual pages.</a> </h1>
+              <p><img src="https://yourimageshare.com/ib/zvQWO3PEpd.jpg" alt="Smiley face" style="width:320px;height:200px;"> </p>
+          <p><strong>SEPTEMBER 28th, 2025</strong></p>
+          </p>".htaccess" has been added to the Wiki. You will no longer see ".html" in any links or urls to the site, you can now link and post to pages directly from their names and no longer have to use the .html extension.</p>
+     <p><img src="https://yourimageshare.com/ib/smtfafIP4R.jpg" alt="Smiley face" style="width:600px;height:370px;"> </p>
+  
+           <p><strong>SEPTEMBER 27th, 2025</strong></p>
+         
+         </a><a href="android21">"Android 21"</a> page has been created. It is a very well known fact that I am a former Rule 34 porn artist, the Android 21 page will be used to begin the "NSFW division" of the /DBS/ Wiki. I am not interested in using the page to promote lots more of my porn artworks, the page is more specifically made to archive FighterZ videos made using nude mods that cannot be posted to YouTube. The artwork used on the Android 21 page can be found on Rule 34, where it will be used to further promote the Wiki and the Red Clover Corporation.</a> <a href="https://rule34.xxx/index.php?page=post&s=view&id=14939970">https://rule34.xxx/index.php?page=post&s=view&id=14939970</a></a>
+   <p><img src="https://yourimageshare.com/ib/TvAsIFLxRc.png" alt="Smiley face" style="width:600px;height:370px;"> </p>
+            <p><strong>SEPTEMBER 25th, 2025</strong></p>
+         
+         </a> <a href="spaniard">"The Spaniard"</a> page has been created.</a>
+           <p><strong>SEPTEMBER 24th, 2025</strong></p>
+         
+</a>Contact has been re-opened to the /DBS/ Wiki, my personal email was previously used briefly in the Wiki origin to negotiate some updates and talk with some of the users off-site but was ultimately removed due to trolling and improper usage. I will no longer tolerate dispute or doubt over my staff member status and have set up an account on the official IRC communications channel used by staff members, and can be privately messaged there directly at any time through out the day at as T00TH on channels <a href="https://qchat.rizon.net/">#4chan, #desuarchive</a> and <a href="https://qchat.rizon.net/">#myanimelist</a> for any matters pertaining to tech support or the 4chan Organization.</a> 
+            <p><strong>SEPTEMBER 23rd, 2025</strong></p>
+          
+          <h1 class="ghost-text" style="display:inline">
+<a href="./ghost">/ghost/</a> page has been created.... I have officially returned to the /a/ threads starting from the Staff meeting/new inductions on the 17th, and I will continue to visit and participate in the threads on a daily basis.</a> 
+          </h1>
+          <p><img src="https://yourimageshare.com/ib/OCsoglWMHw.png" style="width:760px;height:350px;"> </p> 
       
-     
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-    const startButton = document.getElementById('start-button');
-    const stopButton = document.getElementById('stop-button');
-    const muteButton = document.getElementById('mute-button');
-    const audioElement = document.getElementById('audio-player');
-    const canvas = document.getElementById('visualizer-canvas');
-    const canvasCtx = canvas.getContext('2d');
-        const playersContainer = document.getElementById('players-container');
-    let isInitialized = false;
-    
-    // Set canvas dimensions based on the element's client size
-    canvas.width = canvas.clientWidth;
-    canvas.height = canvas.clientHeight;
-    
-    
-    audioElement.style.display = 'none'; // Or 'flex', 'grid', etc., depending on your layout
-  
-
-    let audioCtx, analyser, source, dataArray;
-    function getStringBasedOnMonth() {
-  const monthNames = [
-    "January String", "February String", "March String", "April String",
-    "May String", "June String", "July String", "August String",
-    "September String", "https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3", 
-
-"November String", "December String"
-  ];
-
-  const currentDate = new Date();
-  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
-
-  return monthNames[currentMonthIndex];
-}
-   function getStringBasedOnMonth2() {
-  const monthNames = [
-    "January String", "February String", "March String", "April String",
-    "May String", "June String", "July String", "August String",
-    "September String", "THIS IS HALLOWEEN", 
-"November String", "December String"
-  ];
-
-  const currentDate = new Date();
-  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
-
-  return monthNames[currentMonthIndex];
-}      
-    
-const mySongName = document.getElementById("songName");
-mySongName.textContent = getStringBasedOnMonth2();
-const result = getStringBasedOnMonth();
-
-    const initialize = () => {
-        // Create an AudioContext and AnalyserNode
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        analyser = audioCtx.createAnalyser();
-        
-        // Use an FFT size of 2048 to get frequency data
-        analyser.fftSize = 2048;
-        const bufferLength = analyser.frequencyBinCount;
-        dataArray = new Uint8Array(bufferLength);
-        
-        // Connect the audio source to the analyser and the audio output
-        source = audioCtx.createMediaElementSource(audioElement);
-        source.connect(analyser);
-        analyser.connect(audioCtx.destination);
-        
-        isInitialized = true; 
-        draw();
-        const newPlayer = document.createElement('audio');
- newPlayer.style.display = 'none';
-  newPlayer.src = result;
-  newPlayer.setAttribute('controls', 'controls');
-  newPlayer.play();
-  newPlayer.volume = 0;
-  audioElement.src = result;
-  newPlayer.setAttribute('id', 'myNewAudioPlayer'); 
-  // Append the new player to the container
-  playersContainer.appendChild(newPlayer);
-  
-}
-            // Function to stop the audi o
-function stopAudio() {
-   const termDiv =     document.getElementById('terminationDIV').innerHTML = '';
-  audioElement.stop(); // Reset the audio to the beginning
-  canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
-  termDiv.style.display = none;
-}
-  stopButton.addEventListener('click', stopAudio);  
-        
-        function muteAudio() {
-   const allAudioElements = document.querySelectorAll('audio');
-
-    allAudioElements.forEach(audioElement => {
-        audioElement.pause();
-        audioElement.currentTime = 0;
-    });
-
-    console.log("All audio elements have been reset.");
-}
-  muteButton.addEventListener('click', muteAudio);  
-    const draw = () => {
-        // Continue the animation loop
-        requestAnimationFrame(draw);
-        
-        // Get the frequency data
-        analyser.getByteFrequencyData(dataArray);
-        
-        // Clear the canvas
-        canvasCtx.fillStyle = '#222';
-        canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
-        
-        // Draw the spectrum bars
-        const barWidth = (canvas.width / dataArray.length) * 2.5; // Adjust for spacing
-        let x = 0;
-        
-        for (let i = 0; i < dataArray.length; i++) {
-            const barHeight = dataArray[i]; // Value from 0-255
-            
-            // Set bar color
-            canvasCtx.fillStyle = `rgb(181, 9, 9)`;
-            
-            // Draw the bar
-            canvasCtx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-            
-            x += barWidth + 1; // Add a small gap between bars
-        }
-    };
-       
+      <p><strong>SEPTEMBER 22nd, 2025</strong></p>
+           <p>The <a href="./pagecreatorbase">Page Creator</a> tool was recently introduced for fun, but was not 100% completed yet and could not properly save the data to the site. Cookies are one of the most essential parts of any website and focus on the communication and storage of data between user clients and servers, and have been part of the Wiki since the Red Clover major update. You are required to give cookies to the /DBS/ Wiki every time you enter it from the front gate Home Page, with the "Cache Code" system. Because the Page Creator was not completed yet, it was not added to the top section of the site yet and could only be found in the News. Now that it is, it will be findable across every page.</p>  
+          
+         <p><img src="https://yourimageshare.com/ib/BimZraRKyI.png" alt="Smiley face" style="width:760px;height:320px;"> </p> 
+            <p><strong>SEPTEMBER 21ST, 2025</strong></p>
+               <h1 class="gradient-text" style="display:inline">
+ <a href="./gallery.html">Wiki Artist/Top Contributor Risu has made a new contribution to the Booru.</a> 
+          </h1>
+           <p><strong>SEPTEMBER 20TH, 2025</strong></p>
+           <p><i>"ChainSAW Man"</i>, a fully voiced horror fan animation I created to promote the Reze movie that was previously previewed around /csm/: has been released to my official Fuckmaster18 channel, and on my Newgrounds profile <a href="https://trinity-animation.newgrounds.com/">"Trinity Animations"</a></p>
+           <iframe width="420" height="315" class="right-aligned-iframe"
+src="https://www.youtube.com/embed/5GL2zGMbbO0?autoplay=0&mute=1">th
+</iframe>
+         <h1><strong>SEPTEMBER 18TH, 2025 - DRAGON BALL SUPER WIKI 2.5, HAIL LORD PYTHON AND FALLOUT</strong></h1>
+          
+          <p><a href="./soyjakparty">Soyjak.Party</a> page created. Did you know? Rukiafag's friendship with the staff runs way deeper than you realize, and the tech developers of 4chan themselves are among the biggest fans of the Wiki. They themselves were who gave the harshest constructive criticisms of the roughest parts of our development; like the search bars, cookies, categories, infoboxes, etc. GrapeApe9k frequently works in .php while doing the hosting work for 4chan, and .php is also used in the Bibliotheca Anonoma. He also expressed for fandom of Linux early in the Wiki history. Tech banter aside, we received lots of complaints and requests to incorporate .php, or provide other options for accessing the Wiki content beyond .html: the creation of our Desktop application "THE VAULT" will be the answer for this. Download links to The Vault are available at the <a href="./redclover">Red Clover</a> page.</p>
+           <p><img src="https://yourimageshare.com/ib/u3jARS0RZu.png" alt="Smiley face" style="width:700px;height:340px;"> </p>
+           <p><strong>SEPTEMBER 17TH, 2025</strong></p>
+<a href="./sakurakosama">SAKURAKO-SAMA</a> HAS BEEN ACKNOWLEDGED AND INDUCTED TO THE /DBS/ WIKI HALL OF FAME. After a staff meeting in the archives, a new "Factions" infobox has been created after the proper lineup of moderators/admins was defined.</p>
+          
+          
+          <p><img src="https://yourimageshare.com/ib/suJYrC8Gm1.png" alt="Smiley face" style="width:590px;height:330px;"> </p>
+          
+          
+           <p><strong>SEPTEMBER 15TH, 2025</strong></p>
+            <p></p>
+        <p>"Azusabro" page has been created. <a href="pagecreatorbase">Page CREATOR</a>  function has been introduced. Now YOU can make your own custom unofficial pages, either for shitposts or pitches and previews that could eventually be added to the main database with proper appeals. Everyone already knows the official inclusions, so it is safe to create fake ones for fun or as personal user profiles.</p>
+          <p><img src="https://yourimageshare.com/ib/v1iy7p9aWv.png" alt="Smiley face" style="width:590px;height:330px;"> </p>
+          <p><strong>SEPTEMBER 12TH, 2025</strong></p>
+           <p>Since the Wiki is essentially a giant shitpost with lots of OCs and edits made specifically for it, I have organized every image used on the Wiki into a single page, called the <a href="supergallery">"SUPER GALLERY"</a>, because the cookies functonalities have only so far been used for the headers the Super Gallery will slowly evolve into an image favoriting/stashing system where users will be able to individually select their favorite shitposts and store them in their stash for later usage.</p>
+           <p><img src="https://yourimageshare.com/ib/HQfEUPoUKK.png" alt="Smiley face" style="width:590px;height:330px;"> </p>
+          <p><strong>SEPTEMBER 11TH, 2025</strong></p>
+             <p>A new YouTube channel has been started as a background project to the Wiki, re-uploading the full versions of some of the FighterZ matches that were previously posted early in the site history, as well as producing several new ones. This will not be highly advertised, but is still embedded and easily findable on several of the articles.</p>
+           <p><img src="https://yourimageshare.com/ib/nIlqvRiCli.png" alt="Smiley face" style="width:590px;height:330px;"> </p>
+          
+           <p><strong>SEPTEMBER 5TH, 2025</strong></p>
+          <p>"Zombies" page has been created. "Four Horsemen of the Apocalypse" page has been created. Features/functionalities on the Wiki that are going obsolete by the guests/visitors are going to slowly become disabled. Comments sections have almost exclusively only been used on the Gallery/Booru section, so they have been turned off for individual pages and articles. Removing the comments led to some of the articles becoming a lot smaller, meaning a lot of them had to be revised with new text and gallery images. This has led to all Wiki artists like Samir34, Skillet91, and DrawChad getting all of their art added to the pages. All proxy domains chadsofawiki.great-site.net, direct-chadsofa1,2,3 etc. were killed off for inactivity. Lingering particles from other sites like Neocities and Desuarchive have been removed - meaning the fonts/texts will look much better across the site and no images on the site will fail to appear if Desuarchive is currently down.</p>
+          <p><img src="https://yourimageshare.com/ib/nIQlVgwi4x.png" alt="Smiley face" style="width:670px;height:330px;"> </p>
+          <p><strong>SEPTEMBER 3RD, 2025</strong></p>
+           <p>We have made a massive overhaul to the site layout and search bar, adding a very advanced new redirecting/tagging system. It is specifically designed for individuals, phrases, characters, and anime series that may have been mentioned on the Wiki at some point, but do not yet have an official page. Over time, this will be slowly integrated into the categorizing system, and some tags may recieve an individual page if enough pages fall under them.</p>
+          <p><img src="https://yourimageshare.com/ib/wfiMGsju6B.png" alt="Smiley face" style="width:490px;height:330px;"> </p>
+           <p><strong>SEPTEMBER 1ST, 2025</strong></p>
+           <p>"Yzilma" page has been created.</p>
+          <p>"Son Goten" page has been created.</p>
+          <p>A highly useful "Random Article" function has been implemented to the site, making navigating across the entire database much funner, and smoother.</p>
+           <p>Rukia: Ice Moon custom theme created, designed for superior mobile functionality.</p>
+            <p><img src="https://yourimageshare.com/ib/IICUWEwVxc.jpg" alt="Smiley face" style="width:480px;height:330px;"> </p>
+          <p><strong>AUGUST 26TH, 2025</strong></p>
+           <p>"El Shaggy Blanco" page created. This was our first time using polls to decide a new induction, and we will continue to do this in the future to survey what new pages the fans truly want to see.</p>
+           <p>Custom .CSS injections for the 4chan client released under the Red Clover banner can now be found on the Red Clover Corporation page, visible everywhere across the site.</p>
+           <p><img src="https://yourimageshare.com/ib/Lip8mE0ZpV.png" alt="Smiley face" style="width:420px;height:330px;"> </p>
+           <p><strong>AUGUST 25TH, 2025</strong></p>
+                   <p>"Panpedo" page has been created.</p>
+                  <p>New image added to the "Multiverseguy" page.</p>
+                   <p>"Moro" page has been created.</p>
+          <p>"Characterfag" page has been restored from the original Miraheze.</p>
+          <p>Articles either originally written from the Rukiafag, or restored from the original Wiki are now separated into 2 categories "Legacy Articles" and "New Articles"</p>
+          <p>Early Wiki OC from June "FORTRESS" now usable as one of the site headers.</p>
+              <h1 class="gradient-text" style="display:inline">
+   <a href="posters.html">Wiki Top Contributors given a new beautiful animated gradient text code + new page embeds.</a> 
+          </h1>
+          <p>Bibliotheca Anonoma added to the featured/affiliated websites section.</p>
+          <p>Some of the faces around the site have been removed for greater privacy assurance.</p>
+           <p><strong>AUGUST 22ND, 2025</strong></p>
+                  
+                   <p>Gilbert and the Panpedo's public bans have been added to the janitors article.</p>
+                    <h1><strong>AUGUST 17TH, 2025 - DRAGON BALL SUPER WIKI 2.0 "RED CLOVER"</strong></h1>
+             
+                  <p>A CORPORATE BUSINESS ENTITY CALLED THE "RED CLOVER CORPORATION, LLC" HAS BEEN FORMED, OVERSEEING AND PROTECTING THE MATERIAL CREATED FOR THE SITE WHICH MAY POSSIBLY EXPAND INTO FURTHER PROJECTS AND VENTURES. Our first usage of the Wayback Machine in the entire history of the Wiki (originally used to rebuild materials from the first Dragon Ball Super Wiki) was used to preserve an original pictue of m00t's cat commented to the first image on the Booru. <a href="http://web.archive.org/web/20250000000000*/web.archive.org/screenshot/japanga.github.io/chadsofa/booruitem1.html">http://web.archive.org/web/20250000000000*/</a> A new page: the <a href="./gentlemen.html">"Gentlemen"</a> page has been restored from the original Miraheze. Header customization added to the site, 3 new header options are available. Cache passcoding added to the front home page of the side, data can now be inscribed and bound into the cookies of the site for long term-use - this is currently tied to the header functionality and keeps the same header across the site.</p>
+                     <p><img src="https://yourimageshare.com/ib/HuMB6cKNwS.png" alt="Smiley face" style="width:320px;height:330px;"> </p>
+          
    
-    
-    startButton.addEventListener('click', () => {
-        // The AudioContext must be resumed from a user gesture.
-        if (audioCtx && audioCtx.state === 'suspended') {
-            audioCtx.resume().then(() => {
-                if (!isInitialized) {
-                    initialize();
-                }
-                audioElement.play();
-            });
-        } else {
-            if (!isInitialized) {
-                initialize();
-            } 
-            audioElement.play();
-        }
-    });
-});
-              
+                  <p><strong>AUGUST 4TH, 2025</strong></p>
+     <h1 class="gradient-text" style="display:inline">
+   New page for Christopher "m00t" Poole has been created..</a> 
+          </h1>
+                   <p><strong>JULY 25TH, 2025</strong></p>
+                   <p>An emergency mass deletion crisis on 4chan has forced us to introduce and open the comments section on the Booru. </p>
+                   <h1><strong>JULY 23RD, 2025 - DRAGON BALL SUPER WIKI 1.1 "PASSENGER"</strong></h1>
+     <h1 class="gradient-text" style="display:inline">
+   Risu promoted to HEAD WIKI CONTRIBUTOR.</a> 
+          </h1>
+                   <p>Search bar refined, and added to EVERY page on the site.</p>
+                  <p>Cybersecurity page removed and replaced with Gallery/Booru for OCs made by the artists during the creation of the wiki.</p>
+                  <p>New "Krillin" page has been created.</p>
+                   <p>New "Android 18" page has been created.</p>
+                   <p><strong>JULY 17TH, 2025</strong></p>
+                     <p>New "TotallyNotMark" page has been created.</p>
+                   <p>"Toei Animation" page has been restored from the original Miraheze.</p>
+                   <p>"Samechad" page has been restored from the original Miraheze.</p>
+                    <p><strong>JULY 15TH, 2025</strong></p>
+                     <p>New "Cutegang" page has been created.</p>
+                   <p><strong>JULY 12TH, 2025</strong></p>
+                     <p>"SURPASSEDrus" page has been restored from the original Miraheze.</p>
+                        <p><strong>JULY 5TH, 2025</strong></p>
+                     <p>New addition to 'LordParagon' gallery. New additions to 'StartChad' gallery. Video link embedded into 'Filenamebitch' page. The "Affiliated Posters" section now directly links to the poster pages, adding for much smoother navigation. Since users have always pryed open and peeked at the raw code of the site in "View page source", there is no issue of turning the project open source. After the destruction of the static.domains proxy, the base source code built for the wiki is now stored on Github. One of the links in the proxies list is a deployment ran straight from the repository hosted with Github Pages that will NEVER go down under any circumstance. All issues related to individual site storing and caching will also be greatly improved on sites ran directly from the Github repository as the codes will be updated live and in real time.</p>
+                  <p><img src="https://yourimageshare.com/ib/tqDiS3jxVl.png" alt="Smiley face" style="width:400px;height:230px;"> </p>
+                  
+                   <p><strong>JULY 4TH, 2025</strong></p>
+                     <p>New video and music added to 'Cooler' page.</p>
+                          <p><strong>JULY 3RD, 2025</strong></p>
+                  <p>Fully functional JavaScript search bar added to the front page, capable of directly accessing all pages on the site.</p>
+                     <p>The link to the original Miraheze archive reserve has been REMOVED.</p>
+                   <p><img src="https://yourimageshare.com/ib/IvUUwfKYS3.png" alt="Smiley face" style="width:230px;height:230px;"> 
+                     
+                                    
+                        
+                    <p><strong>JULY 2ND, 2025</strong></p>
+                  <p>Gallery added to the ''StartCHAD'' page.</p>
+                   <p>''Filterbitch'' page has been restored from the original Miraheze.</p>
+                   <p>''Democratic Republic of the Congo'' page has been restored from the original Miraheze.</p>
+                  <p>''/dbs/ Hunger Games'' page has been restored from the original Miraheze.</p>
+                  <p>New, censorsed tweet added to ''Risu'' page.</p>
+                   <p>New butt picture added to ''Hoppu'' page. (this was very important)</p>
+                    <p><strong>JULY 1ST, 2025</strong></p>
+                  <p>New ''SethTheProgrammer'' page created.</p>
+                  <p>''SHAMEEL'' page has been restored from the original Miraheze.</p>
+                   <h1><strong>JUNE 30TH, 2025 - DRAGON BALL SUPER WIKI 1.0 FULL CONTENT RESTORATION</strong></h1>
+                    <p>Infobox templates have been added to all pages.</p>
+                   <p>Category hyperlinks added to the "Posters" section.</p>
+                    <p>New quote added to Yuliban's page.</p>
+                  <p>''El Hermano'' page has been restored from the original Miraheze.</p>
+                   <p>''El Grande Padre'' page has been restored from the original Miraheze.</p>
+                   <p>''Dogposter'' page has been restored from the original Miraheze.</p>
+                  <p>New ''Multiverseguy'' page created.</p>
+                  <p>New ''DrawChad'' page created.</p>
+                  <p>New ''Skillet91'' page created.</p>
+                    <p><strong>JUNE 29TH, 2025</strong></p>
+                    <p>New ''LordParagon'' page created.</p>
+                    <p>BEAUTIFUL new black/red gradient headers added across the whole site.</p>
+                    <p>On a power scaling wiki, the page for our site surpassed 2,000 views.</p>
+                   <p><img src="https://yourimageshare.com/ib/1K13L9FJUk.jpg" alt="Smiley face" style="width:190px;height:230px;"> 
+                     <p><strong>JUNE 28TH, 2025</strong></p>
+                    <p>Extra hyperlinks section added to the Posters list.</p>
+                    <p>New ''TablosAF'' page created.</p>
+                    <p>Gallery added to ''Geekdom101'' page. (LOL)</p>
+                  <p><strong>JUNE 27TH, 2025</strong></p>
+                    <p>New ''Risu'' page created.</p>
+                     <p><strong>JUNE 26TH, 2025</strong></p>
+                    <p>''Marvin Abundis Ramirez'' page restored from the original Miraheze.</p> 
+                  <p>Neocities has been abandoned, and the project now has a new hoster.</p> 
+                  <p><img src="https://yourimageshare.com/ib/iyJk1r34hD.jpg" alt="Smiley face" style="width:160px;height:120px;"> </p>
+                     <p><strong>JUNE 21TH, 2025</strong></p>
+                    <p>New ''Hoppu'' page created.</p>
+                    <p>First full gallery added to the Hoppu article.</p>
+                     <p><strong>JUNE 20TH, 2025</strong></p>
+                    <p>''Cooler'' and ''Cabbagang'' pages restored from the original Miraheze.</p>
+                        <p><strong>JUNE 17TH, 2025</strong></p>
+                    <p>Jiren theme song added to every single page. (LOL)</p>
+                    <p>''Moeshit'' page restored from the original Miraheze.</p>
+                       <p><strong>JUNE 16TH, 2025</strong></p>
+                    <p>Pages for Geekdom101, GodModeGod, and Samir34 added to front page.</p>
+                    <p>Headers, and link to the Miraheze archive reserve added to front page.</p>
+                    <p>All posters on the front page now fully complete with restored pages.</p>
+                    <p>New site pages added for public changelogs and detailed information on the new cybersecurity protection measures.</p>
+                    <p><strong>JUNE 15TH, 2025</strong></p>
+                    <p>The wiki is officially relaunched, and briefly shuts down Neocities with traffic reports of over 21.8 million backlinks</p>
+                    
+                      <p><img src="https://desu-usergeneratedcontent.xyz/a/image/1750/03/1750032795394.jpg" alt="Smiley face" style="float:left;width:430px;height:330px;"> </p>
+                    
+                  
+                 
+
           
-  </script>
-           <script>
-              function makeDraggable(element) {
-  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
-  // Get the header or the element itself to trigger drag
-  const dragHandle = element.querySelector(".draggable-header") || element;
-
-  dragHandle.onmousedown = dragMouseDown;
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault(); // Prevent default browser drag behavior
-
-    // Get the mouse cursor position at startup
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-
-    document.onmouseup = closeDragElement;
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-
-    // Calculate the new cursor position
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-
-    // Set the element's new position
-    element.style.top = (element.offsetTop - pos2) + "px";
-    element.style.left = (element.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // Stop moving when mouse button is released
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-
-// Apply the draggable functionality to your div
-const myDraggableDiv = document.getElementById("myDraggableDiv");
-makeDraggable(myDraggableDiv);
-     
-    window.onload = function() {
-    const audioFile = document.getElementById('audioFile');
-    const canvas = document.getElementById('visualizer');
-    const ctx = canvas.getContext('2d');
-
-    let audioContext;
-    let analyser;
-    let source;
-    let audioBuffer;
-      
-const myAudio = document.getElementById('audioFile');
-const stopButton = document.getElementById('stopButton');
-
-   
-
-    audioFile.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (!file) return;
-
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            const arrayBuffer = event.target.result;
-            initAudio(arrayBuffer);
-        };
-        reader.readAsArrayBuffer(file);
-    });
-      
-      
-// Function to stop the audi o
-function stopAudio(arrayBuffer) {
-  audioContext.close(); // Reset the audio to the beginning
-}
-      
-
-    function initAudio(arrayBuffer) {
-        if (audioContext) {
-            audioContext.close(); // Close existing context if re-initializing
-        }
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        analyser = audioContext.createAnalyser();
-        analyser.fftSize = 256; // Controls the number of frequency bins
-        const bufferLength = analyser.frequencyBinCount;
-        const dataArray = new Uint8Array(bufferLength);
-
-        audioContext.decodeAudioData(arrayBuffer, function(buffer) {
-            audioBuffer = buffer;
-            source = audioContext.createBufferSource();
-            source.buffer = audioBuffer;
-            source.connect(analyser);
-            analyser.connect(audioContext.destination);
-            source.start(0);
-            drawSpectrum(analyser, dataArray, bufferLength);
-        }, function(e) { console.error("Error decoding audio data", e); });
-    }
-
-    function drawSpectrum(analyser, dataArray, bufferLength) {
-        requestAnimationFrame(() => drawSpectrum(analyser, dataArray, bufferLength));
-
-        analyser.getByteFrequencyData(dataArray);
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        const barWidth = (canvas.width / bufferLength) * 2.5;
-        let x = 0;
-
-        for (let i = 0; i < bufferLength; i++) {
-            const barHeight = dataArray[i];
-
-            ctx.fillStyle = 'rgb(' + (barHeight + 194) + ',8,8)';
-            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-
-            x += barWidth + 1;
-        }
-    }
-
-         stopButton.addEventListener('click', stopAudio);
-    // Handle window resizing
-    window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    });
-};
-  </script>
-  
-   <style>
- 
-
-.container {
-    text-align: center;
-}
-
-#visualizer-canvas {
-    width: 600px;
-    height: 300px;
-    background-color: #222;
-    border: 1px solid #444;
-}
-
-.controls {
-    margin-top: 20px;
-}
-
- 
-      .area {
-  text-align: center;
-  font-size: 0.2;
-  letter-spacing: 0px;
-  font-weight: 700;
-  text-transform: uppercase;
-  animation: blur .75s ease-out infinite;
-  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
-}
- a.divlink { 
-  color: #FFFFFF;
-}
-
-@keyframes blur {
-  from {
-    text-shadow:0px 0px 10px #E00000,
-      0px 0px 10px #E00000, 
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 50px #E00000,
-      0px 0px 50px #E00000,
-      0px 0px 50px #E00000,
-      0px 0px 150px #E00000,
-      0px 10px 100px #E00000,
-      0px 10px 100px #E00000,
-      0px 10px 100px #E00000,
-      0px 10px 100px #E00000,
-      0px -10px 100px #E00000,
-      0px -10px 100px #E00000;
-  }
-}
-
-      .draggable {
-  position: absolute; /* Allows positioning with top/left */
-  background-color: #f1f1f1;
-  border: 1px solid #d3d3d3;
-  text-align: center;
-  z-index: 9; /* Ensures it stays on top of other elements */
-  width: 760px; /* Fixed width of 200 pixels */
-  height: 620px; /* Fixed height of 150 pixels */
-  transform: scale(0.3);
-        background: linear-gradient(#050505
-, #5C5C5C
-);
-}
-
-.draggable-header {
-  padding: 10px;
-  cursor: grab; /* Changes cursor to indicate dragability */
-  background-color: #2196f3;
-  color: #fff;
-    background: linear-gradient(#190A05, #870000);
-  color: #fff;
-}
-  
-        canvas {
-          border: 1px solid #666;
-          background-color: #000;
-          transform: scale(0.8);
-          background-image:url("https://yourimageshare.com/ib/KmeblhoVPl.gif"); 
-
-  background-size: cover; /* Ensures the image covers the entire element */
-
-  background-position: center; /* Centers the image horizontally and vertically */
-
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-
-  background-attachment: fixed; 
-        }
-      
-      #audioVisualizer {
-    background-color: rgba(194, 8, 8, 1);
-    border: 2px solid #C20808;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(194, 8, 8, 1); /* Cyan glow */
-        margin-top: -30px;
-}
-      #audioPlayer {
-    width: 80%;
-    max-width: 600px;
-    margin-top: -60px;
-}
-      audio::-webkit-media-controls-panel {
-      background: linear-gradient(#190A05, #870000);
-    }
-
-  </style>
-
+          
                           
                                     
  <script> 
@@ -957,9 +728,8 @@ else if (currentMonth === 9) { // June
 </script>
           
                 </main>
-  
-  
-          
+<style>
+</style>
     
             <script type="text/javascript" id="hcb">
    /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dJ43Tl5IByJdqspQippWg1"+"&opts=16798&num=10&ts=1753470209459");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ 
@@ -1068,52 +838,20 @@ else if (currentMonth === 9) { // June
 }          
     
         
-            .overlay {
+           
+
+    
+          .overlay {
     position: fixed; /* Positions the overlay relative to the viewport */
     top: 0;
     left: 0;
     width: 100%; /* Covers the full width of the viewport */
     height: 100%; /* Covers the full height of the viewport */
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with 50% opacity */
+    /* Black background with 50% opacity */
     z-index: 9999; /* Ensures the overlay is on top of other content */
 }
-
- 
    
-  .gradient-text {   
-      
-       font-size: 18px;
-      font-family: sans-serif;
-      font-style: italic;
-      font-weight: bold;
-      
-  /* Set the background to a linear gradient */
-  background: linear-gradient(to right, white, #F7A205, #F74105, #F76205, white, #F7A205, #F74105);
-  
-  /* Clip the background to the text content */
-  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
-  background-clip: text;
-  
-  /* Make the text color transparent so the background shows through */
-  -webkit-text-fill-color: transparent; /* For WebKit browsers */
-  color: transparent; /* Fallback for other browsers */
-  
-  /* Make the background larger than the text to allow for movement */
-  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
-  
-  /* Apply the animation */
-  animation: moveGradient 3s linear infinite; /* Adjust duration and timing as needed */
-}
-
-/* Define the keyframe animation */
-@keyframes moveGradient {
-  0% {
-    background-position: 0% 50%; /* Start position */
-  }
-  100% {
-    background-position: 100% 50%; /* End position */
-  }
-}   
+ 
           /* user styles */ 
 
             /* styles are what change the color and sizes of stuff on your site. */
@@ -1160,10 +898,87 @@ else if (currentMonth === 9) { // June
   font-size: 17px;
 }
 
+            .halloweennews {
+     color: #FF4000;    
+  }
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of 
+       .hidden {
+  display: none; /* This class will hide the element */
+
+              .gradient-text {   
+      
+       font-size: 18px;
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      
+  /* Set the background to a linear gradient */
+  background: linear-gradient(to right, white, #F7A205, #F74105, #F76205, white, #F7A205, #F74105);
+  
+  /* Clip the background to the text content */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers */
+  
+  /* Make the background larger than the text to allow for movement */
+  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
+  
+  /* Apply the animation */
+  animation: moveGradient 3s linear infinite; /* Adjust duration and timing as needed */
+}
+
+/* Define the keyframe animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  100% {
+    background-position: 100% 50%; /* End position */
+  }
+}   
+
+            .gradient-text2 {   
+      
+       font-size: 14px;
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      
+  /* Set the background to a linear gradient */
+  background: linear-gradient(to right, white, #5915B3, #30014A, #9E3399, #30014A, #5915B3, white);
+  
+  /* Clip the background to the text content */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers */
+  
+  /* Make the background larger than the text to allow for movement */
+  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
+  
+  /* Apply the animation */
+  animation: moveGradient 2s linear infinite; /* Adjust duration and timing as needed */
+}
+
+/* Define the keyframe animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  100% {
+    background-position: 100% 50%; /* End position */
+  }
+}
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of 
        .hidden {
   display: none; /* This class will hide the element */
 }
+           
           
           * {
   margin: auto;
@@ -1185,7 +1000,31 @@ body {
 }
 
 
+        .ghost-text {   
       
+       font-size: 18px;
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      
+  /* Set the background to a linear gradient */
+  background: linear-gradient(to right, white, #27F5AD, #27F5AD, #27F5AD, white, #27F5AD, #27F5AD);
+  
+  /* Clip the background to the text content */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text;
+  
+  /* Make the text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers */
+  
+  /* Make the background larger than the text to allow for movement */
+  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
+  
+  /* Apply the animation */
+  animation: moveGradient 3s linear infinite; /* Adjust duration and timing as needed */
+}
+
       
      
 horizontally */
