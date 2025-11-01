@@ -71,43 +71,8 @@
 
                   
          
-                  <script> 
-
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-             
-                      // Example using a simple cookie function
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
- 
-
-//
-// On page load (e.g., within window.onload or DOMContentLoaded):
-window.onload = function() {
-   const header = document.getElementById('myHeader');
-    var storedImageUrl = getCookie("currentBackgroundImg");
-    if (storedImageUrl) {
-       header.style.backgroundImage = "url('" + storedImageUrl + "')";
-       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
-       header.style.backgroundImage = "no-repeat"; // Optional
-    }
-};
-</script> 
+        
+                  
 
  <script> 
               document.addEventListener('DOMContentLoaded', function() {
@@ -150,18 +115,18 @@ window.onload = function() {
     const currentMonthIndex = today.getMonth(); // 0 for January, 11 for December
 
     const monthHeaders = [
-        "https://i.imgur.com/WqcAGQo.png", // January (index 0)
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
+        "", // January (index 0)
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
         "https://yourimageshare.com/ib/2D57mWw4so.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png"
+        "",
+        ""
     ];
 
     const headerElement = document.getElementById("myHeader"); // Assuming your header has id="mainHeader"
@@ -182,7 +147,43 @@ updateHeaderByMonth();
 
           
                        
-   
+              <script> 
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+             
+                      // Example using a simple cookie function
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+ 
+
+//
+// On page load (e.g., within window.onload or DOMContentLoaded):
+window.onload = function() {
+   const header = document.getElementById('myHeader');
+    var storedImageUrl = getCookie("currentBackgroundImg");
+    if (storedImageUrl) {
+       header.style.backgroundImage = "url('" + storedImageUrl + "')";
+       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       header.style.backgroundImage = "no-repeat"; // Optional
+    }
+};
+</script>
                   
 
                   
@@ -1576,7 +1577,6 @@ horizontally */
      
 </body>
 </html>
-
 
 
 
