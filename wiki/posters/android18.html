@@ -133,7 +133,7 @@
 
     if (headerElement) {
          headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
-        setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
+        //setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
     } else {
         console.error("Header element with ID 'mainHeader' not found.");
     }
@@ -172,7 +172,7 @@ function getCookie(name) {
 // On page load (e.g., within window.onload or DOMContentLoaded):
 window.onload = function() {
    const header = document.getElementById('myHeader');
-    var storedImageUrl = getCookie("currentBackgroundImg");
+    var storedImageUrl = getCookie("currentBackgroundImg2");
     if (storedImageUrl) {
        header.style.backgroundImage = "url('" + storedImageUrl + "')";
        header.style.backgroundImage = "cover"; // Optional: Adjust as needed
