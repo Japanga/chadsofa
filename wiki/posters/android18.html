@@ -112,7 +112,8 @@
  function updateHeaderByMonth() {
     const today = new Date();
     const currentMonthIndex = today.getMonth(); // 0 for January, 11 for December
-
+   
+  
     const monthHeaders = [
         "https://i.imgur.com/WqcAGQo.png", // January (index 0)
         "https://i.imgur.com/WqcAGQo.png",
@@ -124,12 +125,12 @@
         "https://i.imgur.com/WqcAGQo.png",
         "https://i.imgur.com/WqcAGQo.png",
         "https://yourimageshare.com/ib/2D57mWw4so.png",
-        "https://i.imgur.com/WqcAGQo.png",
+        "",
         "https://i.imgur.com/WqcAGQo.png"
     ];
 
     const headerElement = document.getElementById("myHeader"); // Assuming your header has id="mainHeader"
-  
+    var storedImageUrl = getCookie("currentBackgroundImg2");
 
     if (headerElement) {
          headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
