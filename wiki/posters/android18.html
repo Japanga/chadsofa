@@ -108,41 +108,7 @@
                   
                   
                   
- <script> 
- function updateHeaderByMonth() {
-    const today = new Date();
-    const currentMonthIndex = today.getMonth(); // 0 for January, 11 for December
-   
-  
-    const monthHeaders = [
-        "https://i.imgur.com/WqcAGQo.png", // January (index 0)
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://yourimageshare.com/ib/2D57mWw4so.png",
-        "",
-        "https://i.imgur.com/WqcAGQo.png"
-    ];
-
-    const headerElement = document.getElementById("myHeader"); // Assuming your header has id="mainHeader"
-    var storedImageUrl = getCookie("currentBackgroundImg2");
-
-    if (headerElement) {
-         headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
-        //setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
-    } else {
-        console.error("Header element with ID 'mainHeader' not found.");
-    }
-}
-
-// Call the function to update the header when the page loads
-updateHeaderByMonth();
-</script>
+ 
                   
                  <script> 
 
