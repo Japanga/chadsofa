@@ -61,8 +61,7 @@
                   
                 
                 
-                <audio src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" autoplay></audio>        
-                  
+              
           
 
                   
@@ -335,7 +334,317 @@ li.innerHTML = item;
            <p><img src="https://yourimageshare.com/ib/lW6dQRMeCT.png" alt="Smiley face" style="float:left;width:600px;height:120px;"> </p> 
           <p><img src="https://yourimageshare.com/ib/cvAUQrAROe.jpg" alt="Smiley face" style="float:left;width:500px;height:800px;"> </p>
           
-                  
+                   <div id="myDraggableDiv" class="draggable">
+     <div class="draggable-header">
+       <h1><p style="color: white;">MurderJukebox Spectrum Visualizer</p></h1></div>
+
+         <div class="area"><i>
+    <i><h2><p id = songName style="color: black;"></p></p>
+</h2></i>
+    <i><b><h><p id = songName style="color: black;">© RED CLOVER CORPORATION SOFTWARE</p></h></b></i>
+           <a class="divlink" href="https://codepen.io/Japanga/pen/yyeMYNb">
+         <p><p style="color: white;">https://codepen.io/Japanga/pen/yyeMYNb</p></p>
+    </a>
+           <div id="terminationDIV">
+        <canvas id="visualizer-canvas"></canvas>
+              </div>
+        <div class="controls">
+            <audio id="audio-player" 
+
+src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" controls 
+
+crossorigin="anonymous"></audio>
+          
+  <div id="players-container">
+          </div>
+            <button id="start-button">Start Visualizer</button>
+           <button id="stop-button">Stop Visualizer</button>
+          <button id="mute-button">Mute Visualizer</button>
+        </div>
+      
+     
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.getElementById('start-button');
+    const stopButton = document.getElementById('stop-button');
+    const muteButton = document.getElementById('mute-button');
+    const audioElement = document.getElementById('audio-player');
+    const canvas = document.getElementById('visualizer-canvas');
+    const canvasCtx = canvas.getContext('2d');
+        const playersContainer = document.getElementById('players-container');
+    let isInitialized = false;
+    
+    // Set canvas dimensions based on the element's client size
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+    
+    
+    audioElement.style.display = 'none'; // Or 'flex', 'grid', etc., depending on your layout
+  
+
+    let audioCtx, analyser, source, dataArray;
+    function getStringBasedOnMonth() {
+   const monthNames = [
+    "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF",
+    "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF",
+    "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3", 
+
+"https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF"
+  ];
+
+  const currentDate = new Date();
+  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
+
+  return monthNames[currentMonthIndex];
+}
+   function getStringBasedOnMonth2() {
+  const monthNames = [
+    "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG",
+    "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG",
+    "JIREN THEME SONG", "THIS IS HALLOWEEN", 
+"JIREN THEME SONG", "JIREN THEME SONG"
+  ];
+
+  const currentDate = new Date();
+  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
+
+  return monthNames[currentMonthIndex];
+}      
+    
+const mySongName = document.getElementById("songName");
+mySongName.textContent = getStringBasedOnMonth2();
+const result = getStringBasedOnMonth();
+
+    const initialize = () => {
+        // Create an AudioContext and AnalyserNode
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioCtx.createAnalyser();
+        
+        // Use an FFT size of 2048 to get frequency data
+        analyser.fftSize = 2048;
+        const bufferLength = analyser.frequencyBinCount;
+        dataArray = new Uint8Array(bufferLength);
+        
+        // Connect the audio source to the analyser and the audio output
+        source = audioCtx.createMediaElementSource(audioElement);
+        source.connect(analyser);
+        analyser.connect(audioCtx.destination);
+        
+        isInitialized = true; 
+        draw();
+        const newPlayer = document.createElement('audio');
+ newPlayer.style.display = 'none';
+  newPlayer.src = result;
+  newPlayer.setAttribute('controls', 'controls');
+  newPlayer.play();
+  newPlayer.volume = 0;
+  audioElement.src = result;
+  newPlayer.setAttribute('id', 'myNewAudioPlayer'); 
+  // Append the new player to the container
+  playersContainer.appendChild(newPlayer);
+  
+}
+            // Function to stop the audi o
+function stopAudio() {
+   const termDiv =     document.getElementById('terminationDIV').innerHTML = '';
+  audioElement.stop(); // Reset the audio to the beginning
+  canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+  termDiv.style.display = none;
+}
+  stopButton.addEventListener('click', stopAudio);  
+        
+        function muteAudio() {
+   const allAudioElements = document.querySelectorAll('audio');
+
+    allAudioElements.forEach(audioElement => {
+        audioElement.pause();
+        audioElement.currentTime = 0;
+    });
+
+    console.log("All audio elements have been reset.");
+}
+  muteButton.addEventListener('click', muteAudio);  
+    const draw = () => {
+        // Continue the animation loop
+        requestAnimationFrame(draw);
+        
+        // Get the frequency data
+        analyser.getByteFrequencyData(dataArray);
+        
+        // Clear the canvas
+        canvasCtx.fillStyle = '#222';
+        canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw the spectrum bars
+        const barWidth = (canvas.width / dataArray.length) * 2.5; // Adjust for spacing
+        let x = 0;
+        
+        for (let i = 0; i < dataArray.length; i++) {
+            const barHeight = dataArray[i]; // Value from 0-255
+            
+            // Set bar color
+            canvasCtx.fillStyle = `rgb(181, 9, 9)`;
+            
+            // Draw the bar
+            canvasCtx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+            
+            x += barWidth + 1; // Add a small gap between bars
+        }
+    };
+       
+   
+    
+    startButton.addEventListener('click', () => {
+        // The AudioContext must be resumed from a user gesture.
+        if (audioCtx && audioCtx.state === 'suspended') {
+            audioCtx.resume().then(() => {
+                if (!isInitialized) {
+                    initialize();
+                }
+                audioElement.play();
+            });
+        } else {
+            if (!isInitialized) {
+                initialize();
+            } 
+            audioElement.play();
+        }
+    });
+});
+              
+          
+  </script>
+           <script>
+              function makeDraggable(element) {
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+  // Get the header or the element itself to trigger drag
+  const dragHandle = element.querySelector(".draggable-header") || element;
+
+  dragHandle.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault(); // Prevent default browser drag behavior
+
+    // Get the mouse cursor position at startup
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+
+    // Calculate the new cursor position
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    // Set the element's new position
+    element.style.top = (element.offsetTop - pos2) + "px";
+    element.style.left = (element.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // Stop moving when mouse button is released
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+// Apply the draggable functionality to your div
+const myDraggableDiv = document.getElementById("myDraggableDiv");
+makeDraggable(myDraggableDiv);
+     
+    window.onload = function() {
+    const audioFile = document.getElementById('audioFile');
+    const canvas = document.getElementById('visualizer');
+    const ctx = canvas.getContext('2d');
+
+    let audioContext;
+    let analyser;
+    let source;
+    let audioBuffer;
+      
+const myAudio = document.getElementById('audioFile');
+const stopButton = document.getElementById('stopButton');
+
+   
+
+    audioFile.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const arrayBuffer = event.target.result;
+            initAudio(arrayBuffer);
+        };
+        reader.readAsArrayBuffer(file);
+    });
+      
+      
+// Function to stop the audi o
+function stopAudio(arrayBuffer) {
+  audioContext.close(); // Reset the audio to the beginning
+}
+      
+
+    function initAudio(arrayBuffer) {
+        if (audioContext) {
+            audioContext.close(); // Close existing context if re-initializing
+        }
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioContext.createAnalyser();
+        analyser.fftSize = 256; // Controls the number of frequency bins
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+
+        audioContext.decodeAudioData(arrayBuffer, function(buffer) {
+            audioBuffer = buffer;
+            source = audioContext.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(analyser);
+            analyser.connect(audioContext.destination);
+            source.start(0);
+            drawSpectrum(analyser, dataArray, bufferLength);
+        }, function(e) { console.error("Error decoding audio data", e); });
+    }
+
+    function drawSpectrum(analyser, dataArray, bufferLength) {
+        requestAnimationFrame(() => drawSpectrum(analyser, dataArray, bufferLength));
+
+        analyser.getByteFrequencyData(dataArray);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const barWidth = (canvas.width / bufferLength) * 2.5;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = dataArray[i];
+
+            ctx.fillStyle = 'rgb(' + (barHeight + 194) + ',8,8)';
+            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+            x += barWidth + 1;
+        }
+    }
+
+         stopButton.addEventListener('click', stopAudio);
+    // Handle window resizing
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+};
+  </script>
                  
           
                 </main>
@@ -349,6 +658,81 @@ li.innerHTML = item;
         <!-- THIS IS THE CSS !-->
          <style>
           
+.container {
+    text-align: center;
+}
+
+#visualizer-canvas {
+    width: 600px;
+    height: 300px;
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+ 
+      .area {
+  text-align: center;
+  font-size: 0.2;
+  letter-spacing: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
+}
+ a.divlink { 
+  color: #FFFFFF;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #E00000,
+      0px 0px 10px #E00000, 
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 150px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px -10px 100px #E00000,
+      0px -10px 100px #E00000;
+  }
+}
+
+      .draggable {
+  position: absolute; /* Allows positioning with top/left */
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  z-index: 9; /* Ensures it stays on top of other elements */
+  width: 760px; /* Fixed width of 200 pixels */
+  height: 620px; /* Fixed height of 150 pixels */
+  transform: scale(0.3);
+        background: linear-gradient(#050505
+, #5C5C5C
+);
+}
+
+.draggable-header {
+  padding: 10px;
+  cursor: grab; /* Changes cursor to indicate dragability */
+  background-color: #2196f3;
+  color: #fff;
+    background: linear-gradient(#190A05, #870000);
+  color: #fff;
+}
+  
           #myHeader {
   background-image: url('https://i.imgur.com/WqcAGQo.png');
   background-size: cover;
