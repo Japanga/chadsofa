@@ -236,6 +236,18 @@ function redirectToRandomPage() {
                            <button id="changeImageButton"onclick="window.location.href='pagecreatorbase'">⚒ Page Creator ⚒</button> 
                    <button id="changeImageButton"onclick="window.location.href='category5legacyarticles'">⚙ The Vault ⚙</button> 
                   
+                       <button onclick="changeRootVariable()">⚙⚒ Disable animated background .gif</button>
+                  <script>
+                        function changeRootVariable() {
+      // Get the root element (which is the HTML element)
+      const root = document.documentElement;
+                          
+                          const gradientString = "linear-gradient(#0A0A0A, #242222,  #660E0E, #210202)";
+
+      // Set the new value for the CSS variable
+      root.style.setProperty('--body-bg-image', gradientString);
+    }
+                    </script>
                   <div class="search-container">
           
    <input type="search" id="searchBar" placeholder="Search the site.....">
