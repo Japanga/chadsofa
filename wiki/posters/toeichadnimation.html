@@ -105,7 +105,7 @@ window.onload = function() {
        header.style.backgroundImage = "url('" + storedImageUrl + "')";
        header.style.backgroundImage = "cover"; // Optional: Adjust as needed
        header.style.backgroundImage = "no-repeat"; // Optional
-    }
+    } 
 };
 </script> 
 
@@ -141,87 +141,84 @@ window.onload = function() {
 
 </script>
 
-                  
-                  
-                  
- <script> 
- function updateHeaderByMonth() {
-    const today = new Date();
-    const currentMonthIndex = today.getMonth(); // 0 for January, 11 for December
+                 <script> 
+                   // Function to set a cookie
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
 
-    const monthHeaders = [
-        "https://i.imgur.com/WqcAGQo.png", // January (index 0)
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://yourimageshare.com/ib/2D57mWw4so.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png"
-    ];
+// Function to get a cookie value
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
 
-    const headerElement = document.getElementById("myHeader"); // Assuming your header has id="mainHeader"
-  
-
-    if (headerElement) {
-         headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
-         setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
+// Function to check if the header image cookie has been filled
+function hasHeaderCookie() {
+    const cookieValue = getCookie('currentBackgroundImg');
+    if (cookieValue) {
+        alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is ", cookieValue);
+        return true;
     } else {
-        console.error("Header element with ID 'mainHeader' not found.");
+        alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
+        return false;
     }
 }
 
-// Call the function to update the header when the page loads
-updateHeaderByMonth();
-</script>
+// Example usage:
+if (!hasHeaderCookie()) {
+    // Perform actions if the cookie is not set, e.g., set a new session cookie
+    setCookie('header_image_set', 'true', 1); // Sets a cookie that expires in 1 day
+}
+                   
+                                          // Define an array of image paths, one for each month (January to December)
+const monthlyHeaders = [
+    'images/header-january.jpg',
+    'images/header-february.jpg',
+    'images/header-march.jpg',
+    'images/header-april.jpg',
+    'images/header-may.jpg',
+    'images/header-june.jpg',
+    'images/header-july.jpg',
+    'images/header-august.jpg',
+    'images/header-september.jpg',
+    'images/header-october.jpg',
+    'https://yourimageshare.com/ib/URJ3l71GCv.png',
+    'images/header-december.jpg'
+];
+
+function setMonthlyHeader() {
+    const today = new Date();
+    const currentMonth = today.getMonth(); // 0-based index
+    const headerImageElement = document.getElementById('myHeader');
+    
+    if (headerImageElement) {
+        // Set the image source based on the current month index
+        headerImageElement.style.backgroundImage = "url('" + monthlyHeaders[currentMonth]; +"')"; 
+    }
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', setMonthlyHeader);
+               </script>   
                   
+              
 
           
                        
-                  
- <script> 
- function playMonthlyAudio() {
-      const currentDate = new Date();
-      const currentMonth = currentDate.getMonth(); // 0 for January, 11 for December
-
-      const audioFiles = [
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF',
-        'https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF'
-      ];
-
-      // Ensure the audio file for the current month exists
-      if (audioFiles[currentMonth]) {
-        const audio = new Audio(audioFiles[currentMonth]);
-        audio.play()
-          .catch(error => {
-            console.error("Error playing audio:", error);
-            // Handle potential errors like user interaction required for autoplay
-          });
-      } else {
-        console.warn("No audio file defined for the current month.");
-      }
-    }
-
-    // Call the function to play the audio when the page loads or on a specific event
-    playMonthlyAudio();
-</script>
-                  
-                  
-         
+ 
                   
 
                   
@@ -229,69 +226,71 @@ updateHeaderByMonth();
                 
                   
                   
-                 <script>
-  const myRandButton = document.getElementById('changeImageButton5');
+                <script>
+
                   // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
-  "./woaz",
-    "./poaz",
-    "./moaz",
-    "./foaz",
-    "./romaine",
-    "./turles",
-    "./argentinian",
-    "./cabbagang",
-    "./characterfag",
-    "./congo",
-    "./cutegang",
-    "./dbshungergames",
-    "./dennis",
-    "./discordler",
-    "./dogposter",
-    "./drawchad",
-    "./elespecialista",
-    "./elgrandepadre",
-    "./elhermano",
-    "./elshaggyblanco",
-    "./filterbitch",
-    "./geekdom101",
-    "./gets",
-    "./hoppu",
-    "./janitors",
-    "./krillin",
-    "./lordparagon",
-    "./moeshit",
-    "./moewives",
-    "./moot",
-    "./moro.html",
-    "./multiverseguy",
-    "./panpedo",
-    "./risu",
-    "./samechad",
-    "./samir34",
-    "./moewives",
-    "./seththeprogrammer",
-    "./shameel",
-    "./skillet91",
-    "./songoten",
-    "./startchad",
-    "./surpassedrus",
-    "./tablosaf",
-    "./toeichadnimation",
-    "./totallynotmark",
-    "./turles",
-    "./woaz",
-    "./yzilma",
-    "./android18",
-    "./godmodegod",
-    "./zombies",
-    "./fourhorsemen",
-    "./azusabro",
-    "./sakurakosama",
-    "./soyjakparty",
-    "./spaniard",
-    "./android21",
-    "./ghost"
+  "/chadsofa/wiki/posters/woaz",
+    "/chadsofa/wiki/posters/poaz",
+    "/chadsofa/wiki/posters/moaz",
+    "/chadsofa/wiki/posters/foaz",
+    "/chadsofa/wiki/posters/romaine",
+    "/chadsofa/wiki/posters/turles",
+    "/chadsofa/wiki/posters/argentinian",
+    "/chadsofa/wiki/posters/cabbagang",
+    "/chadsofa/wiki/posters/characterfag",
+    "/chadsofa/wiki/posters/congo",
+    "/chadsofa/wiki/posters/cutegang",
+    "/chadsofa/wiki/posters/dbshungergames",
+    "/chadsofa/wiki/posters/dennis",
+    "/chadsofa/wiki/posters/discordler",
+    "/chadsofa/wiki/posters/dogposter",
+    "/chadsofa/wiki/posters/drawchad",
+    "/chadsofa/wiki/posters/elespecialista",
+    "/chadsofa/wiki/posters/elgrandepadre",
+    "/chadsofa/wiki/posters/elhermano",
+    "/chadsofa/wiki/posters/elshaggyblanco",
+    "/chadsofa/wiki/posters/filterbitch",
+    "/chadsofa/wiki/posters/geekdom101",
+    "/chadsofa/wiki/posters/gets",
+    "/chadsofa/wiki/posters/hoppu",
+    "/chadsofa/wiki/posters/janitors",
+    "/chadsofa/wiki/posters/krillin",
+    "/chadsofa/wiki/posters/lordparagon",
+    "/chadsofa/wiki/posters/moeshit",
+    "/chadsofa/wiki/posters/moewives",
+    "/chadsofa/wiki/posters/moot",
+    "/chadsofa/wiki/posters/moro.html",
+    "/chadsofa/wiki/posters/multiverseguy",
+    "/chadsofa/wiki/posters/panpedo",
+    "/chadsofa/wiki/posters/risu",
+    "/chadsofa/wiki/posters/samechad",
+    "/chadsofa/wiki/posters/samir34",
+    "/chadsofa/wiki/posters/moewives",
+    "/chadsofa/wiki/posters/seththeprogrammer",
+    "/chadsofa/wiki/posters/shameel",
+    "/chadsofa/wiki/posters/skillet91",
+    "/chadsofa/wiki/posters/songoten",
+    "/chadsofa/wiki/posters/startchad",
+    "/chadsofa/wiki/posters/surpassedrus",
+    "/chadsofa/wiki/posters/tablosaf",
+    "/chadsofa/wiki/posters/toeichadnimation",
+    "/chadsofa/wiki/posters/totallynotmark",
+    "/chadsofa/wiki/posters/turles",
+    "/chadsofa/wiki/posters/woaz",
+    "/chadsofa/wiki/posters/yzilma",
+    "/chadsofa/wiki/posters/android18",
+    "/chadsofa/wiki/posters/godmodegod",
+    "/chadsofa/wiki/posters/zombies",
+    "/chadsofa/wiki/posters/fourhorsemen",
+    "/chadsofa/wiki/posters/azusabro",
+    "/chadsofa/wiki/posters/sakurakosama",
+    "/chadsofa/wiki/posters/soyjakparty",
+    "/chadsofa/wiki/posters/spaniard",
+    "/chadsofa/wiki/posters/android21",
+    "/chadsofa/wiki/posters/desuarchive",
+    "/chadsofa/wiki/posters/nulybro",
+   "/chadsofa/wiki/posters/rabbitrun"
 
 ];
 // Function to perform the random redirection.
@@ -307,13 +306,12 @@ function redirectToRandomPage() {
     // For replacing the current history entry, use window.location.replace(targetURL);
     window.location.href = targetURL;
 }
-                   myRandButton.addEventListener('click', redirectToRandomPage);
                   </script>
                 
                                     
                            <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
                    <button id="changeImageButton7">⚙ The Vault ⚙</button> 
-                    
+                      
                     <button onclick="changeRootVariable()">⚙⚒ Disable animated background .gif</button>
                   <script>
                         function changeRootVariable() {
@@ -326,6 +324,7 @@ function redirectToRandomPage() {
       root.style.setProperty('--body-bg-image', gradientString);
     }
                     </script>
+
                   <div id="search-container">
                   <div class="search-container">
           
@@ -338,9 +337,8 @@ function redirectToRandomPage() {
                       const myPageButton = document.getElementById('changeImageButton6');
 
                       const myVaultButton = document.getElementById('changeImageButton7');
-                    
-                    
-         function goToPageCreator() {
+                    y
+        function goToPageCreator() {
            window.location.href = "/chadsofa/wiki/tools/pagecreatorbase";
         }
                       function goToVault() {
@@ -360,10 +358,10 @@ function redirectToRandomPage() {
         const searchBar = document.getElementById('searchBar');
         const resultsList = document.getElementById('resultsList');
 
-              const items = [
-             '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
-'<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
-        ];
+         const items = [
+              '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
+'<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>','<a href="desuarchive">Desuarchive</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>','<a href="lordtienrus">LordTienrus</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="nulybro">Nulybro</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="rabiitrun">Rabbitrun</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
+         ];
  searchBar.addEventListener('input', () => {
             const searchTerm = searchBar.value.toLowerCase();
             resultsList.innerHTML = ''; // Clear previous results
@@ -406,7 +404,7 @@ li.innerHTML = item;
 </style>
 
 <blockquote>
-<a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> June 15th, 2025 - present all rights reserved</a>  - <b>IRC contact info <a href="https://rizon.net/">~t00thl3$$@nude.and.on-irc #Rizon, #help, #myanimelist, #anime, #bibanon, #Batcave, #blackhat, #hackers, #ELITEWAREZ, and #desuarchive</a></b>
+<a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> June 15th, 2025 - present all rights reserved</a>  - <b>IRC contact info <a href="https://rizon.net/">~t00thl3$$@nude.and.on-irc #Rizon, #help, #myanimelist, #anime, #bibanon, #Batcave, #blackhat, #hackers, #ELITEWAREZ, #desustorage, and #4channel</a></b>
 </blockquote>
                     
      <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
@@ -415,17 +413,15 @@ li.innerHTML = item;
                  <p><img src="https://yourimageshare.com/ib/dH6sYbAr4T.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
                   
-<button class="tablink" onclick="window.location.href='/chadsofa/wiki/main/index'" id="defaultOpen">HOME</button>
+<button class="tablink" onclick="window.location.href='/chadsofa/index'" id="defaultOpen">HOME</button>
 <button class="tablink2" onclick="window.location.href='/chadsofa/wiki/main/posters'">POSTERS</button>
 <button class="tablink3" onclick="window.location.href='/chadsofa/wiki/main/news'">NEWS</button>
 <button class="tablink4" onclick="window.location.href='/chadsofa/wiki/booru/gallery'">GALLERY</button>
           <button class="tablink5" onclick="window.location.href='/chadsofa/wiki/main/interviews'">INTERVIEWS</button>
           <button class="tablink6" onclick="window.location.href='/chadsofa/wiki/main/cybersecurity'">CYBERSECURITY</button>
-                
-
-                    
-                          
-         <h1>Toei Chadnimation</h1>
+   
+            
+        <h1>Toei Chadnimation</h1>
                            <p><img src="https://yourimageshare.com/ib/HFmbQHYueD.jpg" alt="Smiley face" style="float:right;width:300px;height:360px;"> </p>
                     <p>Toei Chadnimation is the quintessential component to animation worldwide. Notable for their superb animation fluency and art style, which propels them to the top. Their most profitable and popular work, obviously, is CHADgon CHAll CHADper, followed by its lesser known cousins, Dragon Ball Z, and Pedo Ball OG; and their newest addition to the moneymaker family: Super Dragon Ball Pedroes/Heroes.
 
@@ -434,8 +430,321 @@ They do, however, animate and compose other lesser shonens and miscellaneous ser
 They've been around since recorded animation history, and are considered the fathers of moving images.</p>
                 
                   
-                      
+                  
+               
+                    <div id="myDraggableDiv" class="draggable">
+     <div class="draggable-header">
+       <h1><p style="color: white;">MurderJukebox Spectrum Visualizer</p></h1></div>
+
+         <div class="area"><i>
+    <i><h2><p id = songName style="color: black;"></p></p>
+</h2></i>
+    <i><b><h><p id = songName style="color: black;">© RED CLOVER CORPORATION SOFTWARE</p></h></b></i>
+           <a class="divlink" href="https://codepen.io/Japanga/pen/yyeMYNb">
+         <p><p style="color: white;">https://codepen.io/Japanga/pen/yyeMYNb</p></p>
+    </a>
+           <div id="terminationDIV">
+        <canvas id="visualizer-canvas"></canvas>
+              </div>
+        <div class="controls">
+            <audio id="audio-player" 
+
+src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" controls 
+
+crossorigin="anonymous"></audio>
+          
+  <div id="players-container">
+          </div>
+            <button id="start-button">Start Visualizer</button>
+           <button id="stop-button">Stop Visualizer</button>
+          <button id="mute-button">Mute Visualizer</button>
+        </div>
       
+     
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.getElementById('start-button');
+    const stopButton = document.getElementById('stop-button');
+    const muteButton = document.getElementById('mute-button');
+    const audioElement = document.getElementById('audio-player');
+    const canvas = document.getElementById('visualizer-canvas');
+    const canvasCtx = canvas.getContext('2d');
+        const playersContainer = document.getElementById('players-container');
+    let isInitialized = false;
+    
+    // Set canvas dimensions based on the element's client size
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+    
+    
+    audioElement.style.display = 'none'; // Or 'flex', 'grid', etc., depending on your layout
+  
+
+    let audioCtx, analyser, source, dataArray;
+    function getStringBasedOnMonth() {
+  const monthNames = [
+    "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF",
+    "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF",
+    "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3", 
+
+"https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF"
+  ];
+
+  const currentDate = new Date();
+  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
+
+  return monthNames[currentMonthIndex];
+}
+   function getStringBasedOnMonth2() {
+   const monthNames = [
+    "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG",
+    "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG",
+    "JIREN THEME SONG", "THIS IS HALLOWEEN", 
+"JIREN THEME SONG", "JIREN THEME SONG"
+  ];
+
+  const currentDate = new Date();
+  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
+
+  return monthNames[currentMonthIndex];
+}      
+    
+const mySongName = document.getElementById("songName");
+mySongName.textContent = getStringBasedOnMonth2();
+const result = getStringBasedOnMonth();
+
+    const initialize = () => {
+        // Create an AudioContext and AnalyserNode
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioCtx.createAnalyser();
+        
+        // Use an FFT size of 2048 to get frequency data
+        analyser.fftSize = 2048;
+        const bufferLength = analyser.frequencyBinCount;
+        dataArray = new Uint8Array(bufferLength);
+        
+        // Connect the audio source to the analyser and the audio output
+        source = audioCtx.createMediaElementSource(audioElement);
+        source.connect(analyser);
+        analyser.connect(audioCtx.destination);
+        
+        isInitialized = true; 
+        draw();
+        const newPlayer = document.createElement('audio');
+ newPlayer.style.display = 'none';
+  newPlayer.src = result;
+  newPlayer.setAttribute('controls', 'controls');
+  newPlayer.play();
+  newPlayer.volume = 0;
+  audioElement.src = result;
+  newPlayer.setAttribute('id', 'myNewAudioPlayer'); 
+  // Append the new player to the container
+  playersContainer.appendChild(newPlayer);
+  
+}
+            // Function to stop the audi o
+function stopAudio() {
+   const termDiv =     document.getElementById('terminationDIV').innerHTML = '';
+  audioElement.stop(); // Reset the audio to the beginning
+  canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+  termDiv.style.display = none;
+}
+  stopButton.addEventListener('click', stopAudio);  
+        
+        function muteAudio() {
+   const allAudioElements = document.querySelectorAll('audio');
+
+    allAudioElements.forEach(audioElement => {
+        audioElement.pause();
+        audioElement.currentTime = 0;
+    });
+
+    console.log("All audio elements have been reset.");
+}
+  muteButton.addEventListener('click', muteAudio);  
+    const draw = () => {
+        // Continue the animation loop
+        requestAnimationFrame(draw);
+        
+        // Get the frequency data
+        analyser.getByteFrequencyData(dataArray);
+        
+        // Clear the canvas
+        canvasCtx.fillStyle = '#222';
+        canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw the spectrum bars
+        const barWidth = (canvas.width / dataArray.length) * 2.5; // Adjust for spacing
+        let x = 0;
+        
+        for (let i = 0; i < dataArray.length; i++) {
+            const barHeight = dataArray[i]; // Value from 0-255
+            
+            // Set bar color
+            canvasCtx.fillStyle = `rgb(181, 9, 9)`;
+            
+            // Draw the bar
+            canvasCtx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+            
+            x += barWidth + 1; // Add a small gap between bars
+        }
+    };
+       
+   
+    
+    startButton.addEventListener('click', () => {
+        // The AudioContext must be resumed from a user gesture.
+        if (audioCtx && audioCtx.state === 'suspended') {
+            audioCtx.resume().then(() => {
+                if (!isInitialized) {
+                    initialize();
+                }
+                audioElement.play();
+            });
+        } else {
+            if (!isInitialized) {
+                initialize();
+            } 
+            audioElement.play();
+        }
+    });
+});
+              
+          
+  </script>
+           <script>
+              function makeDraggable(element) {
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+  // Get the header or the element itself to trigger drag
+  const dragHandle = element.querySelector(".draggable-header") || element;
+
+  dragHandle.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault(); // Prevent default browser drag behavior
+
+    // Get the mouse cursor position at startup
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+
+    // Calculate the new cursor position
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    // Set the element's new position
+    element.style.top = (element.offsetTop - pos2) + "px";
+    element.style.left = (element.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // Stop moving when mouse button is released
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+// Apply the draggable functionality to your div
+const myDraggableDiv = document.getElementById("myDraggableDiv");
+makeDraggable(myDraggableDiv);
+     
+    window.onload = function() {
+    const audioFile = document.getElementById('audioFile');
+    const canvas = document.getElementById('visualizer');
+    const ctx = canvas.getContext('2d');
+
+    let audioContext;
+    let analyser;
+    let source;
+    let audioBuffer;
+      
+const myAudio = document.getElementById('audioFile');
+const stopButton = document.getElementById('stopButton');
+
+   
+
+    audioFile.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const arrayBuffer = event.target.result;
+            initAudio(arrayBuffer);
+        };
+        reader.readAsArrayBuffer(file);
+    });
+      
+      
+// Function to stop the audi o
+function stopAudio(arrayBuffer) {
+  audioContext.close(); // Reset the audio to the beginning
+}
+      
+
+    function initAudio(arrayBuffer) {
+        if (audioContext) {
+            audioContext.close(); // Close existing context if re-initializing
+        }
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioContext.createAnalyser();
+        analyser.fftSize = 256; // Controls the number of frequency bins
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+
+        audioContext.decodeAudioData(arrayBuffer, function(buffer) {
+            audioBuffer = buffer;
+            source = audioContext.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(analyser);
+            analyser.connect(audioContext.destination);
+            source.start(0);
+            drawSpectrum(analyser, dataArray, bufferLength);
+        }, function(e) { console.error("Error decoding audio data", e); });
+    }
+
+    function drawSpectrum(analyser, dataArray, bufferLength) {
+        requestAnimationFrame(() => drawSpectrum(analyser, dataArray, bufferLength));
+
+        analyser.getByteFrequencyData(dataArray);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const barWidth = (canvas.width / bufferLength) * 2.5;
+        let x = 0;
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = dataArray[i];
+
+            ctx.fillStyle = 'rgb(' + (barHeight + 194) + ',8,8)';
+            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+            x += barWidth + 1;
+        }
+    }
+
+         stopButton.addEventListener('click', stopAudio);
+    // Handle window resizing
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+};
+  </script>
+                      
+                          
                   
                           
                                     
@@ -554,6 +863,80 @@ else if (currentMonth === 9) { // June
         <!-- THIS IS THE CSS !-->
          <style>
           
+.container {
+    text-align: center;
+}
+
+#visualizer-canvas {
+    width: 600px;
+    height: 300px;
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+ 
+      .area {
+  text-align: center;
+  font-size: 0.2;
+  letter-spacing: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
+}
+ a.divlink { 
+  color: #FFFFFF;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #E00000,
+      0px 0px 10px #E00000, 
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 150px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px -10px 100px #E00000,
+      0px -10px 100px #E00000;
+  }
+}
+
+      .draggable {
+  position: absolute; /* Allows positioning with top/left */
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  z-index: 9; /* Ensures it stays on top of other elements */
+  width: 760px; /* Fixed width of 200 pixels */
+  height: 620px; /* Fixed height of 150 pixels */
+  transform: scale(0.3);
+        background: linear-gradient(#050505
+, #5C5C5C
+);
+}
+
+.draggable-header {
+  padding: 10px;
+  cursor: grab; /* Changes cursor to indicate dragability */
+  background-color: #2196f3;
+  color: #fff;
+    background: linear-gradient(#190A05, #870000);
+  color: #fff;
+}
           #myHeader {
   background-image: url('https://i.imgur.com/WqcAGQo.png');
   background-size: cover;
@@ -1186,12 +1569,3 @@ horizontally */
      
 </body>
 </html>
-
-
-
-
-
-
-
-
-
