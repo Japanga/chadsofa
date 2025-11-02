@@ -141,7 +141,7 @@ window.onload = function() {
 
 </script>
 
-                 <script> 
+                    <script> 
                    // Function to set a cookie
 function setCookie(name, value, days) {
     let expires = "";
@@ -162,17 +162,39 @@ function getCookie(name) {
         while (c.charAt(0) === ' ') c = c.substring(1, c.length);
         if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
     }
-    return null;
+    return null; 
 }
+                   
+                                                             // Define an array of image paths, one for each month (January to December)
 
+  
 // Function to check if the header image cookie has been filled
 function hasHeaderCookie() {
+     const today = new Date();
+    const currentMonth = today.getMonth(); // 0-based index
     const cookieValue = getCookie('currentBackgroundImg');
+   const headerImageElement = document.getElementById('myHeader');
+  const monthlyHeaders = [
+    'images/header-january.jpg', 
+    'images/header-february.jpg',
+    'images/header-march.jpg',
+    'images/header-april.jpg',
+    'images/header-may.jpg',
+    'images/header-june.jpg',
+    'images/header-july.jpg',
+    'images/header-august.jpg',
+    'images/header-september.jpg',
+    'images/header-october.jpg', 
+    'https://yourimageshare.com/ib/URJ3l71GCv.png',
+    'images/header-december.jpg'
+];
     if (cookieValue) {
-        alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is ", cookieValue);
+        alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
+            headerImageElement.style.backgroundImage = "url('" + cookieValue +"')";  
         return true;
     } else {
-        alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
+       alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
+   headerImageElement.style.backgroundImage = "url('" + monthlyHeaders[currentMonth]; +"')"; 
         return false;
     }
 }
@@ -183,36 +205,11 @@ if (!hasHeaderCookie()) {
     setCookie('header_image_set', 'true', 1); // Sets a cookie that expires in 1 day
 }
                    
-                                          // Define an array of image paths, one for each month (January to December)
-const monthlyHeaders = [
-    'images/header-january.jpg',
-    'images/header-february.jpg',
-    'images/header-march.jpg',
-    'images/header-april.jpg',
-    'images/header-may.jpg',
-    'images/header-june.jpg',
-    'images/header-july.jpg',
-    'images/header-august.jpg',
-    'images/header-september.jpg',
-    'images/header-october.jpg',
-    'https://yourimageshare.com/ib/URJ3l71GCv.png',
-    'images/header-december.jpg'
-];
-
-function setMonthlyHeader() {
-    const today = new Date();
-    const currentMonth = today.getMonth(); // 0-based index
-    const headerImageElement = document.getElementById('myHeader');
-    
-    if (headerImageElement) {
-        // Set the image source based on the current month index
-        headerImageElement.style.backgroundImage = "url('" + monthlyHeaders[currentMonth]; +"')"; 
-    }
-}
 
 // Call the function when the page loads
 document.addEventListener('DOMContentLoaded', setMonthlyHeader);
                </script>   
+                  
                   
               
 
