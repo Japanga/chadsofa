@@ -191,10 +191,14 @@ function hasHeaderCookie() {
     if (cookieValue) {
         alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
             headerImageElement.style.backgroundImage = "url('" + cookieValue +"')";  
+         headerImageElement.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       headerImageElement.style.backgroundImage = "no-repeat"; // Optional
         return true;
     } else {
        alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
    headerImageElement.style.backgroundImage = "url('" + monthlyHeaders[currentMonth]; +"')"; 
+           headerImageElement.style.backgroundImage = "cover"; // Optional: Adjust as needed
+       headerImageElement.style.backgroundImage = "no-repeat"; // Optional
         return false;
     }
 }
@@ -1567,6 +1571,7 @@ horizontally */
      
 </body>
 </html>
+
 
 
 
