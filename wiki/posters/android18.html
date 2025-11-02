@@ -224,9 +224,9 @@ document.addEventListener('DOMContentLoaded', setMonthlyHeader);
                   <button id="changeImageButton5">Random Article</button>
                 
                   
-                  
-                <script>
-
+                 
+                  <script>
+  const myRandButton = document.getElementById('changeImageButton5');
                   // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
   "/chadsofa/wiki/posters/woaz",
@@ -288,8 +288,7 @@ const pageURLs = [
     "/chadsofa/wiki/posters/spaniard",
     "/chadsofa/wiki/posters/android21",
     "/chadsofa/wiki/posters/desuarchive",
-    "/chadsofa/wiki/posters/nulybro",
-   "/chadsofa/wiki/posters/rabbitrun"
+    "/chadsofa/wiki/posters/nulybro"
 
 ];
 // Function to perform the random redirection.
@@ -305,6 +304,7 @@ function redirectToRandomPage() {
     // For replacing the current history entry, use window.location.replace(targetURL);
     window.location.href = targetURL;
 }
+                   myRandButton.addEventListener('click', redirectToRandomPage);
                   </script>
                 
                                     
@@ -1571,6 +1571,7 @@ horizontally */
      
 </body>
 </html>
+
 
 
 
