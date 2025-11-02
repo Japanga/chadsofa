@@ -71,43 +71,7 @@
 
                   
          
-                  <script> 
-
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-             
-                      // Example using a simple cookie function
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
- 
-
-//
-// On page load (e.g., within window.onload or DOMContentLoaded):
-window.onload = function() {
-   const header = document.getElementById('myHeader');
-    var storedImageUrl = getCookie("currentBackgroundImg");
-    if (storedImageUrl) {
-       header.style.backgroundImage = "url('" + storedImageUrl + "')";
-       header.style.backgroundImage = "cover"; // Optional: Adjust as needed
-       header.style.backgroundImage = "no-repeat"; // Optional
-    }
-};
-</script> 
+    
 
  <script> 
               document.addEventListener('DOMContentLoaded', function() {
@@ -142,43 +106,75 @@ window.onload = function() {
 </script>
 
                   
-                  
-                  
- <script> 
- function updateHeaderByMonth() {
-    const today = new Date();
-    const currentMonthIndex = today.getMonth(); // 0 for January, 11 for December
+    <script> 
+                   // Function to set a cookie
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
 
-    const monthHeaders = [
-        "https://i.imgur.com/WqcAGQo.png", // January (index 0)
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://yourimageshare.com/ib/2D57mWw4so.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png"
-    ];
+// Function to get a cookie value
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null; 
+}
+                   
+                                                             // Define an array of image paths, one for each month (January to December)
 
-    const headerElement = document.getElementById("myHeader"); // Assuming your header has id="mainHeader"
   
-
-    if (headerElement) {
-         headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
-        setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
+// Function to check if the header image cookie has been filled
+function hasHeaderCookie() {
+     const today = new Date();
+    const currentMonth = today.getMonth(); // 0-based index
+    const cookieValue = getCookie('currentBackgroundImg');
+   const headerImageElement = document.getElementById('myHeader');
+  const monthlyHeaders = [
+    'images/header-january.jpg', 
+    'images/header-february.jpg',
+    'images/header-march.jpg',
+    'images/header-april.jpg',
+    'images/header-may.jpg',
+    'images/header-june.jpg',
+    'images/header-july.jpg',
+    'images/header-august.jpg',
+    'images/header-september.jpg',
+    'images/header-october.jpg', 
+    'https://yourimageshare.com/ib/URJ3l71GCv.png',
+    'images/header-december.jpg'
+];
+    if (cookieValue) {
+        alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
+            headerImageElement.style.backgroundImage = "url('" + cookieValue +"')";  
+        return true;
     } else {
-        console.error("Header element with ID 'mainHeader' not found.");
+       alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
+   headerImageElement.style.backgroundImage = "url('" + monthlyHeaders[currentMonth]; +"')"; 
+        return false;
     }
 }
 
-// Call the function to update the header when the page loads
-updateHeaderByMonth();
-</script>
-                  
+// Example usage:
+if (!hasHeaderCookie()) {
+    // Perform actions if the cookie is not set, e.g., set a new session cookie
+    setCookie('header_image_set', 'true', 1); // Sets a cookie that expires in 1 day
+}
+                   
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', setMonthlyHeader);
+               </script>   
+                     
 
           
                        
