@@ -105,7 +105,7 @@ window.onload = function() {
        header.style.backgroundImage = "url('" + storedImageUrl + "')";
        header.style.backgroundImage = "cover"; // Optional: Adjust as needed
        header.style.backgroundImage = "no-repeat"; // Optional
-    }
+    } 
 };
 </script> 
 
@@ -141,48 +141,84 @@ window.onload = function() {
 
 </script>
 
-                  
-                  
-                  
- <script> 
- function updateHeaderByMonth() {
-    const today = new Date();
-    const currentMonthIndex = today.getMonth(); // 0 for January, 11 for December
+                 <script> 
+                   // Function to set a cookie
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
 
-    const monthHeaders = [
-        "https://i.imgur.com/WqcAGQo.png", // January (index 0)
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://yourimageshare.com/ib/2D57mWw4so.png",
-        "https://i.imgur.com/WqcAGQo.png",
-        "https://i.imgur.com/WqcAGQo.png"
-    ];
+// Function to get a cookie value
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
 
-    const headerElement = document.getElementById("myHeader"); // Assuming your header has id="mainHeader"
-  
-
-    if (headerElement) {
-         headerElement.style.backgroundImage = "url('" + monthHeaders[currentMonthIndex] + "')";
-        setCookie("currentBackgroundImg", monthHeaders[currentMonthIndex], 30);
+// Function to check if the header image cookie has been filled
+function hasHeaderCookie() {
+    const cookieValue = getCookie('currentBackgroundImg');
+    if (cookieValue) {
+        alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is ", cookieValue);
+        return true;
     } else {
-        console.error("Header element with ID 'mainHeader' not found.");
+        alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
+        return false;
     }
 }
 
-// Call the function to update the header when the page loads
-updateHeaderByMonth();
-</script>
+// Example usage:
+if (!hasHeaderCookie()) {
+    // Perform actions if the cookie is not set, e.g., set a new session cookie
+    setCookie('header_image_set', 'true', 1); // Sets a cookie that expires in 1 day
+}
+                   
+                                          // Define an array of image paths, one for each month (January to December)
+const monthlyHeaders = [
+    'images/header-january.jpg',
+    'images/header-february.jpg',
+    'images/header-march.jpg',
+    'images/header-april.jpg',
+    'images/header-may.jpg',
+    'images/header-june.jpg',
+    'images/header-july.jpg',
+    'images/header-august.jpg',
+    'images/header-september.jpg',
+    'images/header-october.jpg',
+    'https://yourimageshare.com/ib/URJ3l71GCv.png',
+    'images/header-december.jpg'
+];
+
+function setMonthlyHeader() {
+    const today = new Date();
+    const currentMonth = today.getMonth(); // 0-based index
+    const headerImageElement = document.getElementById('myHeader');
+    
+    if (headerImageElement) {
+        // Set the image source based on the current month index
+        headerImageElement.style.backgroundImage = "url('" + monthlyHeaders[currentMonth]; +"')"; 
+    }
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', setMonthlyHeader);
+               </script>   
                   
+              
 
           
                        
-   
+ 
                   
 
                   
@@ -191,11 +227,10 @@ updateHeaderByMonth();
                   
                   
                 <script>
-  const myRandButton = document.getElementById('changeImageButton5');
+
                   // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
- 
-"/chadsofa/wiki/posters/woaz",
+  "/chadsofa/wiki/posters/woaz",
     "/chadsofa/wiki/posters/poaz",
     "/chadsofa/wiki/posters/moaz",
     "/chadsofa/wiki/posters/foaz",
@@ -255,7 +290,7 @@ const pageURLs = [
     "/chadsofa/wiki/posters/android21",
     "/chadsofa/wiki/posters/desuarchive",
     "/chadsofa/wiki/posters/nulybro",
-    "/chadsofa/wiki/posters/rabbitrun"
+   "/chadsofa/wiki/posters/rabbitrun"
 
 ];
 // Function to perform the random redirection.
@@ -271,13 +306,12 @@ function redirectToRandomPage() {
     // For replacing the current history entry, use window.location.replace(targetURL);
     window.location.href = targetURL;
 }
-                   myRandButton.addEventListener('click', redirectToRandomPage);
-                </script>
+                  </script>
                 
                                     
                            <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
                    <button id="changeImageButton7">⚙ The Vault ⚙</button> 
-                    
+                      
                     <button onclick="changeRootVariable()">⚙⚒ Disable animated background .gif</button>
                   <script>
                         function changeRootVariable() {
@@ -290,6 +324,7 @@ function redirectToRandomPage() {
       root.style.setProperty('--body-bg-image', gradientString);
     }
                     </script>
+
                   <div id="search-container">
                   <div class="search-container">
           
@@ -302,15 +337,13 @@ function redirectToRandomPage() {
                       const myPageButton = document.getElementById('changeImageButton6');
 
                       const myVaultButton = document.getElementById('changeImageButton7');
-                    
-                    
-           function goToPageCreator() {
+                    y
+        function goToPageCreator() {
            window.location.href = "/chadsofa/wiki/tools/pagecreatorbase";
         }
                       function goToVault() {
            window.location.href = "/chadsofa/wiki/category/js$TAG=LEGACY";
         }
-
                                    myPageButton.addEventListener('click', goToPageCreator);
                     
                     myVaultButton.addEventListener('click', goToVault);
@@ -325,8 +358,8 @@ function redirectToRandomPage() {
         const searchBar = document.getElementById('searchBar');
         const resultsList = document.getElementById('resultsList');
 
-               const items = [
-               '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
+         const items = [
+              '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
 '<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>','<a href="desuarchive">Desuarchive</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hirom00t" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>','<a href="lordtienrus">LordTienrus</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="nulybro">Nulybro</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="rabiitrun">Rabbitrun</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
          ];
  searchBar.addEventListener('input', () => {
@@ -370,9 +403,8 @@ li.innerHTML = item;
   }
 </style>
 
-
 <blockquote>
-<a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> June 15th, 2025 - present all rights reserved</a>  - <b>IRC contact info <a href="https://rizon.net/">~t00thl3$$@nude.and.on-irc #Rizon, #help, #myanimelist, #anime, #bibanon, #Batcave, #blackhat, #hackers, #ELITEWAREZ, and #desuarchive</a></b>
+<a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> June 15th, 2025 - present all rights reserved</a>  - <b>IRC contact info <a href="https://rizon.net/">~t00thl3$$@nude.and.on-irc #Rizon, #help, #myanimelist, #anime, #bibanon, #Batcave, #blackhat, #hackers, #ELITEWAREZ, #desustorage, and #4channel</a></b>
 </blockquote>
                     
      <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
@@ -381,15 +413,15 @@ li.innerHTML = item;
                  <p><img src="https://yourimageshare.com/ib/dH6sYbAr4T.png" alt="Smiley face" style="float:right;width:95px;height:95px;"> </p>
  </a>
                   
-<button class="tablink" onclick="window.location.href='/chadsofa/wiki/main/index'" id="defaultOpen">HOME</button>
+<button class="tablink" onclick="window.location.href='/chadsofa/index'" id="defaultOpen">HOME</button>
 <button class="tablink2" onclick="window.location.href='/chadsofa/wiki/main/posters'">POSTERS</button>
 <button class="tablink3" onclick="window.location.href='/chadsofa/wiki/main/news'">NEWS</button>
 <button class="tablink4" onclick="window.location.href='/chadsofa/wiki/booru/gallery'">GALLERY</button>
           <button class="tablink5" onclick="window.location.href='/chadsofa/wiki/main/interviews'">INTERVIEWS</button>
           <button class="tablink6" onclick="window.location.href='/chadsofa/wiki/main/cybersecurity'">CYBERSECURITY</button>
-             
-                            
-          
+   
+            
+      
    <h1>TotallyNotMark</h1>
                   
                   <table style="float:right; width:258px; margin:0 0 7px 14px; border-collapse:collapse; background:#000000; border:1px solid #999; line-height:1.5; color:red; font-size:smaller;"><tr>
@@ -435,11 +467,11 @@ li.innerHTML = item;
 src="https://www.youtube.com/embed/FVKt5NcvTeM?autoplay=0&mute=1">
 </iframe>
                 
-                                
-     
-                          
-                          
-                      <div id="myDraggableDiv" class="draggable">
+                
+                  
+                  
+               
+                    <div id="myDraggableDiv" class="draggable">
      <div class="draggable-header">
        <h1><p style="color: white;">MurderJukebox Spectrum Visualizer</p></h1></div>
 
@@ -490,7 +522,7 @@ crossorigin="anonymous"></audio>
 
     let audioCtx, analyser, source, dataArray;
     function getStringBasedOnMonth() {
-   const monthNames = [
+  const monthNames = [
     "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF",
     "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF",
     "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3", 
@@ -504,7 +536,7 @@ crossorigin="anonymous"></audio>
   return monthNames[currentMonthIndex];
 }
    function getStringBasedOnMonth2() {
- const monthNames = [
+   const monthNames = [
     "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG",
     "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG",
     "JIREN THEME SONG", "THIS IS HALLOWEEN", 
@@ -750,118 +782,9 @@ function stopAudio(arrayBuffer) {
     });
 };
   </script>
-  
-   <style>
- 
-
-.container {
-    text-align: center;
-}
-
-#visualizer-canvas {
-    width: 600px;
-    height: 300px;
-    background-color: #222;
-    border: 1px solid #444;
-}
-
-.controls {
-    margin-top: 20px;
-}
-
- 
-      .area {
-  text-align: center;
-  font-size: 0.2;
-  letter-spacing: 0px;
-  font-weight: 700;
-  text-transform: uppercase;
-  animation: blur .75s ease-out infinite;
-  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
-}
- a.divlink { 
-  color: #FFFFFF;
-}
-
-@keyframes blur {
-  from {
-    text-shadow:0px 0px 10px #E00000,
-      0px 0px 10px #E00000, 
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 25px #E00000,
-      0px 0px 50px #E00000,
-      0px 0px 50px #E00000,
-      0px 0px 50px #E00000,
-      0px 0px 150px #E00000,
-      0px 10px 100px #E00000,
-      0px 10px 100px #E00000,
-      0px 10px 100px #E00000,
-      0px 10px 100px #E00000,
-      0px -10px 100px #E00000,
-      0px -10px 100px #E00000;
-  }
-}
-
-      .draggable {
-  position: absolute; /* Allows positioning with top/left */
-  background-color: #f1f1f1;
-  border: 1px solid #d3d3d3;
-  text-align: center;
-  z-index: 9; /* Ensures it stays on top of other elements */
-  width: 760px; /* Fixed width of 200 pixels */
-  height: 620px; /* Fixed height of 150 pixels */
-  transform: scale(0.3);
-        background: linear-gradient(#050505
-, #5C5C5C
-);
-}
-
-.draggable-header {
-  padding: 10px;
-  cursor: grab; /* Changes cursor to indicate dragability */
-  background-color: #2196f3;
-  color: #fff;
-    background: linear-gradient(#190A05, #870000);
-  color: #fff;
-}
-  
-        canvas {
-          border: 1px solid #666;
-          background-color: #000;
-          transform: scale(0.8);
-          background-image:url("https://yourimageshare.com/ib/KmeblhoVPl.gif"); 
-
-  background-size: cover; /* Ensures the image covers the entire element */
-
-  background-position: center; /* Centers the image horizontally and vertically */
-
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-
-  background-attachment: fixed; 
-        }
-      
-      #audioVisualizer {
-    background-color: rgba(194, 8, 8, 1);
-    border: 2px solid #C20808;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(194, 8, 8, 1); /* Cyan glow */
-        margin-top: -30px;
-}
-      #audioPlayer {
-    width: 80%;
-    max-width: 600px;
-    margin-top: -60px;
-}
-      audio::-webkit-media-controls-panel {
-      background: linear-gradient(#190A05, #870000);
-    }
-
-  </style>
-
+                      
+                          
+                  
                           
                                     
  <script> 
@@ -969,9 +892,6 @@ else if (currentMonth === 9) { // June
 </script>
           
                 </main>
-  
-  
-          
     
             <script type="text/javascript" id="hcb">
    /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24dJ43Tl5IByJdqspQippWg1"+"&opts=16798&num=10&ts=1753470209459");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ 
@@ -982,6 +902,80 @@ else if (currentMonth === 9) { // June
         <!-- THIS IS THE CSS !-->
          <style>
           
+.container {
+    text-align: center;
+}
+
+#visualizer-canvas {
+    width: 600px;
+    height: 300px;
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+ 
+      .area {
+  text-align: center;
+  font-size: 0.2;
+  letter-spacing: 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #E00000, 0px 0px 7px #E00000;
+}
+ a.divlink { 
+  color: #FFFFFF;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #E00000,
+      0px 0px 10px #E00000, 
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 25px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 50px #E00000,
+      0px 0px 150px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px 10px 100px #E00000,
+      0px -10px 100px #E00000,
+      0px -10px 100px #E00000;
+  }
+}
+
+      .draggable {
+  position: absolute; /* Allows positioning with top/left */
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  z-index: 9; /* Ensures it stays on top of other elements */
+  width: 760px; /* Fixed width of 200 pixels */
+  height: 620px; /* Fixed height of 150 pixels */
+  transform: scale(0.3);
+        background: linear-gradient(#050505
+, #5C5C5C
+);
+}
+
+.draggable-header {
+  padding: 10px;
+  cursor: grab; /* Changes cursor to indicate dragability */
+  background-color: #2196f3;
+  color: #fff;
+    background: linear-gradient(#190A05, #870000);
+  color: #fff;
+}
           #myHeader {
   background-image: url('https://i.imgur.com/WqcAGQo.png');
   background-size: cover;
@@ -1080,52 +1074,20 @@ else if (currentMonth === 9) { // June
 }          
     
         
-            .overlay {
+           
+
+    
+          .overlay {
     position: fixed; /* Positions the overlay relative to the viewport */
     top: 0;
     left: 0;
     width: 100%; /* Covers the full width of the viewport */
     height: 100%; /* Covers the full height of the viewport */
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with 50% opacity */
+    /* Black background with 50% opacity */
     z-index: 9999; /* Ensures the overlay is on top of other content */
 }
-
- 
    
-  .gradient-text {   
-      
-       font-size: 18px;
-      font-family: sans-serif;
-      font-style: italic;
-      font-weight: bold;
-      
-  /* Set the background to a linear gradient */
-  background: linear-gradient(to right, white, #F7A205, #F74105, #F76205, white, #F7A205, #F74105);
-  
-  /* Clip the background to the text content */
-  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
-  background-clip: text;
-  
-  /* Make the text color transparent so the background shows through */
-  -webkit-text-fill-color: transparent; /* For WebKit browsers */
-  color: transparent; /* Fallback for other browsers */
-  
-  /* Make the background larger than the text to allow for movement */
-  background-size: 200% auto; /* Or a larger percentage depending on desired effect */
-  
-  /* Apply the animation */
-  animation: moveGradient 3s linear infinite; /* Adjust duration and timing as needed */
-}
-
-/* Define the keyframe animation */
-@keyframes moveGradient {
-  0% {
-    background-position: 0% 50%; /* Start position */
-  }
-  100% {
-    background-position: 100% 50%; /* End position */
-  }
-}   
+ 
           /* user styles */ 
 
             /* styles are what change the color and sizes of stuff on your site. */
@@ -1646,11 +1608,3 @@ horizontally */
      
 </body>
 </html>
-
-
-
-
-
-
-
-
