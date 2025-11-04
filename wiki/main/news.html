@@ -156,11 +156,11 @@ function hasHeaderCookie() {
     'images/header-december.jpg'
 ];
     if (cookieValue) {
-        alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
+      //  alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
             headerImageElement.style.backgroundImage = "url('" + cookieValue +"')";  
         return true;
     } else {
-       alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
+      // alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
    headerImageElement.style.backgroundImage = "url('" + monthlyHeaders[currentMonth]; +"')"; 
         return false;
     }
@@ -391,6 +391,9 @@ li.innerHTML = item;
 </style> 
           
 <h1>LATEST SITE UPDATES</h1>
+        <p><strong>NOVEMBER 3RD, 2025</strong></p>
+     <p><a href="https://japanga.github.io/fakechanarchive/">FakeChan Archive</a> now has a comments section like the one on the Wiki Booru/Gallery pages, where a special new feature can be used called Desutexting. Any usage of $DESU$ in a comment automatically converts it to a glowing red/green text.</p>
+          <p><img src="https://yourimageshare.com/ib/Iawn52x12V.gif" alt="Smiley face" style="width:500px;height:300px;"> </p>
       <p><strong>NOVEMBER 1ST, 2025</strong></p>
      <p>Seasons code is finally integrated properly with the original site header selections, and the cookies system that was originally in place allowing for the same header choice to be remembered and kept by the system across the whole site has been restored. If you selected a header from the Home page, it will detect it and use that one. If you haven't, it will load the Seasonal header.</p>
           <p><img src="https://yourimageshare.com/ib/PfzLLl9mgF.png" alt="Smiley face" style="width:490px;height:600px;"> </p>
@@ -1473,6 +1476,5 @@ horizontally */
      
 </body>
 </html>
-
 
 
