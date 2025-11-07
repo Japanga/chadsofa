@@ -983,6 +983,18 @@ else if (currentMonth === 9) { // June
   /* Apply the animation */
   animation: moveGradient 3s linear infinite; /* Adjust duration and timing as needed */
 }
+             /* Define the keyframe animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  100% {
+    background-position: 100% 50%; /* End position */
+  }
+}   
+.container {
+    text-align: center;
+}
 
 .container {
     text-align: center;
@@ -1690,6 +1702,7 @@ horizontally */
      
 </body>
 </html>
+
 
 
 
