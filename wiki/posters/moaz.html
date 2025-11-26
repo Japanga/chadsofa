@@ -471,7 +471,7 @@ li.innerHTML = item;
                   </th></tr>
 <tr>
 <td style="padding:4px;"><b>Primary Occupation</b></td>
-<td style="padding:4px;"><p>Wiki Developer / <h1 class="gradient-text" style="display:inline">🍀 Archive Moderator 🍀</h1></p></td>
+<td style="padding:4px;"><p>Wiki Developer / <h1 class="desu-text" style="display:inline">🍀 Desuarchive Moderator 🍀</h1></p></td>
 </tr>
     <td style="padding:4px;"><b>Other Aliases</b></td>
 <td style="padding:4px;"><p>Japanga, ghostsamurai, T00THL3$$</p></td>
@@ -747,6 +747,28 @@ else if (currentMonth === 9) { // June
           
         <!-- THIS IS THE CSS !-->
          <style>
+            .desu-text {
+    font-size: 14px;
+    display: inline;
+    text-align: center;
+    color: #fff; /* Initial text color */
+    animation: colorGlow 3s infinite alternate ease-in-out; /* Animation properties */
+}
+
+@keyframes colorGlow {
+    0% {
+        text-shadow: 0 0 10px #089913, /* Cyan glow */
+                     0 0 20px #0EED1F,
+                     0 0 30px #0EED1F,
+                     0 0 40px #089913;
+    }
+    100% {
+        text-shadow: 0 0 10px #ED210E, /* Magenta glow */
+                     0 0 20px #ED210E,
+                     0 0 30px #ED210E,
+                     0 0 40px #ED210E;
+    }
+}
               .gradient-text {   
       
          font-size: 14px;
@@ -1506,7 +1528,6 @@ horizontally */
      
 </body>
 </html>
-
 
 
 
