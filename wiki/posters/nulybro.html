@@ -511,7 +511,197 @@ li.innerHTML = item;
    
                   
                
-          
+            <style>
+   .wiki-infobox-footer {
+    border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    width: 600px; /* Infoboxes are typically thin */
+    font-size: 90%;
+    margin: 1em 0 1em 1em; /* Adjust margin as needed for page bottom placement */
+    box-sizing: border-box;
+    clear: both; /* Helps place it at the bottom or sidebar without text wrapping issues */
+      background-color: #121212;
+}
+
+.infobox-header {
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.4em;
+    background-color: #0D0D0D; /* Common wiki header color */
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.4em;
+  color: red;
+}
+
+.infobox-section {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 0.4em;
+    background-color: #1C1C1C; /* Common wiki header color */
+}
+
+.infobox-label {
+    font-weight: bold;
+    padding: 0.2em 0.4em;
+    width: 40%; /* Adjust width ratio between label and data */
+    text-align: left;
+    word-wrap: break-word;
+    box-sizing: border-box;
+  color: red;
+}
+
+.infobox-data {
+    padding: 0.2em 0.4em;
+    width: 60%;
+    text-align: left;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.infobox-data ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.infobox-data li {
+    margin-bottom: 0.2em;
+  display: inline-block;
+}
+
+/* Optional: Add basic link styling */
+.infobox-data a {
+    text-decoration: none;
+    color: #0645ad; /* Wikipedia link color */
+  color: red;
+}
+      
+      /* Optional: Add basic link styling */
+.infobox-label a {
+   
+    color: #0645ad; /* Wikipedia link color */
+  color: red;
+}
+
+.infobox-data a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+
+    <div id="message"></div>
+
+
+  <div class="wiki-infobox-footer">
+    <div class="infobox-header">
+        Page Directory
+    </div>
+    <div class="infobox-section">
+        <div class="infobox-label">Owner</div>
+        <div class="infobox-data">
+            <ul>
+                <li><a href="./moaz">MOAZ</a></li>
+   
+            </ul>
+        </div>
+    </div>
+    <div class="infobox-section">
+        <div class="infobox-label">VIP/ Top Contributors</div>
+        <div class="infobox-data">
+            <ul>
+                <li><a href="./geekdom101">Geekdom101</a>,</li>
+                <li><a href="./risu">MatoiRisu</a>,</li>
+               <li><a href="./yzilma">Yzilma</a>,</li>
+               <li><a href="./tablosaf">DerGrosseScholar</a>,</li>
+            </ul>
+        </div>
+    </div>
+        <div class="infobox-section">
+        <div class="infobox-label"><a href="/chadsofa/wiki/category/js$TAG=LEGACY">Legacy Articles</a></div>
+        <div class="infobox-data">
+            <ul>
+                <li><a href="./foaz">FOAZ</a>,</li>
+                   <li><a href="./poaz">POAZ</a>,</li>
+                 <li><a href="./woaz">Jiren</a>,</li>
+               <li><a href="./argentinian">The Argentinian</a>,</li>
+                <li><a href="./geekdom101">Reekdom</a>, </li>
+                <li><a href="./filenamebitch">Filenamebitch</a>,</li>
+                <li><a href="./samir34">Samir34</a>, </li>
+                <li><a href="./moeshit">Moeshit</a>, </li>
+                <li><a href="./discordler">Discordler</a>, </li>
+                <li><a href="./cabbagang">Cabbagang</a>, </li>
+                <li><a href="./elespecialista">Marvin Abundis Ramirez</a>, </li>
+                <li><a href="./elhermano">El Hermano</a>, </li>
+                <li><a href="./elgrandepadre">El Grande Padre</a>, </li>
+                <li><a href="./dogposter">Dogposter</a>, </li>
+                <li><a href="./surpassedrus">Beerus</a>, </li>
+                <li><a href="./toechadnimation">Toei Animation</a>, </li>
+                <li><a href="./samechad">SameCHAD</a>, </li>
+                <li><a href="./gentlemen">Gentlemen</a>, </li>
+                <li><a href="./characterfag">Characterfag</a>, </li>
+            </ul>
+        </div>
+    </div>
+         <div class="infobox-section">
+        <div class="infobox-label"><a href="/chadsofa/wiki/category/js$TAG=NEW">NEW Articles</a></div>
+        <div class="infobox-data">
+            <ul>
+                <li><a href="./turles">Turles</a>,</li>
+                   <li><a href="./startchad">StartCHAD</a>,</li>
+                 <li><a href="./lordparagon">Lord Paragon</a>,</li>
+               <li><a href="./dbshungergames">/dbs/ Hunger Games</a>,</li>
+                <li><a href="./congo">Democratic Republic of the Congo</a>, </li>
+                <li><a href="./multiverseguy">Multiverseguy</a>,</li>
+                <li><a href="./drawchad">DrawChad</a>, </li>
+                <li><a href="./seththeprogrammer">SethTheProgrammer</a>, </li>
+                <li><a href="./cutegang">Cutegang</a>, </li>
+                <li><a href="./totallynotmark">TotallyNotMARK</a>, </li>
+                <li><a href="./android18">Android 18</a>, </li>
+                <li><a href="./krillin">Krillin</a>, </li>
+                <li><a href="./dennis">Dennis</a>, </li>
+                <li><a href="./janitors">Janitors</a>, </li>
+                <li><a href="./gets">GETS</a>, </li>
+                <li><a href="./panpedo">Panpedo</a>, </li>
+                <li><a href="./moro">Moro</a>, </li>
+                <li><a href="./elshaggyblanco">El Shaggy Blanco</a>, </li>
+                <li><a href="./songoten">Son Goten</a>, </li>
+                <li><a href="./zombies">Zombies</a>, </li>
+                <li><a href="./fourhorsemen">Four Horsemen of the Apocalypse</a>, </li>
+                <li><a href="./azusabro">Azunyanon</a>, </li>
+                <li><a href="./sakurakosama">Sakurako-sama</a>, </li>
+                <li><a href="./spaniard">The Spaniard</a>, </li>
+                <li><a href="./android21">Android 21</a>, </li>
+                <li><a href="./nulybro">Nulybro</a> </li>
+            </ul>
+        </div>
+    </div>
+       <div class="infobox-section">
+        <div class="infobox-label">Historical Figures</div>
+        <div class="infobox-data">
+            <ul>
+                <li><a href="./moot">Chris "Moot" Poole</a>,</li>
+                   <li><a href="./donaldtrump">President Donald Trump</a>,</li>
+                 <li><a href="./takaokoyama">Takao Koyama</a> </li>
+              
+            </ul>
+        </div>
+    </div>
+    <div class="infobox-section">
+        <div class="infobox-label">Groups/Factions/Websites</div>
+        <div class="infobox-data">
+            <ul>
+                <li><a href="./janitors">4chan Corporation</a></li>
+                <li><a href="./desuarchive">Desuarchive</a></li>
+               <li><a href="./redclover">Red Clover Corporation</a></li>
+               <li><a href="./soyjakparty">Soyjak.Party</a></li>
+               <li><a href="https://wiki.bibanon.org/Main_Page">Biblitotheca Anonoma</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
           
          
                
