@@ -189,7 +189,7 @@ function hasHeaderCookie() {
     '/chadsofa/wiki/files/images/xmasheader.png'
 ];
     if (cookieValue) {
-        alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
+      //  alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
             headerImageElement.style.backgroundImage = "url('" + cookieValue +"')";  
         return true;
     } else {
@@ -309,7 +309,11 @@ function redirectToRandomPage() {
                    myRandButton.addEventListener('click', redirectToRandomPage);
                   </script>
                 
-                   <style>
+               
+                           <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
+                   <button id="changeImageButton7">⚙ The Vault ⚙</button> 
+                
+                      <style>
                                   #changeImageButton8 {
  background: linear-gradient(#190A05, #870000);
   border: linear-gradient(#190A05, #870000);
@@ -319,10 +323,17 @@ function redirectToRandomPage() {
                
 } 
                     </style>
-                           <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
-                   <button id="changeImageButton7">⚙ The Vault ⚙</button> 
-                
-                   <button id="changeImageButton8">▐▆▄ Stats </button> 
+                   <button id="changeImageButton8">▋▅ ▂ Stats ⚙</button> 
+                  <script> 
+                    document.addEventListener('DOMContentLoaded', function() {
+    const myButton = document.getElementById('changeImageButton8');
+
+    myButton.addEventListener('click', function() {
+        // Redirect to a new page
+        window.location.href = '/chadsofa/wiki/tools/stats'; // Replace with your target URL
+    }); 
+});
+                  </script> 
                       
                     <button onclick="changeRootVariable()">⚙⚒ Disable animated background .gif</button>
                   <script>
@@ -1732,11 +1743,3 @@ horizontally */
      
 </body>
 </html>
-
-
-
-
-
-
-
-
