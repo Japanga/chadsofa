@@ -312,8 +312,12 @@ function redirectToRandomPage() {
                                     
                            <button id="changeImageButton6">⚒ Page Creator ⚒</button> 
                    <button id="changeImageButton7">⚙ The Vault ⚙</button> 
-                  
-                   <button id="changeImageButton8">⛅ Stats 📊</button> 
+                  <style>
+                    .chart-symbol::after {
+  content: "\\1F4CA\\FE0E"; /* Unicode for 📊 (U+1F4CA) followed by VS15 (U+FE0E) */
+}
+                  </style> 
+                   <button id="changeImageButton8">📊&#xFE0E; Stats 📊&#xFE0E;</button> 
                       
                     <button onclick="changeRootVariable()">⚙⚒ Disable animated background .gif</button>
                   <script>
