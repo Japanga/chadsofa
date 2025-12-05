@@ -556,17 +556,28 @@ li.innerHTML = item;
     vertical-align: middle;
 } </style>
           
-             
-                     <style>
-  blockquote2 {
-    font-style: italic;
-    font-size: 10px;
-  }
-</style>
-          
-          <blockquote2>
-"A UDP DDoS attack (User Datagram Protocol Distributed Denial of Service) overwhelms a target server by flooding it with a massive volume of UDP packets, exploiting UDP's connectionless nature (no handshake needed) and forcing the server to waste resources checking for applications on random ports, eventually causing legitimate users to be denied service as the server exhausts resources and its internet connection saturates. "
-</blockquote2>
+             <style>
+           .bordered-quote {
+  border: 2px solid red; /* Sets a 2px solid light gray border */
+  padding: 15px; /* Adds internal spacing around the content */
+  margin: 20px 0; /* Adds external spacing above and below the blockquote */
+  background-color: black; /* Optional: Adds a light background color */
+
+}
+
+.bordered-quote p {
+  margin-bottom: 10px; /* Adjusts spacing for paragraphs within the quote */
+}
+
+.bordered-quote footer {
+  font-style: italic; /* Styles the footer text */
+  color: #555; /* Sets a darker color for the footer */
+}
+          </style>
+                <blockquote class="bordered-quote">
+  <p>"A UDP DDoS attack overwhelms a server by flooding it with massive amounts of User Datagram Protocol (UDP) packets, forcing the system to waste resources checking for applications at spoofed ports, and responding with "unreachable" messages until it's too bogged down to serve legitimate users, causing a denial of service. "</p>
+
+</blockquote>
           
           
 <div class="war-infobox">
