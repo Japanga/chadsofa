@@ -765,7 +765,7 @@ Your browser does not support the video tag.
             <ul>
                 <li><a href="./turles">Turles</a>,</li>
                    <li><a href="./startchad">StartCHAD</a>,</li>
-                 <li><a href="./lordparagon">Lord Paragon</a>,</li>
+                 <li><a href="./lordparagon">LordParagon</a>,</li>
                <li><a href="./dbshungergames">/dbs/ Hunger Games</a>,</li>
                 <li><a href="./congo">Democratic Republic of the Congo</a>, </li>
                 <li><a href="./multiverseguy">Multiverseguy</a>,</li>
@@ -824,7 +824,8 @@ Your browser does not support the video tag.
     <div id="myPopup" class="popup">
         <div class="popup-content">
             <h2>Report this content</h2>
-            <input type="input" id="inputField2" placeholder="Enter report content...">
+            <input type="input" id="inputField1" placeholder="Name...">
+            <input type="input2" id="inputField2" placeholder="Report content...">
             <button id="executeFunctionBtn">Send Report</button>
             <button id="closePopupBtn">Close</button>
         </div>
@@ -859,7 +860,7 @@ Your browser does not support the video tag.
         const value2 = inputField2.value;
       
       emailjs.send("service_5lfdh8p","template_5au6hk6");
-
+  myPopup.style.display = 'none';
 
         // Example function: display the input values
         alert(`Input 1: ${value1}\nInput 2: ${value2}`);
@@ -917,7 +918,7 @@ Your browser does not support the video tag.
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-   min-height: 90px; /* Ensures a minimum height */
+   min-height: 30px; /* Ensures a minimum height */
 }
 
 .popup-content button {
