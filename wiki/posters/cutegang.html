@@ -708,7 +708,8 @@ li.innerHTML = item;
     <div id="myPopup" class="popup">
         <div class="popup-content">
             <h2>Report this content</h2>
-            <input type="input" id="inputField2" placeholder="Enter report content...">
+             <input type="input" id="inputField1" placeholder="Name...">
+            <input type="input2" id="inputField2" placeholder="Report content...">
             <button id="executeFunctionBtn">Send Report</button>
             <button id="closePopupBtn">Close</button>
         </div>
@@ -743,7 +744,7 @@ li.innerHTML = item;
         const value2 = inputField2.value;
       
       emailjs.send("service_5lfdh8p","template_5au6hk6");
-
+  myPopup.style.display = 'none';
 
         // Example function: display the input values
         alert(`Input 1: ${value1}\nInput 2: ${value2}`);
@@ -1958,6 +1959,7 @@ horizontally */
      
 </body>
 </html>
+
 
 
 
