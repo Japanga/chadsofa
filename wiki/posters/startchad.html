@@ -750,7 +750,8 @@ li.innerHTML = item;
     <div id="myPopup" class="popup">
         <div class="popup-content">
             <h2>Report this content</h2>
-            <input type="input" id="inputField2" placeholder="Enter report content...">
+          <input type="input" id="inputField1" placeholder="Name...">
+            <input type="input2" id="inputField2" placeholder="Report content...">
             <button id="executeFunctionBtn">Send Report</button>
             <button id="closePopupBtn">Close</button>
         </div>
@@ -783,6 +784,7 @@ li.innerHTML = item;
     executeFunctionBtn.addEventListener('click', () => {
         const value1 = inputField1.value;
         const value2 = inputField2.value;
+         myPopup.style.display = 'none'; 
       
       emailjs.send("service_5lfdh8p","template_5au6hk6");
 
@@ -843,7 +845,7 @@ li.innerHTML = item;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-   min-height: 90px; /* Ensures a minimum height */
+   min-height: 30px; /* Ensures a minimum height */
 }
 
 .popup-content button {
@@ -1999,6 +2001,7 @@ horizontally */
      
 </body>
 </html>
+
 
 
 
