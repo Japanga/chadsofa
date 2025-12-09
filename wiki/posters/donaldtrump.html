@@ -10,8 +10,7 @@
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
     <link href="https://cdn.staticrun.app/2d9f09cc-8aba-4abc-822a-86333b5241b2/97f08559-81f0-42f4-891e-3bd78455b0b3/style.css" rel="stylesheet" type="text/css" media="all">
-
-        
+   
      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   
      <script type="text/javascript">
@@ -200,16 +199,12 @@ function hasHeaderCookie() {
     '/chadsofa/wiki/files/images/xmasheader.png'
 ];
     if (cookieValue) {
-       // alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
+        alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
             headerImageElement.style.backgroundImage = "url('" + cookieValue +"')";  
-           headerImageElement.style.backgroundImage = "cover"; // Optional: Adjust as needed
-       headerImageElement.style.backgroundImage = "no-repeat"; // Optional
         return true;
     } else {
-      // alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
+       alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
    headerImageElement.style.backgroundImage = "url('" + monthlyHeaders[currentMonth]; +"')"; 
-           headerImageElement.style.backgroundImage = "cover"; // Optional: Adjust as needed
-       headerImageElement.style.backgroundImage = "no-repeat"; // Optional
         return false;
     }
 }
@@ -224,7 +219,9 @@ if (!hasHeaderCookie()) {
 // Call the function when the page loads
 document.addEventListener('DOMContentLoaded', setMonthlyHeader);
                </script>   
-                  
+                   
+              
+
           
                        
  
@@ -235,7 +232,7 @@ document.addEventListener('DOMContentLoaded', setMonthlyHeader);
                 
                   
                   
-                  <script>
+                   <script>
   const myRandButton = document.getElementById('changeImageButton5');
                   // Define an array of URLs to which the user can be redirected. 
 const pageURLs = [
@@ -299,11 +296,11 @@ const pageURLs = [
     "/chadsofa/wiki/posters/android21",
     "/chadsofa/wiki/posters/desuarchive",
     "/chadsofa/wiki/posters/nulybro",
-     "/chadsofa/wiki/posters/rabbitrun",
-     "/chadsofa/wiki/posters/donaldtrump".
+    "/chadsofa/wiki/posters/rabbitrun",
+    "/chadsofa/wiki/posters/donaldtrump",
     "/chadsofa/wiki/posters/takaokoyama",
-     "/chadsofa/wiki/posters/japanga"
-     "/chadsofa/wiki/posters/greatfurrywar"
+    "/chadsofa/wiki/posters/japanga",
+    "/chadsofa/wiki/posters/greatfurrywar"
 
 ];
 // Function to perform the random redirection.
@@ -394,7 +391,8 @@ function redirectToRandomPage() {
         const searchBar = document.getElementById('searchBar');
         const resultsList = document.getElementById('resultsList');
 
-             const items = [
+         
+           const items = [
               '<a href="azusabro">Azusabro</a>','<a href="android18">Android 18</a>','<a href="android21">Android 21</a>','"Asuka" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Aqua" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="argentinian">Argentinian</a>','"Belgian" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">Belgian</a>','<a href="cabbagang">Cabbagang</a>', '<a href="characterfag">Characterfag</a>', '<a href="congo">Congo</a>',
 '<a href="cutegang">Cutegang</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Chainsaw Man" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"Devilman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="Dennis">Dennis</a>', '<a href="dbshungergames">/dbs/ Hunger Games</a>', '<a href="discordler">Discordler</a>', '<a href="dogposter">Dogposter</a>', '<a href="drawchad">DrawChad</a>','<a href="desuarchive">Desuarchive</a>', '"Diaper" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Eren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="elespecialista">El Especialista</a>', '<a href="elgrandepadre">El Grande Padre</a>', '<a href="elhermano">El Hermano</a>', '<a href="elshaggyblanco">El Shaggy Blanco</a>', '<a href="filterbitch">Filterbitch</a>', '<a href="foaz">FOAZ</a>','<a href="fourhorsemen">Four Horsemen of the Apocalypse</a>','"Father of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="foaz">FOAZ</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="android18">Android 18</a>','"GameFAQs" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>', 'Geekdom101', 'Gentlemen', 'GETS', 'GodModeGod','"God of War" ☖TAG☖ USE DETECTED, LOCATED AT <a href="godmodegod">GodModeGod</a>','<a href="ghost">/ghost/</a>', '"Jiren" ☖TAG☖ USE DETECTED, LOCATED AT <a href="woaz">WOAZ</a>','"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Jujutsu Kaisen" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Kill la Kill" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>','"Hackotaro" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','<a href="hoppu">Hoppu</a>','"Hazbin Hotel" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>','"Hunter X Hunter" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','"Hiroyuki" ☖TAG☖ USE DETECTED, LOCATED AT <a href="ghost">/ghost/</a>','<a href="janitors">Janitors</a>', '<a href="krillin">Krillin</a>', '<a href="lordparagon">LordParagon</a>','<a href="lordtienrus">LordTienrus</a>','<a href="moaz">MOAZ</a>' ,'"Matoi" ☖TAG☖ USE DETECTED, LOCATED AT <a href="risu">Risu</a>', '<a href="moeshit">Moeshit</a>', '<a href="moewives">Moewives</a>', '<a href="moot">m00t</a>','<a href="moro">Moro</a>', '"Makima" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>','<a href="multiverseguy">Multiverseguy</a>','"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '"Nobara" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="nulybro">Nulybro</a>','"Neon Genesis Evangelion" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moot">Moot</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMark</a>', '"Naruto" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="turles">Turles</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>', '"One Piece" ☖TAG☖ USE DETECTED, LOCATED AT <a href="yzilma">Yzilma</a>', '<a href="donaldtrump">President Donald Trump</a>', '<a href="panpedo">Panpedo</a>', '<a href="poaz">POAZ</a>' ,'"Prince of all Zombies" ☖TAG☖ USE DETECTED, LOCATED AT <a href="poaz">POAZ</a>', '"Rukiafag" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '"Rukia" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="rabiitrun">Rabbitrun</a>', '<a href="redclover">Red Clover Corporation</a>', '<a href="risu">Risu</a>', '"Reze" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>', '<a href="romaine">Romaine</a>', '<a href="samechad">SameCHAD</a>', '<a href="samir34">Samir34</a>', '<a href="seththeprorammer">SethTheProgrammer</a>', '<a href="shameel">Shameel</a>', '<a href="skillet91">Skillet91</a>', '<a href="songoten">Son Goten</a>', '<a href="startchad">StartCHAD</a>' ,'"Sonic the Hedgehog" ☖TAG☖ USE DETECTED, LOCATED AT <a href="multiverseguy">Multiverseguy</a>', '"Superman" ☖TAG☖ USE DETECTED, LOCATED AT <a href="totallynotmark">TotallyNotMARK</a>','<a href="surpassedrus">Surpassedrus</a>','<a href="sakurakosama">Sakurako-sama</a>','<a href="takaokoyama">Takao Koyama</a>','<a href="soyjakparty">Soyjak.Party</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="spaniard">The Spaniard</a>','"Toaluigi95" ☖TAG☖ USE DETECTED, LOCATED AT <a href="startchad">StartCHAD</a>', '<a href="tablosaf">TablosAF</a>', '<a href="toeichadnimation">Toei Animation</a>', '<a href="totallynotmark">TotallyNotMARK</a>', '<a href="turles">Turles</a>', '<a href="woaz">WOAZ</a>','<a href="yzilma">Yzilma</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">Romaine</a>','"Yuliban" ☖TAG☖ USE DETECTED, LOCATED AT <a href="romaine">romaine</a>','"YuYu Hakusho" ☖TAG☖ USE DETECTED, LOCATED AT <a href="moaz">MOAZ</a>','<a href="zombies">Zombies</a>'
          ];
@@ -438,7 +436,6 @@ li.innerHTML = item;
     font-size: 10px;
   }
 </style>
-
 
 <blockquote>
 <a href="/chadsofa/wiki/posters/redclover">© Red Clover Corporation</a> June 15th, 2025 - present all rights reserved</a>  - <b>IRC contact info <a href="https://rizon.net/">~t00thl3$$@nude.and.on-irc #Rizon, #help, #myanimelist, #anime, #bibanon, #Batcave, #blackhat, #hackers, #ELITEWAREZ, #desustorage, and #4channel</a></b>
@@ -501,6 +498,7 @@ li.innerHTML = item;
           <button class="tablink6" onclick="window.location.href='/chadsofa/wiki/main/cybersecurity'">SECURITY</button>
                  </div>
              </div>
+                
   
            <style>
                     #historical_figure {
@@ -514,7 +512,7 @@ li.innerHTML = item;
                 
    <h1>President Donald Trump</h1>
                            <p><img src="/chadsofa/wiki/files/images/donaldtrump.png" alt="Smiley face" style="float:right;width:350px;height:250px;"> </p>
-                    <p><b>Donald Trump</b> is a known fan and user of the Wiki, and confirmed on a visit to <a href="/chadsofa/wiki/posters/ghost">/ghost/</a> on November 7th, 2025. <span style="color: yellow;">[1]☏☑</span> He was first rumored to have appeared when <a href="/chadsofa/wiki/category/JS$TAG=LEGACY">"The Vault"</a> was first created, and inquired about getting Rukiafag to work for TruthSocial. <span style="color: yellow;">[2]☏☑</span> This could have easily been dismissed as a joke or false appearance, except for 4chan being well known for being a far-right, conservative talking platform with ties to feds and the U.S. government (who are even hired as moderators on /b/) 4chan is a very important platform in politics as it is an immensely popular platform used to control the masses, which several politicans would want to use to their advantage. The narrative of Trump or other government employees frequenting 4chan and <a href="/chadsofa/wiki/posters/Desuarchive">Desuarchive</a>, especially to interact with other equally powerful figures like moderators and admins is more plausible than people might realize. <span style="color: yellow;">[3]☏☑</span> It is a well-known fact that Elon Musk is usually always seen with Donald Trump, and is sort of his right hand man and advisor. Musk is also a fan of the Rukiafag's works, and had praise for <a href="https://japanga.github.io/fakechan/">FakeChan</a>. These rumors of the two having met were confirmed when Rukiafag was contacted by Musk's mother after joining Truth Social.</p>
+                    <p><b>Donald Trump</b> is a known fan and user of the Wiki, and confirmed on a visit to <a href="/chadsofa/wiki/posters/ghost">/ghost/</a> on November 7th, 2025. <span style="color: yellow;">[1]☏☑</span> He was first rumored to have appeared when <a href="/chadsofa/wiki/category/JS$TAG=LEGACY">"The Vault"</a> was first created, and inquired about getting Rukiafag to work for TruthSocial. <span style="color: yellow;">[2]☏☑</span> This could have easily been dismissed as a joke or false appearance, except for 4chan being well known for being a far-right, conservative talking platform with ties to feds and the U.S. government (who are even hired as moderators on /b/) 4chan is a very important platform in politics as it is an immensely popular platform used to control the masses, which several politicans would want to use to their advantage. The narrative of Trump or other government employees frequenting 4chan and <a href="/chadsofa/wiki/posters/desuarchive">Desuarchive</a>, especially to interact with other equally powerful figures like moderators and admins is more plausible than people might realize. <span style="color: yellow;">[3]☏☑</span> It is a well-known fact that Elon Musk is usually always seen with Donald Trump, and is sort of his right hand man and advisor. Musk is also a fan of the Rukiafag's works, and had praise for <a href="https://japanga.github.io/fakechan/">FakeChan</a>. These rumors of the two having met were confirmed when Rukiafag was contacted by Musk's mother after joining Truth Social.</p> 
     
     
           
@@ -524,9 +522,7 @@ li.innerHTML = item;
         Your browser does not support the audio element.
     </audio>
           </div>
-    
-    
-      <style>
+            <style>
    .wiki-infobox-footer {
     border: 1px solid #aaa;
     background-color: #f9f9f9;
@@ -644,7 +640,7 @@ li.innerHTML = item;
                <li><a href="./argentinian">The Argentinian</a>,</li>
                 <li><a href="./geekdom101">Reekdom</a>, </li>
                 <li><a href="./filenamebitch">Filenamebitch</a>,</li>
-               <li><a href="./filterbitch">Filterbitch</a>,</li>
+                <li><a href="./filterbitch">Filterbitch</a>,</li>
                 <li><a href="./samir34">Samir34</a>, </li>
                 <li><a href="./moeshit">Moeshit</a>, </li>
                 <li><a href="./discordler">Discordler</a>, </li>
@@ -682,14 +678,14 @@ li.innerHTML = item;
                 <li><a href="./gets">GETS</a>, </li>
                 <li><a href="./panpedo">Panpedo</a>, </li>
                 <li><a href="./moro">Moro</a>, </li>
-               <li><a href="./moewives">Moewives</a>, </li>
+                <li><a href="./moewives">Moewives</a>, </li>
                 <li><a href="./elshaggyblanco">El Shaggy Blanco</a>, </li>
                 <li><a href="./songoten">Son Goten</a>, </li>
                 <li><a href="./zombies">Zombies</a>, </li>
                 <li><a href="./fourhorsemen">Four Horsemen of the Apocalypse</a>, </li>
                 <li><a href="./azusabro">Azunyanon</a>, </li>
                 <li><a href="./sakurakosama">Sakurako-sama</a>, </li>
-               <li><a href="./rabbitrun">Rabbitrun</a>, </li>
+                <li><a href="./rabbitrun">Rabbitrun</a>, </li>
                 <li><a href="./spaniard">The Spaniard</a>, </li>
                 <li><a href="./android21">Android 21</a>, </li>
                 <li><a href="./nulybro">Nulybro, </a> </li>
@@ -721,10 +717,9 @@ li.innerHTML = item;
         </div>
     </div>
 </div>
-
-    
   
-                  
+  
+                    
 <style>
     /* Basic styling for the list items */
 li {
@@ -745,7 +740,7 @@ li:hover {
 
 href="https://desuarchive.org/a/thread/283587948/#q283619347_2">https://desuarchive.org/a/thread/283587948/#q283619347_2</a></li>
       
-       <li><a 
+       <li><a  
 
 href="https://desuarchive.org/a/search/username/realDonaldTrump/">https://desuarchive.org/a/search/username/realDonaldTrump/</a></li>
       
@@ -760,8 +755,9 @@ sourcing, go to the page for their site on our Wiki to check the domain status a
 
 still be able to check the citations.</span></i></h>
 </div>
- <button id="openPopupBtn">🏁 Report this content
-</button>
+
+       <button id="openPopupBtn">🏁 Report this content
+</button> 
 
     <div id="myPopup" class="popup">
         <div class="popup-content">
@@ -800,7 +796,8 @@ still be able to check the citations.</span></i></h>
     executeFunctionBtn.addEventListener('click', () => {
         const value1 = inputField1.value;
         const value2 = inputField2.value;
-              myPopup.style.display = 'none';
+
+            myPopup.style.display = 'none';
       
       emailjs.send("service_5lfdh8p","template_5au6hk6");
 
@@ -878,6 +875,8 @@ still be able to check the citations.</span></i></h>
 }
   </style>
   
+          
+         
                
                     <div id="myDraggableDiv" class="draggable">
      <div class="draggable-header">
@@ -1308,8 +1307,8 @@ else if (currentMonth === 9) { // June
      
           
         <!-- THIS IS THE CSS !-->
-         <style>
-           audio::-webkit-media-controls-panel {
+         <style> 
+               audio::-webkit-media-controls-panel {
       background: linear-gradient(#190A05, #870000);
     }
         
@@ -1687,7 +1686,7 @@ horizontally */
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 17px;
   width: 25%;
 }
            
@@ -1699,7 +1698,7 @@ horizontally */
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 17px;
   width: 25%;
 }
            
@@ -1711,7 +1710,7 @@ horizontally */
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 17px;
   width: 25%;
 }
            
@@ -1723,7 +1722,7 @@ horizontally */
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 17px;
   width: 25%;
 }
            
@@ -1735,7 +1734,7 @@ horizontally */
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 17px;
   width: 25%;
 }
 
@@ -1747,7 +1746,7 @@ horizontally */
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 17px;
   width: 25%;
 }
 
