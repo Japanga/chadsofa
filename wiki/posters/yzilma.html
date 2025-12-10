@@ -199,11 +199,11 @@ function hasHeaderCookie() {
     '/chadsofa/wiki/files/images/xmasheader.png'
 ];
     if (cookieValue) {
-        alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
+      //  alert("Your personal preference of site header was detected and loaded by the system, the url currently bound to the cookie is " +  cookieValue);
             headerImageElement.style.backgroundImage = "url('" + cookieValue +"')";  
         return true;
     } else {
-       alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
+      // alert("You have not personally selected a header you want to use from the front gate home page, so the system will automatically load the special 'seasons' header created for each of the major holidays.");
    headerImageElement.style.backgroundImage = "url('" + monthlyHeaders[currentMonth]; +"')"; 
         return false;
     }
@@ -302,7 +302,8 @@ const pageURLs = [
     "/chadsofa/wiki/posters/japanga",
     "/chadsofa/wiki/posters/greatfurrywar",
   "/chadsofa/wiki/posters/frieza",
-  "/chadsofa/wiki/posters/kensukegod"
+  "/chadsofa/wiki/posters/kensukegod",
+  "/chadsofa/wiki/posters/snacks"
 
 ];
 // Function to perform the random redirection.
@@ -604,6 +605,11 @@ li.innerHTML = item;
                 <div id="historical_figure">
                    <p><img src="/chadsofa/wiki/files/images/redclover.png" alt="Smiley face" style="float:left;width:100px;height:100px;"> </p> <i><p>This user is a member of the  <a href="redclover">Red Clover Corporation</a>, extremely high ranking contributors to the Wiki that are viewed as a de-facto staff team.</i></p>
                   </div>
+    
+       <div id="historical_figure">
+                   <p><img src="/chadsofa/wiki/files/images/lochness.png" alt="Smiley face" style="float:left;width:100px;height:100px;"> </p> <i><p>This is a MISSING user. They have not logged on in several months, and cannot safely be called an active participant of the threads until they return from their state of limbo.</i></p>
+                  </div>
+    
    
          <h1>XAVIER LANCE CRUZADO / YZILMA</h1>
                   
@@ -817,6 +823,7 @@ li.innerHTML = item;
                  <li><a href="./nulybro">Nulybro, </a> </li>
                <li><a href="./greatfurrywar">The Great Furry War of 25'</a>, </li>
                    <li><a href="./kensukegod">KensukeGOD </a> </li>
+                <li><a href="./snacks">W.T. Snacks </a> </li>
             </ul>
         </div>
     </div>
