@@ -835,190 +835,90 @@ li.innerHTML = item;
 }
   </style>
   
-               
-                    <div id="myDraggableDiv" class="draggable">
-     <div class="draggable-header">
-       <h1><p style="color: white;">MurderJukebox Spectrum Visualizer</p></h1></div>
-
-         <div class="area"><i>
-    <i><h2><p id = songName style="color: black;"></p></p>
-</h2></i>
-    <i><b><h><p id = songName style="color: black;">© RED CLOVER CORPORATION SOFTWARE</p></h></b></i>
-           <a class="divlink" href="https://codepen.io/Japanga/pen/yyeMYNb">
-         <p><p style="color: white;">https://codepen.io/Japanga/pen/yyeMYNb</p></p>
-    </a>
-           <div id="terminationDIV">
-        <canvas id="visualizer-canvas"></canvas>
-              </div>
-        <div class="controls">
-            <audio id="audio-player" 
-
-src="https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF" controls 
-
-crossorigin="anonymous"></audio>
-          
-  <div id="players-container">
-          </div>
-            <button id="start-button">Start Visualizer</button>
-           <button id="stop-button">Stop Visualizer</button>
-          <button id="mute-button">Mute Visualizer</button>
-        </div>
-      
+  
+   
+   <div id="myDraggableDiv" class="draggable">
      
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-    const startButton = document.getElementById('start-button');
-    const stopButton = document.getElementById('stop-button');
-    const muteButton = document.getElementById('mute-button');
-    const audioElement = document.getElementById('audio-player');
-    const canvas = document.getElementById('visualizer-canvas');
-    const canvasCtx = canvas.getContext('2d');
-        const playersContainer = document.getElementById('players-container');
-    let isInitialized = false;
-    
-    // Set canvas dimensions based on the element's client size
-    canvas.width = canvas.clientWidth;
-    canvas.height = canvas.clientHeight;
-    
-    
-    audioElement.style.display = 'none'; // Or 'flex', 'grid', etc., depending on your layout
+     <div class="draggable-header">
   
+       <h1><p id = songName style="color: white;">MurderJukebox</p></h1></div>
 
-    let audioCtx, analyser, source, dataArray;
-    function getStringBasedOnMonth() {
-  const monthNames = [
-    "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF",
-    "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF",
-    "https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/UPUDTLEqr5u4yZSwrnyTNxBBturmADc3", 
+        <div class="area"><i>
+    <i><h2><p id = songName style="color: black;">SLIPKNOT - VERMILION PT. 2</h2></i>
+    <i><b><h><p id = songName style="color: black;">© RED CLOVER CORPORATION SOFTWARE</h></b></i>
+           <a class="divlink" style="color: white;"href="https://codepen.io/Japanga/pen/NPxppyz">
+         <p>https://codepen.io/Japanga/pen/NPxppyz</p>
+    </a>
 
-"https://audio.jukehost.co.uk/jPJ485pILwpIYGt6HMbBmrwibKIY0OqF", "https://audio.jukehost.co.uk/BxTbjHS8M1A1vCm2DhVq1T8PNudBzjJi"
-  ];
+          
+    <canvas id="audioVisualizer" width="800" height="400"></canvas>
+<audio id="audioPlayer" src="https://audio.jukehost.co.uk/oYoAEOYI4gP6Ark9v8A0SCVssIwSTXpt"  controls crossorigin="anonymous"></audio>
+    <script src="spectrum.js"></script>
+    </div>
+          
+         
+              
+                      
+               <script>   
+                 
+      window.onload = function() {
+    const audioPlayer = document.getElementById('audioPlayer');
+    const canvas = document.getElementById('audioVisualizer');
+    const ctx = canvas.getContext('2d');
+    // Set canvas dimensions
+    canvas.width = window.innerWidth * 0.8;
+    canvas.height = window.innerHeight * 0.6;
+audioPlayer.play();
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioContext.createAnalyser();
+    const source = audioContext.createMediaElementSource(audioPlayer);
 
-  const currentDate = new Date();
-  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
+    source.connect(analyser);
+    analyser.connect(audioContext.destination);
 
-  return monthNames[currentMonthIndex];
-}
-   function getStringBasedOnMonth2() {
-   const monthNames = [
-    "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG",
-    "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG", "JIREN THEME SONG",
-    "JIREN THEME SONG", "THIS IS HALLOWEEN", 
-"JIREN THEME SONG", "CHRISTMAS CANON"
-  ];
+    analyser.fftSize = 256; // Fast Fourier Transform size
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
 
-  const currentDate = new Date();
-  const currentMonthIndex = currentDate.getMonth(); // 0-indexed month
-
-  return monthNames[currentMonthIndex];
-}      
-    
-const mySongName = document.getElementById("songName");
-mySongName.textContent = getStringBasedOnMonth2();
-const result = getStringBasedOnMonth();
-
-    const initialize = () => {
-        // Create an AudioContext and AnalyserNode
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        analyser = audioCtx.createAnalyser();
-        
-        // Use an FFT size of 2048 to get frequency data
-        analyser.fftSize = 2048;
-        const bufferLength = analyser.frequencyBinCount;
-        dataArray = new Uint8Array(bufferLength);
-        
-        // Connect the audio source to the analyser and the audio output
-        source = audioCtx.createMediaElementSource(audioElement);
-        source.connect(analyser);
-        analyser.connect(audioCtx.destination);
-        
-        isInitialized = true; 
-        draw();
-        const newPlayer = document.createElement('audio');
- newPlayer.style.display = 'none';
-  newPlayer.src = result;
-  newPlayer.setAttribute('controls', 'controls');
-  newPlayer.play();
-  newPlayer.volume = 0;
-  audioElement.src = result;
-  newPlayer.setAttribute('id', 'myNewAudioPlayer'); 
-  // Append the new player to the container
-  playersContainer.appendChild(newPlayer);
-  
-}
-            // Function to stop the audi o
-function stopAudio() {
-   const termDiv =     document.getElementById('terminationDIV').innerHTML = '';
-  audioElement.stop(); // Reset the audio to the beginning
-  canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
-  termDiv.style.display = none;
-}
-  stopButton.addEventListener('click', stopAudio);  
-        
-        function muteAudio() {
-   const allAudioElements = document.querySelectorAll('audio');
-
-    allAudioElements.forEach(audioElement => {
-        audioElement.pause();
-        audioElement.currentTime = 0;
-    });
-
-    console.log("All audio elements have been reset.");
-}
-  muteButton.addEventListener('click', muteAudio);  
-    const draw = () => {
-        // Continue the animation loop
+    function draw() {
         requestAnimationFrame(draw);
-        
-        // Get the frequency data
+
         analyser.getByteFrequencyData(dataArray);
-        
-        // Clear the canvas
-        canvasCtx.fillStyle = '#222';
-        canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
-        
-        // Draw the spectrum bars
-        const barWidth = (canvas.width / dataArray.length) * 2.5; // Adjust for spacing
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous frame
+
+        const barWidth = (canvas.width / bufferLength) * 2.5;
         let x = 0;
-        
-        for (let i = 0; i < dataArray.length; i++) {
-            const barHeight = dataArray[i]; // Value from 0-255
-            
-            // Set bar color
-            canvasCtx.fillStyle = `rgb(181, 9, 9)`;
-            
-            // Draw the bar
-            canvasCtx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-            
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = dataArray[i] * 1.5; // Adjust multiplier for visual effect
+
+            // Gradient for bars
+            const gradient = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight);
+            gradient.addColorStop(0, '#4C0202'); // Cyan
+            gradient.addColorStop(1, '#BD0404'); // Magenta
+            ctx.fillStyle = gradient;
+
+            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
             x += barWidth + 1; // Add a small gap between bars
         }
-    };
-       
-   
-    
-    startButton.addEventListener('click', () => {
-        // The AudioContext must be resumed from a user gesture.
-        if (audioCtx && audioCtx.state === 'suspended') {
-            audioCtx.resume().then(() => {
-                if (!isInitialized) {
-                    initialize();
-                }
-                audioElement.play();
-            });
-        } else {
-            if (!isInitialized) {
-                initialize();
-            } 
-            audioElement.play();
+    }
+
+    // Ensure audio context resumes on user interaction for some browsers
+    audioPlayer.addEventListener('play', () => {
+        if (audioContext.state === 'suspended') {
+            audioContext.resume();
         }
+        draw();
     });
-});
-              
-          
-  </script>
-           <script>
-              function makeDraggable(element) {
+
+    audioPlayer.addEventListener('pause', () => {
+        // Optionally, stop drawing when paused to save resources
+        // cancelAnimationFrame(draw); // This would require storing the animation frame ID
+    });
+    }
+     function makeDraggable(element) {
   let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
   // Get the header or the element itself to trigger drag
@@ -1063,91 +963,9 @@ function stopAudio() {
 // Apply the draggable functionality to your div
 const myDraggableDiv = document.getElementById("myDraggableDiv");
 makeDraggable(myDraggableDiv);
-     
-    window.onload = function() {
-    const audioFile = document.getElementById('audioFile');
-    const canvas = document.getElementById('visualizer');
-    const ctx = canvas.getContext('2d');
-
-    let audioContext;
-    let analyser;
-    let source;
-    let audioBuffer;
-      
-const myAudio = document.getElementById('audioFile');
-const stopButton = document.getElementById('stopButton');
-
-   
-
-    audioFile.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (!file) return;
-
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            const arrayBuffer = event.target.result;
-            initAudio(arrayBuffer);
-        };
-        reader.readAsArrayBuffer(file);
-    });
-      
-      
-// Function to stop the audi o
-function stopAudio(arrayBuffer) {
-  audioContext.close(); // Reset the audio to the beginning
-}
-      
-
-    function initAudio(arrayBuffer) {
-        if (audioContext) {
-            audioContext.close(); // Close existing context if re-initializing
-        }
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        analyser = audioContext.createAnalyser();
-        analyser.fftSize = 256; // Controls the number of frequency bins
-        const bufferLength = analyser.frequencyBinCount;
-        const dataArray = new Uint8Array(bufferLength);
-
-        audioContext.decodeAudioData(arrayBuffer, function(buffer) {
-            audioBuffer = buffer;
-            source = audioContext.createBufferSource();
-            source.buffer = audioBuffer;
-            source.connect(analyser);
-            analyser.connect(audioContext.destination);
-            source.start(0);
-            drawSpectrum(analyser, dataArray, bufferLength);
-        }, function(e) { console.error("Error decoding audio data", e); });
-    }
-
-    function drawSpectrum(analyser, dataArray, bufferLength) {
-        requestAnimationFrame(() => drawSpectrum(analyser, dataArray, bufferLength));
-
-        analyser.getByteFrequencyData(dataArray);
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        const barWidth = (canvas.width / bufferLength) * 2.5;
-        let x = 0;
-
-        for (let i = 0; i < bufferLength; i++) {
-            const barHeight = dataArray[i];
-
-            ctx.fillStyle = 'rgb(' + (barHeight + 194) + ',8,8)';
-            ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-
-            x += barWidth + 1;
-        }
-    }
-
-         stopButton.addEventListener('click', stopAudio);
-    // Handle window resizing
-    window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    });
-};
-  </script>
-                      
+           </script>       
+                         
+                         
                           
                   
                           
@@ -1973,27 +1791,3 @@ horizontally */
      
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
