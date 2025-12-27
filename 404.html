@@ -20,19 +20,8 @@
              var audio = document.getElementById("hiddenAudio");// Replace 'your_audio_file.mp3' with your actual file path
 
             // Attempt to play the audio
-            var playPromise = audio.play();
+           audio.play();
 
-            if (playPromise !== undefined) {
-                playPromise.then(function() {
-                    // Autoplay started successfully
-                    console.log('Audio started playing automatically.');
-                }).catch(function(error) {
-                    // Autoplay was prevented (e.g., by browser policies)
-                    console.error('Autoplay was prevented:', error);
-                    // You might need to show a play button here for the user to interact
-                    alert('Please click on the page to play the audio.');
-                });
-            }
         };
     </script>
   
