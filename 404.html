@@ -7,29 +7,22 @@
 <body>
 
   <img src="https://japanga.github.io/chadsofa/wiki/files/images/githubquitsketch.png" alt="Description of the image" width="500" height="300"> 
-  
-  <audio id="background-audio" src="https://audio.jukehost.co.uk/CLo9es7WE9vRNdfCR97bPPD5rWQeh1Dz" loop></audio>
-<!-- Provide a fallback source for broader browser support -->
-<!-- <audio id="background-audio" muted autoplay loop>
-  <source src="background-audio.mp3" type="audio/mpeg">
-  <source src="background-audio.ogg" type="audio/ogg">
+ 
+  <audio id="hiddenAudio" controls autoplay>
+  <source src="https://audio.jukehost.co.uk/CLo9es7WE9vRNdfCR97bPPD5rWQeh1Dz" type="audio/mpeg">
   Your browser does not support the audio element.
-</audio> -->
+</audio>
   
- <script>
-   window.onload = function() {
-    const audio = document.getElementById('background-audio');
-     
-     audio.play();
-   
 
-};
-    </script>
+
   
   <style>
-  #background-audio {
-    display: none;
-    /* or you can use: visibility: hidden; */
+#hiddenAudio {
+  display: none; /* Completely removes it from layout */
+  /* OR */
+  /* width: 0; height: 0; /* Hides but keeps space */
+  /* OR */
+  /* visibility: hidden; */
 }
   </style>
 
