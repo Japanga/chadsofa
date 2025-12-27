@@ -1,60 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+ <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hCaptcha Example</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+ 
 </head>
 <body>
+
+  <img src="https://japanga.github.io/chadsofa/wiki/files/images/githubquitsketch.png" alt="Description of the image" width="500" height="300"> 
   
-    <b><p id="updatingParagraph">Getting a connection from the Wiki.</p></b>
+  <audio id="background-audio" autoplay loop>
+    <source src="https://audio.jukehost.co.uk/CLo9es7WE9vRNdfCR97bPPD5rWQeh1Dz" type="audio/mpeg">
+    <!-- You can add other formats for better browser compatibility -->
+    <source src="your_audio_file.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
   
-  
-        <div class="h-captcha" data-sitekey="36042202-6850-4a02-b758-492e5d407d08" data-theme="light" data-callback="onRecaptchaSuccess"></div>
-    </form>
   <style>
-    body{
-      background-image: linear-gradient(#0A0A0A, #242222,  #660E0E, #210202);
+  #background-audio {
+    display: none;
+    /* or you can use: visibility: hidden; */
+}
+  </style>
 
-    }
-    #updatingParagraph{
-     color:red;
-    }
-    </style>
-  <p><img src="https://yourimageshare.com/ib/awhW7ojlbn.png" alt="Smiley face" style="float:left;width:200px;height:200px;"> </p>
- </a>   
-  
-    <script>
-        const paragraph = document.getElementById('updatingParagraph');
-        const messages = [
-            "Getting a connection from the Wiki..",
-            "Getting a connection from the Wiki...",
-            "Getting a connection from the Wiki....",
-            "Getting a connection from the Wiki.....",
-            "Getting a connection from the Wiki......"
-        ];
-        let messageIndex = 0;
-
-        function updateParagraphText() {
-            paragraph.textContent = messages[messageIndex];
-            messageIndex = (messageIndex + 1) % messages.length; // Cycle through messages
-        }
-
-        // Call the function immediately to set the first message
-        updateParagraphText();
-
-        // Update the text every 3 seconds (3000 milliseconds)
-        setInterval(updateParagraphText, 100); 
-      
-          function onRecaptchaSuccess(token) {
-        // 'token' is the reCAPTCHA response token you might send to your server for verification.
-        // For client-side redirection, you can proceed directly.
-
-        const targetUrl = "https://japanga.github.io/chadsofa/wiki/main/home"; // Replace with your desired URL
-        window.location.href = targetUrl; // Redirect to the target URL
-    }
-    </script>
 </body>
 </html>
