@@ -8,12 +8,23 @@
 
   <img src="https://japanga.github.io/chadsofa/wiki/files/images/githubquitsketch.png" alt="Description of the image" width="500" height="300"> 
   
-  <audio id="background-audio" autoplay loop>
-    <source src="https://audio.jukehost.co.uk/CLo9es7WE9vRNdfCR97bPPD5rWQeh1Dz" type="audio/mpeg">
-    <!-- You can add other formats for better browser compatibility -->
-    <source src="your_audio_file.ogg" type="audio/ogg">
-    Your browser does not support the audio element.
-</audio>
+  <audio id="background-audio" src="https://audio.jukehost.co.uk/CLo9es7WE9vRNdfCR97bPPD5rWQeh1Dz" loop></audio>
+<!-- Provide a fallback source for broader browser support -->
+<!-- <audio id="background-audio" muted autoplay loop>
+  <source src="background-audio.mp3" type="audio/mpeg">
+  <source src="background-audio.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio> -->
+  
+ <script>
+   window.onload = function() {
+    const audio = document.getElementById('background-audio');
+     
+     audio.play();
+   
+
+};
+    </script>
   
   <style>
   #background-audio {
