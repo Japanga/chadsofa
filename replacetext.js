@@ -2,7 +2,7 @@
 // Function to fetch the text file content and update the paragraph
 function replaceParagraphContent() {
     // Specify the path to your external text file
-    const textFilePath = 'external_content.txt';
+    const textFilePath = 'https://japanga.github.io/chadsofa/external_content.txt';
     const paragraphId = 'content-paragraph';
 
     fetch(textFilePath)
