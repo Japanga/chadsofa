@@ -1,5 +1,5 @@
 /* Custom Header Background Image */
-.site-header {
+.navbar-header {
     background-image: url('https://i.imgur.com/m5e9hP3.jpeg');
     background-size: cover; /* This makes the image cover the entire header area */
     background-repeat: no-repeat; /* Prevents the image from repeating */
