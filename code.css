@@ -4,7 +4,7 @@
     background-size: cover; /* This makes the image cover the entire header area */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image in the header */
-    /* Adjust height as needed, default is usually fine */
+    /* Adjust height as needed, default is usually fine */ 
     /* min-height: 150px; */ 
 }
 
