@@ -1,1 +1,1 @@
-1.13k unique visitors, 4.38k SSL requests
+1.13k unique visitors, 11.03k SSL requests
